@@ -1,0 +1,11 @@
+nnoremap <C-H> ^
+nnoremap <C-L> $
+nnoremap R :action RenameElement
+imap <C-A> <ESC>^i
+imap <C-E> <ESC>$a
+
+
+let mapleader=","
+set easymotion
+set surroundo
+set argtextobj
