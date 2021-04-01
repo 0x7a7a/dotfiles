@@ -1,0 +1,73 @@
+patch:
+    #  us_keyboard_layout: true      # 鍵盤選項：應用美式鍵盤佈局
+    # show_notifications_when: appropriate # 狀態通知，默認裝有Growl時顯示，也可設爲全開（always）全關（never）
+    # style/horizontal: true # 候選窗横向顯示
+    #  style/inline_preedit: false   # 非內嵌編碼行
+    #  style/font_face: "儷黑 Pro"    # 我喜歡的字體名稱
+    # style/font_point: 16 # 字號
+    #  style/corner_radius: 10       # 窗口圓角半徑
+    #  style/border_height: 0        # 窗口邊界高度，大於圓角半徑才有效果
+    #  style/border_width: 0         # 窗口邊界寬度，大於圓角半徑才有效果
+    #  style/color_scheme: clean_white # 選擇配色方案
+
+# 註：預設的配色方案及代碼（指定爲 style/color_scheme ）
+#   系統默認色系 - native
+#   碧水 - aqua
+#   青天 - azure
+#   明月 - luna
+#   墨池 - ink
+#   孤寺 - lost_temple
+#   暗堂 - dark_temple
+#   星際我爭霸 - starcraft
+#   谷歌 - google
+#   曬經石 - solarized_rock
+#   简约白 - clean_white
+
+
+patch:
+  show_notifications_when: appropriate          # 状态通知，适当，也可设为全开（always）全关（never）
+
+  style/color_scheme: apathy # 方案命名，不能有空格
+  preset_color_schemes:
+    mritd_dark:
+      name: 漠然／mritd dark
+      horizontal: true                          # 水平排列
+      inline_preedit: true                      # 单行显示，false双行显示
+      candidate_format: "%c\u2005%@"            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+      corner_radius: 5                          # 候选条圆角
+      hilited_corner_radius: 3                  # 高亮圆角
+      border_height: 6                          # 窗口边界高度，大于圆角半径才生效
+      border_width: 6                           # 窗口边界宽度，大于圆角半径才生效
+      border_color_width: 0
+      font_face: "PingFangSC,HanaMinB"                   # 候选词字体
+      font_point: 16                            # 候选字词大小
+      label_font_point: 14                      # 候选编号大小
+
+      text_color: 0xdedddd                      # 拼音行文字颜色，24位色值，16进制，BGR顺序
+      back_color: 0x4b4b4b                      # 候选条背景色
+      label_color: 0x888785                     # 预选栏编号颜色
+      border_color: 0x4b4b4b                    # 边框色
+      candidate_text_color: 0xffffff            # 预选项文字颜色
+      hilited_text_color: 0xdedddd              # 高亮拼音 (需要开启内嵌编码)
+      hilited_back_color: 0x252320              # 高亮拼音 (需要开启内嵌编码)
+      hilited_candidate_text_color: 0xFFE696    # 第一候选项文字颜色
+      hilited_candidate_back_color: 0x4b4b4b    # 第一候选项背景背景色
+      hilited_candidate_label_color: 0xffffff   # 第一候选项编号颜色
+      comment_text_color: 0xdedddd              # 拼音等提示文字颜色
+      #hilited_comment_text_color: 0xdedddd      # 注解文字高亮
+    apathy: 
+      name: "冷漠 / Apathy"
+      horizontal: true  # 水平排列
+      inline_preedit: true #单行显示，false双行显示
+      candidate_format: "%c\u2005%@\u2005"  # 编号 %c 和候选词 %@ 前后的空间
+      corner_radius: 5  #候选条圆角
+      border_height: 0 
+      border_width: 0
+      back_color: 0xFFFFFF  #候选条背景色
+      font_face: "PingFangSC"  #候选词字体
+      font_point: 16  #候选字词大小
+      text_color: 0x424242  #高亮选中词颜色
+      label_font_point: 12   #候选编号大小
+      hilited_candidate_text_color: 0xEE6E00  #候选文字颜色
+      hilited_candidate_back_color: 0xFFF0E4  #候选文字背景色
+      comment_text_color: 0x999999  #拼音等提示文字颜色

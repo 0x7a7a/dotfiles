@@ -1,0 +1,36 @@
+patch:
+    schema_list:
+        # - schema: luna_pinyin # 朙月拼音
+        - schema: luna_pinyin_simp # 朙月拼音 简化字
+    #  - schema: luna_pinyin_fluency # 语句流
+    #  - schema: double_pinyin         # 自然碼雙拼
+    #  - schema: double_pinyin_flypy   # 小鹤雙拼
+    #  - schema: double_pinyin_pyjj    # 拼音加加双拼
+    #  - schema: wubi_pinyin           # 五笔拼音混合輸入
+    switcher/hotkeys:
+        - "Control+grave" # 注意是control+`，不是command+`
+    switcher/save_options:
+        - full_shape
+        - ascii_punct
+        - simplification
+        - zh_hans
+        - emoji_suggestion
+    menu/page_size: 8
+    ascii_composer: # 设置caps、shift、control等键的作用
+        good_old_caps_lock: true # 若为true，caps只切换大小写
+        switch_key:
+            Shift_L: commit_code
+            Shift_R: noop
+            Control_L: noop
+            Control_R: noop
+            Caps_Lock: commit_code
+            Eisu_toggle: clear
+    key_binder/bindings: # 设置哪些键可以翻页，需要哪个取消注释即可
+        - { when: composing, accept: Tab, send: Right } # Tab 移动光标向右
+        - { when: composing, accept: Shift+Tab, send: Page_Up }
+        - { when: paging, accept: minus, send: Page_Up }
+        - { when: has_menu, accept: equal, send: Page_Down }
+        - { when: paging, accept: bracketleft, send: Page_Up }
+        - { when: has_menu, accept: bracketright, send: Page_Down }
+        - { accept: "Control+p", send: Up, when: composing }
+        - { accept: "Control+n", send: Down, when: composing }
