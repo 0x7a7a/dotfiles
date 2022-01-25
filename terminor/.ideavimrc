@@ -5,7 +5,17 @@ imap <C-A> <ESC>^i
 imap <C-E> <ESC>$a
 
 
-let mapleader="."
+let mapleader="'"
 set easymotion
 set surroundo
 set argtextobj
+set ideajoin
+
+# " Press `f` to activate AceJump
+# map f :action AceAction<CR>
+# " Press `F` to activate Target Mode
+# map F :action AceTargetAction<CR>
+# " Press `g` to activate Line Mode
+# map g :action AceLineAction<CR>
+
+

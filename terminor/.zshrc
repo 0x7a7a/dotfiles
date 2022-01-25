@@ -15,7 +15,7 @@ export ZSH="/Users/lucky/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+# ZSH_THEME="agnoster"
 ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Set list of themes to pick from when loading at random
@@ -78,17 +78,21 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  screen
   git
   extract
   z
+  docker
   kubectl
   minikube
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-completions
-  vi-mode
+  zsh-vi-mode
 )
 
+# 需要定义在source命令之前,否则会和fzf按键冲突
+ZVM_INIT_MODE=sourcing
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,11 +126,19 @@ source $ZSH/oh-my-zsh.sh
 #export GO111MODULE=auto
 # 配置 GOPROXY 环境变量
 #export GOPROXY=https://goproxy.io
-
 export GOROOT=/usr/local/go
 export GOPATH=~/dev/gopath:~/dev/mygo
+# nginx
 export NGINXPATH=/usr/local/opt/openresty/nginx/sbin
+# pyenv
 PATH=$PATH:$GOROOT/bin:~/dev/gopath/bin:~/dev/mygo/bin:/usr/local/sbin:$NGINXPATH:/usr/local/opt/mysql-client/bin
+eval "$(pyenv init -)"
+# kubectl
+export KUBECONFIG=$HOME/.kube/config.d/pro:$HOME/.kube/config
+alias kc='kubectl'
+# default editor
+export EDITOR=nvim;
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -137,23 +149,24 @@ export NVM_DIR="$HOME/.nvm"
 
 alias gp='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
 alias unp='unset http_proxy https_proxy'
-alias dm=docker-machine
-alias dme='_a(){eval $(docker-machine env $1)};_a'
-alias dmu='eval $(docker-machine env -u)'
 alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+alias vim='nvim'
 
-function p () {
+# 解析剪切板中的pb
+function pb () {
   echo `pbpaste` | xxd -r -p | protoc --decode_raw
 }
 
+# 格式化剪切板中的json数据,可能会有精度丢失
 function pj() {
   pbpaste | jq .
 }
 
+# kill进程
 fkill() {
   local pid
   pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
@@ -164,8 +177,11 @@ fkill() {
   fi
 }
 
+# 在history中忽略一些常用命令
+export HISTIGNORE='pwd:exit:fg:bg:top:clear:history:ls:uptime:df'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
+
 
 source ~/.bash_profile
