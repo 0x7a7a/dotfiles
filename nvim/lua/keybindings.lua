@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local opt = {
-    noremap = true,
-    silent = true
+	noremap = true,
+	silent = true,
 }
 
 -- set leader
@@ -10,14 +10,14 @@ vim.g.maplocalleader = ","
 
 -- 基础 --
 -- 插入模式光标快捷移动
-map('i', '<C-h>', '<Left>', opt)
-map('i', '<C-j>', '<Down>', opt)
-map('i', '<C-k>', '<Up>', opt)
-map('i', '<C-l>', '<Right>', opt)
+map("i", "<C-h>", "<Left>", opt)
+map("i", "<C-j>", "<Down>", opt)
+map("i", "<C-k>", "<Up>", opt)
+map("i", "<C-l>", "<Right>", opt)
 
 -- 缩进
-map('v', '<', '<gv', opt)
-map('v', '>', '>gv', opt)
+map("v", "<", "<gv", opt)
+map("v", ">", ">gv", opt)
 
 -- 分屏
 map("n", "sv", ":vsp<CR>", opt)
@@ -45,13 +45,14 @@ map("n", "<leader>s", ":SaveSession<CR>", opt)
 
 -- 插件相关 --
 -- 文件侧边栏 Defx
-map('n', '<C-n>', ':NvimTreeToggle<CR>', opt)
+map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
 
 -- trouble
-map('n', 'gt', ':TroubleToggle<CR>', opt)
+map("n", "gt", ":TroubleToggle document_diagnostics<CR>", opt)
+map("n", "gT", ":TroubleToggle workspace_diagnostics<CR>", opt)
 
 -- rnvimr
-map('n', '<leader>n', ':RnvimrToggle<CR>', opt)
+map("n", "<leader>n", ":RnvimrToggle<CR>", opt)
 
 -- bufferline 左右Tab切换
 map("n", "<S-Tab>", ":bprev<Return>", opt)
@@ -68,55 +69,76 @@ map("n", "<Tab>", ":bnext<Return>", opt)
 -- vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
 -- vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
 
-map('n', 'sf', ':Telescope find_files<CR>', opt)
-map('n', '<leader>fg', ':Telescope live_grep<CR>', opt)
-map('n', '<leader>fb', ':Telescope buffers<CR>', opt)
-map('n', '<leader>fh', ':Telescope help_tags<CR>', opt)
+map("n", "sf", ":Telescope find_files<CR>", opt)
+map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>fb", ":Telescope buffers<CR>", opt)
+map("n", "<leader>fh", ":Telescope help_tags<CR>", opt)
 
 -- bufferline
-map('n', 'gb', ':BufferLinePick<CR>', opt)
+map("n", "sb", ":BufferLinePick<CR>", opt)
 
 -- hop
-map('n', 'f',
-    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-    {})
-map('n', 'F',
-    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-    {})
-map('o', 'f',
-    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-    {})
-map('o', 'F',
-    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-    {})
-map('', 'f',
-    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-    {})
-map('', 'F',
-    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-    {})
-map('n', 'sn', ':HopLine<CR>', opt)
+map(
+	"n",
+	"f",
+	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
+	{}
+)
+map(
+	"n",
+	"F",
+	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
+	{}
+)
+map(
+	"o",
+	"f",
+	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
+	{}
+)
+map(
+	"o",
+	"F",
+	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
+	{}
+)
+map(
+	"",
+	"f",
+	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
+	{}
+)
+map(
+	"",
+	"F",
+	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
+	{}
+)
+map("n", "sn", ":HopLine<CR>", opt)
 
 -- lspsaga
-map('n', 'K', ':Lspsaga hover_doc<CR>', opt)
-map('n', '<F8>', ':Lspsaga diagnostic_jump_next<CR>', opt)
-map('n', '<C-k>', ':Lspsaga signature_help<CR>', opt)
-map('n', 'gh', ':Lspsaga lsp_finder<CR>', opt)
-map('n', 'gi', ':Lspsaga implement<CR>', opt)
-map('n', 'gp', ':Lspsaga preview_definition<CR>', opt)
-map('n', '<C-space>', ':Lspsaga code_action<CR>', opt)
-map('i', '<C-space>', ':Lspsaga code_action<CR>', opt)
+map("n", "K", ":Lspsaga hover_doc<CR>", opt)
+map("n", "<F8>", ":Lspsaga diagnostic_jump_next<CR>", opt)
+map("n", "<C-k>", ":Lspsaga signature_help<CR>", opt)
+map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
+map("n", "gi", ":Lspsaga implement<CR>", opt)
+map("n", "gp", ":Lspsaga preview_definition<CR>", opt)
+map("n", "<C-space>", ":Lspsaga code_action<CR>", opt)
+map("i", "<C-space>", ":Lspsaga code_action<CR>", opt)
 -- 这两个暂时无效
 -- map('n', '<C-f>', ":lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opt)
 -- map('n', '<C-b>', ":lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opt)
 
 -- bufferline
-map("n", "<leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
-map("n", "<leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>", opt)
-map("n", "<leader>3", "<Cmd>BufferLineGoToBuffer 3<CR>", opt)
-map("n", "<leader>4", "<Cmd>BufferLineGoToBuffer 4<CR>", opt)
-map("n", "<leader>5", "<Cmd>BufferLineGoToBuffer 5<CR>", opt)
-map("n", "<leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>", opt)
-map("n", "<leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>", opt)
-map("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>", opt)
-map("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", opt)
+map("n", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
+map("n", "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>", opt)
+map("n", "<A-3>", "<Cmd>BufferLineGoToBuffer 3<CR>", opt)
+map("n", "<A-4>", "<Cmd>BufferLineGoToBuffer 4<CR>", opt)
+map("n", "<A-5>", "<Cmd>BufferLineGoToBuffer 5<CR>", opt)
+map("n", "<A-6>", "<Cmd>BufferLineGoToBuffer 6<CR>", opt)
+map("n", "<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>", opt)
+map("n", "<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>", opt)
+map("n", "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>", opt)
+map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
+map("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)

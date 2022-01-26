@@ -1,10 +1,11 @@
 -- utf8
 vim.g.encoding = "UTF-8"
-vim.o.fileencoding = 'utf-8'
+vim.o.fileencoding = "utf-8"
 -- jk移动时光标下上方保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 -- 使用相对行号
+--
 vim.wo.number = true
 vim.wo.relativenumber = true
 -- 高亮所在行
@@ -54,7 +55,7 @@ vim.o.mouse = "a"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
--- smaller updatetime 
+-- smaller updatetime
 vim.o.updatetime = 300
 -- 等待mappings
 vim.o.timeoutlen = 500
@@ -67,7 +68,7 @@ vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 补全增强
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
-vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.shortmess = vim.o.shortmess .. "c"
 -- 补全候选
 vim.o.pumheight = 10
 vim.wo.foldenable = false

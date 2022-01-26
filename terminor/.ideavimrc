@@ -1,6 +1,17 @@
 nnoremap <C-H> ^
 nnoremap <C-L> $
 nnoremap R :action RenameElement
+nnoremap <S-Tab> :bprev<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap sv :vsp<CR>
+nnoremap ss :sp<CR>
+nnoremap sc <C-w>c
+
+nnoremap sh <C-w>h
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+
 imap <C-A> <ESC>^i
 imap <C-E> <ESC>$a
 
@@ -11,11 +22,15 @@ set surroundo
 set argtextobj
 set ideajoin
 
-# " Press `f` to activate AceJump
-# map f :action AceAction<CR>
-# " Press `F` to activate Target Mode
-# map F :action AceTargetAction<CR>
-# " Press `g` to activate Line Mode
-# map g :action AceLineAction<CR>
+set number
+set relativenumber
+
+" Press `f` to activate AceJump
+" map f :action AceAction<CR>
+map F :action AceAction<CR>
+" Press `F` to activate Target Mode
+" map F :action AceTargetAction<CR>
+" Press `g` to activate Line Mode
+" map g :action AceLineAction<CR>
 
 
