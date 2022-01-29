@@ -72,3 +72,5 @@ vim.o.shortmess = vim.o.shortmess .. "c"
 -- 补全候选
 vim.o.pumheight = 10
 vim.wo.foldenable = false
+-- %匹配,andymass/vim-matchup插件的配置
+vim.g.loaded_matchit = true

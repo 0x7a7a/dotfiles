@@ -11,7 +11,7 @@ require("colors/tokyonight")
 require("colors/github-nvim-theme")
 require("colors/onenord")
 require("colors/kanagawa")
-vim.cmd([[colorscheme kanagawa]])
+vim.cmd([[colorscheme tokyonight]])
 
 -- 插件配置
 require("plugin-config/bufferline")
@@ -39,7 +39,8 @@ require("plugin-config/lsp-kind")
 require("plugin-config/lsp-color")
 require("plugin-config/lsp-signature")
 -- 暂时不可用
-require("plugin-config/vsnip")
+-- require("plugin-config/vsnip")
+require("plugin-config/lua-snip")
 -- 代码格式化
 require("plugin-config/formatter")
 

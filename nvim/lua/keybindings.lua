@@ -45,7 +45,7 @@ map("n", "<leader>s", ":SaveSession<CR>", opt)
 
 -- 插件相关 --
 -- 文件侧边栏 Defx
-map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
+-- map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
 
 -- trouble
 map("n", "gt", ":TroubleToggle document_diagnostics<CR>", opt)
@@ -58,26 +58,13 @@ map("n", "<leader>n", ":RnvimrToggle<CR>", opt)
 map("n", "<S-Tab>", ":bprev<Return>", opt)
 map("n", "<Tab>", ":bnext<Return>", opt)
 
--- 终端
--- local opts = {
--- noremap = true
--- }
--- vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
--- vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
--- vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
--- vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
--- vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
--- vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
-
 map("n", "sf", ":Telescope find_files<CR>", opt)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opt)
 
--- bufferline
-map("n", "sb", ":BufferLinePick<CR>", opt)
-
 -- hop
+map("n", "\f", "<cmd>lua require'hop'.hint_char1<CR>", opt)
 map(
 	"n",
 	"f",
@@ -114,13 +101,14 @@ map(
 	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
 	{}
 )
-map("n", "sn", ":HopLine<CR>", opt)
+map("n", "sn", ":HopLineStart<CR>", opt)
+map("n", "sa", ":HopChar2<CR>", opt)
 
 -- lspsaga
-map("n", "K", ":Lspsaga hover_doc<CR>", opt)
 map("n", "<F8>", ":Lspsaga diagnostic_jump_next<CR>", opt)
 map("n", "<C-k>", ":Lspsaga signature_help<CR>", opt)
 map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
+map("n", "gk", ":Lspsaga hover_doc<CR>", opt)
 map("n", "gi", ":Lspsaga implement<CR>", opt)
 map("n", "gp", ":Lspsaga preview_definition<CR>", opt)
 map("n", "<C-space>", ":Lspsaga code_action<CR>", opt)
@@ -142,3 +130,25 @@ map("n", "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>", opt)
 map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
 map("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>bc", "<Cmd>:%bd|e#|bd#<CR>", opt)
+map("n", "sb", ":BufferLinePick<CR>", opt)
+
+-- vim-go
+map("n", "<leader>gr", "<Cmd>GoRun<CR>", opt)
+map("n", "<leader>gs", "<Cmd>GoFillStruct<CR>", opt)
+map("n", "<leader>gt", "<Cmd>GoAddTags<CR>", opt)
+
+-- toggleterm
+function _G.set_terminal_keymaps()
+	local opts = { noremap = true }
+	-- 和lazygit冲突
+	-- vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
+end
+
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
