@@ -45,7 +45,7 @@ map("n", "<leader>s", ":SaveSession<CR>", opt)
 
 -- 插件相关 --
 -- 文件侧边栏 Defx
--- map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
+map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
 
 -- trouble
 map("n", "gt", ":TroubleToggle document_diagnostics<CR>", opt)

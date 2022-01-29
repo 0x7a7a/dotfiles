@@ -42,7 +42,7 @@ require("plugin-config/lsp-signature")
 -- require("plugin-config/vsnip")
 require("plugin-config/lua-snip")
 -- 代码格式化
-require("plugin-config/formatter")
+-- require("plugin-config/formatter")
 
 -- LSP server
 require("lsp/go")

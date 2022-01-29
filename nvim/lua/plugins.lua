@@ -92,7 +92,8 @@ return require("packer").startup(function()
 	-- 注释
 	use("numToStr/Comment.nvim")
 	-- 格式化
-	use("mhartington/formatter.nvim")
+	-- use("mhartington/formatter.nvim")
+	use("sbdchd/neoformat")
 	-- fzf
 	use("junegunn/fzf")
 	use("junegunn/fzf.vim")

@@ -74,3 +74,13 @@ vim.o.pumheight = 10
 vim.wo.foldenable = false
 -- %匹配,andymass/vim-matchup插件的配置
 vim.g.loaded_matchit = true
+-- neoformatter
+vim.api.nvim_exec(
+	[[
+    augroup fmt
+      autocmd!
+      autocmd BufWritePre * undojoin | Neoformat
+    augroup END
+]],
+	false
+)
