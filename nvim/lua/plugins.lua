@@ -5,7 +5,7 @@ return require("packer").startup(function()
 	-- 主题
 	use("rebelot/kanagawa.nvim")
 	use("folke/tokyonight.nvim")
-	use("projekt0n/github-nvim-theme")
+	-- use("projekt0n/github-nvim-theme")
 	use("olimorris/onedarkpro.nvim")
 	use("rmehri01/onenord.nvim")
 	-- smooth
@@ -49,7 +49,7 @@ return require("packer").startup(function()
 	-- 文件搜索
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
+		requires = { "nvim-lua/plenary.nvim" },
 	})
 	-- 终端
 	use("akinsho/toggleterm.nvim")
@@ -68,6 +68,10 @@ return require("packer").startup(function()
 	use("phaazon/hop.nvim")
 	-- Golang
 	use("fatih/vim-go")
+	-- typescript
+	use("leafgarland/typescript-vim")
+	--javascript
+	use("pangloss/vim-javascript")
 	-- LSP
 	use("neovim/nvim-lspconfig")
 	-- 括号补全
@@ -92,8 +96,10 @@ return require("packer").startup(function()
 	-- 注释
 	use("numToStr/Comment.nvim")
 	-- 格式化
-	-- use("mhartington/formatter.nvim")
-	use("sbdchd/neoformat")
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
 	-- fzf
 	use("junegunn/fzf")
 	use("junegunn/fzf.vim")
@@ -103,4 +109,7 @@ return require("packer").startup(function()
 	use("andymass/vim-matchup")
 	-- surround
 	use("tpope/vim-surround")
+
+	-- github coplilot
+	use("github/copilot.vim")
 end)

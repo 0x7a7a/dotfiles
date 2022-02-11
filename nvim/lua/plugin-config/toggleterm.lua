@@ -60,3 +60,22 @@ function _lazygit_toggle()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>l", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+
+local Fterminal = Terminal:new({
+	direction = "float",
+	float_opts = {
+		border = "curved",
+	},
+	-- function to run on opening the terminal
+	on_open = function(term)
+		vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
+	end,
+	-- function to run on closing the terminal
+	on_close = function(term) end,
+})
+
+function _fterminal_toggle()
+	Fterminal:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>lua _fterminal_toggle()<CR>", { noremap = true, silent = true })

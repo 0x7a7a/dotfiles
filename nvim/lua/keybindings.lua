@@ -11,9 +11,11 @@ vim.g.maplocalleader = ","
 -- 基础 --
 -- 插入模式光标快捷移动
 map("i", "<C-h>", "<Left>", opt)
-map("i", "<C-j>", "<Down>", opt)
-map("i", "<C-k>", "<Up>", opt)
 map("i", "<C-l>", "<Right>", opt)
+
+-- 快捷保存和退出
+map("n", "<leader>q", ":q<CR>", opt)
+map("n", "<leader>w", ":w<CR>", opt)
 
 -- 缩进
 map("v", "<", "<gv", opt)
@@ -105,17 +107,21 @@ map("n", "sn", ":HopLineStart<CR>", opt)
 map("n", "sa", ":HopChar2<CR>", opt)
 
 -- lspsaga
-map("n", "<F8>", ":Lspsaga diagnostic_jump_next<CR>", opt)
+map("n", "<F2>", ":Lspsaga diagnostic_jump_next<CR>", opt)
 map("n", "<C-k>", ":Lspsaga signature_help<CR>", opt)
 map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
 map("n", "gk", ":Lspsaga hover_doc<CR>", opt)
 map("n", "gi", ":Lspsaga implement<CR>", opt)
 map("n", "gp", ":Lspsaga preview_definition<CR>", opt)
 map("n", "<C-space>", ":Lspsaga code_action<CR>", opt)
-map("i", "<C-space>", ":Lspsaga code_action<CR>", opt)
+map("i", "<C-space>", "<Cmd>Lspsaga code_action<CR>", opt)
+map("n", "R", ":Lspsaga rename<CR>", opt)
 -- 这两个暂时无效
 -- map('n', '<C-f>', ":lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opt)
 -- map('n', '<C-b>', ":lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opt)
+
+-- 代码跳转
+map("n", "<C-]>", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
 
 -- bufferline
 map("n", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
@@ -135,15 +141,14 @@ map("n", "sb", ":BufferLinePick<CR>", opt)
 
 -- vim-go
 map("n", "<leader>gr", "<Cmd>GoRun<CR>", opt)
-map("n", "<leader>gs", "<Cmd>GoFillStruct<CR>", opt)
+map("n", "<leader>gf", "<Cmd>GoFillStruct<CR>", opt)
 map("n", "<leader>gt", "<Cmd>GoAddTags<CR>", opt)
 
 -- toggleterm
 function _G.set_terminal_keymaps()
 	local opts = { noremap = true }
-	-- 和lazygit冲突
-	-- vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
-	vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<A-q>", [[<C-\><C-n>]], opts)
+	-- vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
 	vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
 	vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
 	vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
