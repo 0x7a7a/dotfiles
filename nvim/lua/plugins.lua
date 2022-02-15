@@ -68,6 +68,7 @@ return require("packer").startup(function()
 	use("phaazon/hop.nvim")
 	-- Golang
 	use("fatih/vim-go")
+	use("buoto/gotests-vim")
 	-- typescript
 	use("leafgarland/typescript-vim")
 	--javascript

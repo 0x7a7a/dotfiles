@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gotests-vim"] = {
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/gotests-vim",
+    url = "https://github.com/buoto/gotests-vim"
+  },
   ["hop.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/hop.nvim",

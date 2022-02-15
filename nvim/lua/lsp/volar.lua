@@ -5,7 +5,7 @@ local function get_typescript_server_path(root_dir)
 
 	local local_tsserverlib = project_root ~= nil
 		and util.path.join(project_root, "node_modules", "typescript", "lib", "tsserverlibrary.js")
-	local global_tsserverlib = "/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib/tsserverlibrary.js"
+	local global_tsserverlib = "/home/lucky/.npm/lib/node_modules/typescript/lib/tsserverlibrary.js"
 
 	if local_tsserverlib and util.path.exists(local_tsserverlib) then
 		return local_tsserverlib
@@ -29,3 +29,6 @@ require("lspconfig").volar.setup({
 		end,
 	},
 })
+
+-- print(123)
+-- print(util.find_node_modules_ancestor("volar/lsp/volar.luaberp/www") ~= nil)

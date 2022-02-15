@@ -44,5 +44,5 @@ require("plugin-config/null-ls")
 
 -- LSP server
 require("lsp/go")
--- require("lsp/typescript")
-require("lsp/volar")
+require("lsp/typescript")
+-- require("lsp/volar")

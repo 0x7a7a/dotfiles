@@ -25,6 +25,7 @@ map("v", ">", ">gv", opt)
 map("n", "sv", ":vsp<CR>", opt)
 map("n", "ss", ":sp<CR>", opt)
 map("n", "sc", "<C-w>c", opt)
+map("n", "so", "<C-w>o", opt)
 
 map("", "sh", "<C-w>h", opt)
 map("", "sj", "<C-w>j", opt)
@@ -120,9 +121,6 @@ map("n", "R", ":Lspsaga rename<CR>", opt)
 -- map('n', '<C-f>', ":lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opt)
 -- map('n', '<C-b>', ":lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opt)
 
--- 代码跳转
-map("n", "<C-]>", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
-
 -- bufferline
 map("n", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
 map("n", "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>", opt)
@@ -133,10 +131,12 @@ map("n", "<A-6>", "<Cmd>BufferLineGoToBuffer 6<CR>", opt)
 map("n", "<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>", opt)
 map("n", "<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>", opt)
 map("n", "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>", opt)
-map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
-map("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", opt)
-map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)
-map("n", "<leader>bc", "<Cmd>:%bd|e#|bd#<CR>", opt)
+-- map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
+-- map("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", opt)
+-- map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)
+-- map("n", "<leader>bc", "<Cmd>:%bd|e#|bd#<CR>", opt)
+map("n", "<leader>b", "<Cmd>:bd<CR>", opt)
+map("n", "<leader>B", "<Cmd>:%bd|e#|bd#<CR>", opt)
 map("n", "sb", ":BufferLinePick<CR>", opt)
 
 -- vim-go
