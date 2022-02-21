@@ -157,3 +157,5 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+
+map("n", "<leader>m", "<Cmd>MarkdownPreviewToggle<CR>", opt)

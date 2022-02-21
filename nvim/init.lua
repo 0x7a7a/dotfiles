@@ -32,8 +32,8 @@ require("plugin-config/auto-pairs")
 
 -- 语法补全
 require("plugin-config/lsp-cmp")
-require("plugin-config/lsp-config")
 require("plugin-config/lsp-saga")
+require("plugin-config/lsp-config")
 require("plugin-config/lsp-kind")
 require("plugin-config/lsp-color")
 require("plugin-config/lsp-signature")

@@ -113,4 +113,7 @@ return require("packer").startup(function()
 
 	-- github coplilot
 	use("github/copilot.vim")
+
+	-- markdown
+	use("iamcco/markdown-preview.nvim")
 end)
