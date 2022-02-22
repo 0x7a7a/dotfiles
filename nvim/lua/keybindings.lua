@@ -65,6 +65,8 @@ map("n", "sf", ":Telescope find_files<CR>", opt)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opt)
+map("n", "<leader>fo", ":Telescope oldfiles<CR>", opt)
+map("n", "<leader>fi", ":Telescope lsp_implementations<CR>", opt)
 
 -- hop
 map("n", "\f", "<cmd>lua require'hop'.hint_char1<CR>", opt)

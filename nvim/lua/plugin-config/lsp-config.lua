@@ -30,7 +30,10 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
 end
 
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = {
+		prefix = "🤖",
+		spacing = 1,
+	},
 	signs = true,
 	underline = true,
 })
