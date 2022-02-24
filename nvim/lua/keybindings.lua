@@ -133,18 +133,18 @@ map("n", "<A-6>", "<Cmd>BufferLineGoToBuffer 6<CR>", opt)
 map("n", "<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>", opt)
 map("n", "<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>", opt)
 map("n", "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>", opt)
--- map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
--- map("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", opt)
--- map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)
--- map("n", "<leader>bc", "<Cmd>:%bd|e#|bd#<CR>", opt)
-map("n", "<leader>b", "<Cmd>:bd<CR>", opt)
+map("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
+map("n", "<leader>bb", "<Cmd>bd<CR>", opt)
 map("n", "<leader>B", "<Cmd>:%bd|e#|bd#<CR>", opt)
 map("n", "sb", ":BufferLinePick<CR>", opt)
 
--- vim-go
-map("n", "<leader>gr", "<Cmd>GoRun<CR>", opt)
-map("n", "<leader>gf", "<Cmd>GoFillStruct<CR>", opt)
-map("n", "<leader>gt", "<Cmd>GoAddTags<CR>", opt)
+-- git
+map("n", "<leader>gd", "<Cmd>Gdiffsplit<CR>", opt)
+map("n", "<leader>gb", "<Cmd>Git blame<CR>", opt)
+map("n", "<leader>gh", "<Cmd>Gitsigns preview_hunk<CR>", opt)
+map("n", "<leader>G", "<Cmd>G<CR>", opt)
 
 -- toggleterm
 function _G.set_terminal_keymaps()
@@ -161,3 +161,6 @@ end
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 map("n", "<leader>m", "<Cmd>MarkdownPreviewToggle<CR>", opt)
+
+-- diagnostic弹窗显示
+map("n", "<leader>d", "<Cmd>Lspsaga show_line_diagnostics<CR>", opt)

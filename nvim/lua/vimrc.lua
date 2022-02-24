@@ -1,9 +1,9 @@
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
--- jk移动时光标下上方保留4行
-vim.o.scrolloff = 4
-vim.o.sidescrolloff = 4
+-- jk移动时光标下上方保留行
+vim.o.scrolloff = 3
+vim.o.sidescrolloff = 3
 -- 使用相对行号
 --
 vim.wo.number = true
@@ -79,3 +79,6 @@ vim.g.loaded_matchit = true
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""
+
+-- javascript
+vim.g.javascript_plugin_flow = 1

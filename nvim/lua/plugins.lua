@@ -54,7 +54,7 @@ return require("packer").startup(function()
 	-- 终端
 	use("akinsho/toggleterm.nvim")
 	-- 彩虹括号
-	use("p00f/nvim-ts-rainbow")
+	use({ "p00f/nvim-ts-rainbow", commit = "c6c26c4def0e9cd82f371ba677d6fc9baa0038af" })
 	-- 快捷键提示
 	use("folke/which-key.nvim")
 	-- 缩进提示
@@ -116,4 +116,17 @@ return require("packer").startup(function()
 
 	-- markdown
 	use("iamcco/markdown-preview.nvim")
+
+	-- todo comments
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 end)

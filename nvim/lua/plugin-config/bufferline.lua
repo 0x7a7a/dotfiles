@@ -14,12 +14,14 @@ require("bufferline").setup({
 		max_prefix_length = 15,
 		tab_size = 18,
 		show_buffer_close_icons = false,
+		show_close_icon = false,
 		show_buffer_icons = true,
 		show_tab_indicators = true,
 		diagnostics = "nvim_lsp",
+		diagnostics_update_in_insert = false,
 		always_show_bufferline = true,
 		-- "slant" | "thick" | "thin" | { 'any', 'any' },
-		separator_style = "slant",
+		separator_style = "thin",
 		offsets = {
 			{
 				filetype = "NvimTree",
