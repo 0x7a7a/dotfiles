@@ -89,8 +89,6 @@ return require("packer").startup(function()
 	use("onsails/lspkind-nvim")
 	use("ray-x/lsp_signature.nvim")
 	-- 代码片断
-	-- use("hrsh7th/cmp-vsnip")
-	-- use("hrsh7th/vim-vsnip")
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")

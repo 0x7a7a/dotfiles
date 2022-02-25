@@ -21,11 +21,6 @@ cmp.setup({
 		end,
 	},
 	mapping = {
-		-- 目前无效 没找到冲突的快捷键
-		-- ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
-		-- ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
-		-- ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
-		-- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
 		["<C-e>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
@@ -33,15 +28,10 @@ cmp.setup({
 		["<CR>"] = cmp.mapping.confirm({
 			select = true,
 		}), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-
-		-- ["<S-tab>"] = cmp.mapping(cmp.mapping.select_prev_item()),
-		-- ["<tab>"] = cmp.mapping(cmp.mapping.select_next_item()),
-
-		-- luasnip需要修改的快捷键映射
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif luasnip.expand_or_jumpable() then
+			elseif luasnip.expand_or_locally_jumpable() then
 				luasnip.expand_or_jump()
 			elseif has_words_before() then
 				cmp.complete()
@@ -62,6 +52,7 @@ cmp.setup({
 
 		["<C-j>"] = cmp.mapping(function(fallback)
 			cmp.mapping.abort()
+			cmp.mapping.close()
 			local copilot_keys = vim.fn["copilot#Accept"]()
 			if copilot_keys ~= "" then
 				vim.api.nvim_feedkeys(copilot_keys, "i", true)

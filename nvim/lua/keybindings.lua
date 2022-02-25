@@ -14,7 +14,9 @@ map("i", "<C-h>", "<Left>", opt)
 map("i", "<C-l>", "<Right>", opt)
 
 -- 快捷保存和退出
-map("n", "<leader>q", ":q<CR>", opt)
+map("n", "<leader>qq", ":q<CR>", opt)
+map("n", "<leader>qQ", ":q!<CR>", opt)
+map("n", "<leader>qa", ":qa<CR>", opt)
 map("n", "<leader>w", ":w<CR>", opt)
 
 -- 缩进
@@ -43,9 +45,6 @@ map("n", "<leader>pu", ":PackerUpdate<CR>", opt)
 map("n", "<leader>pi", ":PackerInstall<CR>", opt)
 map("n", "<leader>pc", ":PackerClean<CR>", opt)
 
--- session
-map("n", "<leader>s", ":SaveSession<CR>", opt)
-
 -- 插件相关 --
 -- 文件侧边栏 Defx
 map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
@@ -57,9 +56,11 @@ map("n", "gT", ":TroubleToggle workspace_diagnostics<CR>", opt)
 -- rnvimr
 map("n", "<leader>n", ":RnvimrToggle<CR>", opt)
 
--- bufferline 左右Tab切换
-map("n", "<S-Tab>", ":bprev<Return>", opt)
-map("n", "<Tab>", ":bnext<Return>", opt)
+-- bufferline 左右Tab切换,这里如果使用Tab,会这<C-i>冲突
+-- map("n", "<S-Tab>", ":bprev<Return>", opt)
+-- map("n", "<Tab>", ":bnext<Return>", opt)
+map("n", "[b", ":BufferLineCyclePrev<CR>", opt)
+map("n", "]b", ":BufferLineCycleNext<CR>", opt)
 
 map("n", "sf", ":Telescope find_files<CR>", opt)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
@@ -107,7 +108,7 @@ map(
 	{}
 )
 map("n", "sn", ":HopLineStart<CR>", opt)
-map("n", "sa", ":HopChar2<CR>", opt)
+map("n", "sa", ":HopChar1<CR>", opt)
 
 -- lspsaga
 map("n", "<F2>", ":Lspsaga diagnostic_jump_next<CR>", opt)
@@ -138,7 +139,7 @@ map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
 map("n", "<leader>bb", "<Cmd>bd<CR>", opt)
 map("n", "<leader>B", "<Cmd>:%bd|e#|bd#<CR>", opt)
-map("n", "sb", ":BufferLinePick<CR>", opt)
+map("n", "<leader>s", ":BufferLinePick<CR>", opt)
 
 -- git
 map("n", "<leader>gd", "<Cmd>Gdiffsplit<CR>", opt)
