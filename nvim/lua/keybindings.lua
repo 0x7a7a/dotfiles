@@ -13,6 +13,9 @@ vim.g.maplocalleader = ","
 map("i", "<C-h>", "<Left>", opt)
 map("i", "<C-l>", "<Right>", opt)
 
+-- map("n", "oo", "o<Esc>k", opt)
+-- map("n", "OO", "O<Esc>j", opt)
+
 -- 快捷保存和退出
 map("n", "<leader>qq", ":q<CR>", opt)
 map("n", "<leader>qQ", ":q!<CR>", opt)
@@ -52,9 +55,6 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
 -- trouble
 map("n", "gt", ":TroubleToggle document_diagnostics<CR>", opt)
 map("n", "gT", ":TroubleToggle workspace_diagnostics<CR>", opt)
-
--- rnvimr
-map("n", "<leader>n", ":RnvimrToggle<CR>", opt)
 
 -- bufferline 左右Tab切换,这里如果使用Tab,会这<C-i>冲突
 -- map("n", "<S-Tab>", ":bprev<Return>", opt)
@@ -147,21 +147,21 @@ map("n", "<leader>gb", "<Cmd>Git blame<CR>", opt)
 map("n", "<leader>gh", "<Cmd>Gitsigns preview_hunk<CR>", opt)
 map("n", "<leader>G", "<Cmd>G<CR>", opt)
 
--- toggleterm
-function _G.set_terminal_keymaps()
-	local opts = { noremap = true }
-	vim.api.nvim_buf_set_keymap(0, "t", "<A-q>", [[<C-\><C-n>]], opts)
-	-- vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
-	vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
-	vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
-	vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
-	vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
-end
-
--- if you only want these mappings for toggle term use term://*toggleterm#* instead
-vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-
+-- markdown preview
 map("n", "<leader>m", "<Cmd>MarkdownPreviewToggle<CR>", opt)
 
--- diagnostic弹窗显示
+-- diagnostic 弹窗显示
 map("n", "<leader>d", "<Cmd>Lspsaga show_line_diagnostics<CR>", opt)
+
+-- floaterm 悬浮终端
+map("n", "<F7>", ":FloatermNew<CR>", opt)
+map("t", "<F7>", "<C-\\><C-n>:FloatermNew<CR>", opt)
+map("n", "<F8>", ":FloatermPrev<CR>", opt)
+map("t", "<F8>", "<C-\\><C-n>:FloatermPrev<CR>", opt)
+map("n", "<F9>", ":FloatermNext<CR>", opt)
+map("t", "<F9>", "<C-\\><C-n>:FloatermNext<CR>", opt)
+map("n", "<F12>", ":FloatermToggle<CR>", opt)
+map("t", "<F12>", "<C-\\><C-n>:FloatermToggle<CR>", opt)
+-- 自定义终端
+map("n", "<leader>fl", ":FloatermNew --title=lazygit --autoclose=2 lazygit<CR>", opt)
+map("n", "<leader>lf", ":FloatermNew --title=fl --autoclose=2 --opener=nvim lf<CR>", opt)

@@ -20,8 +20,6 @@ return require("packer").startup(function()
 	})
 	-- 保存会话状态
 	use("rmagatti/auto-session")
-	-- 悬浮ranger
-	use("kevinhwang91/rnvimr")
 	-- 顶部 bufferline
 	use({
 		"akinsho/bufferline.nvim",
@@ -51,10 +49,8 @@ return require("packer").startup(function()
 		"nvim-telescope/telescope.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
-	-- 终端
-	use("akinsho/toggleterm.nvim")
 	-- 彩虹括号
-	use({ "p00f/nvim-ts-rainbow", commit = "c6c26c4def0e9cd82f371ba677d6fc9baa0038af" })
+	use({ "p00f/nvim-ts-rainbow" })
 	-- 快捷键提示
 	use("folke/which-key.nvim")
 	-- 缩进提示
@@ -127,4 +123,7 @@ return require("packer").startup(function()
 			})
 		end,
 	})
+
+	-- floaterm
+	use("voldikss/vim-floaterm")
 end)

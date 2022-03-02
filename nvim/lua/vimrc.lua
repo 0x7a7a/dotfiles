@@ -58,7 +58,7 @@ vim.o.swapfile = false
 -- smaller updatetime
 vim.o.updatetime = 250
 -- 等待mappings
-vim.o.timeoutlen = 500
+vim.o.timeoutlen = 200
 -- split window 从下边和右边出现
 vim.o.splitbelow = true
 vim.o.splitright = true
@@ -82,3 +82,7 @@ vim.g.copilot_tab_fallback = ""
 
 -- javascript
 vim.g.javascript_plugin_flow = 1
+
+-- floaterm
+vim.g.floaterm_height = 0.8
+vim.g.floaterm_width = 0.7
