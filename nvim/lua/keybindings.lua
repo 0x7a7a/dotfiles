@@ -56,11 +56,11 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
 map("n", "gt", ":TroubleToggle document_diagnostics<CR>", opt)
 map("n", "gT", ":TroubleToggle workspace_diagnostics<CR>", opt)
 
--- bufferline 左右Tab切换,这里如果使用Tab,会这<C-i>冲突
--- map("n", "<S-Tab>", ":bprev<Return>", opt)
--- map("n", "<Tab>", ":bnext<Return>", opt)
-map("n", "[b", ":BufferLineCyclePrev<CR>", opt)
-map("n", "]b", ":BufferLineCycleNext<CR>", opt)
+-- bufferline 左右Tab切换
+-- map("n", "[b", ":BufferLineCyclePrev<CR>", opt)
+-- map("n", "]b", ":BufferLineCycleNext<CR>", opt)
+map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
 
 map("n", "sf", ":Telescope find_files<CR>", opt)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
@@ -115,7 +115,7 @@ map("n", "<F2>", ":Lspsaga diagnostic_jump_next<CR>", opt)
 map("n", "<C-k>", ":Lspsaga signature_help<CR>", opt)
 map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
 map("n", "gk", ":Lspsaga hover_doc<CR>", opt)
-map("n", "gi", ":Lspsaga implement<CR>", opt)
+-- map("n", "gi", ":Lspsaga implement<CR>", opt)
 map("n", "gp", ":Lspsaga preview_definition<CR>", opt)
 map("n", "<C-space>", ":Lspsaga code_action<CR>", opt)
 map("i", "<C-space>", "<Cmd>Lspsaga code_action<CR>", opt)
@@ -164,4 +164,9 @@ map("n", "<F12>", ":FloatermToggle<CR>", opt)
 map("t", "<F12>", "<C-\\><C-n>:FloatermToggle<CR>", opt)
 -- 自定义终端
 map("n", "<leader>fl", ":FloatermNew --title=lazygit --autoclose=2 lazygit<CR>", opt)
-map("n", "<leader>lf", ":FloatermNew --title=fl --autoclose=2 --opener=nvim lf<CR>", opt)
+map("n", "<leader>lf", ":FloatermNew --title=fl --autoclose=2 lf<CR>", opt)
+map("t", "<A-q>", "<C-\\><C-n>", opt)
+
+-- async task
+map("n", "<F5>", ":AsyncTask file-build<CR>", opt)
+map("n", "<F6>", ":AsyncTask file-test<CR>", opt)

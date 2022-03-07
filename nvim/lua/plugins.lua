@@ -126,4 +126,8 @@ return require("packer").startup(function()
 
 	-- floaterm
 	use("voldikss/vim-floaterm")
+
+	-- asyncrun/task
+	use("skywind3000/asynctasks.vim")
+	use("skywind3000/asyncrun.vim")
 end)

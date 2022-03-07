@@ -86,3 +86,7 @@ vim.g.javascript_plugin_flow = 1
 -- floaterm
 vim.g.floaterm_height = 0.8
 vim.g.floaterm_width = 0.7
+
+-- asynctask
+vim.g.asyncrun_open = 6
+vim.g.asynctasks_term_pos = "floaterm"

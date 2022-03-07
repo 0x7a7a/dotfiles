@@ -22,7 +22,7 @@ require("nvim-tree").setup({
 		},
 	},
 	update_focused_file = {
-		enable = false,
+		enable = true,
 		update_cwd = false,
 		ignore_list = {},
 	},
@@ -47,7 +47,8 @@ require("nvim-tree").setup({
 		auto_resize = false,
 		mappings = {
 			custom_only = false,
-			list = {},
+			-- 关闭自定义的system_open
+			list = { { key = "s" } },
 		},
 		number = false,
 		relativenumber = false,
