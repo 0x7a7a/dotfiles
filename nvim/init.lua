@@ -45,7 +45,4 @@ require("plugin-config/null-ls")
 require("lsp/go")
 require("lsp/typescript")
 require("lsp/lua-server")
--- require("lsp/volar")
-
--- floaterm
--- require("plugin-config/floaterm")
+require("lsp/cssls")

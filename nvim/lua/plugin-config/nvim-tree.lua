@@ -22,7 +22,7 @@ require("nvim-tree").setup({
 		},
 	},
 	update_focused_file = {
-		enable = true,
+		enable = false,
 		update_cwd = false,
 		ignore_list = {},
 	},

@@ -13,8 +13,8 @@ vim.g.maplocalleader = ","
 map("i", "<C-h>", "<Left>", opt)
 map("i", "<C-l>", "<Right>", opt)
 
--- map("n", "oo", "o<Esc>k", opt)
--- map("n", "OO", "O<Esc>j", opt)
+map("n", "]<Space>", "o<Esc>k", opt)
+map("n", "[<Space>", "O<Esc>j", opt)
 
 -- 快捷保存和退出
 map("n", "<leader>qq", ":q<CR>", opt)
@@ -68,6 +68,7 @@ map("n", "<leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opt)
 map("n", "<leader>fo", ":Telescope oldfiles<CR>", opt)
 map("n", "<leader>fi", ":Telescope lsp_implementations<CR>", opt)
+map("n", "<leader>ft", ":TodoTelescope<CR>", opt)
 
 -- hop
 map("n", "\f", "<cmd>lua require'hop'.hint_char1<CR>", opt)

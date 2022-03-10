@@ -37,3 +37,14 @@ vim.diagnostic.config({
 	signs = true,
 	underline = true,
 })
+
+-- 这个代码是因为autotag的问题,如果不设置会在tag补全瞬间显示错误的红色提示线
+-- https://github.com/windwp/nvim-ts-autotag/issues/19
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+	underline = true,
+	virtual_text = {
+		spacing = 5,
+		severity_limit = "Warning",
+	},
+	update_in_insert = true,
+})

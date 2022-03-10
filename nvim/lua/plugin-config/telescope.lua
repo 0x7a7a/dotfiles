@@ -10,6 +10,7 @@ require("telescope").setup({
 				["<C-h>"] = "which_key",
 			},
 		},
+		file_ignore_patterns = { "node_modules", "vendor" },
 	},
 	pickers = {
 		-- Default configuration for builtin pickers goes here:

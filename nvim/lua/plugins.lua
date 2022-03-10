@@ -130,4 +130,7 @@ return require("packer").startup(function()
 	-- asyncrun/task
 	use("skywind3000/asynctasks.vim")
 	use("skywind3000/asyncrun.vim")
+
+	-- auto tag
+	use("windwp/nvim-ts-autotag")
 end)
