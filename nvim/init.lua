@@ -14,7 +14,6 @@ vim.cmd([[colorscheme kanagawa]])
 
 -- 插件配置
 require("plugin-config/bufferline")
-require("plugin-config/rnvimr")
 require("plugin-config/treesitter")
 require("plugin-config/gitsigns")
 require("plugin-config/lualine")

@@ -62,13 +62,14 @@ map("n", "gT", ":TroubleToggle workspace_diagnostics<CR>", opt)
 map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
 
-map("n", "sf", ":Telescope find_files<CR>", opt)
+map("n", "sf", ":Telescope find_files hidden=true<CR>", opt)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opt)
 map("n", "<leader>fo", ":Telescope oldfiles<CR>", opt)
 map("n", "<leader>fi", ":Telescope lsp_implementations<CR>", opt)
 map("n", "<leader>ft", ":TodoTelescope<CR>", opt)
+map("n", "<leader>fd", ":Telescope diagnostics<CR>", opt)
 
 -- hop
 map("n", "\f", "<cmd>lua require'hop'.hint_char1<CR>", opt)
