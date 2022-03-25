@@ -162,6 +162,8 @@ map("n", "<F8>", ":FloatermPrev<CR>", opt)
 map("t", "<F8>", "<C-\\><C-n>:FloatermPrev<CR>", opt)
 map("n", "<F9>", ":FloatermNext<CR>", opt)
 map("t", "<F9>", "<C-\\><C-n>:FloatermNext<CR>", opt)
+map("n", "<F11>", ":FloatermKill<CR>", opt)
+map("t", "<F11>", "<C-\\><C-n>:FloatermKill<CR>", opt)
 map("n", "<F12>", ":FloatermToggle<CR>", opt)
 map("t", "<F12>", "<C-\\><C-n>:FloatermToggle<CR>", opt)
 -- 自定义终端

@@ -9,7 +9,7 @@ vim.o.sidescrolloff = 3
 vim.wo.number = true
 vim.wo.relativenumber = false
 -- 高亮所在行
-vim.wo.cursorline = true
+-- vim.wo.cursorline = true
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行

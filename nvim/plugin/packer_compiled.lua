@@ -154,10 +154,21 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/gotests-vim",
     url = "https://github.com/buoto/gotests-vim"
   },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
+  },
   ["hop.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
+  },
+  ["impatient.nvim"] = {
+    config = { "\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0" },
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -244,11 +255,6 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onedarkpro.nvim"] = {
-    loaded = true,
-    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
-    url = "https://github.com/olimorris/onedarkpro.nvim"
-  },
   ["onenord.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/onenord.nvim",
@@ -334,14 +340,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time([[Config for todo-comments.nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
+time([[Config for impatient.nvim]], false)
 -- Config for: vim-smoothie
 time([[Config for vim-smoothie]], true)
 vim.gsmoothie_enabled = true
 time([[Config for vim-smoothie]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

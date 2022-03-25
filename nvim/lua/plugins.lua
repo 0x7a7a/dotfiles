@@ -5,8 +5,8 @@ return require("packer").startup(function()
 	-- 主题
 	use("rebelot/kanagawa.nvim")
 	use("folke/tokyonight.nvim")
+	use("sainnhe/gruvbox-material")
 	-- use("projekt0n/github-nvim-theme")
-	use("olimorris/onedarkpro.nvim")
 	use("rmehri01/onenord.nvim")
 	-- smooth
 	use({
@@ -38,7 +38,7 @@ return require("packer").startup(function()
 			opt = true,
 		},
 	})
-	-- git sign
+	-- git
 	use({
 		"lewis6991/gitsigns.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
@@ -90,6 +90,12 @@ return require("packer").startup(function()
 	use("rafamadriz/friendly-snippets")
 	-- 注释
 	use("numToStr/Comment.nvim")
+	-- use({
+	-- 	"danymat/neogen",
+	-- 	config = function()
+	-- 		require("neogen").setup()
+	-- 	end,
+	-- })
 	-- 格式化
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
@@ -133,4 +139,12 @@ return require("packer").startup(function()
 
 	-- auto tag
 	use("windwp/nvim-ts-autotag")
+
+	-- 插件提速
+	use({
+		"lewis6991/impatient.nvim",
+		config = function()
+			require("impatient")
+		end,
+	})
 end)
