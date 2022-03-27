@@ -172,5 +172,5 @@ map("n", "<leader>lf", ":FloatermNew --title=fl --autoclose=2 lf<CR>", opt)
 map("t", "<A-q>", "<C-\\><C-n>", opt)
 
 -- async task
-map("n", "<F5>", ":AsyncTask file-build<CR>", opt)
-map("n", "<F6>", ":AsyncTask file-test<CR>", opt)
+map("n", "<F6>", ":AsyncTask file-build<CR>", opt)
+map("n", "<F5>", ":AsyncTask file-test<CR>", opt)
