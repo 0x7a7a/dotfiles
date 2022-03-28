@@ -39,31 +39,6 @@ require("nvim-treesitter.configs").setup({
 	autotag = {
 		enable = true,
 	},
-	textobjects = {
-		swap = {
-			enable = true,
-			swap_next = {
-				["<leader>a"] = "@parameter.inner",
-			},
-			swap_previous = {
-				["<leader>A"] = "@parameter.inner",
-			},
-		},
-		select = {
-			enable = true,
-
-			-- Automatically jump forward to textobj, similar to targets.vim
-			lookahead = true,
-
-			keymaps = {
-				-- You can use the capture groups defined in textobjects.scm
-				["af"] = "@function.outer",
-				["if"] = "@function.inner",
-				["ib"] = "@block.inner",
-				["ab"] = "@block.outer",
-			},
-		},
-	},
 	textsubjects = {
 		enable = true,
 		prev_selection = ";", -- (Optional) keymap to select the previous selection
