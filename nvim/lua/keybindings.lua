@@ -20,6 +20,7 @@ map("n", "[<Space>", "O<Esc>j", opt)
 map("n", "<leader>qq", ":q<CR>", opt)
 map("n", "<leader>qQ", ":q!<CR>", opt)
 map("n", "<leader>qa", ":qa<CR>", opt)
+map("n", "<leader>qc", "<cmd>cclose<CR>", opt)
 map("n", "<leader>w", ":w<CR>", opt)
 
 -- 缩进
@@ -57,8 +58,6 @@ map("n", "gt", ":TroubleToggle document_diagnostics<CR>", opt)
 map("n", "gT", ":TroubleToggle workspace_diagnostics<CR>", opt)
 
 -- bufferline 左右Tab切换
--- map("n", "[b", ":BufferLineCyclePrev<CR>", opt)
--- map("n", "]b", ":BufferLineCycleNext<CR>", opt)
 map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
 
@@ -72,7 +71,6 @@ map("n", "<leader>ft", ":TodoTelescope<CR>", opt)
 map("n", "<leader>fd", ":Telescope diagnostics<CR>", opt)
 
 -- hop
-map("n", "\f", "<cmd>lua require'hop'.hint_char1<CR>", opt)
 map(
 	"n",
 	"f",
@@ -110,21 +108,21 @@ map(
 	{}
 )
 map("n", "sn", ":HopLineStart<CR>", opt)
-map("n", "sa", ":HopChar1<CR>", opt)
+map("n", "ff", ":HopChar1<CR>", opt)
 
--- lspsaga
+-- 预览定义和实现等
 map("n", "<F2>", ":Lspsaga diagnostic_jump_next<CR>", opt)
 map("n", "<C-k>", ":Lspsaga signature_help<CR>", opt)
 map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
 map("n", "gk", ":Lspsaga hover_doc<CR>", opt)
--- map("n", "gi", ":Lspsaga implement<CR>", opt)
-map("n", "gp", ":Lspsaga preview_definition<CR>", opt)
 map("n", "<C-space>", ":Lspsaga code_action<CR>", opt)
 map("i", "<C-space>", "<Cmd>Lspsaga code_action<CR>", opt)
 map("n", "R", ":Lspsaga rename<CR>", opt)
--- 这两个暂时无效
--- map('n', '<C-f>', ":lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opt)
--- map('n', '<C-b>', ":lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opt)
+
+map("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opt)
+map("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opt)
+map("n", "gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opt)
+map("n", "gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", opt)
 
 -- bufferline
 map("n", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
@@ -140,6 +138,7 @@ map("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bp", "<Cmd>BufferLinePickClose<CR>", opt)
 map("n", "<leader>bb", "<Cmd>bd<CR>", opt)
+map("n", "<leader>bs", "<Cmd>BufferLineSortByDirectory<CR>", opt)
 map("n", "<leader>B", "<Cmd>:%bd|e#|bd#<CR>", opt)
 map("n", "<leader>s", ":BufferLinePick<CR>", opt)
 
@@ -162,8 +161,8 @@ map("n", "<F8>", ":FloatermPrev<CR>", opt)
 map("t", "<F8>", "<C-\\><C-n>:FloatermPrev<CR>", opt)
 map("n", "<F9>", ":FloatermNext<CR>", opt)
 map("t", "<F9>", "<C-\\><C-n>:FloatermNext<CR>", opt)
-map("n", "<F11>", ":FloatermKill<CR>", opt)
-map("t", "<F11>", "<C-\\><C-n>:FloatermKill<CR>", opt)
+map("n", "<F10>", ":FloatermKill<CR>", opt)
+map("t", "<F10>", "<C-\\><C-n>:FloatermKill<CR>", opt)
 map("n", "<F12>", ":FloatermToggle<CR>", opt)
 map("t", "<F12>", "<C-\\><C-n>:FloatermToggle<CR>", opt)
 -- 自定义终端
@@ -174,3 +173,10 @@ map("t", "<A-q>", "<C-\\><C-n>", opt)
 -- async task
 map("n", "<F6>", ":AsyncTask file-build<CR>", opt)
 map("n", "<F5>", ":AsyncTask file-test<CR>", opt)
+
+-- symbols-outline
+map("n", "<leader>S", ":SymbolsOutline<CR>", opt)
+
+-- 同名变量跳转
+map("n", "<a-n>", '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>', opt)
+map("n", "<a-p>", '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>', opt)

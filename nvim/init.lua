@@ -10,6 +10,7 @@ require("keybindings")
 require("colors/tokyonight")
 require("colors/onenord")
 require("colors/kanagawa")
+
 vim.cmd([[colorscheme kanagawa]])
 
 -- 插件配置
@@ -24,6 +25,8 @@ require("plugin-config/hop")
 require("plugin-config/comment")
 require("plugin-config/nvim-tree")
 require("plugin-config/indent-blankline")
+require("plugin-config/goto-preview")
+require("plugin-config/symbols-outline")
 
 require("plugin-config/auto-session")
 require("plugin-config/auto-pairs")

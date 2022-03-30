@@ -6,7 +6,7 @@ local opts = {
 	auto_restore_enabled = nil,
 	auto_session_suppress_dirs = nil,
 
-	pre_save_cmds = { "lua require'nvim-tree.view'.close()" },
+	pre_save_cmds = { "{lua require'nvim-tree.view'.close()}", "{lua require'symbols-outline.preview'.close()}" },
 }
 
 require("auto-session").setup(opts)

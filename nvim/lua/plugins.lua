@@ -30,6 +30,8 @@ return require("packer").startup(function()
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	-- 高亮当前变量
+	use("RRethy/vim-illuminate")
 	use("RRethy/nvim-treesitter-textsubjects")
 	-- status line
 	use({
@@ -85,7 +87,8 @@ return require("packer").startup(function()
 	-- lspkind 补全分类图标
 	use("onsails/lspkind-nvim")
 	use("ray-x/lsp_signature.nvim")
-	-- 代码片断
+	use("rmagatti/goto-preview")
+	-- 代码片段
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
@@ -148,4 +151,13 @@ return require("packer").startup(function()
 			require("impatient")
 		end,
 	})
+	-- lsp载入状态
+	use({
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup({})
+		end,
+	})
+	-- 大纲
+	use("simrat39/symbols-outline.nvim")
 end)
