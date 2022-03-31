@@ -160,4 +160,5 @@ return require("packer").startup(function()
 	})
 	-- 大纲
 	use("simrat39/symbols-outline.nvim")
+	-- use("unblevable/quick-scope")
 end)
