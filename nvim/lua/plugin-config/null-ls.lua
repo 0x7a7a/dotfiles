@@ -1,9 +1,13 @@
 require("null-ls").setup({
 	sources = {
 		require("null-ls").builtins.formatting.stylua,
-		require("null-ls").builtins.formatting.prettier,
+		require("null-ls").builtins.formatting.prettier.with({
+			prefer_local = "node_modules/.bin",
+		}),
 
-		require("null-ls").builtins.diagnostics.eslint,
+		require("null-ls").builtins.diagnostics.eslint.with({
+			prefer_local = "node_modules/.bin",
+		}),
 	},
 	-- format files on save
 	on_attach = function(client)

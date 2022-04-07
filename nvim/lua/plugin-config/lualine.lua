@@ -1,8 +1,3 @@
-local current_signature = function(width)
-	local sig = require("lsp_signature").status_line(width)
-	return sig.label .. "🐼" .. sig.hint
-end
-
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
@@ -22,7 +17,7 @@ require("lualine").setup({
 			{
 				"filename",
 				file_status = true, -- Displays file status (readonly status, modified status)
-				path = 0, -- 0: Just the filename
+				path = 1, -- 0: Just the filename
 				-- 1: Relative path
 				-- 2: Absolute path
 
