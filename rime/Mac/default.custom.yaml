@@ -1,7 +1,7 @@
 patch:
     schema_list:
         - schema: luna_pinyin_simp # 明月拼音 简化字
-        # - schema: double_pinyin_flypy # 小鹤双拼
+        - schema: double_pinyin_flypy # 小鹤双拼
     menu/page_size: 9
     switcher/hotkeys:
         - "Control+grave" # ctrl+`切换输入法
