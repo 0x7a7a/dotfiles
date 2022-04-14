@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local opt = {
-	noremap = true,
-	silent = true,
+    noremap = true,
+    silent = true,
 }
 
 -- set leader
@@ -72,40 +72,40 @@ map("n", "<leader>fd", ":Telescope diagnostics<CR>", opt)
 
 -- hop
 map(
-	"n",
-	"f",
-	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-	{}
+    "n",
+    "f",
+    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
+    {}
 )
 map(
-	"n",
-	"F",
-	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-	{}
+    "n",
+    "F",
+    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
+    {}
 )
 map(
-	"o",
-	"f",
-	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-	{}
+    "o",
+    "f",
+    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
+    {}
 )
 map(
-	"o",
-	"F",
-	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-	{}
+    "o",
+    "F",
+    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
+    {}
 )
 map(
-	"",
-	"f",
-	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-	{}
+    "",
+    "f",
+    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
+    {}
 )
 map(
-	"",
-	"F",
-	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-	{}
+    "",
+    "F",
+    "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
+    {}
 )
 map("n", "sn", ":HopLineStart<CR>", opt)
 map("n", "ff", ":HopChar1<CR>", opt)
@@ -180,3 +180,7 @@ map("n", "<leader>S", ":SymbolsOutline<CR>", opt)
 -- 同名变量跳转
 map("n", "<a-n>", '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>', opt)
 map("n", "<a-p>", '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>', opt)
+
+-- nvim-lsp-ts-utils
+map("n", "<leader>ti", ":TSLspImportAll<CR>", opt)
+map("n", "<leader>ts", ":TSLspOrganize<CR>", opt)
