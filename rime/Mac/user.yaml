@@ -4,8 +4,8 @@ var:
     ascii_punct: true
     full_shape: false
     simplification: true
-  previously_selected_schema: luna_pinyin_simp
+  previously_selected_schema: double_pinyin_flypy
   schema_access_time:
-    double_pinyin_flypy: 1649908741
+    double_pinyin_flypy: 1649995647
     luna_pinyin: 1610554957
-    luna_pinyin_simp: 1649908778
+    luna_pinyin_simp: 1649921771

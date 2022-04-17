@@ -717,7 +717,7 @@
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>TabViewType</key>
-	<integer>2</integer>
+	<integer>0</integer>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseMetal</key>
