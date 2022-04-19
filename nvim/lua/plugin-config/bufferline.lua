@@ -2,7 +2,7 @@ require("bufferline").setup({
 	options = {
 		numbers = function(opts)
 			-- return string.format("%s·%s", opts.ordinal, opts.raise(opts.id))
-			return string.format("%s.", opts.ordinal)
+			-- return string.format("%s.", opts.ordinal)
 		end,
 		indicator_icon = "▎",
 		buffer_close_icon = "",
@@ -21,7 +21,7 @@ require("bufferline").setup({
 		diagnostics_update_in_insert = false,
 		always_show_bufferline = true,
 		-- "slant" | "thick" | "thin" | { 'any', 'any' },
-		separator_style = "thin",
+		separator_style = "slant",
 		offsets = {
 			{
 				filetype = "NvimTree",

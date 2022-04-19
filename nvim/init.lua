@@ -8,7 +8,6 @@ require("keybindings")
 
 -- 主题
 require("colors/tokyonight")
-require("colors/onenord")
 require("colors/kanagawa")
 
 vim.cmd([[colorscheme kanagawa]])
@@ -35,7 +34,7 @@ require("plugin-config/auto-pairs")
 require("plugin-config/lsp-cmp")
 require("plugin-config/lsp-saga")
 require("plugin-config/lsp-config")
-require("plugin-config/lsp-kind")
+-- require("plugin-config/lsp-kind")
 require("plugin-config/lsp-color")
 require("plugin-config/lsp-signature")
 require("plugin-config/lua-snip")

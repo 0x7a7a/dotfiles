@@ -5,9 +5,7 @@ return require("packer").startup(function()
     -- 主题
     use("rebelot/kanagawa.nvim")
     use("folke/tokyonight.nvim")
-    use("sainnhe/gruvbox-material")
-    -- use("projekt0n/github-nvim-theme")
-    use("rmehri01/onenord.nvim")
+    use("projekt0n/github-nvim-theme")
     -- smooth
     use({
         "psliwka/vim-smoothie",

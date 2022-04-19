@@ -3,7 +3,7 @@ local basic = require("lsp/basic")
 require("lspconfig").gopls.setup({
     capabilities = basic.capabilities,
     on_attach = function(client, bufnr)
-        basic.on_attach()
+        basic.on_attach(client,bufnr)
     end,
 })
 -- 和lspsaga冲突

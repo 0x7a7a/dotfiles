@@ -150,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -164,11 +169,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/goto-preview",
     url = "https://github.com/rmagatti/goto-preview"
-  },
-  ["gruvbox-material"] = {
-    loaded = true,
-    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/gruvbox-material",
-    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["hop.nvim"] = {
     loaded = true,
@@ -276,11 +276,6 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onenord.nvim"] = {
-    loaded = true,
-    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/onenord.nvim",
-    url = "https://github.com/rmehri01/onenord.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -371,14 +366,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
-time([[Config for impatient.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
+time([[Config for impatient.nvim]], false)
 -- Config for: fidget.nvim
 time([[Config for fidget.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
