@@ -19,6 +19,16 @@ M.on_attach = function(client, bufnr)
 
     vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
     vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+
+    -- format files on save
+    if client.resolved_capabilities.document_formatting then
+        vim.cmd([[
+        augroup LspFormatting
+            autocmd! * <buffer>
+            autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+        augroup END
+        ]])
+    end
 end
 
 return M

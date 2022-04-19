@@ -109,18 +109,10 @@ return require("packer").startup(function()
     use("junegunn/fzf.vim")
     -- git
     use("tpope/vim-fugitive")
-    -- %匹配
     use("andymass/vim-matchup")
-    -- surround
     use("tpope/vim-surround")
-
-    -- github coplilot
     use("github/copilot.vim")
-
-    -- markdown
     use("iamcco/markdown-preview.nvim")
-
-    -- todo comments
     use({
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
