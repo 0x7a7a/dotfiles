@@ -56,7 +56,7 @@ vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
 -- smaller updatetime
-vim.o.updatetime = 1000
+vim.o.updatetime = 250
 -- 等待mapping_rhs
 vim.o.timeoutlen = 500
 -- split window 从下边和右边出现

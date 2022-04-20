@@ -81,12 +81,11 @@ return require("packer").startup(function()
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
     use("hrsh7th/nvim-cmp")
-    use("tami5/lspsaga.nvim")
+    -- use("tami5/lspsaga.nvim")
     use("folke/lsp-colors.nvim")
     -- lspkind 补全分类图标
     use("onsails/lspkind-nvim")
     use("ray-x/lsp_signature.nvim")
-    use("rmagatti/goto-preview")
     -- 代码片段
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
@@ -152,4 +151,8 @@ return require("packer").startup(function()
     -- 大纲
     use("simrat39/symbols-outline.nvim")
     -- use("unblevable/quick-scope")
+
+    use({ 'ray-x/navigator.lua', requires = { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }, config = function()
+        require("navigator").setup()
+    end })
 end)

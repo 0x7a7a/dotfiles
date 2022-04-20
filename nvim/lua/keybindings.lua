@@ -112,18 +112,13 @@ map("n", "sn", ":HopLineStart<CR>", opt)
 map("n", "ff", ":HopChar1<CR>", opt)
 
 -- 预览定义和实现等
-map("n", "<F2>", ":Lspsaga diagnostic_jump_next<CR>", opt)
-map("n", "<C-k>", ":Lspsaga signature_help<CR>", opt)
-map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
-map("n", "gk", ":Lspsaga hover_doc<CR>", opt)
-map("n", "<C-space>", ":Lspsaga code_action<CR>", opt)
-map("i", "<C-space>", "<Cmd>Lspsaga code_action<CR>", opt)
-map("n", "R", ":Lspsaga rename<CR>", opt)
-
-map("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opt)
-map("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opt)
-map("n", "gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opt)
-map("n", "gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", opt)
+map("n", "<C-space>", "<Cmd>lua require('navigator.codeAction').code_action()<CR>", opt)
+map("i", "<C-space>", "<Cmd>lua require('navigator.codeAction').code_action()<CR>", opt)
+map("n", "R", "<CMD>lua require('navigator.rename').rename()<CR>", opt)
+map("n", "gk", "<CMD>lua vim.lsp.buf.hover()<CR>", opt)
+map("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opt)
+map("n", "gp", "<CMD>lua require('navigator.definition').definition_preview()<CR>", opt)
+map("n", "gr", "<CMD>lua require('navigator.reference').reference()<CR>", opt)
 
 -- bufferline
 map("n", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
@@ -151,9 +146,6 @@ map("n", "<leader>G", "<Cmd>G<CR>", opt)
 
 -- markdown preview
 map("n", "<leader>m", "<Cmd>MarkdownPreviewToggle<CR>", opt)
-
--- diagnostic 弹窗显示
-map("n", "<leader>d", "<Cmd>Lspsaga show_line_diagnostics<CR>", opt)
 
 -- floaterm 悬浮终端
 map("n", "<F7>", ":FloatermNew<CR>", opt)
