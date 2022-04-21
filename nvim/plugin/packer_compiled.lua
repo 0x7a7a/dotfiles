@@ -339,6 +339,11 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-cool",
     url = "https://github.com/romainl/vim-cool"
   },
+  ["vim-easy-align"] = {
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-easy-align",
+    url = "https://github.com/junegunn/vim-easy-align"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-floaterm",
@@ -378,6 +383,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   },
   ["which-key.nvim"] = {
     loaded = true,

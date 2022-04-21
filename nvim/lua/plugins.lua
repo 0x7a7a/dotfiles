@@ -51,6 +51,7 @@ require("packer").startup(function()
     -- tools(need key map to call)
     use("kyazdani42/nvim-tree.lua")
     use("tpope/vim-surround")
+    use("vim-test/vim-test")
     use("iamcco/markdown-preview.nvim")
     use("folke/todo-comments.nvim")
     use("AndrewRadev/splitjoin.vim")
@@ -59,6 +60,7 @@ require("packer").startup(function()
     use("simrat39/symbols-outline.nvim")
     use("numToStr/Comment.nvim")
     use("jose-elias-alvarez/null-ls.nvim")
+    use("junegunn/vim-easy-align")
     use { 'ray-x/navigator.lua', requires = { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' } }
     -- use({
     -- 	"danymat/neogen",
@@ -120,3 +122,5 @@ Keymap("n", "<leader>ps", ":PackerSync<CR>")
 Keymap("n", "<leader>pu", ":PackerUpdate<CR>")
 Keymap("n", "<leader>pi", ":PackerInstall<CR>")
 Keymap("n", "<leader>pc", ":PackerClean<CR>")
+
+vim.g["test#strategy"] = "make"

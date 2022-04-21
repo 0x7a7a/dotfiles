@@ -62,5 +62,15 @@ Keymap("n", "<a-n>", ':lua require"illuminate".next_reference{wrap=true}<cr>')
 Keymap("n", "<a-p>", ':lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>')
 
 -- nvim-lsp-ts-utils
-Keymap("n", "<leader>ti", ":TSLspImportAll<CR>")
-Keymap("n", "<leader>ts", ":TSLspOrganize<CR>")
+Keymap("n", "<leader>Ti", ":TSLspImportAll<CR>")
+Keymap("n", "<leader>Ts", ":TSLspOrganize<CR>")
+
+-- easyalign
+Keymap("n", "ga", ":EasyAlign<CR>")
+Keymap("x", "ga", ":EasyAlign<CR>")
+
+-- test
+Keymap("n", "<leader>tt", ":TestNearest<CR>")
+Keymap("n", "<leader>tf", ":TestFile<CR>")
+Keymap("n", "<leader>tl", ":TestLast<CR>")
+Keymap("n", "<leader>tv", ":TestVisit<CR>")
