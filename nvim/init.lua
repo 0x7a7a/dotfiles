@@ -1,43 +1,40 @@
--- 基础配置
+-- base vim setting
 require("vimrc")
--- 载入插件
-require("plugins")
 
--- 按键映射
-require("keybindings")
+-- key mapping
+require("keymaps")
 
--- 主题
+-- colorscheme
 require("colors/tokyonight")
 require("colors/kanagawa")
-
 vim.cmd([[colorscheme kanagawa]])
 
--- 插件配置
-require("plugin-config/bufferline")
-require("plugin-config/treesitter")
-require("plugin-config/gitsigns")
-require("plugin-config/lualine")
-require("plugin-config/which-key")
-require("plugin-config/telescope")
-require("plugin-config/trouble")
-require("plugin-config/hop")
-require("plugin-config/comment")
-require("plugin-config/nvim-tree")
-require("plugin-config/indent-blankline")
-require("plugin-config/symbols-outline")
-require("plugin-config/auto-session")
-require("plugin-config/auto-pairs")
-require("plugin-config/neoscroll")
-
--- 语法补全
-require("plugin-config/lsp-cmp")
-require("plugin-config/lsp-config")
-require("plugin-config/lsp-color")
-require("plugin-config/lsp-signature")
-require("plugin-config/lua-snip")
-
--- null-ls
-require("plugin-config/null-ls")
+-- load plugins
+require("plugins")
+-- plugins setting
+require("plugins/bufferline")
+require("plugins/treesitter")
+require("plugins/gitsigns")
+require("plugins/lualine")
+require("plugins/which-key")
+require("plugins/telescope")
+require("plugins/trouble")
+require("plugins/hop")
+require("plugins/comment")
+require("plugins/nvim-tree")
+require("plugins/indent-blankline")
+require("plugins/symbols-outline")
+require("plugins/auto-session")
+require("plugins/auto-pairs")
+require("plugins/neoscroll")
+require("plugins/colorizer")
+-- lsp plugin setting
+require("plugins/lsp-cmp")
+require("plugins/lsp-config")
+require("plugins/lsp-color")
+require("plugins/lsp-signature")
+require("plugins/lua-snip")
+require("plugins/null-ls")
 
 -- LSP server
 require("lsp/go")
