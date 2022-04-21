@@ -222,6 +222,12 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/navigator.lua",
     url = "https://github.com/ray-x/navigator.lua"
   },
+  ["neoscroll.nvim"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0" },
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -287,6 +293,11 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["splitjoin.vim"] = {
+    loaded = true,
+    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/splitjoin.vim",
+    url = "https://github.com/AndrewRadev/splitjoin.vim"
+  },
   ["symbols-outline.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
@@ -348,12 +359,6 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-matchup",
     url = "https://github.com/andymass/vim-matchup"
   },
-  ["vim-smoothie"] = {
-    config = { "vim.gsmoothie_enabled = true" },
-    loaded = true,
-    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-smoothie",
-    url = "https://github.com/psliwka/vim-smoothie"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -371,22 +376,22 @@ time([[Defining packer_plugins]], false)
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
-time([[Config for impatient.nvim]], false)
 -- Config for: fidget.nvim
 time([[Config for fidget.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
 time([[Config for fidget.nvim]], false)
--- Config for: vim-smoothie
-time([[Config for vim-smoothie]], true)
-vim.gsmoothie_enabled = true
-time([[Config for vim-smoothie]], false)
 -- Config for: navigator.lua
 time([[Config for navigator.lua]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14navigator\frequire\0", "config", "navigator.lua")
 time([[Config for navigator.lua]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
+time([[Config for impatient.nvim]], false)
+-- Config for: neoscroll.nvim
+time([[Config for neoscroll.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0", "config", "neoscroll.nvim")
+time([[Config for neoscroll.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

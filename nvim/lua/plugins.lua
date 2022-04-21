@@ -6,11 +6,11 @@ return require("packer").startup(function()
     use("rebelot/kanagawa.nvim")
     use("folke/tokyonight.nvim")
     use("projekt0n/github-nvim-theme")
-    -- smooth
-    use({
-        "psliwka/vim-smoothie",
-        config = "vim.gsmoothie_enabled = true",
-    })
+    use { 'karb94/neoscroll.nvim',
+        config = function()
+            require('neoscroll').setup()
+        end
+    }
     -- 侧边栏文件管理
     use({
         "kyazdani42/nvim-tree.lua",
@@ -155,4 +155,10 @@ return require("packer").startup(function()
     use({ 'ray-x/navigator.lua', requires = { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }, config = function()
         require("navigator").setup()
     end })
+
+    use("AndrewRadev/splitjoin.vim")
+
+    -- Multiple cursors
+    -- https://github.com/mg979/vim-visual-multi
+    -- use { 'mg979/vim-visual-multi', as = 'multiple-cursors'}
 end)

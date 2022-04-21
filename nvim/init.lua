@@ -25,9 +25,9 @@ require("plugin-config/comment")
 require("plugin-config/nvim-tree")
 require("plugin-config/indent-blankline")
 require("plugin-config/symbols-outline")
-
 require("plugin-config/auto-session")
 require("plugin-config/auto-pairs")
+require("plugin-config/neoscroll")
 
 -- 语法补全
 require("plugin-config/lsp-cmp")

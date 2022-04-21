@@ -66,7 +66,6 @@ map("n", "sf", ":Telescope find_files hidden=true<CR>", opt)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opt)
-map("n", "<leader>fo", ":Telescope oldfiles<CR>", opt)
 map("n", "<leader>fi", ":Telescope lsp_implementations<CR>", opt)
 map("n", "<leader>ft", ":TodoTelescope<CR>", opt)
 map("n", "<leader>fd", ":Telescope diagnostics<CR>", opt)
@@ -111,7 +110,6 @@ map(
 map("n", "sn", ":HopLineStart<CR>", opt)
 map("n", "ff", ":HopChar1<CR>", opt)
 
--- 预览定义和实现等
 map("n", "<C-space>", "<Cmd>lua require('navigator.codeAction').code_action()<CR>", opt)
 map("i", "<C-space>", "<Cmd>lua require('navigator.codeAction').code_action()<CR>", opt)
 map("n", "R", "<CMD>lua require('navigator.rename').rename()<CR>", opt)

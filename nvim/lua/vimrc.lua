@@ -4,10 +4,10 @@ vim.o.fileencoding = "utf-8"
 -- jk移动时光标下上方保留行
 vim.o.scrolloff = 3
 vim.o.sidescrolloff = 3
--- 使用相对行号
---
+
 vim.wo.number = true
-vim.wo.relativenumber = false
+-- 使用相对行号
+vim.wo.relativenumber = true
 -- 高亮所在行
 -- vim.wo.cursorline = true
 -- 显示左侧图标指示列
@@ -48,7 +48,7 @@ vim.wo.wrap = false
 -- 行结尾可以跳到下一行
 -- vim.o.whichwrap = 'b,s,<,>,[,],h,l'
 -- 允许隐藏被修改过的buffer
-vim.o.hidden = true
+-- vim.o.hidden = true
 -- 鼠标支持
 vim.o.mouse = "a"
 -- 禁止创建备份文件
