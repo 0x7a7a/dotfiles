@@ -37,7 +37,6 @@ require("plugins/lsp-cmp")
 require("plugins/lsp-config")
 require("plugins/lsp-color")
 require("plugins/lsp-signature")
-require("plugins/lua-snip")
 require("plugins/null-ls")
 
 -- LSP server

@@ -137,6 +137,7 @@ end)
 require('neoscroll').setup()
 require('impatient')
 require('todo-comments').setup()
+require("luasnip.loaders.from_vscode").load()
 
 
 Keymap("n", "<leader>ps", ":PackerSync<CR>")
