@@ -1,3 +1,5 @@
+require("globals")
+
 -- base vim setting
 require("vimrc")
 
@@ -7,7 +9,8 @@ require("keymaps")
 -- colorscheme
 require("colors/tokyonight")
 require("colors/kanagawa")
-vim.cmd([[colorscheme kanagawa]])
+-- vim.cmd([[colorscheme kanagawa]])
+vim.cmd([[colorscheme tokyonight]])
 
 -- load plugins
 require("plugins")
@@ -28,6 +31,7 @@ require("plugins/auto-session")
 require("plugins/auto-pairs")
 require("plugins/neoscroll")
 require("plugins/colorizer")
+require("plugins/fidget")
 -- lsp plugin setting
 require("plugins/lsp-cmp")
 require("plugins/lsp-config")

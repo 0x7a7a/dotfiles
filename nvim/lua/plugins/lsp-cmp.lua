@@ -21,13 +21,13 @@ cmp.setup({
         end,
     },
     mapping = cmp.mapping.preset.insert({
-        ["<C-e>"] = cmp.mapping({
-            i = cmp.mapping.abort(),
-            c = cmp.mapping.close(),
-        }),
-        ["<CR>"] = cmp.mapping.confirm({
-            select = true,
-        }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<CR>"]  = cmp.mapping.confirm({ select = true, }),
+        ["<C-p>"] = cmp.mapping.select_prev_item(),
+        ["<C-n>"] = cmp.mapping.select_next_item(),
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-e>"] = cmp.mapping.close(),
+
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()

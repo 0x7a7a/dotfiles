@@ -1,3 +1,20 @@
+-- util function
+local executable = function(x)
+    return vim.fn.executable(x) == 1
+end
+
+local has = function(x)
+    return vim.fn.has(x) == 1
+end
+
+local is_wsl = (function()
+    local output = vim.fn.systemlist "uname -r"
+    return not not string.find(output[1] or "", "WSL")
+end)()
+
+local is_mac = has "maxunix"
+local is_linux = not is_wsl and not is_mac
+
 -- Automatically install packer
 local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
@@ -11,13 +28,16 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.api.nvim_command('packadd packer.nvim')
 end
 
-require("packer").startup(function()
+require("packer").startup(function(use)
     -- packer can manage itself
     use("wbthomason/packer.nvim")
 
     -- dependence
-    use("kyazdani42/nvim-web-devicons")
     use("nvim-lua/plenary.nvim")
+    use("kyazdani42/nvim-web-devicons")
+    if is_linux then
+        use "yamatsum/nvim-web-nonicons"
+    end
 
     -- colorscheme
     use("rebelot/kanagawa.nvim")
@@ -25,7 +45,6 @@ require("packer").startup(function()
     use("projekt0n/github-nvim-theme")
 
     -- base(usually need't add key map)
-    use("wellle/targets.vim")
     use("karb94/neoscroll.nvim")
     use("rmagatti/auto-session")
     use("akinsho/bufferline.nvim")
@@ -42,26 +61,28 @@ require("packer").startup(function()
     use("andymass/vim-matchup")
     use("romainl/vim-cool")
     use("lewis6991/impatient.nvim")
-    use("tpope/vim-repeat")
     use("github/copilot.vim")
     use({ 'lewis6991/gitsigns.nvim', tag = 'release' })
     use("norcalli/nvim-colorizer.lua")
     -- use("unblevable/quick-scope")
 
+    -- text maniuplation
+    use("tpope/vim-repeat")
+    use("tpope/vim-surround")
+    use("wellle/targets.vim")
+    use("junegunn/vim-easy-align")
+    use("AndrewRadev/splitjoin.vim")
 
     -- tools(need key map to call)
     use("kyazdani42/nvim-tree.lua")
-    use("tpope/vim-surround")
     use("vim-test/vim-test")
     use("iamcco/markdown-preview.nvim")
     use("folke/todo-comments.nvim")
-    use("AndrewRadev/splitjoin.vim")
     use("folke/trouble.nvim")
     use("phaazon/hop.nvim")
     use("simrat39/symbols-outline.nvim")
     use("numToStr/Comment.nvim")
     use("jose-elias-alvarez/null-ls.nvim")
-    use("junegunn/vim-easy-align")
     use { 'ray-x/navigator.lua', requires = { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' } }
     use("mileszs/ack.vim")
     --use("tpope/vim-dispatch")
@@ -106,13 +127,16 @@ require("packer").startup(function()
     -- floaterm
     use("voldikss/vim-floaterm")
 
+    -- ack.vim
+    if executable "ag" then
+        vim.g.ackprg = 'ag --vimgrep'
+    end
 end)
 
 -- one line setup
 require('neoscroll').setup()
 require('impatient')
 require('todo-comments').setup()
-require('fidget').setup()
 
 
 Keymap("n", "<leader>ps", ":PackerSync<CR>")
@@ -122,9 +146,4 @@ Keymap("n", "<leader>pc", ":PackerClean<CR>")
 
 -- vim-test
 vim.g["test#strategy"] = "make"
--- ack.vim
-if (vim.call('executable', 'ag'))
-then
-    vim.g.ackprg = 'ag --vimgrep'
-end
 Keymap("n", "<leader>a", ":Ack!<Space>")

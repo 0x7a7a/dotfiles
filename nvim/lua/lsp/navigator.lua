@@ -8,7 +8,7 @@ require('navigator').setup({
         diagnostic = {
             underline = true,
             virtual_text = false,
-            update_in_insert = false, -- update diagnostic message in insert mode
+            update_in_insert = false,
         },
     }
 })

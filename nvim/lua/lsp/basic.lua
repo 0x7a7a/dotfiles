@@ -3,10 +3,6 @@ local M = {}
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-local opts = {
-    noremap = true,
-    silent = true,
-}
 M.on_attach = function(client, bufnr)
     -- 高亮同名变量
     require("illuminate").on_attach(client)
@@ -16,9 +12,9 @@ M.on_attach = function(client, bufnr)
 
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-    vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+    local opts = { noremap = true, silent = true }
+    vim.api.nvim_buf_set_keymap(bufnr,"n", "gD", ":lua vim.lsp.buf.declaration()<CR>",opts)
+    vim.api.nvim_buf_set_keymap(bufnr,"n", "gd", ":lua vim.lsp.buf.definition()<CR>",opts)
 
     -- diagnostic float
     vim.api.nvim_create_autocmd("CursorHold", {

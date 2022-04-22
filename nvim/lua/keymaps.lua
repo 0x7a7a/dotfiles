@@ -1,9 +1,8 @@
-function Keymap(mode, key, cmd, opts)
+Keymap = function(mode, key, cmd, opts)
     opts = opts or { noremap = true, silent = true }
     vim.api.nvim_set_keymap(mode, key, cmd, opts)
 end
 
--- add blank line
 Keymap("n", "]<Space>", "o<Esc>k")
 Keymap("n", "[<Space>", "O<Esc>j")
 
