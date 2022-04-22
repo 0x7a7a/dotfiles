@@ -7,7 +7,7 @@ opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 opt.scrolloff = 5
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.cursorline = false
 opt.signcolumn = "yes"
 opt.wrap = false
@@ -28,6 +28,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.completeopt = "menu,menuone,noselect,noinsert"
 opt.pumheight = 10
+opt.formatoptions:remove('cro')
 -- colorschme
 opt.showmode = false
 opt.background = "dark"

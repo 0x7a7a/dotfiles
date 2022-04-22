@@ -24,7 +24,8 @@ require("packer").startup(function()
     use("folke/tokyonight.nvim")
     use("projekt0n/github-nvim-theme")
 
-    -- base(usually need't key map)
+    -- base(usually need't add key map)
+    use("wellle/targets.vim")
     use("karb94/neoscroll.nvim")
     use("rmagatti/auto-session")
     use("akinsho/bufferline.nvim")
@@ -62,13 +63,9 @@ require("packer").startup(function()
     use("jose-elias-alvarez/null-ls.nvim")
     use("junegunn/vim-easy-align")
     use { 'ray-x/navigator.lua', requires = { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' } }
-    -- use({
-    -- 	"danymat/neogen",
-    -- 	config = function()
-    -- 		require("neogen").setup()
-    -- 	end,
-    -- })
-    --
+    use("mileszs/ack.vim")
+    --use("tpope/vim-dispatch")
+
     -- git
     use("nvim-telescope/telescope.nvim")
     use("tpope/vim-fugitive")
@@ -123,4 +120,11 @@ Keymap("n", "<leader>pu", ":PackerUpdate<CR>")
 Keymap("n", "<leader>pi", ":PackerInstall<CR>")
 Keymap("n", "<leader>pc", ":PackerClean<CR>")
 
+-- vim-test
 vim.g["test#strategy"] = "make"
+-- ack.vim
+if (vim.call('executable', 'ag'))
+then
+    vim.g.ackprg = 'ag --vimgrep'
+end
+Keymap("n", "<leader>a", ":Ack!<Space>")
