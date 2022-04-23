@@ -1,19 +1,19 @@
 require("telescope").setup({
-    defaults = {
-        file_ignore_patterns = {
-            "node_modules",
-            "vendor",
-            "dist",
-            ".git",
-            ".idea",
-            ".DS_Store",
-        },
-    },
-    pickers = {
-        find_files = {
-            hidden = true,
-        }
-    },
+	defaults = {
+		file_ignore_patterns = {
+			"node_modules",
+			"vendor",
+			"dist",
+			".git",
+			".idea",
+			".DS_Store",
+		},
+	},
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
+	},
 })
 
 Keymap("n", "sf", ":Telescope find_files hidden=true<CR>")
