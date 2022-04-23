@@ -1,16 +1,16 @@
-require('navigator').setup({
-    default_mapping = false,
-    keymaps = {},
-    lsp_installer = false,
-    lsp = {
-        format_on_save = false,
-        disable_lsp = 'all',
-        diagnostic = {
-            underline = true,
-            virtual_text = false,
-            update_in_insert = false,
-        },
-    }
+require("navigator").setup({
+  default_mapping = false,
+  keymaps = {},
+  lsp_installer = false,
+  lsp = {
+    format_on_save = false,
+    disable_lsp = "all",
+    diagnostic = {
+      underline = true,
+      virtual_text = false,
+      update_in_insert = false,
+    },
+  },
 })
 
 Keymap("n", "<C-space>", ":lua require('navigator.codeAction').code_action()<CR>")

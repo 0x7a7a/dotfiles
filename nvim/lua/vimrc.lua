@@ -5,7 +5,7 @@ vim.g.maplocalleader = ","
 
 -- command menu
 opt.pumblend = 17
-opt.wildmode = "longest:full"
+opt.wildmode = "longest:full,full"
 opt.wildoptions = "pum"
 
 -- long line wrap
@@ -38,14 +38,14 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.completeopt = "menu,menuone,noselect,noinsert"
 opt.formatoptions = opt.formatoptions
-	- "a" -- Auto formatting is BAD.
-	- "t" -- Don't auto format my code. I got linters for that.
-	+ "c" -- In general, I like it when comments respect textwidth
-	+ "q" -- Allow formatting comments w/ gq
-	- "o" -- O and o, don't continue comments
-	+ "r" -- But do continue when pressing enter.
-	+ "n" -- Indent past the formatlistpat, not underneath it.
-	+ "j" -- Auto-remove comments if possible.
+  - "a" -- Auto formatting is BAD.
+  - "t" -- Don't auto format my code. I got linters for that.
+  + "c" -- In general, I like it when comments respect textwidth
+  + "q" -- Allow formatting comments w/ gq
+  - "o" -- O and o, don't continue comments
+  + "r" -- But do continue when pressing enter.
+  + "n" -- Indent past the formatlistpat, not underneath it.
+  + "j" -- Auto-remove comments if possible.
 
 -- system clipboard
 -- opt.clipboard = "unnamedplus"

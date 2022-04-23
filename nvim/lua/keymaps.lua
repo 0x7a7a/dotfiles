@@ -1,6 +1,6 @@
 Keymap = function(mode, key, cmd, opts)
-    opts = opts or { noremap = true, silent = true }
-    vim.api.nvim_set_keymap(mode, key, cmd, opts)
+  opts = opts or { noremap = true, silent = true }
+  vim.api.nvim_set_keymap(mode, key, cmd, opts)
 end
 
 Keymap("n", "]<Space>", "o<Esc>k")

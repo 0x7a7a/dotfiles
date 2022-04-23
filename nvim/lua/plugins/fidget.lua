@@ -1,8 +1,8 @@
-require('fidget').setup({
-    text = {
-        spinner = "moon",
-    },
-    window = {
-        relative = "editor",
-    },
+require("fidget").setup({
+  text = {
+    spinner = "moon",
+  },
+  window = {
+    relative = "editor",
+  },
 })

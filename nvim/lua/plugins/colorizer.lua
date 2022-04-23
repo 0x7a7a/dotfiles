@@ -1,4 +1,4 @@
-require 'colorizer'.setup({
-    'css';
-    'javascript';
+require("colorizer").setup({
+  "css",
+  "javascript",
 })
