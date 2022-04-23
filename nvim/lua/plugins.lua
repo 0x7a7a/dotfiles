@@ -1,19 +1,6 @@
--- util function
 local executable = function(x)
     return vim.fn.executable(x) == 1
 end
-
-local has = function(x)
-    return vim.fn.has(x) == 1
-end
-
-local is_wsl = (function()
-    local output = vim.fn.systemlist "uname -r"
-    return not not string.find(output[1] or "", "WSL")
-end)()
-
-local is_mac = has "maxunix"
-local is_linux = not is_wsl and not is_mac
 
 -- Automatically install packer
 local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -35,9 +22,6 @@ require("packer").startup(function(use)
     -- dependence
     use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
-    if is_linux then
-        use "yamatsum/nvim-web-nonicons"
-    end
 
     -- colorscheme
     use("rebelot/kanagawa.nvim")

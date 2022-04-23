@@ -294,11 +294,6 @@ _G.packer_plugins = {
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["nvim-web-nonicons"] = {
-    loaded = true,
-    path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/nvim-web-nonicons",
-    url = "https://github.com/yamatsum/nvim-web-nonicons"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/lucky/.local/share/nvim/site/pack/packer/start/packer.nvim",

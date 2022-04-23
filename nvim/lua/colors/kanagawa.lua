@@ -6,7 +6,7 @@ require("kanagawa").setup({
     keywordStyle = "italic",
     statementStyle = "bold",
     typeStyle = "italic",
-    variablebuiltinStyle = "italic",
+    variablebuiltinStyle = "bold",
     specialReturn = true, -- special highlight for the return keyword
     specialException = true, -- special highlight for exception handling keywords
     transparent = false, -- do not set background color
