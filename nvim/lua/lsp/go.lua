@@ -1,4 +1,5 @@
 local basic = require("lsp/basic")
+local util = require "lspconfig/util"
 
 require("lspconfig").gopls.setup({
     capabilities = basic.capabilities,
@@ -9,21 +10,17 @@ require("lspconfig").gopls.setup({
     filetypes = { 'go', 'gomod', 'gohtmltmpl', 'gotexttmpl' },
     message_level = vim.lsp.protocol.MessageType.Error,
     cmd = {
-        'gopls', -- share the gopls instance if there is one already
-        -- '-remote=auto', --[[ debug options ]] --
-        -- "-logfile=auto",
-        -- "-debug=:0",
-        -- '-remote.debug=:0',
-        -- "-rpc.trace",
+        'gopls',
+        -- 'server',
     },
-
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
     flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
     settings = {
         gopls = {
             analyses = { unusedparams = true, unreachable = false },
             codelenses = {
-                generate = true, -- show the `go generate` lens.
-                gc_details = true, --  // Show a code lens toggling the display of gc's choices.
+                generate = true,
+                gc_details = true,
                 test = true,
                 tidy = true,
             },
@@ -40,3 +37,5 @@ require("lspconfig").gopls.setup({
         }
     }
 })
+
+require('lspconfig').golangci_lint_ls.setup {}

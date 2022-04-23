@@ -115,7 +115,7 @@ require("packer").startup(function(use)
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
     use("rafamadriz/friendly-snippets")
-    -- golang
+    -- go
     use("fatih/vim-go")
     use("buoto/gotests-vim")
     -- typescript

@@ -9,8 +9,8 @@ require("keymaps")
 -- colorscheme
 require("colors/tokyonight")
 require("colors/kanagawa")
--- vim.cmd([[colorscheme kanagawa]])
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme kanagawa]])
+-- vim.cmd([[colorscheme tokyonight]])
 
 -- load plugins
 require("plugins")
@@ -18,7 +18,6 @@ require("plugins")
 require("plugins/bufferline")
 require("plugins/treesitter")
 require("plugins/gitsigns")
-require("plugins/lualine")
 require("plugins/which-key")
 require("plugins/telescope")
 require("plugins/trouble")
@@ -32,12 +31,13 @@ require("plugins/auto-pairs")
 require("plugins/neoscroll")
 require("plugins/colorizer")
 require("plugins/fidget")
+require("plugins/null-ls")
+require("plugins/lualine")
 -- lsp plugin setting
 require("plugins/lsp-cmp")
 require("plugins/lsp-config")
 require("plugins/lsp-color")
 require("plugins/lsp-signature")
-require("plugins/null-ls")
 
 -- LSP server
 require("lsp/go")
