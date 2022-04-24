@@ -1,9 +1,14 @@
+local builtins = require('null-ls').builtins
 local utils = require('null-ls.utils').make_conditional_utils()
 
 require('null-ls').setup({
   debug = false,
   sources = {
-    require('null-ls').builtins.formatting.stylua.with({
+    -- lua
+    builtins.formatting.stylua.with({
+      condition = function()
+        return vim.fn.executable('stylua')
+      end,
       extra_args = function()
         if not utils.root_has_file({ 'stylua.toml', '.stylua.toml' }) then
           return {
@@ -13,14 +18,24 @@ require('null-ls').setup({
         end
       end,
     }),
-    require('null-ls').builtins.formatting.prettier.with({
-      prefer_local = 'node_modules/.bin',
+    builtins.diagnostics.luacheck.with({
+      condition = function()
+        return vim.fn.executable('luacheck') and utils.root_has_file({ '.luacheckrc' })
+      end,
     }),
 
-    require('null-ls').builtins.diagnostics.eslint.with({
+    -- javascript
+    builtins.formatting.prettier.with({
       prefer_local = 'node_modules/.bin',
     }),
+    builtins.diagnostics.eslint.with({
+      prefer_local = 'node_modules/.bin',
+      condition = function()
+        return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json', '.eslintrc.yaml' })
+      end,
+    }),
   },
+  --
   -- format files on save
   on_attach = function(client)
     if client.resolved_capabilities.document_formatting then

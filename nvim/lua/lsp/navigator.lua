@@ -5,6 +5,14 @@ require('navigator').setup({
   lsp = {
     format_on_save = false,
     disable_lsp = 'all',
+    code_lens = true,
+    code_lens_action = {
+      enable = true,
+      sign = true,
+      sign_priority = 40,
+      virtual_text = true,
+      virtual_text_icon = true,
+    },
     diagnostic = {
       underline = true,
       virtual_text = false,
