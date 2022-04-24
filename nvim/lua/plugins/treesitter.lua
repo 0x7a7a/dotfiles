@@ -1,7 +1,7 @@
-vim.api.nvim_command("set foldmethod=expr")
-vim.api.nvim_command("set foldexpr=nvim_treesitter#foldexpr()")
-require("nvim-treesitter.configs").setup({
-  ensure_installed = { "html", "css", "javascript", "typescript", "tsx", "go", "vue" },
+vim.api.nvim_command('set foldmethod=expr')
+vim.api.nvim_command('set foldexpr=nvim_treesitter#foldexpr()')
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'html', 'css', 'javascript', 'typescript', 'tsx', 'go', 'vue' },
   highlight = {
     enable = true,
     disable = {},
@@ -17,11 +17,11 @@ require("nvim-treesitter.configs").setup({
       enable = true,
       config = {
         javascript = {
-          __default = "// %s",
-          jsx_element = "{/* %s */}",
-          jsx_fragment = "{/* %s */}",
-          jsx_attribute = "// %s",
-          comment = "// %s",
+          __default = '// %s',
+          jsx_element = '{/* %s */}',
+          jsx_fragment = '{/* %s */}',
+          jsx_attribute = '// %s',
+          comment = '// %s',
         },
       },
     },
@@ -41,9 +41,9 @@ require("nvim-treesitter.configs").setup({
   },
   textsubjects = {
     enable = true,
-    prev_selection = ";", -- (Optional) keymap to select the previous selection
+    prev_selection = ';', -- (Optional) keymap to select the previous selection
     keymaps = {
-      ["."] = "textsubjects-smart",
+      ['.'] = 'textsubjects-smart',
       -- [";"] = "textsubjects-container-outer",
       -- ["i;"] = "textsubjects-container-inner",
     },

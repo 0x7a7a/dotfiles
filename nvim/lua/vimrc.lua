@@ -1,27 +1,27 @@
 local opt = vim.opt
 
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 -- command menu
 opt.pumblend = 17
-opt.wildmode = "longest:full,full"
-opt.wildoptions = "pum"
+opt.wildmode = 'longest:full,full'
+opt.wildoptions = 'pum'
 
 -- long line wrap
 opt.wrap = true
 opt.breakindent = true
-opt.showbreak = string.rep(" ", 3) -- Make it so that long lines wrap smartly
+opt.showbreak = string.rep(' ', 3) -- Make it so that long lines wrap smartly
 opt.linebreak = true
 
-opt.encoding = "utf-8"
-opt.fileencoding = "utf-8"
+opt.encoding = 'utf-8'
+opt.fileencoding = 'utf-8'
 opt.scrolloff = 5
 opt.number = true
 opt.relativenumber = false
 opt.cursorline = false
-opt.signcolumn = "yes"
-opt.mouse = "a"
+opt.signcolumn = 'yes'
+opt.mouse = 'a'
 opt.writebackup = false
 opt.swapfile = false
 opt.updatetime = 500
@@ -36,23 +36,23 @@ opt.autoindent = true
 opt.smartindent = true
 opt.ignorecase = true
 opt.smartcase = true
-opt.completeopt = "menu,menuone,noselect,noinsert"
+opt.completeopt = 'menu,menuone,noselect,noinsert'
 opt.formatoptions = opt.formatoptions
-  - "a" -- Auto formatting is BAD.
-  - "t" -- Don't auto format my code. I got linters for that.
-  + "c" -- In general, I like it when comments respect textwidth
-  + "q" -- Allow formatting comments w/ gq
-  - "o" -- O and o, don't continue comments
-  + "r" -- But do continue when pressing enter.
-  + "n" -- Indent past the formatlistpat, not underneath it.
-  + "j" -- Auto-remove comments if possible.
+  - 'a' -- Auto formatting is BAD.
+  - 't' -- Don't auto format my code. I got linters for that.
+  + 'c' -- In general, I like it when comments respect textwidth
+  + 'q' -- Allow formatting comments w/ gq
+  - 'o' -- O and o, don't continue comments
+  + 'r' -- But do continue when pressing enter.
+  + 'n' -- Indent past the formatlistpat, not underneath it.
+  + 'j' -- Auto-remove comments if possible.
 
 -- system clipboard
 -- opt.clipboard = "unnamedplus"
 
 -- colorschme
 opt.showmode = false
-opt.background = "dark"
+opt.background = 'dark'
 opt.termguicolors = true
 
 -- fold
@@ -64,7 +64,7 @@ vim.g.loaded_matchit = true
 -- coplilot
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
-vim.g.copilot_tab_fallback = ""
+vim.g.copilot_tab_fallback = ''
 -- javascript
 vim.g.javascript_plugin_flow = 1
 -- floaterm
@@ -72,4 +72,4 @@ vim.g.floaterm_height = 0.8
 vim.g.floaterm_width = 0.7
 -- asynctask
 vim.g.asyncrun_open = 6
-vim.g.asynctasks_term_pos = "floaterm"
+vim.g.asynctasks_term_pos = 'floaterm'

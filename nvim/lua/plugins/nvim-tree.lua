@@ -1,4 +1,4 @@
-require("nvim-tree").setup({
+require('nvim-tree').setup({
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
@@ -14,10 +14,10 @@ require("nvim-tree").setup({
   diagnostics = {
     enable = false,
     icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
+      hint = '',
+      info = '',
+      warning = '',
+      error = '',
     },
   },
   update_focused_file = {
@@ -42,19 +42,19 @@ require("nvim-tree").setup({
     width = 30,
     height = 30,
     hide_root_folder = false,
-    side = "left",
+    side = 'left',
     auto_resize = false,
     mappings = {
       custom_only = false,
       -- 关闭自定义的system_open
-      list = { { key = "s" } },
+      list = { { key = 's' } },
     },
     number = false,
     relativenumber = false,
-    signcolumn = "yes",
+    signcolumn = 'yes',
   },
   trash = {
-    cmd = "trash",
+    cmd = 'trash',
     require_confirm = true,
   },
   actions = {
@@ -69,14 +69,14 @@ require("nvim-tree").setup({
       resize_window = false,
       window_picker = {
         enable = true,
-        chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+        chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
         exclude = {
-          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
-          buftype = { "nofile", "terminal", "help" },
+          filetype = { 'notify', 'packer', 'qf', 'diff', 'fugitive', 'fugitiveblame' },
+          buftype = { 'nofile', 'terminal', 'help' },
         },
       },
     },
   },
 })
 
-Keymap("n", "<C-n>", ":NvimTreeFindFileToggle<CR>")
+Keymap('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')

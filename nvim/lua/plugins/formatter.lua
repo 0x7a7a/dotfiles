@@ -1,12 +1,12 @@
-require("formatter").setup({
+require('formatter').setup({
   filetype = {
     lua = {
       function()
         return {
-          exe = "stylua",
+          exe = 'stylua',
           args = {
-            "--config-path " .. os.getenv("PWD") .. "/lua/formatter/lua.toml",
-            "-",
+            '--config-path ' .. os.getenv('PWD') .. '/lua/formatter/lua.toml',
+            '-',
           },
           stdin = true,
         }

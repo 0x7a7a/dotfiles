@@ -1,6 +1,6 @@
-local basic = require("lsp/basic")
+local basic = require('lsp/basic')
 
-require("lspconfig").tsserver.setup({
+require('lspconfig').tsserver.setup({
   capabilities = basic.capabilities,
 
   on_attach = function(client, bufnr)
@@ -9,7 +9,7 @@ require("lspconfig").tsserver.setup({
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
 
-    local ts_utils = require("nvim-lsp-ts-utils")
+    local ts_utils = require('nvim-lsp-ts-utils')
 
     -- defaults
     ts_utils.setup({
@@ -37,7 +37,7 @@ require("lspconfig").tsserver.setup({
 
       -- inlay hints
       auto_inlay_hints = true,
-      inlay_hints_highlight = "Comment",
+      inlay_hints_highlight = 'Comment',
       inlay_hints_priority = 200, -- priority of the hint extmarks
       inlay_hints_throttle = 150, -- throttle the inlay hint request
       inlay_hints_format = { -- format options for individual hint kind
@@ -70,11 +70,11 @@ require("lspconfig").tsserver.setup({
   end,
 
   filetypes = {
-    "javascript",
-    "javascriptreact",
-    "javascript.jsx",
-    "typescript",
-    "typescriptreact",
-    "typescript.tsx",
+    'javascript',
+    'javascriptreact',
+    'javascript.jsx',
+    'typescript',
+    'typescriptreact',
+    'typescript.tsx',
   },
 })
