@@ -31,6 +31,12 @@ require('null-ls').setup({
     builtins.diagnostics.eslint.with({
       prefer_local = 'node_modules/.bin',
       condition = function()
+        local has_eslintd = vim.fn.executable('eslint_d')
+        return not has_eslintd and utils.root_has_file({ '.eslintrc.js', '.eslintrc.json', '.eslintrc.yaml' })
+      end,
+    }),
+    builtins.diagnostics.eslint_d.with({
+      condition = function()
         return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json', '.eslintrc.yaml' })
       end,
     }),
