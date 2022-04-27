@@ -1,18 +1,42 @@
 require('nvim-tree').setup({
-  disable_netrw = true,
-  hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = {},
   auto_reload_on_write = true,
-  open_on_tab = false,
+  disable_netrw = false,
   hijack_cursor = false,
-  update_cwd = true,
+  hijack_netrw = true,
+  hijack_unnamed_buffer_when_opening = false,
+  ignore_buffer_on_setup = false,
+  open_on_setup = false,
+  open_on_setup_file = false,
+  open_on_tab = false,
+  sort_by = 'name',
+  update_cwd = false,
+  view = {
+    width = 30,
+    height = 30,
+    hide_root_folder = false,
+    side = 'left',
+    preserve_window_proportions = true,
+    number = false,
+    relativenumber = false,
+    signcolumn = 'yes',
+    mappings = {
+      custom_only = false,
+      -- disable custom system open
+      list = { { key = 's' } },
+    },
+  },
   hijack_directories = {
     enable = true,
     auto_open = true,
   },
+  update_focused_file = {
+    enable = false,
+    update_cwd = false,
+    ignore_list = {},
+  },
   diagnostics = {
     enable = false,
+    show_on_dirs = false,
     icons = {
       hint = '',
       info = '',
@@ -20,11 +44,7 @@ require('nvim-tree').setup({
       error = '',
     },
   },
-  update_focused_file = {
-    enable = false,
-    update_cwd = false,
-    ignore_list = {},
-  },
+  ignore_ft_on_setup = {},
   system_open = {
     cmd = nil,
     args = {},
@@ -32,30 +52,12 @@ require('nvim-tree').setup({
   filters = {
     dotfiles = false,
     custom = {},
+    exclude = {},
   },
   git = {
     enable = true,
     ignore = false,
     timeout = 500,
-  },
-  view = {
-    width = 30,
-    height = 30,
-    hide_root_folder = false,
-    side = 'left',
-    auto_resize = false,
-    mappings = {
-      custom_only = false,
-      -- 关闭自定义的system_open
-      list = { { key = 's' } },
-    },
-    number = false,
-    relativenumber = false,
-    signcolumn = 'yes',
-  },
-  trash = {
-    cmd = 'trash',
-    require_confirm = true,
   },
   actions = {
     use_system_clipboard = true,
@@ -75,6 +77,22 @@ require('nvim-tree').setup({
           buftype = { 'nofile', 'terminal', 'help' },
         },
       },
+    },
+  },
+  trash = {
+    cmd = 'trash',
+    require_confirm = true,
+  },
+  log = {
+    enable = false,
+    truncate = false,
+    types = {
+      all = false,
+      config = false,
+      copy_paste = false,
+      diagnostics = false,
+      git = false,
+      profile = false,
     },
   },
 })
