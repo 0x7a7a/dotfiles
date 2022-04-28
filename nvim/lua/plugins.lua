@@ -48,7 +48,6 @@ require('packer').startup(function(use)
   use('romainl/vim-cool')
   use('lewis6991/impatient.nvim')
   use('github/copilot.vim')
-  use({ 'lewis6991/gitsigns.nvim', tag = 'release' })
   use('norcalli/nvim-colorizer.lua')
   -- use("unblevable/quick-scope")
 
@@ -60,6 +59,8 @@ require('packer').startup(function(use)
   use('AndrewRadev/splitjoin.vim')
 
   -- tools(need key map to call)
+  use('nvim-telescope/telescope.nvim')
+  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
   use('kyazdani42/nvim-tree.lua')
   use('vim-test/vim-test')
   use('iamcco/markdown-preview.nvim')
@@ -74,7 +75,7 @@ require('packer').startup(function(use)
   --use("tpope/vim-dispatch")
 
   -- git
-  use('nvim-telescope/telescope.nvim')
+  use({ 'lewis6991/gitsigns.nvim', tag = 'release' })
   use('tpope/vim-fugitive')
   -- syntax
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })

@@ -36,5 +36,5 @@ Keymap(
   ":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
   {}
 )
-Keymap('n', 'sn', ':HopLineStart<CR>')
+Keymap('n', 'fl', ':HopLineStart<CR>')
 Keymap('n', 'ff', ':HopChar1<CR>')

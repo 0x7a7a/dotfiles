@@ -81,3 +81,4 @@ Keymap('n', '<leader>tv', ':TestVisit<CR>')
 
 -- dev
 Keymap('n', '<leader>R', ":lua R('navigator')<CR>")
+Keymap('n', '<leader>L', ':luafile %<CR>')
