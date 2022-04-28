@@ -38,6 +38,7 @@ require('plugins/lsp-cmp')
 require('plugins/lsp-config')
 require('plugins/lsp-color')
 require('plugins/lsp-signature')
+require('plugins/navigator')
 
 -- LSP server
 require('lsp/go')
@@ -45,5 +46,4 @@ require('lsp/typescript')
 require('lsp/eslint')
 require('lsp/lua')
 require('lsp/cssls')
-require('lsp/navigator')
 require('lsp/tailwindcss')
