@@ -27,6 +27,12 @@ M.on_attach = function(client, bufnr)
         source = 'always',
         prefix = ' ',
         scope = 'cursor',
+        format = function(diagnostic)
+          if diagnostic.severity == vim.diagnostic.severity.ERROR and diagnostic.source == 'eslint' then
+            return string.format('%s (%s)', diagnostic.message, diagnostic.code)
+          end
+          return diagnostic.message
+        end,
       }
       vim.diagnostic.open_float(nil, _opts)
     end,

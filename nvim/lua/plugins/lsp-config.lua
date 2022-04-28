@@ -26,6 +26,8 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
+-- it may be override by other plugins
+-- ex: Navigator
 vim.diagnostic.config({
   virtual_text = false,
   signs = true,

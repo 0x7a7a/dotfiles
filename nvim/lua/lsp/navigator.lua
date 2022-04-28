@@ -1,4 +1,5 @@
 require('navigator').setup({
+  debug = true,
   default_mapping = false,
   keymaps = {},
   lsp_installer = false,
@@ -17,6 +18,7 @@ require('navigator').setup({
       virtual_text = false,
       update_in_insert = false,
     },
+    diagnostic_scrollbar_sign = false,
   },
 })
 

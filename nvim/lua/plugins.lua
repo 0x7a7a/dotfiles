@@ -120,7 +120,6 @@ require('packer').startup(function(use)
 end)
 
 -- one line setup
-require('neoscroll').setup()
 require('impatient')
 require('todo-comments').setup()
 require('luasnip.loaders.from_vscode').load()
@@ -130,6 +129,6 @@ Keymap('n', '<leader>pu', ':PackerUpdate<CR>')
 Keymap('n', '<leader>pi', ':PackerInstall<CR>')
 Keymap('n', '<leader>pc', ':PackerClean<CR>')
 
--- vim-test
+-- ack
 vim.g['test#strategy'] = 'make'
 Keymap('n', '<leader>a', ':Ack!<Space>')

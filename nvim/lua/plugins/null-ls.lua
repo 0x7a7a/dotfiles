@@ -32,8 +32,10 @@ require('null-ls').setup({
     formatter.prettier.with({
       prefer_local = 'node_modules/.bin',
     }),
+
     -- use lsp eslint instead null-ls eslint
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
+
     -- linter.eslint_d.with({
     --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
     --   condition = function()

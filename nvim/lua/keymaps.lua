@@ -1,5 +1,8 @@
 Keymap = function(mode, key, cmd, opts)
-  opts = opts or { noremap = true, silent = true }
+  opts = opts or {
+    noremap = true,
+    silent = true,
+  }
   vim.api.nvim_set_keymap(mode, key, cmd, opts)
 end
 
@@ -75,3 +78,6 @@ Keymap('n', '<leader>tf', ':TestFile<CR>')
 Keymap('n', '<leader>ts', ':TestSuite<CR>')
 Keymap('n', '<leader>tl', ':TestLast<CR>')
 Keymap('n', '<leader>tv', ':TestVisit<CR>')
+
+-- dev
+Keymap('n', '<leader>R', ":lua R('navigator')<CR>")
