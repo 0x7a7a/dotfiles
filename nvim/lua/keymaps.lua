@@ -30,8 +30,6 @@ Keymap('n', '<A-left>', ':vertical resize-5<CR>')
 Keymap('n', '<A-up>', ':resize+5<CR>')
 Keymap('n', '<A-down>', ':resize-5<CR>')
 
-Keymap('n', '<F2>', ':lua vim.diagnostic.goto_next()<CR>')
-
 -- git
 Keymap('n', '<leader>gd', ':Gvdiffsplit<CR>')
 Keymap('n', '<leader>gb', ':Git blame<CR>')

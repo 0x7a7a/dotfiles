@@ -13,15 +13,18 @@ M.on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  local opts = { noremap = true, silent = true }
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', ':lua vim.lsp.buf.declaration()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'R', ':lua vim.lsp.buf.rename()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-Space>', ':lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'i', '<C-Space>', ':lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gk', ':lua vim.lsp.buf.hover()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', ':Telescope lsp_references<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', ':Telescope lsp_implementations<CR>', opts)
+  local set_buf_keymap = function(mode, lhs, rhs)
+    vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, { noremap = true, silent = true })
+  end
+  set_buf_keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
+  set_buf_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
+  set_buf_keymap('n', 'R', ':lua vim.lsp.buf.rename()<CR>')
+  set_buf_keymap('n', '<C-Space>', ':lua vim.lsp.buf.code_action()<CR>')
+  set_buf_keymap('i', '<C-Space>', ':lua vim.lsp.buf.code_action()<CR>')
+  set_buf_keymap('n', 'gk', ':lua vim.lsp.buf.hover()<CR>')
+  set_buf_keymap('n', 'gr', ':Telescope lsp_references<CR>')
+  set_buf_keymap('n', '[d', ':lua vim.lsp.diagnostic.goto_prev()<CR>')
+  set_buf_keymap('n', ']d', ':lua vim.lsp.diagnostic.goto_next()<CR>')
   -- TODO
   -- vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gp', ':preview', opts)
 

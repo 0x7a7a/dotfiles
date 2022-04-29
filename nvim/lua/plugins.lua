@@ -28,7 +28,6 @@ require('packer').startup(function(use)
   -- colorscheme
   use('rebelot/kanagawa.nvim')
   use('folke/tokyonight.nvim')
-  use('projekt0n/github-nvim-theme')
 
   -- base(usually need't add key map)
   use('psliwka/vim-smoothie')
@@ -105,8 +104,6 @@ require('packer').startup(function(use)
   -- typescript
   use('leafgarland/typescript-vim')
   use('jose-elias-alvarez/nvim-lsp-ts-utils')
-  --javascript
-  use('pangloss/vim-javascript')
 
   -- floaterm
   use('voldikss/vim-floaterm')

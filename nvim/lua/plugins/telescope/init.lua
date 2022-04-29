@@ -10,7 +10,7 @@ local previewer_maker = function(filepath, bufnr, opts)
     if not stat then
       return
     end
-    if stat.size > 100000 then
+    if stat.size > 500000 then
       return
     else
       previewers.buffer_previewer_maker(filepath, bufnr, opts)
@@ -26,7 +26,6 @@ require('telescope').setup({
     mappings = {
       i = {
         ['<esc>'] = actions.close,
-        ['<C-e>'] = actions.close,
 
         ['<C-k>'] = actions.cycle_history_next,
         ['<C-j>'] = actions.cycle_history_prev,
@@ -34,8 +33,8 @@ require('telescope').setup({
         ['<C-u>'] = actions.results_scrolling_up,
       },
       n = {
-        ['<C-e>'] = actions.results_scrolling_down,
-        ['<C-y>'] = actions.results_scrolling_up,
+        ['<C-d>'] = actions.results_scrolling_down,
+        ['<C-u>'] = actions.results_scrolling_up,
       },
     },
     file_ignore_patterns = {
