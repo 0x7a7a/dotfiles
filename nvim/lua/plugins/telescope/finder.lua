@@ -16,7 +16,7 @@ finders.fd_in_nvim = function()
     prompt = ' ',
     results_height = 15,
     previewer = false,
-    prompt_prefix = 'Nvim>',
+    prompt_prefix = 'Nvim> ',
     cwd = vim.fn.stdpath('config'),
   }))
 

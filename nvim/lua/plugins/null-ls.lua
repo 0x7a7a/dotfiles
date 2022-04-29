@@ -22,11 +22,11 @@ require('null-ls').setup({
         end
       end,
     }),
-    -- linter.luacheck.with({
-    --   condition = function()
-    --     return vim.fn.executable('luacheck') and utils.root_has_file({ '.luacheckrc' })
-    --   end,
-    -- }),
+    linter.luacheck.with({
+      condition = function()
+        return vim.fn.executable('luacheck') and utils.root_has_file({ '.luacheckrc' })
+      end,
+    }),
 
     -- javascript
     formatter.prettier.with({
