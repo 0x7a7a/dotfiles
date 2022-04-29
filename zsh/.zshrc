@@ -78,17 +78,18 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  screen
-  git
-  extract
-  z
-  docker
-  kubectl
-  minikube
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  zsh-completions
-  zsh-vi-mode
+    fzf-tab
+    screen
+    git
+    extract
+    z
+    docker
+    kubectl
+    minikube
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-completions
+    zsh-vi-mode
 )
 
 # 需要定义在source命令之前,否则会和fzf按键冲突
@@ -154,7 +155,8 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias vim='nvim'
+alias nv='nvim'
+alias lg='lazygit'
 
 # 解析剪切板中的pb
 function pb () {
@@ -163,7 +165,7 @@ function pb () {
 
 # 格式化剪切板中的json数据,可能会有精度丢失
 function pj() {
-  pbpaste | jq .
+  pbpaste | jless
 }
 
 # kill进程
