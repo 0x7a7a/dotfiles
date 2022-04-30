@@ -1,189 +1,96 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/lucky/.oh-my-zsh"
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="agnoster"
-ZSH_THEME=powerlevel10k/powerlevel10k
+### End of Zinit's installer chunk
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-HIST_STAMPS="yyyy-mm-dd"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    fzf-tab
-    screen
-    git
-    extract
-    z
-    docker
-    kubectl
-    minikube
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    zsh-completions
-    zsh-vi-mode
-)
-
-# 需要定义在source命令之前,否则会和fzf按键冲突
+# must be loaded before the fzf plugin
+# https://github.com/jeffreytse/zsh-vi-mode/issues/24
 ZVM_INIT_MODE=sourcing
 
-source $ZSH/oh-my-zsh.sh
+### ohmyzsh plugin
+zinit snippet OMZL::git.zsh
+zinit snippet OMZL::history.zsh
 
-# User configuration
+zinit wait lucid for \
+    OMZP::git \
+    OMZP::extract \
 
-# export MANPATH="/usr/local/man:$MANPATH"
+### comletion
+zinit ice lucid waite=1 as"completion"
+zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+### theme
+zinit ice depth 1; zinit light romkatv/powerlevel10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+### tool plugin
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zdharma-continuum/fast-syntax-highlighting \
+ blockf \
+    zsh-users/zsh-completions \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+zinit light jeffreytse/zsh-vi-mode
+zinit wait lucid for \
+    skywind3000/z.lua \
+    Aloxaf/fzf-tab
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+zinit wait lucid from"gh-r" as"null" for \
+    sbin"**/lsd" Peltoche/lsd \
+    sbin"*/rg"   BurntSushi/ripgrep \
+    sbin"**/fd"  @sharkdp/fd \
+    sbin"**/bat" @sharkdp/bat \
+    sbin"fzf"    junegunn/fzf
+     # sbin"bin/exa -> exa"  ogham/exa
 
-# 启用 Go Modules 功能
-#export GO111MODULE=auto
-# 配置 GOPROXY 环境变量
-#export GOPROXY=https://goproxy.io
-export GOROOT=/usr/local/go
-export GOPATH=~/dev/gopath:~/dev/mygo
-# nginx
-export NGINXPATH=/usr/local/opt/openresty/nginx/sbin
+zinit ice mv"*.zsh -> _fzf" as"completion"
+zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/completion.zsh'
+zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh'
+
+# fnm
+# zinit ice from'gh-r' sbin'fnm' nocompile \
+#     atclone"./fnm env --use-on-cd > fnmenv.zsh;./fnm completions --shell zsh > $FPATH/_fnm.zsh" \
+#     atpull"%atclone" \
+#     multisrc"*.zsh"
+# zinit light Schniz/fnm
+zinit ice wait lucid from'gh-r' sbin'fnm' nocompile \
+    atclone"./fnm env --use-on-cd > fnmenv.zsh" \
+    atpull"%atclone" \
+    src"fnmenv.zsh"
+zinit light Schniz/fnm
+
 # pyenv
-PATH=$PATH:$GOROOT/bin:~/dev/gopath/bin:~/dev/mygo/bin:/usr/local/sbin:$NGINXPATH:/usr/local/opt/mysql-client/bin
-eval "$(pyenv init -)"
-# kubectl
-export KUBECONFIG=$HOME/.kube/config.d/pro:$HOME/.kube/config
-alias kc='kubectl'
-# default editor
-export EDITOR=nvim;
+# zinit ice atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh' \
+#     atinit'export PYENV_ROOT="$PWD"' atpull"%atclone" \
+#     as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
+# zinit light pyenv/pyenv
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-alias gp='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
-alias unp='unset http_proxy https_proxy'
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias nv='nvim'
-alias lg='lazygit'
-
-# 解析剪切板中的pb
-function pb () {
-  echo `pbpaste` | xxd -r -p | protoc --decode_raw
-}
-
-# 格式化剪切板中的json数据,可能会有精度丢失
-function pj() {
-  pbpaste | jless
-}
-
-# kill进程
-fkill() {
-  local pid
-  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
-
-  if [ "x$pid" != "x" ]
-  then
-	echo $pid | xargs kill -${1:-9}
-  fi
-}
-
-# 在history中忽略一些常用命令
+### make command run better
+export EDITOR=nvim
+export FZF_DEFAULT_COMMAND='fd --type f'
 export HISTIGNORE='pwd:exit:fg:bg:top:clear:history:ls:uptime:df'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-fpath=(/usr/local/share/zsh-completions $fpath)
-
-
-source ~/.bash_profile
+### profile
+[ -f ~/zsh/.func.sh ] && source ~/zsh/.func.sh
+[ -f ~/zsh/.env.sh ] && source ~/zsh/.env.sh
+[ -f ~/zsh/.alias.sh ] && source ~/zsh/.alias.sh
