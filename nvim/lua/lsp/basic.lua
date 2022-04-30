@@ -16,8 +16,9 @@ M.on_attach = function(client, bufnr)
   local set_buf_keymap = function(mode, lhs, rhs)
     vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, { noremap = true, silent = true })
   end
-  set_buf_keymap('n', 'gd', ':Telescope lsp_definitions<CR>')
-  set_buf_keymap('n', 'gD', ':Telescope lsp_type_definitions<CR>')
+
+  set_buf_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
+  set_buf_keymap('n', 'gD', ':lua lsp_type_definitions<CR>')
   set_buf_keymap('n', 'R', ':lua vim.lsp.buf.rename()<CR>')
   set_buf_keymap('n', '<C-Space>', ':lua vim.lsp.buf.code_action()<CR>')
   set_buf_keymap('i', '<C-Space>', ':lua vim.lsp.buf.code_action()<CR>')

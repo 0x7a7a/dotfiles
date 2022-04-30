@@ -17,7 +17,16 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.api.nvim_command('packadd packer.nvim')
 end
 
-require('packer').startup(function(use)
+local packer = require('packer')
+packer.init({
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'rounded' })
+    end,
+  },
+})
+
+packer.startup(function(use)
   -- packer can manage itself
   use('wbthomason/packer.nvim')
 
@@ -48,6 +57,7 @@ require('packer').startup(function(use)
   use('lewis6991/impatient.nvim')
   use('github/copilot.vim')
   use('norcalli/nvim-colorizer.lua')
+  use('moll/vim-bbye')
   -- use("unblevable/quick-scope")
 
   -- text maniuplation
@@ -65,7 +75,8 @@ require('packer').startup(function(use)
   use('folke/trouble.nvim')
   use('phaazon/hop.nvim')
   use('simrat39/symbols-outline.nvim')
-  use('numToStr/Comment.nvim')
+  use('preservim/nerdcommenter')
+  -- use('numToStr/Comment.nvim')
   use('jose-elias-alvarez/null-ls.nvim')
   use('mileszs/ack.vim')
   use('dstein64/vim-startuptime')
