@@ -29,6 +29,6 @@ require('indent_blankline').setup({
   show_current_context = true,
 })
 
--- vim.opt.list = true
--- vim.opt.listchars:append("eol:↴")
+vim.opt.list = true
+vim.opt.listchars:append('eol:↴')
 vim.opt.termguicolors = true

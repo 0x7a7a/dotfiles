@@ -68,6 +68,7 @@ require('packer').startup(function(use)
   use('numToStr/Comment.nvim')
   use('jose-elias-alvarez/null-ls.nvim')
   use('mileszs/ack.vim')
+  use('dstein64/vim-startuptime')
   --use("tpope/vim-dispatch")
 
   -- git
