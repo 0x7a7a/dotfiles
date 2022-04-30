@@ -26,23 +26,23 @@ zinit light-mode for \
 ZVM_INIT_MODE=sourcing
 
 ### ohmyzsh plugin
-zinit snippet OMZL::git.zsh
-zinit snippet OMZL::history.zsh
+zi snippet OMZL::git.zsh
+zi snippet OMZL::history.zsh
 
-zinit wait lucid for \
+zi wait lucid for \
     OMZP::git \
     OMZP::extract \
 
 ### comletion
-zinit ice lucid waite=1 as"completion"
-zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+zi ice lucid waite=1 as"completion"
+zi snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
 ### theme
-zinit ice depth 1; zinit light romkatv/powerlevel10k
+zi ice depth 1; zi light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ### tool plugin
-zinit wait lucid for \
+zi wait lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
  blockf \
@@ -50,12 +50,12 @@ zinit wait lucid for \
  atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions
 
-zinit light jeffreytse/zsh-vi-mode
-zinit wait lucid for \
+zi light jeffreytse/zsh-vi-mode
+zi wait lucid for \
     skywind3000/z.lua \
     Aloxaf/fzf-tab
 
-zinit wait lucid from"gh-r" as"null" for \
+zi wait lucid from"gh-r" as"null" for \
     sbin"**/lsd" Peltoche/lsd \
     sbin"*/rg"   BurntSushi/ripgrep \
     sbin"**/fd"  @sharkdp/fd \
@@ -63,27 +63,21 @@ zinit wait lucid from"gh-r" as"null" for \
     sbin"fzf"    junegunn/fzf
      # sbin"bin/exa -> exa"  ogham/exa
 
-zinit ice mv"*.zsh -> _fzf" as"completion"
-zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/completion.zsh'
-zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh'
+zi for \
+    https://raw.githubusercontent.com/junegunn/fzf/master/shell/{'completion','key-bindings'}.zsh
 
 # fnm
-# zinit ice from'gh-r' sbin'fnm' nocompile \
-#     atclone"./fnm env --use-on-cd > fnmenv.zsh;./fnm completions --shell zsh > $FPATH/_fnm.zsh" \
-#     atpull"%atclone" \
-#     multisrc"*.zsh"
-# zinit light Schniz/fnm
-zinit ice wait lucid from'gh-r' sbin'fnm' nocompile \
+zi ice wait lucid from'gh-r' sbin'fnm' nocompile \
     atclone"./fnm env --use-on-cd > fnmenv.zsh" \
     atpull"%atclone" \
     src"fnmenv.zsh"
-zinit light Schniz/fnm
+zi light Schniz/fnm
 
 # pyenv
-# zinit ice atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh' \
+# zi ice atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh' \
 #     atinit'export PYENV_ROOT="$PWD"' atpull"%atclone" \
 #     as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
-# zinit light pyenv/pyenv
+# zi light pyenv/pyenv
 
 ### make command run better
 export EDITOR=nvim

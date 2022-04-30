@@ -1,4 +1,4 @@
-alias gp='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
+alias gpp='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
 alias unp='unset http_proxy https_proxy'
 alias ls='lsd'
 alias l='ls -l'
@@ -10,4 +10,3 @@ alias nv='nvim'
 alias lg='lazygit'
 alias kc='kubectl'
 alias cg='cargo'
-
