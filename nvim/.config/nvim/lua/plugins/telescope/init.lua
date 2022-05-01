@@ -53,11 +53,15 @@ require('telescope').setup({
       hidden = true,
       theme = 'dropdown',
       previewer = false,
+      follow = true,
     },
     oldfiles = {
       hidden = true,
       theme = 'dropdown',
       previewer = false,
+    },
+    live_grep = {
+      follow = true,
     },
   },
   extensions = {

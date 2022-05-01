@@ -60,7 +60,7 @@ packer.startup(function(use)
   use('moll/vim-bbye')
   -- use("unblevable/quick-scope")
 
-  -- text maniuplation
+  -- text edit
   use('tpope/vim-repeat')
   use('tpope/vim-surround')
   use('wellle/targets.vim')
@@ -76,7 +76,6 @@ packer.startup(function(use)
   use('phaazon/hop.nvim')
   use('simrat39/symbols-outline.nvim')
   use('numToStr/Comment.nvim')
-  -- use('preservim/nerdcommenter')
   use('jose-elias-alvarez/null-ls.nvim')
   use('mileszs/ack.vim')
   use('dstein64/vim-startuptime')
@@ -89,9 +88,6 @@ packer.startup(function(use)
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use('RRethy/nvim-treesitter-textsubjects')
   use('SmiteshP/nvim-gps')
-  -- multiple line
-  -- https://github.com/mg979/vim-visual-multi
-  -- use { 'mg979/vim-visual-multi', as = 'multiple-cursors'}
 
   -- asyncrun/task,build and test
   use('skywind3000/asynctasks.vim')

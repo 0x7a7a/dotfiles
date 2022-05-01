@@ -24,6 +24,7 @@ end
 M.fd_in_nvim = function()
   local opts = vim.deepcopy(themes.get_dropdown({
     hidden = true,
+    follow = true,
     winblend = 10,
     width = 0.5,
     prompt = ' ',
@@ -36,7 +37,7 @@ M.fd_in_nvim = function()
   require('telescope.builtin').fd(opts)
 end
 
--- telescope test
+-- for test
 local opt = themes.get_cursor({})
 function fd()
   local opts = vim.deepcopy(opt)
