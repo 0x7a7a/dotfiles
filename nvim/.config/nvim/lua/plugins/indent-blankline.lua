@@ -1,3 +1,7 @@
+vim.opt.list = true
+vim.opt.listchars:append 'eol:↴'
+vim.opt.termguicolors = true
+
 require('indent_blankline').setup {
   show_end_of_line = false,
 
@@ -28,7 +32,3 @@ require('indent_blankline').setup {
   show_current_context_start = false,
   show_current_context = true,
 }
-
-vim.opt.list = true
-vim.opt.listchars:append 'eol:↴'
-vim.opt.termguicolors = true

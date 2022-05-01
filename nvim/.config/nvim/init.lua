@@ -1,3 +1,9 @@
+-- cache,prevent errors when first time run
+local ok, _ = pcall(require, 'impatient')
+if ok then
+  require 'impatient'
+end
+
 require 'globals'
 
 -- base vim setting
@@ -14,35 +20,9 @@ vim.cmd [[colorscheme kanagawa]]
 
 -- load plugins
 require 'plugins'
--- plugins setting
-require 'plugins/bufferline'
-require 'plugins/treesitter'
-require 'plugins/gitsigns'
-require 'plugins/which-key'
-require 'plugins/trouble'
-require 'plugins/hop'
-require 'plugins/comment'
-require 'plugins/nvim-tree'
-require 'plugins/indent-blankline'
-require 'plugins/symbols-outline'
-require 'plugins/auto-session'
-require 'plugins/auto-pairs'
-require 'plugins/telescope'
-require 'plugins/colorizer'
-require 'plugins/fidget'
-require 'plugins/null-ls'
-require 'plugins/lualine'
--- lsp plugin setting
-require 'plugins/lsp-cmp'
-require 'plugins/lsp-config'
-require 'plugins/lsp-color'
-require 'plugins/lsp-signature'
 
 -- LSP server
-require 'lsp/go'
 require 'lsp/eslint'
 require 'lsp/lua'
 require 'lsp/cssls'
 require 'lsp/tailwindcss'
--- lazy load in plugin.lua
--- require 'lsp/typescript'

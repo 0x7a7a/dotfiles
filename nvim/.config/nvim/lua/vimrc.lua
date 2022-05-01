@@ -57,21 +57,3 @@ opt.termguicolors = true
 
 -- fold
 opt.foldenable = false
-
----- plugin options ----
---vim-matchup
-vim.g.loaded_matchit = true
--- coplilot
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
-vim.g.copilot_tab_fallback = ''
--- javascript
-vim.g.javascript_plugin_flow = 1
--- floaterm
-vim.g.floaterm_height = 0.8
-vim.g.floaterm_width = 0.7
--- asynctask
-vim.g.asyncrun_open = 6
-vim.g.asynctasks_term_pos = 'floaterm'
--- romainl/vim-cool
-vim.g.CoolTotalMatches = 1
