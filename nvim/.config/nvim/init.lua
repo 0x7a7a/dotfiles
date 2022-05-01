@@ -40,8 +40,9 @@ require 'plugins/lsp-signature'
 
 -- LSP server
 require 'lsp/go'
-require 'lsp/typescript'
 require 'lsp/eslint'
 require 'lsp/lua'
 require 'lsp/cssls'
 require 'lsp/tailwindcss'
+-- lazy load in plugin.lua
+-- require 'lsp/typescript'

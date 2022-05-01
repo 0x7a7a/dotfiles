@@ -50,11 +50,15 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use 'j-hui/fidget.nvim'
   use 'windwp/nvim-autopairs'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
+  use { 'junegunn/fzf.vim', requires = { 'junegunn/fzf' } }
   use 'andymass/vim-matchup'
   use 'romainl/vim-cool'
-  use 'lewis6991/impatient.nvim'
+  use {
+    'lewis6991/impatient.nvim',
+    config = function()
+      require 'impatient'
+    end,
+  }
   use 'github/copilot.vim'
   use 'norcalli/nvim-colorizer.lua'
   use 'moll/vim-bbye'
@@ -71,47 +75,57 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'kyazdani42/nvim-tree.lua'
-  use 'vim-test/vim-test'
   use 'folke/trouble.nvim'
   use 'phaazon/hop.nvim'
-  use 'simrat39/symbols-outline.nvim'
   use 'numToStr/Comment.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
-  use 'mileszs/ack.vim'
-  use 'dstein64/vim-startuptime'
+  use 'simrat39/symbols-outline.nvim'
+  use { 'vim-test/vim-test', cmd = 'Test' }
+  use { 'mileszs/ack.vim', cmd = 'Ack' }
+  use { 'dstein64/vim-startuptime', cmd = 'StartupTime' }
   --use("tpope/vim-dispatch")
 
   -- git
-  use { 'lewis6991/gitsigns.nvim', tag = 'release' }
   use 'tpope/vim-fugitive'
+  use { 'lewis6991/gitsigns.nvim', tag = 'release' }
   -- syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'RRethy/nvim-treesitter-textsubjects'
   use 'SmiteshP/nvim-gps'
 
   -- asyncrun/task,build and test
-  use 'skywind3000/asynctasks.vim'
-  use 'skywind3000/asyncrun.vim'
+  use { 'skywind3000/asynctasks.vim', requires = { 'skywind3000/asyncrun.vim' }, cmd = { 'AsyncTask' } }
 
   -- lsp
   use 'neovim/nvim-lspconfig'
   use 'folke/lsp-colors.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'ray-x/lsp_signature.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
-  use 'onsails/lspkind-nvim'
-  use 'ray-x/lsp_signature.nvim'
-  use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-  use 'rafamadriz/friendly-snippets'
+  use {
+    'L3MON4D3/LuaSnip',
+    requires = { 'rafamadriz/friendly-snippets' },
+    config = function()
+      require('luasnip.loaders.from_vscode').load()
+    end,
+  }
   -- go
-  use 'fatih/vim-go'
-  use 'buoto/gotests-vim'
+  use { 'fatih/vim-go', ft = { 'go' } }
+  use { 'buoto/gotests-vim', ft = { 'go' } }
   -- typescript
-  use 'leafgarland/typescript-vim'
-  use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+  use { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } }
+  use {
+    'jose-elias-alvarez/nvim-lsp-ts-utils',
+    ft = { 'typescript', 'typescriptreact' },
+    config = function()
+      require 'lsp/typescript'
+    end,
+  }
 
   -- floaterm
   use 'voldikss/vim-floaterm'
@@ -121,10 +135,6 @@ packer.startup(function(use)
     vim.g.ackprg = 'ag --vimgrep'
   end
 end)
-
--- one line setup
-require 'impatient'
-require('luasnip.loaders.from_vscode').load()
 
 Keymap('n', '<leader>ps', ':PackerSync<CR>')
 Keymap('n', '<leader>pu', ':PackerUpdate<CR>')

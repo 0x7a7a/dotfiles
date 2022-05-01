@@ -81,7 +81,6 @@ Keymap('n', '<Space>fg', ':Telescope live_grep<CR>')
 Keymap('n', '<Space>fb', ':Telescope buffers<CR>')
 Keymap('n', '<Space>fh', ':Telescope help_tags<CR>')
 Keymap('n', '<Space>fi', ':Telescope lsp_implementations<CR>')
-Keymap('n', '<Space>ft', ':TodoTelescope<CR>')
 Keymap('n', '<Space>fd', ':Telescope diagnostics<CR>')
 
 Keymap('n', '<Space>fn', ':lua require("plugins/telescope/finder").fd_in_nvim()<CR>')
