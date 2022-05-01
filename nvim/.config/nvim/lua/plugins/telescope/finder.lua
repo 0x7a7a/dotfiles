@@ -8,7 +8,7 @@ M.fd_in_dotfiles = function()
     return
   end
   local opts = vim.deepcopy(themes.get_dropdown {
-    hidden = false,
+    hidden = true,
     winblend = 10,
     width = 0.5,
     prompt = ' ',

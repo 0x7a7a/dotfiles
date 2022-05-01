@@ -34,6 +34,7 @@ packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
 
   -- colorscheme
+  -- colorscheme toolkit https://github.com/lifepillar/vim-colortemplate
   use 'rebelot/kanagawa.nvim'
   use 'folke/tokyonight.nvim'
 
@@ -76,7 +77,7 @@ packer.startup(function(use)
   use { 'windwp/nvim-autopairs', config = [[ require 'plugins/auto-pairs' ]], after = 'nvim-cmp' }
 
   -- lsp progress alert
-  use { 'j-hui/fidget.nvim', config = [[ require 'plugins/fidget' ]] }
+  use { 'j-hui/fidget.nvim', after = 'auto-session', config = [[ require 'plugins/fidget' ]] }
 
   -- fzf in vim
   -- use { 'junegunn/fzf.vim', requires = { 'junegunn/fzf' } }
@@ -95,7 +96,11 @@ packer.startup(function(use)
   }
 
   -- neovim colorizer
-  use { 'norcalli/nvim-colorizer.lua', config = [[ require 'colorizer' ]] }
+  use {
+    'norcalli/nvim-colorizer.lua',
+    ft = { 'css', 'javascript', 'vim', 'html' },
+    config = [[require('colorizer').setup {'css', 'javascript', 'vim', 'html'}]],
+  }
 
   -- highlight matching words
   use { 'andymass/vim-matchup', config = [[ vim.g.loaded_matchit = true ]] }
@@ -131,6 +136,14 @@ packer.startup(function(use)
   -- smart comment
   use { 'numToStr/Comment.nvim', config = [[ require 'plugins/comment' ]] }
 
+  -- Documentation
+  -- use {
+  --   'danymat/neogen',
+  --   requires = 'nvim-treesitter',
+  --   config = [[require('config.neogen')]],
+  --   keys = { '<localleader>d', '<localleader>df', '<localleader>dc' },
+  -- }
+
   -- external supplement for lsp
   use { 'jose-elias-alvarez/null-ls.nvim', config = [[ require 'plugins/null-ls' ]] }
 
@@ -144,8 +157,16 @@ packer.startup(function(use)
   -- use { 'tpope/vim-dispatch', cmd = { 'Dispatch', 'Make', 'Focus', 'Start' } }
 
   -- git
-  use 'tpope/vim-fugitive'
-  use { 'lewis6991/gitsigns.nvim', tag = 'release', config = [[ require 'plugins/gitsigns' ]] }
+  use {
+    {
+      'tpope/vim-fugitive',
+      cmd = { 'G', 'G!', 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' },
+    },
+    {
+      'lewis6991/gitsigns.nvim',
+      config = [[ require 'plugins.gitsigns' ]],
+    },
+  }
 
   -- highlights
   use {
@@ -217,13 +238,7 @@ packer.startup(function(use)
   }
 
   -- floaterm
-  use {
-    'voldikss/vim-floaterm',
-    config = function()
-      vim.g.floaterm_height = 0.8
-      vim.g.floaterm_width = 0.7
-    end,
-  }
+  use 'voldikss/vim-floaterm'
 end)
 
 Keymap('n', '<leader>ps', ':PackerSync<CR>')
