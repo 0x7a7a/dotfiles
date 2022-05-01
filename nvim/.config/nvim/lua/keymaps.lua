@@ -6,6 +6,11 @@ Keymap = function(mode, key, cmd, opts)
   vim.api.nvim_set_keymap(mode, key, cmd, opts)
 end
 
+-- quick close,keep windows (moll/vim-bbye)
+-- Keymap('n', '<leader>bb', ':bd<CR>')
+Keymap('n', '<leader>bb', ':Bdelete<CR>')
+Keymap('n', '<leader>B', ':bufdo :Bdelete<CR>')
+
 Keymap('n', ']<Space>', 'o<Esc>k')
 Keymap('n', '[<Space>', 'O<Esc>j')
 

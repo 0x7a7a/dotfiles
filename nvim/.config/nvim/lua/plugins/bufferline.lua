@@ -39,7 +39,7 @@ require('bufferline').setup({
         text_align = 'left',
       },
     },
-    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+    diagnostics_indicator = function()
       return ' '
     end,
     color_icons = true,
@@ -61,7 +61,5 @@ Keymap('n', '<A-9>', ':BufferLineGoToBuffer 9<CR>')
 Keymap('n', '<leader>br', ':BufferLineCloseRight<CR>')
 Keymap('n', '<leader>bl', ':BufferLineCloseLeft<CR>')
 Keymap('n', '<leader>bp', ':BufferLinePickClose<CR>')
--- Keymap('n', '<leader>bb', ':bd<CR>')
-Keymap('n', '<leader>bb', ':Bdelete<CR>')
 Keymap('n', '<leader>bs', ':BufferLineSortByDirectory<CR>')
 Keymap('n', '<leader>s', ':BufferLinePick<CR>')
