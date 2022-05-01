@@ -67,18 +67,16 @@ zi for \
     https://raw.githubusercontent.com/junegunn/fzf/master/shell/{'completion','key-bindings'}.zsh
 
 # fnm
-zi wait lucid for \
+zinit wait lucid for \
     as'completion' \
-    atclone"
-      ./fnm env --use-on-cd > fnmenv.zsh
-      ./fnm completions --shell zsh > _fnm.zsh" \
+    atclone"./fnm completions --shell zsh > _fnm.zsh" \
+    atload'eval $(fnm env --shell zsh)' \
     atpull'%atclone' \
     blockf \
     from'gh-r' \
     nocompile \
-    pick'fnmenv.zsh' \
     sbin'fnm' \
-    @Schniz/fnm
+  @Schniz/fnm
 
 # pyenv
 # zi ice atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh' \
