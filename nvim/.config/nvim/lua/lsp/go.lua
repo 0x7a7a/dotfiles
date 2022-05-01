@@ -1,7 +1,7 @@
-local basic = require('lsp/basic')
-local util = require('lspconfig/util')
+local basic = require 'lsp/basic'
+local util = require 'lspconfig/util'
 
-require('lspconfig').gopls.setup({
+require('lspconfig').gopls.setup {
   capabilities = basic.capabilities,
   on_attach = function(client, bufnr)
     basic.on_attach(client, bufnr)
@@ -36,6 +36,6 @@ require('lspconfig').gopls.setup({
       -- buildFlags = {"-tags", "functional"}
     },
   },
-})
+}
 
 -- require('lspconfig').golangci_lint_ls.setup({})

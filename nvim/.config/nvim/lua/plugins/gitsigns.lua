@@ -1,4 +1,4 @@
-require('gitsigns').setup({
+require('gitsigns').setup {
   signs = {
     add = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
     change = { hl = 'GitSignsChange', text = '│', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
@@ -79,16 +79,16 @@ require('gitsigns').setup({
     map('n', '<leader>hR', gs.reset_buffer)
     map('n', '<leader>hp', gs.preview_hunk)
     map('n', '<leader>hb', function()
-      gs.blame_line({ full = true })
+      gs.blame_line { full = true }
     end)
     map('n', '<leader>tb', gs.toggle_current_line_blame)
     map('n', '<leader>hd', gs.diffthis)
     map('n', '<leader>hD', function()
-      gs.diffthis('~')
+      gs.diffthis '~'
     end)
     -- map("n", "<leader>td", gs.toggle_deleted)
 
     -- Text object
     -- map({ "o", "x" }, ":<C-U>Gitsigns select_hunk<CR>")
   end,
-})
+}

@@ -6,9 +6,9 @@ M.capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 M.on_attach = function(client, bufnr)
   -- 高亮同名变量
   require('illuminate').on_attach(client)
-  vim.api.nvim_command([[ hi def link LspReferenceText CursorLine ]])
-  vim.api.nvim_command([[ hi def link LspReferenceWrite CursorLine ]])
-  vim.api.nvim_command([[ hi def link LspReferenceRead CursorLine ]])
+  vim.api.nvim_command [[ hi def link LspReferenceText CursorLine ]]
+  vim.api.nvim_command [[ hi def link LspReferenceWrite CursorLine ]]
+  vim.api.nvim_command [[ hi def link LspReferenceRead CursorLine ]]
 
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -53,12 +53,12 @@ M.on_attach = function(client, bufnr)
 
   -- autoformat
   if client.resolved_capabilities.document_formatting then
-    vim.cmd([[
+    vim.cmd [[
         augroup LspFormatting
         autocmd! * <buffer>
         autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
         augroup END
-        ]])
+        ]]
   end
 end
 

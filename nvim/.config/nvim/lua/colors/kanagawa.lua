@@ -1,5 +1,5 @@
 -- Default options:
-require('kanagawa').setup({
+require('kanagawa').setup {
   undercurl = true, -- enable undercurls
   commentStyle = 'italic',
   functionStyle = 'italic',
@@ -13,4 +13,4 @@ require('kanagawa').setup({
   dimInactive = false, -- dim inactive window `:h hl-NormalNC`
   colors = {},
   overrides = {},
-})
+}

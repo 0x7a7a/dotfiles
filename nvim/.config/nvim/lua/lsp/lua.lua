@@ -1,9 +1,9 @@
 local runtime_path = vim.split(package.path, ';')
-local basic = require('lsp/basic')
+local basic = require 'lsp/basic'
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').sumneko_lua.setup({
+require('lspconfig').sumneko_lua.setup {
   on_attach = function(client, bufnr)
     basic.on_attach(client, bufnr)
     client.resolved_capabilities.document_formatting = false
@@ -40,4 +40,4 @@ require('lspconfig').sumneko_lua.setup({
       },
     },
   },
-})
+}

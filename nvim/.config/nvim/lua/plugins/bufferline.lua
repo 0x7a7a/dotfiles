@@ -1,4 +1,4 @@
-require('bufferline').setup({
+require('bufferline').setup {
   options = {
     mode = 'buffers',
     numbers = 'none',
@@ -44,7 +44,7 @@ require('bufferline').setup({
     end,
     color_icons = true,
   },
-})
+}
 
 Keymap('n', '<A-h>', ':BufferLineCyclePrev<CR>')
 Keymap('n', '<A-l>', ':BufferLineCycleNext<CR>')

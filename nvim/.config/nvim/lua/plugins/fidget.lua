@@ -1,4 +1,4 @@
-require('fidget').setup({
+require('fidget').setup {
   debug = {
     logging = false,
   },
@@ -8,4 +8,4 @@ require('fidget').setup({
   window = {
     relative = 'editor',
   },
-})
+}

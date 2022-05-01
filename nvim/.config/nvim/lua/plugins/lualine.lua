@@ -1,6 +1,6 @@
 require('nvim-gps').setup()
-local gps = require('nvim-gps')
-require('lualine').setup({
+local gps = require 'nvim-gps'
+require('lualine').setup {
   options = {
     globalstatus = true,
     icons_enabled = true,
@@ -73,4 +73,4 @@ require('lualine').setup({
   tabline = {},
   -- extensions = {"quickfix", "nvim-tree", "toggleterm", "fugitive", symbols_outline}
   extensions = { 'nvim-tree', 'toggleterm', 'fugitive' },
-})
+}

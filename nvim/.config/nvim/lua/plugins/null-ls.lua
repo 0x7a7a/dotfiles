@@ -1,37 +1,37 @@
-local null_ls = require('null-ls')
+local null_ls = require 'null-ls'
 local builtins = null_ls.builtins
 local formatter = builtins.formatting
 local linter = builtins.diagnostics
 
 local utils = require('null-ls.utils').make_conditional_utils()
 
-require('null-ls').setup({
+require('null-ls').setup {
   debug = false,
   sources = {
     -- lua
-    formatter.stylua.with({
+    formatter.stylua.with {
       condition = function()
-        return vim.fn.executable('stylua')
+        return vim.fn.executable 'stylua'
       end,
       extra_args = function()
-        if not utils.root_has_file({ 'stylua.toml', '.stylua.toml' }) then
+        if not utils.root_has_file { 'stylua.toml', '.stylua.toml' } then
           return {
             '--config-path',
-            vim.fn.expand('~/.config/nvim/stylua.toml'),
+            vim.fn.expand '~/.config/nvim/stylua.toml',
           }
         end
       end,
-    }),
-    linter.luacheck.with({
+    },
+    linter.luacheck.with {
       condition = function()
-        return vim.fn.executable('luacheck') and utils.root_has_file({ '.luacheckrc' })
+        return vim.fn.executable 'luacheck' and utils.root_has_file { '.luacheckrc' }
       end,
-    }),
+    },
 
     -- javascript
-    formatter.prettier.with({
+    formatter.prettier.with {
       prefer_local = 'node_modules/.bin',
-    }),
+    },
 
     -- use lsp eslint instead null-ls eslint
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
@@ -58,12 +58,12 @@ require('null-ls').setup({
   -- format files on save
   on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
-      vim.cmd([[
+      vim.cmd [[
             augroup LspFormatting
                 autocmd! * <buffer>
                 autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
             augroup END
-            ]])
+            ]]
     end
   end,
-})
+}

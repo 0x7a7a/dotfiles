@@ -1,4 +1,4 @@
-require('Comment').setup({
+require('Comment').setup {
   ---Add a space b/w comment and the line
   ---@type boolean
   padding = true,
@@ -65,4 +65,4 @@ require('Comment').setup({
   ---Post-hook, called after commenting is done
   ---@type fun(ctx: Ctx)
   post_hook = nil,
-})
+}

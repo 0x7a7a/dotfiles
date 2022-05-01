@@ -1,5 +1,5 @@
-local actions = require('telescope.actions')
-local previewers = require('telescope.previewers')
+local actions = require 'telescope.actions'
+local previewers = require 'telescope.previewers'
 
 -- Preview only small files
 local previewer_maker = function(filepath, bufnr, opts)
@@ -18,7 +18,7 @@ local previewer_maker = function(filepath, bufnr, opts)
   end)
 end
 
-require('telescope').setup({
+require('telescope').setup {
   defaults = {
 
     buffer_previewer_maker = previewer_maker,
@@ -72,8 +72,8 @@ require('telescope').setup({
       case_mode = 'smart_case', -- or "ignore_case" or "respect_case",the default case_mode is "smart_case"
     },
   },
-})
-require('telescope').load_extension('fzf')
+}
+require('telescope').load_extension 'fzf'
 
 Keymap('n', 'sf', ':Telescope find_files<CR>')
 Keymap('n', '<Space>fo', ':Telescope oldfiles<CR>')

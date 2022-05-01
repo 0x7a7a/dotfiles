@@ -1,6 +1,6 @@
-local basic = require('lsp/basic')
+local basic = require 'lsp/basic'
 
-require('lspconfig').tsserver.setup({
+require('lspconfig').tsserver.setup {
   capabilities = basic.capabilities,
 
   on_attach = function(client, bufnr)
@@ -9,10 +9,10 @@ require('lspconfig').tsserver.setup({
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
 
-    local ts_utils = require('nvim-lsp-ts-utils')
+    local ts_utils = require 'nvim-lsp-ts-utils'
 
     -- defaults
-    ts_utils.setup({
+    ts_utils.setup {
       debug = false,
       disable_commands = false,
       enable_import_on_completion = false,
@@ -57,7 +57,7 @@ require('lspconfig').tsserver.setup({
       update_imports_on_move = false,
       require_confirmation_on_move = false,
       watch_dir = nil,
-    })
+    }
 
     -- required to fix code action ranges and filter diagnostics
     ts_utils.setup_client(client)
@@ -77,4 +77,4 @@ require('lspconfig').tsserver.setup({
     'typescriptreact',
     'typescript.tsx',
   },
-})
+}

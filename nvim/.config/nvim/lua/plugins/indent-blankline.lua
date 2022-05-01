@@ -1,4 +1,4 @@
-require('indent_blankline').setup({
+require('indent_blankline').setup {
   show_end_of_line = false,
 
   filetype_exclude = {
@@ -27,8 +27,8 @@ require('indent_blankline').setup({
   buftype_exclude = { 'terminal', 'nofile' },
   show_current_context_start = false,
   show_current_context = true,
-})
+}
 
 vim.opt.list = true
-vim.opt.listchars:append('eol:↴')
+vim.opt.listchars:append 'eol:↴'
 vim.opt.termguicolors = true

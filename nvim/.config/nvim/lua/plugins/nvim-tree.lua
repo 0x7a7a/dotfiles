@@ -1,4 +1,4 @@
-require('nvim-tree').setup({
+require('nvim-tree').setup {
   auto_reload_on_write = true,
   disable_netrw = false,
   hijack_cursor = false,
@@ -95,6 +95,6 @@ require('nvim-tree').setup({
       profile = false,
     },
   },
-})
+}
 
 Keymap('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
