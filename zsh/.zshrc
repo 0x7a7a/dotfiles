@@ -26,14 +26,15 @@ zinit light-mode for \
 ZVM_INIT_MODE=sourcing
 
 ### ohmyzsh plugin
-zi snippet OMZL::git.zsh
-zi snippet OMZL::history.zsh
+zi for \
+    OMZL::git.zsh \
+    OMZL::history.zsh \
 
 zi wait lucid for \
     OMZP::git \
     OMZP::extract \
 
-### comletion
+### completion
 zi ice lucid waite=1 as"completion"
 zi snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
@@ -41,7 +42,7 @@ zi snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_doc
 zi ice depth 1; zi light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-### tool plugin
+### tool
 zi wait lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
@@ -90,6 +91,6 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export HISTIGNORE='pwd:exit:fg:bg:top:clear:history:ls:uptime:df'
 
 ### profile
-[ -f ~/zsh/.func.sh ] && source ~/zsh/.func.sh
-[ -f ~/zsh/.env.sh ] && source ~/zsh/.env.sh
-[ -f ~/zsh/.alias.sh ] && source ~/zsh/.alias.sh
+[ -f ~/.func.sh ] && source ~/.func.sh
+[ -f ~/.env.sh ] && source ~/.env.sh
+[ -f ~/.alias.sh ] && source ~/.alias.sh
