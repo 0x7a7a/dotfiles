@@ -85,7 +85,7 @@ Keymap('n', '<Space>ft', ':TodoTelescope<CR>')
 Keymap('n', '<Space>fd', ':Telescope diagnostics<CR>')
 
 Keymap('n', '<Space>fn', ':lua require("plugins/telescope/finder").fd_in_nvim()<CR>')
-Keymap('n', '<Space>fz', ':lua require("plugins/telescope/finder").fd_in_zsh()<CR>')
+Keymap('n', '<Space>fd', ':lua require("plugins/telescope/finder").fd_in_dotfiles()<CR>')
 Keymap('n', '<Space>fm', ':lua require("plugins/telescope/finder").fd()<CR>')
 
 -- lsp

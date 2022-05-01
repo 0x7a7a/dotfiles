@@ -1,21 +1,25 @@
 local themes = require('telescope.themes')
 local M = {}
 
-M.fd_in_zsh = function()
-  local cfg_path = vim.fn.expand('~/zsh')
+M.fd_in_dotfiles = function()
+  local cfg_path = vim.fn.expand('~/dotfiles')
   if not vim.loop.fs_stat(cfg_path) then
     vim.api.nvim_err_writeln(string.format('no zsh config path: %s', cfg_path))
     return
   end
   local opts = vim.deepcopy(themes.get_dropdown({
-    hidden = true,
+    hidden = false,
     winblend = 10,
     width = 0.5,
     prompt = ' ',
     results_height = 15,
     previewer = false,
-    prompt_prefix = 'Zsh> ',
-    cwd = vim.fn.expand('~/zsh'),
+    prompt_prefix = 'Dotfiles> ',
+    cwd = cfg_path,
+    file_ignore_patterns = {
+      '.git',
+      'dict.yaml$',
+    },
   }))
 
   require('telescope.builtin').fd(opts)
