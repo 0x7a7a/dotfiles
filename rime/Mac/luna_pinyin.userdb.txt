@@ -2,7 +2,7 @@
 #@/db_name	luna_pinyin
 #@/db_type	userdb
 #@/rime_version	1.7.3
-#@/tick	808443
+#@/tick	808455
 #@/user_id	Mac
 a 	呵	c=1 d=6.84827e-282 t=808443
 a 	啊	c=3381 d=0.6652 t=808443
@@ -311,7 +311,7 @@ ao zhe 	熬着	c=2 d=3.71541e-88 t=808443
 ao zhou 	澳洲	c=3 d=7.22012e-22 t=808443
 ao zou 	熬走	c=1 d=1.35882e-254 t=808443
 ba 	八	c=19 d=1.49951e-31 t=808443
-ba 	吧	c=4112 d=1.33211 t=808443
+ba 	吧	c=4113 d=2.29274 t=808449
 ba 	巴	c=12 d=5.03646e-20 t=808443
 ba 	扒	c=3 d=0 t=808443
 ba 	把	c=866 d=1.49923 t=808443
@@ -1304,7 +1304,7 @@ bian le ge 	變了個	c=1 d=0 t=808443
 bian li 	遍歷	c=19 d=0.0357931 t=808443
 bian li dian 	便利店	c=2 d=1.84497e-264 t=808443
 bian lian 	變臉	c=2 d=3.38728e-209 t=808443
-bian liang 	變量	c=53 d=0.540956 t=808443
+bian liang 	變量	c=54 d=1.51715 t=808452
 bian lu 	邊路	c=16 d=0.0575558 t=808443
 bian ma 	編碼	c=21 d=3.89806e-35 t=808443
 bian min 	便民	c=0 d=0 t=808443
@@ -2684,7 +2684,7 @@ ca shang 	擦傷	c=2 d=0 t=808443
 ca shen er guo 	擦身而過	c=1 d=1.28177e-185 t=808443
 ca tai 	擦太	c=2 d=1.28968e-81 t=808443
 cai 	彩	c=1 d=0 t=808443
-cai 	才	c=378 d=0.606233 t=808443
+cai 	才	c=379 d=1.60321 t=808444
 cai 	材	c=4 d=0 t=808443
 cai 	猜	c=64 d=0.0734068 t=808443
 cai 	菜	c=259 d=1.44901e-05 t=808443
@@ -4822,7 +4822,7 @@ da ti 	大體	c=5 d=3.01576e-104 t=808443
 da ti 	答題	c=2 d=0 t=808443
 da tie guan 	打铁关	c=1 d=0 t=808443
 da ting 	大廳	c=9 d=1.85092e-08 t=808443
-da ting 	打聽	c=11 d=1.59791e-90 t=808443
+da ting 	打聽	c=12 d=1 t=808447
 da tong 	大桶	c=1 d=8.98553e-66 t=808443
 da tong xiao yi 	大同小异	c=1 d=2.00958e-05 t=808443
 da tou 	大頭	c=9 d=1.65485e-73 t=808443
@@ -9996,6 +9996,7 @@ ha ha ha ha ha ha ha ha 	哈哈哈哈哈哈哈哈	c=2 d=3.37316e-10 t=808443
 ha ha ha ha ha ha ha ha ha ha 	哈哈哈哈哈哈哈哈哈哈	c=2 d=6.72742e-14 t=808443
 ha ha ha ha ha ha ha ha ha ha ha 	哈哈哈哈哈哈哈哈哈哈哈	c=1 d=1.56907e-182 t=808443
 ha ha ha ha ha ha ha ha ha ha ha ha 	哈哈哈哈哈哈哈哈哈哈哈哈	c=1 d=2.87475e-217 t=808443
+ha ha jing 	哈哈鏡	c=1 d=1 t=808450
 ha hao 	哈好	c=4 d=0 t=808443
 ha lei 	哈雷	c=3 d=0 t=808443
 ha li bo te 	哈利波特	c=5 d=0.0518189 t=808443
@@ -11852,7 +11853,7 @@ huan jie 	環節	c=10 d=2.13519e-13 t=808443
 huan jie 	緩解	c=30 d=0.000136389 t=808443
 huan jie huan jie 	緩解緩解	c=1 d=0 t=808443
 huan jie xia 	緩解下	c=1 d=0 t=808443
-huan jing 	環境	c=70 d=0.538258 t=808443
+huan jing 	環境	c=71 d=1.51715 t=808451
 huan jing bian liang 	環境變量	c=2 d=5.28521e-234 t=808443
 huan ju 	換句	c=1 d=0 t=808443
 huan ju hua 	換句話	c=3 d=0 t=808443
@@ -27020,7 +27021,7 @@ wen zi 	蚊子	c=10 d=1.51643e-16 t=808443
 wen zi ji 	問自己	c=1 d=9.07797e-10 t=808443
 weng 	甕	c=1 d=0 t=808443
 weng 	翁	c=7 d=4.40599e-123 t=808443
-wo 	我	c=35783 d=10.7249 t=808443
+wo 	我	c=35784 d=11.6182 t=808445
 wo 	握	c=2 d=0 t=808443
 wo 	窩	c=5 d=4.09878e-155 t=808443
 wo 	臥	c=2 d=2.12241e-30 t=808443
@@ -29750,7 +29751,7 @@ yan 	沿	c=1 d=0 t=808443
 yan 	演	c=4 d=0 t=808443
 yan 	炎	c=5 d=2.09045e-28 t=808443
 yan 	煙	c=4 d=2.16723e-305 t=808443
-yan 	眼	c=46 d=5.08106e-06 t=808443
+yan 	眼	c=47 d=1 t=808454
 yan 	言	c=8 d=5.38739e-224 t=808443
 yan 	驗	c=1 d=1.5806e-268 t=808443
 yan 	鹽	c=6 d=9.33664e-17 t=808443
@@ -32074,7 +32075,7 @@ yu er 	玉儿	c=2 d=0 t=808443
 yu er 	育兒	c=8 d=5.0901e-196 t=808443
 yu er 	魚餌	c=1 d=1.63088e-19 t=808443
 yu fa 	愈發	c=2 d=2.50472e-243 t=808443
-yu fa 	語法	c=36 d=0.0113865 t=808443
+yu fa 	語法	c=37 d=1.01083 t=808453
 yu fang 	預防	c=3 d=0 t=808443
 yu fang zhen 	預防針	c=2 d=0 t=808443
 yu fen 	魚粉	c=1 d=0 t=808443
@@ -32550,7 +32551,7 @@ za zhi 	雜誌	c=2 d=8.2554e-304 t=808443
 za zhi dao 	咋知道	c=1 d=0 t=808443
 zai 	仔	c=33 d=2.73179e-16 t=808443
 zai 	再	c=1249 d=0.527293 t=808443
-zai 	在	c=4393 d=5.10201 t=808443
+zai 	在	c=4394 d=5.80489 t=808455
 zai 	宰	c=30 d=1.47036e-06 t=808443
 zai 	崽	c=1 d=0 t=808443
 zai 	栽	c=3 d=0 t=808443
@@ -32627,7 +32628,7 @@ zai shou 	在手	c=1 d=0 t=808443
 zai shou ji 	在手机	c=1 d=0 t=808443
 zai shu bao 	在書包	c=1 d=0 t=808443
 zai shui 	再睡	c=4 d=5.53802e-78 t=808443
-zai shuo 	再說	c=180 d=0.00105417 t=808443
+zai shuo 	再說	c=181 d=1.00103 t=808448
 zai shuo 	在說	c=1 d=0 t=808443
 zai shuo ba 	再说吧	c=40 d=2.42827e-55 t=808443
 zai shuo sha 	在說啥	c=1 d=0 t=808443
@@ -33164,7 +33165,7 @@ zhao san mu si 	朝三暮四	c=1 d=2.13937e-06 t=808443
 zhao sha 	找啥	c=2 d=0 t=808443
 zhao shang 	招商	c=6 d=1.14528e-37 t=808443
 zhao shang lai 	找上來	c=1 d=0 t=808443
-zhao shei 	找誰	c=2 d=1.13667e-154 t=808443
+zhao shei 	找誰	c=3 d=1 t=808446
 zhao shi 	找事	c=2 d=7.99015e-214 t=808443
 zhao shi 	招式	c=2 d=9.16305e-149 t=808443
 zhao shi 	肇事	c=3 d=8.26016e-252 t=808443
