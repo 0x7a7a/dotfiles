@@ -31,8 +31,8 @@ zi for \
     OMZL::history.zsh \
 
 zi wait lucid for \
-    OMZP::git \
     OMZP::extract \
+    # OMZP::git \
 
 ### completion
 zi ice lucid waite=1 as"completion"
@@ -78,12 +78,6 @@ zinit wait lucid for \
     nocompile \
     sbin'fnm' \
   @Schniz/fnm
-
-# pyenv
-# zi ice atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh' \
-#     atinit'export PYENV_ROOT="$PWD"' atpull"%atclone" \
-#     as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
-# zi light pyenv/pyenv
 
 ### make command run better
 export EDITOR=nvim

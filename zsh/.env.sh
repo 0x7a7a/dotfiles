@@ -1,6 +1,6 @@
 # go
 export GO111MODULE=auto
-export GOPROXY="https://goproxy.io,direct"
+export GOPROXY="https://goproxy.cn/,direct"
 export GOROOT=/usr/local/go
 export GOPATH=~/dev/gopath
 MYGODEV=~/dev/mygo/bin

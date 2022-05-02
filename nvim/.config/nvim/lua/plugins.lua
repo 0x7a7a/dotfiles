@@ -33,6 +33,7 @@ packer.startup(function(use)
   -- colorscheme toolkit https://github.com/lifepillar/vim-colortemplate
   use 'rebelot/kanagawa.nvim'
   use 'folke/tokyonight.nvim'
+  use 'morhetz/gruvbox'
 
   -- base dependence
   use 'nvim-lua/plenary.nvim'
