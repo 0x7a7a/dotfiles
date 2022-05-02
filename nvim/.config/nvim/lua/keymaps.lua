@@ -9,7 +9,6 @@ end
 -- quick close,keep windows (moll/vim-bbye)
 -- Keymap('n', '<leader>bb', ':bd<CR>')
 Keymap('n', '<leader>bb', ':Bdelete<CR>')
-Keymap('n', '<leader>B', ':bufdo :Bdelete<CR>')
 
 Keymap('n', ']<Space>', 'o<Esc>k')
 Keymap('n', '[<Space>', 'O<Esc>j')
@@ -87,3 +86,6 @@ Keymap('n', '<leader>Tv', ':TestVisit<CR>')
 -- dev
 Keymap('n', '<leader>R', ":lua R('navigator')<CR>")
 Keymap('n', '<leader>L', ':luafile %<CR>')
+
+-- outline
+Keymap('n', '<leader>o', ':SymbolsOutline<CR>')

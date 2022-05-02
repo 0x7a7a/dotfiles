@@ -14,13 +14,14 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 local packer = require 'packer'
-packer.init {
-  display = {
-    open_fn = function()
-      return require('packer.util').float { border = 'rounded' }
-    end,
-  },
-}
+-- pop-up window
+-- packer.init {
+--   display = {
+--     open_fn = function()
+--       return require('packer.util').float { border = 'rounded' }
+--     end,
+--   },
+-- }
 
 packer.startup(function(use)
   -- packer
@@ -33,7 +34,7 @@ packer.startup(function(use)
   -- colorscheme toolkit https://github.com/lifepillar/vim-colortemplate
   use 'rebelot/kanagawa.nvim'
   use 'folke/tokyonight.nvim'
-  use 'morhetz/gruvbox'
+  -- use 'morhetz/gruvbox'
 
   -- base dependence
   use 'nvim-lua/plenary.nvim'
@@ -130,6 +131,12 @@ packer.startup(function(use)
   -- quick jump in file
   use { 'phaazon/hop.nvim', config = [[ require 'plugins/hop' ]] }
 
+  -- outline
+  use 'simrat39/symbols-outline.nvim'
+
+  -- snip run
+  use { 'michaelb/sniprun', run = './install.sh', config = [[ require 'plugins/sniprun' ]] }
+
   -- smart comment
   use { 'numToStr/Comment.nvim', config = [[ require 'plugins/comment' ]] }
 
@@ -163,6 +170,7 @@ packer.startup(function(use)
       'lewis6991/gitsigns.nvim',
       config = [[ require 'plugins.gitsigns' ]],
     },
+    -- { 'sindrets/diffview.nvim' },
   }
 
   -- highlights
@@ -242,6 +250,9 @@ packer.startup(function(use)
       vim.g.floaterm_width = 0.7
     end,
   }
+
+  -- search/replace
+  -- use 'nvim-pack/nvim-spectre'
 end)
 
 Keymap('n', '<leader>ps', ':PackerSync<CR>')
