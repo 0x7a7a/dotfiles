@@ -25,11 +25,11 @@ cmp.setup {
   },
   mapping = cmp.mapping.preset.insert {
     ['<CR>'] = cmp.mapping.confirm { select = true },
-    ['<C-p>'] = cmp.mapping.select_prev_item(),
-    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
+    ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-e>'] = cmp.mapping.close(),
+    ['<C-e>'] = cmp.mapping.abort(),
 
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then

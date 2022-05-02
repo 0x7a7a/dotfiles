@@ -1,7 +1,3 @@
-local executable = function(x)
-  return vim.fn.executable(x) == 1
-end
-
 -- Automatically install packer
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 
@@ -238,7 +234,13 @@ packer.startup(function(use)
   }
 
   -- floaterm
-  use 'voldikss/vim-floaterm'
+  use {
+    'voldikss/vim-floaterm',
+    setup = function()
+      vim.g.floaterm_height = 0.8
+      vim.g.floaterm_width = 0.7
+    end,
+  }
 end)
 
 Keymap('n', '<leader>ps', ':PackerSync<CR>')
