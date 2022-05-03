@@ -219,7 +219,7 @@ packer.startup(function(use)
   use {
     'L3MON4D3/LuaSnip',
     requires = { 'rafamadriz/friendly-snippets' },
-    config = [[ require('luasnip.loaders.from_vscode').load() ]],
+    config = [[ require('luasnip.loaders.from_vscode').lazy_load() ]],
   }
 
   -- Lsp
@@ -253,6 +253,7 @@ packer.startup(function(use)
       vim.g.floaterm_height = 0.8
       vim.g.floaterm_width = 0.7
     end,
+    cmd = { 'FloatermNew', 'FloatermToggle' },
   }
 
   -- Make quickfix better
