@@ -24,13 +24,13 @@ local packer = require 'packer'
 -- }
 
 packer.startup(function(use)
-  -- packer
+  -- Packer
   use 'wbthomason/packer.nvim'
 
-  -- cache
+  -- Cache
   use 'lewis6991/impatient.nvim'
 
-  -- colorscheme
+  -- Colorscheme
   -- toolkit:
   --    https://github.com/lifepillar/vim-colortemplate
   --    https://github.com/rktjmp/lush.nvim
@@ -38,54 +38,54 @@ packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   -- use 'morhetz/gruvbox'
 
-  -- base dependence
+  -- Base dependence
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons'
 
-  -- smooth scroll
+  -- Smooth scroll
   use 'psliwka/vim-smoothie'
 
-  -- close buffer,keep window
+  -- Close buffer,keep window
   use 'moll/vim-bbye'
 
-  -- auto save session
+  -- Auto save session
   use { 'rmagatti/auto-session', config = [[ require 'auto-session' ]] }
 
-  -- buffer line
+  -- Buffer line
   use { 'akinsho/bufferline.nvim', config = [[ require 'plugins/bufferline' ]] }
 
-  -- statusline
+  -- Statusline
   use { 'nvim-lualine/lualine.nvim', config = [[ require 'plugins/lualine' ]] }
-  -- show code gps on statusline
+  -- Show code gps on statusline
   use 'SmiteshP/nvim-gps'
 
-  -- highlight the variable with the same name
+  -- Highlight the variable with the same name
   use 'RRethy/vim-illuminate'
 
-  -- rainbow brackets
+  -- Rainbow brackets
   use 'p00f/nvim-ts-rainbow'
 
-  -- keymap tips
+  -- Keymap tips
   use { 'folke/which-key.nvim', config = [[ require 'plugins/which-key' ]] }
 
-  -- indent tips
+  -- Indent tips
   use { 'lukas-reineke/indent-blankline.nvim', config = [[ require 'plugins/indent-blankline' ]] }
 
-  -- auto close html tag
+  -- Auto close html tag
   use 'windwp/nvim-ts-autotag'
 
   use { 'windwp/nvim-autopairs', config = [[ require 'plugins/auto-pairs' ]], after = 'nvim-cmp' }
 
-  -- lsp progress alert
+  -- Lsp progress alert
   use { 'j-hui/fidget.nvim', after = 'auto-session', config = [[ require 'plugins/fidget' ]] }
 
-  -- fzf in vim
+  -- Fzf in vim
   -- use { 'junegunn/fzf.vim', requires = { 'junegunn/fzf' } }
 
-  -- auto unhighlight after search
+  -- Auto unhighlight after search
   use { 'romainl/vim-cool', config = [[ vim.g.CoolTotalMatches = 1 ]] }
 
-  -- ai code hint
+  -- Ai code hint
   use {
     'github/copilot.vim',
     config = function()
@@ -95,29 +95,29 @@ packer.startup(function(use)
     end,
   }
 
-  -- neovim colorizer
+  -- Neovim colorizer
   use {
     'norcalli/nvim-colorizer.lua',
     ft = { 'css', 'javascript', 'vim', 'html' },
     config = [[require('colorizer').setup {'css', 'javascript', 'vim', 'html'}]],
   }
 
-  -- highlight matching words
+  -- Highlight matching words
   use { 'andymass/vim-matchup', config = [[ vim.g.loaded_matchit = true ]] }
 
-  -- highlighting unique characters within a line
+  -- Highlighting unique characters within a line
   -- use("unblevable/quick-scope")
 
-  -- text object edit
-  -- use 'mg979/vim-visual-multi'
+  -- Text object edit
   use 'tommcdo/vim-exchange'
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
   use 'wellle/targets.vim'
   use 'junegunn/vim-easy-align'
   use 'AndrewRadev/splitjoin.vim'
+  -- use 'mg979/vim-visual-multi'
 
-  -- search
+  -- Search
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -126,22 +126,22 @@ packer.startup(function(use)
     config = [[ require 'plugins/telescope' ]],
   }
 
-  -- file manager
+  -- File manager
   use { 'kyazdani42/nvim-tree.lua', config = [[ require 'plugins/nvim-tree' ]] }
 
-  -- trouble List
+  -- Trouble List
   use { 'folke/trouble.nvim', config = [[ require 'plugins/trouble' ]] }
 
-  -- quick jump in file
+  -- Quick jump in file
   use { 'phaazon/hop.nvim', config = [[ require 'plugins/hop' ]] }
 
-  -- outline
+  -- Outline
   use 'simrat39/symbols-outline.nvim'
 
-  -- snip run
+  -- Snip run
   use { 'michaelb/sniprun', run = './install.sh', config = [[ require 'plugins/sniprun' ]] }
 
-  -- smart comment
+  -- Smart comment
   use { 'numToStr/Comment.nvim', config = [[ require 'plugins/comment' ]] }
 
   -- Documentation
@@ -152,19 +152,19 @@ packer.startup(function(use)
   --   keys = { '<localleader>d', '<localleader>df', '<localleader>dc' },
   -- }
 
-  -- external supplement for lsp
+  -- External supplement for lsp
   use { 'jose-elias-alvarez/null-ls.nvim', config = [[ require 'plugins/null-ls' ]] }
 
-  -- test helper
+  -- Test helper
   use 'vim-test/vim-test'
 
-  -- analysis of neovim's start-up time
+  -- Analysis of neovim's start-up time
   use { 'dstein64/vim-startuptime', cmd = 'StartupTime' }
 
-  -- async building & commands
+  -- Async building & commands
   -- use { 'tpope/vim-dispatch', cmd = { 'Dispatch', 'Make', 'Focus', 'Start' } }
 
-  -- git
+  -- Git
   use {
     {
       'tpope/vim-fugitive',
@@ -177,7 +177,7 @@ packer.startup(function(use)
     -- { 'sindrets/diffview.nvim' },
   }
 
-  -- highlights
+  -- Highlights
   use {
     'nvim-treesitter/nvim-treesitter',
     requires = {
@@ -189,7 +189,7 @@ packer.startup(function(use)
     config = [[ require 'plugins/treesitter' ]],
   }
 
-  -- asyncrun/task,build and test
+  -- Asyncrun/task,build and test
   use {
     'skywind3000/asynctasks.vim',
     requires = { 'skywind3000/asyncrun.vim' },
@@ -200,10 +200,10 @@ packer.startup(function(use)
     end,
   }
 
-  -- parameter hints
+  -- Parameter hints
   use { 'ray-x/lsp_signature.nvim', config = [[ require 'plugins/lsp_signature' ]] }
 
-  -- nvim-cmp and snip
+  -- Completion and snip
   use {
     'hrsh7th/nvim-cmp',
     requires = {
@@ -222,7 +222,7 @@ packer.startup(function(use)
     config = [[ require('luasnip.loaders.from_vscode').load() ]],
   }
 
-  -- lsp
+  -- Lsp
   use { 'neovim/nvim-lspconfig', config = [[ require 'plugins/lsp-config' ]] }
   use {
     'folke/lsp-colors.nvim',
@@ -246,7 +246,7 @@ packer.startup(function(use)
     config = [[ require 'lsp/typescript' ]],
   }
 
-  -- floaterm
+  -- Floaterm
   use {
     'voldikss/vim-floaterm',
     setup = function()
@@ -255,17 +255,17 @@ packer.startup(function(use)
     end,
   }
 
-  -- TODO
-  -- use 'mhinz/vim-grepper'
-  use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
-  use {
-    'junegunn/fzf',
-    run = function()
-      vim.fn['fzf#install']()
-    end,
-  }
+  -- Make quickfix better
+  -- use { 'mhinz/vim-grepper', cmd = 'Grepper' }
+  -- use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
+  -- use {
+  --   'junegunn/fzf',
+  --   run = function()
+  --     vim.fn['fzf#install']()
+  --   end,
+  -- }
 
-  -- search/replace
+  -- Search/replace
   -- use 'nvim-pack/nvim-spectre'
 end)
 

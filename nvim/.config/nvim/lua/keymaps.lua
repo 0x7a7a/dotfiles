@@ -22,6 +22,11 @@ Keymap('n', ']q', ':cnext<CR>')
 Keymap('n', '[Q', ':cfirst<CR>')
 Keymap('n', ']Q', ':clast<CR>')
 
+Keymap('n', '[l', ':lprevious<CR>')
+Keymap('n', ']l', ':lnext<CR>')
+Keymap('n', '[L', ':lfirst<CR>')
+Keymap('n', ']L', ':llast<CR>')
+
 -- toggle some settings
 -- Keymap('n', '\\q', ':')
 
