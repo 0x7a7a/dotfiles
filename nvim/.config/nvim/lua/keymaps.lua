@@ -10,6 +10,21 @@ end
 -- Keymap('n', '<leader>bb', ':bd<CR>')
 Keymap('n', '<leader>bb', ':Bdelete<CR>')
 
+Keymap('i', '<C-a>', '<Esc>0i')
+Keymap('i', '<C-e>', '<Esc>$a')
+
+Keymap('n', 'H', '^')
+Keymap('n', 'L', '$')
+
+-- navigation in the quickfix list
+Keymap('n', '[q', ':cprevious<CR>')
+Keymap('n', ']q', ':cnext<CR>')
+Keymap('n', '[Q', ':cfirst<CR>')
+Keymap('n', ']Q', ':clast<CR>')
+
+-- toggle some settings
+-- Keymap('n', '\\q', ':')
+
 Keymap('n', ']<Space>', 'o<Esc>k')
 Keymap('n', '[<Space>', 'O<Esc>j')
 
@@ -37,10 +52,6 @@ Keymap('n', '<A-down>', ':resize-5<CR>')
 -- git
 Keymap('n', '<leader>gd', ':Gvdiffsplit<CR>')
 Keymap('n', '<leader>gb', ':Git blame<CR>')
-Keymap('n', '<leader>G', ':G<CR>')
-
--- markdown
-Keymap('n', '<leader>m', ':MarkdownPreviewToggle<CR>')
 
 -- floaterm
 Keymap('n', '<leader>tN', ':FloatermNew<CR>')

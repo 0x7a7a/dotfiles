@@ -31,7 +31,9 @@ packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
 
   -- colorscheme
-  -- colorscheme toolkit https://github.com/lifepillar/vim-colortemplate
+  -- toolkit:
+  --    https://github.com/lifepillar/vim-colortemplate
+  --    https://github.com/rktjmp/lush.nvim
   use 'rebelot/kanagawa.nvim'
   use 'folke/tokyonight.nvim'
   -- use 'morhetz/gruvbox'
@@ -107,6 +109,8 @@ packer.startup(function(use)
   -- use("unblevable/quick-scope")
 
   -- text object edit
+  -- use 'mg979/vim-visual-multi'
+  use 'tommcdo/vim-exchange'
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
   use 'wellle/targets.vim'
@@ -196,7 +200,7 @@ packer.startup(function(use)
     end,
   }
 
-  -- parameter Hints
+  -- parameter hints
   use { 'ray-x/lsp_signature.nvim', config = [[ require 'plugins/lsp_signature' ]] }
 
   -- nvim-cmp and snip
@@ -248,6 +252,16 @@ packer.startup(function(use)
     setup = function()
       vim.g.floaterm_height = 0.8
       vim.g.floaterm_width = 0.7
+    end,
+  }
+
+  -- TODO
+  -- use 'mhinz/vim-grepper'
+  use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
+  use {
+    'junegunn/fzf',
+    run = function()
+      vim.fn['fzf#install']()
     end,
   }
 
