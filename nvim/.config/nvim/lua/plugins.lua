@@ -49,7 +49,7 @@ packer.startup(function(use)
   use 'moll/vim-bbye'
 
   -- Auto save session
-  use { 'rmagatti/auto-session', config = [[ require 'auto-session' ]] }
+  use { 'rmagatti/auto-session' }
 
   -- Buffer line
   use { 'akinsho/bufferline.nvim', config = [[ require 'plugins/bufferline' ]] }
@@ -124,10 +124,16 @@ packer.startup(function(use)
       { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
     },
     config = [[ require 'plugins/telescope' ]],
+    keys = { { 'n', 'sf' }, { 'n', '<Space>fg' }, { 'n', '<Space>fh' } },
   }
 
   -- File manager
-  use { 'kyazdani42/nvim-tree.lua', config = [[ require 'plugins/nvim-tree' ]] }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    config = [[ require 'plugins/nvim-tree']],
+    keys = { 'n', '<C-n>' },
+    cmd = { 'NvimTreeOpen', 'NvimTreeToggle', 'NvimTreeFindFileToggle' },
+  }
 
   -- Trouble List
   use { 'folke/trouble.nvim', config = [[ require 'plugins/trouble' ]] }
@@ -183,7 +189,6 @@ packer.startup(function(use)
     requires = {
       'nvim-treesitter/nvim-treesitter-refactor',
       'RRethy/nvim-treesitter-textsubjects',
-      -- 'RRethy/nvim-treesitter-textsubjects',
     },
     run = ':TSUpdate',
     config = [[ require 'plugins/treesitter' ]],
@@ -194,6 +199,7 @@ packer.startup(function(use)
     'skywind3000/asynctasks.vim',
     requires = { 'skywind3000/asyncrun.vim' },
     cmd = { 'AsyncTask' },
+    keys = { { 'n', '<F5>' }, { 'n', '<F6>' } },
     config = function()
       vim.g.asyncrun_open = 6
       vim.g.asynctasks_term_pos = 'floaterm'
