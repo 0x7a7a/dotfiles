@@ -55,7 +55,6 @@ cmp.setup {
 
     ['<C-j>'] = cmp.mapping(function(fallback)
       cmp.mapping.abort()
-      cmp.mapping.close()
       local copilot_keys = vim.fn['copilot#Accept']()
       if copilot_keys ~= '' then
         vim.api.nvim_feedkeys(copilot_keys, 'i', true)

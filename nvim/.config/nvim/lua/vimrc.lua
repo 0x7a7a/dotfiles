@@ -4,7 +4,7 @@ vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
 -- command menu
-opt.pumblend = 17
+opt.pumblend = 15
 opt.wildmode = 'longest:full,full'
 opt.wildoptions = 'pum'
 
@@ -47,8 +47,12 @@ opt.formatoptions = opt.formatoptions
   + 'n' -- Indent past the formatlistpat, not underneath it.
   + 'j' -- Auto-remove comments if possible.
 
+opt.list = true
+vim.opt.listchars:append 'eol:↴'
+opt.termguicolors = true
+
 -- system clipboard
--- opt.clipboard = "unnamedplus"
+-- opt.clipboard = 'unnamedplus'
 
 -- colorschme
 opt.showmode = false

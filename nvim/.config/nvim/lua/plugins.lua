@@ -115,7 +115,7 @@ packer.startup(function(use)
   use 'wellle/targets.vim'
   use 'junegunn/vim-easy-align'
   use 'AndrewRadev/splitjoin.vim'
-  -- use 'mg979/vim-visual-multi'
+  use 'mg979/vim-visual-multi'
 
   -- Search
   use {
@@ -124,14 +124,13 @@ packer.startup(function(use)
       { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
     },
     config = [[ require 'plugins/telescope' ]],
-    keys = { { 'n', 'sf' }, { 'n', '<Space>fg' }, { 'n', '<Space>fh' } },
   }
 
   -- File manager
   use {
     'kyazdani42/nvim-tree.lua',
     config = [[ require 'plugins/nvim-tree']],
-    keys = { 'n', '<C-n>' },
+    keys = { 'n', '<Space>n' },
     cmd = { 'NvimTreeOpen', 'NvimTreeToggle', 'NvimTreeFindFileToggle' },
   }
 

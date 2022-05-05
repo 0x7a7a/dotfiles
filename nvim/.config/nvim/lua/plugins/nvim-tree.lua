@@ -97,4 +97,4 @@ require('nvim-tree').setup {
   },
 }
 
-Keymap('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
+Keymap('n', '<Space>n', ':NvimTreeFindFileToggle<CR>')
