@@ -90,8 +90,8 @@ Keymap('n', '<a-n>', ':lua require"illuminate".next_reference{wrap=true}<cr>')
 Keymap('n', '<a-p>', ':lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>')
 
 -- Nvim-lsp-ts-utils
-Keymap('n', '<leader>Ti', ':TSLspImportAll<CR>')
-Keymap('n', '<leader>Ts', ':TSLspOrganize<CR>')
+Keymap('n', '<leader>ia', ':TSLspImportAll<CR>')
+Keymap('n', '<leader>io', ':TSLspOrganize<CR>')
 
 -- Easyalign
 Keymap('n', 'ga', ':EasyAlign<CR>')
