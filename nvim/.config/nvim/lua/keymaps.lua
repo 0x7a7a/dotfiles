@@ -109,4 +109,4 @@ Keymap('n', '<leader>R', ':source %<CR>')
 Keymap('n', '<leader>L', ':luafile %<CR>')
 
 -- Outline
-Keymap('n', '<leader>o', ':SymbolsOutline<CR>')
+Keymap('n', '<leader>o', ':TagbarToggle<CR>')
