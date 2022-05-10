@@ -26,6 +26,13 @@ require('nvim-treesitter.configs').setup {
       },
     },
   },
+  refactor = {
+    highlight_definitions = {
+      enable = true,
+      -- Set to false if you have an `updatetime` of ~100.
+      clear_on_cursor_move = true,
+    },
+  },
   rainbow = {
     enable = true,
     extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
@@ -39,13 +46,20 @@ require('nvim-treesitter.configs').setup {
   autotag = {
     enable = true,
   },
-  textsubjects = {
-    enable = true,
-    prev_selection = ';', -- (Optional) keymap to select the previous selection
-    keymaps = {
-      ['.'] = 'textsubjects-smart',
-      -- [";"] = "textsubjects-container-outer",
-      -- ["i;"] = "textsubjects-container-inner",
+  textobjects = {
+    select = {
+      enable = true,
+
+      -- Automatically jump forward to textobj, similar to targets.vim
+      lookahead = true,
+
+      keymaps = {
+        -- You can use the capture groups defined in textobjects.scm
+        ['af'] = '@function.outer',
+        ['if'] = '@function.inner',
+        ['ac'] = '@class.outer',
+        ['ic'] = '@class.inner',
+      },
     },
   },
 }

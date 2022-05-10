@@ -147,7 +147,7 @@ packer.startup(function(use)
   use { 'phaazon/hop.nvim', config = [[ require 'plugins/hop' ]] }
 
   -- Outline
-  use 'preservim/tagbar'
+  -- use 'preservim/tagbar'
 
   -- Snip run
   use { 'michaelb/sniprun', run = './install.sh', config = [[ require 'plugins/sniprun' ]] }
@@ -193,7 +193,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     requires = {
       'nvim-treesitter/nvim-treesitter-refactor',
-      'RRethy/nvim-treesitter-textsubjects',
+      'nvim-treesitter/nvim-treesitter-textobjects',
     },
     run = ':TSUpdate',
     config = [[ require 'plugins/treesitter' ]],
