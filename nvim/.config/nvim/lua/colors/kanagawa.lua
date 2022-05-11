@@ -1,16 +1,17 @@
--- Default options:
 require('kanagawa').setup {
   undercurl = true, -- enable undercurls
   commentStyle = 'italic',
-  functionStyle = 'italic',
+  functionStyle = 'NONE',
   keywordStyle = 'italic',
   statementStyle = 'bold',
-  typeStyle = 'italic',
-  variablebuiltinStyle = 'bold',
+  typeStyle = 'NONE',
+  variablebuiltinStyle = 'italic',
   specialReturn = true, -- special highlight for the return keyword
   specialException = true, -- special highlight for exception handling keywords
   transparent = false, -- do not set background color
-  dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+  dimInactive = true, -- dim inactive window `:h hl-NormalNC`
   colors = {},
   overrides = {},
+
+  globalStatus = true,
 }

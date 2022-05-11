@@ -1,40 +1,6 @@
 require('hop').setup()
 
-Keymap(
-  'n',
-  'f',
-  ":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-  {}
-)
-Keymap(
-  'n',
-  'F',
-  ":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-  {}
-)
-Keymap(
-  'o',
-  'f',
-  ":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-  {}
-)
-Keymap(
-  'o',
-  'F',
-  ":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-  {}
-)
-Keymap(
-  '',
-  'f',
-  ":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
-  {}
-)
-Keymap(
-  '',
-  'F',
-  ":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
-  {}
-)
-Keymap('n', 'fl', ':HopLineStart<CR>')
-Keymap('n', 'ff', ':HopChar1<CR>')
+Keymap({ 'n', 'v' }, 'f', '<Cmd>HopChar1CurrentLineAC<CR>', {})
+Keymap({ 'n', 'v' }, 'F', '<Cmd>HopChar1CurrentLineBC<CR>', {})
+Keymap({ 'n', 'v' }, 'ff', '<Cmd>HopChar1<CR>')
+Keymap({ 'n', 'v' }, 'fl', '<Cmd>HopLineStart<CR>')

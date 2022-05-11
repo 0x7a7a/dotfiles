@@ -48,8 +48,18 @@ opt.formatoptions = opt.formatoptions
   + 'n' -- Indent past the formatlistpat, not underneath it.
   + 'j' -- Auto-remove comments if possible.
 
+opt.fillchars:append {
+  horiz = '━',
+  horizup = '┻',
+  horizdown = '┳',
+  vert = '┃',
+  vertleft = '┨',
+  vertright = '┣',
+  verthoriz = '╋',
+}
+
 opt.list = true
-vim.opt.listchars:append 'eol:↴'
+opt.listchars:append 'eol:↴'
 opt.termguicolors = true
 
 -- system clipboard
@@ -62,3 +72,6 @@ opt.termguicolors = true
 
 -- fold
 opt.foldenable = false
+
+-- disabled illuminate
+vim.g.Illuminate_ftblacklist = { 'NvimTree' }
