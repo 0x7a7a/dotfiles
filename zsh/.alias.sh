@@ -2,7 +2,7 @@ alias gp='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7
 alias unp='unset http_proxy https_proxy'
 alias ..='cd ..'
 alias ls='lsd'
-alias l='ls -la'
+alias l='ls -l'
 alias ll='ls -l'
 alias lla='ls -la'
 alias la='ls -a'

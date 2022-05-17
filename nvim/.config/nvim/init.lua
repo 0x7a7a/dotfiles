@@ -4,13 +4,13 @@ if ok then
   require 'impatient'
 end
 
+-- some utils function
 require 'globals'
 
 -- base vim setting
 require 'vimrc'
-
--- key mapping
 require 'keymaps'
+require 'autocmds'
 
 -- colorscheme
 require 'colors/tokyonight'
@@ -18,10 +18,9 @@ require 'colors/kanagawa'
 vim.cmd [[colorscheme kanagawa]]
 -- vim.cmd([[colorscheme tokyonight]])
 
--- load plugins
 require 'plugins'
 
--- LSP server
+-- lsp config
 require 'lsp/eslint'
 require 'lsp/lua'
 require 'lsp/cssls'

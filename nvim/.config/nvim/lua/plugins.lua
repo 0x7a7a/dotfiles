@@ -203,8 +203,6 @@ packer.startup(function(use)
   use {
     'skywind3000/asynctasks.vim',
     requires = { 'skywind3000/asyncrun.vim' },
-    cmd = { 'AsyncTask' },
-    keys = { { 'n', '<F5>' }, { 'n', '<F6>' } },
     config = function()
       vim.g.asyncrun_open = 6
       vim.g.asynctasks_term_pos = 'floaterm'
@@ -256,6 +254,9 @@ packer.startup(function(use)
     ft = { 'typescript', 'typescriptreact' },
     config = [[ require 'lsp/typescript' ]],
   }
+
+  -- rust
+  use { 'rust-lang/rust.vim', ft = { 'rust' }, after = 'nvim-lspconfig', config = [[ require 'lsp/rust' ]] }
 
   -- Floaterm
   use {

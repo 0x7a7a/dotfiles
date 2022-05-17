@@ -17,8 +17,8 @@ patch:
   engine/translators:
     # - lua_translator@date_translator
     # - lua_translator@week_translator
-    - punct_translator
-    - script_translator
+    # - punct_translator
+    # - script_translator
     - table_translator@custom_phrase
   engine/filters:
     - simplifier@emoji_suggestion
@@ -87,7 +87,7 @@ patch:
     enable_completion: false
     enable_sentence: false
     initial_quality: 1
-  "engine/translators/@5": table_translator@custom_phrase
+  # "engine/translators/@5": table_translator@custom_phrase
 
 # Rx: BlindingDark/rime-easy-en:customize:schema=double_pinyin_flypy
   # __include: easy_en:/patch
@@ -98,4 +98,4 @@ patch:
   # __include: lua_select_character:/patch # 需要lua_selector打开本行注释
 
 # librime-lua 输入动态时间和日期
-  "engine/translators/@6": lua_translator@date_translator
+  "engine/translators/@1": lua_translator@date_translator
