@@ -254,7 +254,6 @@ packer.startup(function(use)
     ft = { 'typescript', 'typescriptreact' },
     config = [[ require 'lsp/typescript' ]],
   }
-
   -- rust
   use { 'rust-lang/rust.vim', ft = { 'rust' }, after = 'nvim-lspconfig', config = [[ require 'lsp/rust' ]] }
 

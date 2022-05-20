@@ -88,5 +88,5 @@ Keymap('n', '<Space>fd', ':lua require("plugins/telescope/finder").fd_in_dotfile
 Keymap('n', '<Space>fm', ':lua require("plugins/telescope/finder").fd()<CR>')
 
 -- lsp
-Keymap('n', 'gi', ':Telescope lsp_implementations()<CR>')
-Keymap('n', 'gr', ':Telescope lsp_reference()<CR>')
+Keymap('n', 'gi', ':Telescope lsp_implementations<CR>')
+Keymap('n', 'gr', ':Telescope lsp_reference<CR>')
