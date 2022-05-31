@@ -129,14 +129,6 @@ packer.startup(function(use)
   -- File manager
   use {
     'kyazdani42/nvim-tree.lua',
-    setup = function()
-      vim.g.nvim_tree_show_icons = {
-        git = 1,
-        folders = 1,
-        files = 1,
-        folder_arrows = 0,
-      }
-    end,
     config = [[ require 'plugins/nvim-tree']],
   }
 

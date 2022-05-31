@@ -1,5 +1,6 @@
 require('nvim-tree').setup {
   auto_reload_on_write = true,
+  create_in_closed_folder = false,
   disable_netrw = false,
   hijack_cursor = false,
   hijack_netrw = true,
@@ -10,6 +11,8 @@ require('nvim-tree').setup {
   open_on_tab = false,
   sort_by = 'name',
   update_cwd = false,
+  reload_on_bufenter = false,
+  respect_buf_cwd = false,
   view = {
     width = 30,
     height = 30,
@@ -24,6 +27,57 @@ require('nvim-tree').setup {
       -- disable custom system open
       list = { { key = 's' } },
     },
+  },
+  renderer = {
+    add_trailing = false,
+    group_empty = false,
+    highlight_git = false,
+    highlight_opened_files = 'none',
+    root_folder_modifier = ':~',
+    indent_markers = {
+      enable = false,
+      icons = {
+        corner = '└ ',
+        edge = '│ ',
+        none = '  ',
+      },
+    },
+    icons = {
+      webdev_colors = true,
+      git_placement = 'before',
+      padding = ' ',
+      symlink_arrow = ' ➛ ',
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = false,
+        git = true,
+      },
+      glyphs = {
+        default = '',
+        symlink = '',
+        folder = {
+          arrow_closed = '',
+          arrow_open = '',
+          default = '',
+          open = '',
+          empty = '',
+          empty_open = '',
+          symlink = '',
+          symlink_open = '',
+        },
+        git = {
+          unstaged = '✗',
+          staged = '✓',
+          unmerged = '',
+          renamed = '➜',
+          untracked = '★',
+          deleted = '',
+          ignored = '◌',
+        },
+      },
+    },
+    special_files = { 'Cargo.toml', 'Makefile', 'README.md', 'readme.md' },
   },
   hijack_directories = {
     enable = true,
@@ -66,6 +120,9 @@ require('nvim-tree').setup {
       global = false,
       restrict_above_cwd = true,
     },
+    expand_all = {
+      max_folder_discovery = 300,
+    },
     open_file = {
       quit_on_open = false,
       resize_window = false,
@@ -78,10 +135,17 @@ require('nvim-tree').setup {
         },
       },
     },
+    remove_file = {
+      close_window = true,
+    },
   },
   trash = {
     cmd = 'trash',
     require_confirm = true,
+  },
+  live_filter = {
+    prefix = '[FILTER]: ',
+    always_show_folders = true,
   },
   log = {
     enable = false,
