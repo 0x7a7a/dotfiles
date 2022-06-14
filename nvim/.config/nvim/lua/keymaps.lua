@@ -67,15 +67,16 @@ Keymap('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', {
 Keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 
 -- Floaterm
-Keymap('n', '<leader>tt', ':FloatermToggle<CR>')
-Keymap('t', '<leader>tt', '<C-\\><C-n>:FloatermToggle<CR>')
-Keymap('t', '<leader>tN', '<C-\\><C-n>:FloatermNew<CR>')
-Keymap('t', '<leader>tp', '<C-\\><C-n>:FloatermPrev<CR>')
-Keymap('t', '<leader>tn', '<C-\\><C-n>:FloatermNext<CR>')
-Keymap('t', '<leader>tk', '<C-\\><C-n>:FloatermKill<CR>')
+Keymap('n', '<leader>f', ':FloatermToggle<CR>')
+Keymap('t', '<leader>f', '<C-\\><C-n>:FloatermToggle<CR>')
+Keymap('t', '<A-n>', '<C-\\><C-n>:FloatermNew<CR>')
+Keymap('t', '<A-k>', '<C-\\><C-n>:FloatermKill<CR>')
+Keymap('t', '<A-h>', '<C-\\><C-n>:FloatermPrev<CR>')
+Keymap('t', '<A-l>', '<C-\\><C-n>:FloatermNext<CR>')
+Keymap('t', '<A-q>', '<C-\\><C-n>')
+
 Keymap('n', '<leader>lg', ':FloatermNew --title=lazygit --autoclose=2 lazygit<CR>')
 Keymap('n', '<leader>lf', ':FloatermNew --title=fl --autoclose=2 lf<CR>')
-Keymap('t', '<A-q>', '<C-\\><C-n>')
 
 -- Async task
 Keymap('n', '<F5>', ':AsyncTask dev<CR>')
@@ -94,11 +95,11 @@ Keymap('n', 'ga', ':EasyAlign<CR>')
 Keymap('x', 'ga', ':EasyAlign<CR>')
 
 -- Test
-Keymap('n', '<leader>Tt', ':TestNearest<CR>')
-Keymap('n', '<leader>Tf', ':TestFile<CR>')
-Keymap('n', '<leader>Ts', ':TestSuite<CR>')
-Keymap('n', '<leader>Tl', ':TestLast<CR>')
-Keymap('n', '<leader>Tv', ':TestVisit<CR>')
+Keymap('n', '<leader>tt', ':TestNearest<CR>')
+Keymap('n', '<leader>tf', ':TestFile<CR>')
+Keymap('n', '<leader>ts', ':TestSuite<CR>')
+Keymap('n', '<leader>tl', ':TestLast<CR>')
+Keymap('n', '<leader>tv', ':TestVisit<CR>')
 
 -- Dev
 Keymap('n', '<leader>R', ':source %<CR>')
