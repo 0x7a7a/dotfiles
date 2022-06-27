@@ -141,9 +141,6 @@ packer.startup(function(use)
   -- Outline
   -- use 'preservim/tagbar'
 
-  -- Snip run
-  use { 'michaelb/sniprun', run = './install.sh', config = [[ require 'plugins/sniprun' ]] }
-
   -- Smart comment
   use { 'numToStr/Comment.nvim', config = [[ require 'plugins/comment' ]] }
 

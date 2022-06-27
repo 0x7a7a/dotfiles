@@ -95,7 +95,7 @@ Keymap('n', 'ga', ':EasyAlign<CR>')
 Keymap('x', 'ga', ':EasyAlign<CR>')
 
 -- Test
-Keymap('n', '<leader>tt', ':TestNearest<CR>')
+Keymap('n', '<leader>tt', ':TestNearest -strategy=floaterm<CR>')
 Keymap('n', '<leader>tf', ':TestFile<CR>')
 Keymap('n', '<leader>ts', ':TestSuite<CR>')
 Keymap('n', '<leader>tl', ':TestLast<CR>')

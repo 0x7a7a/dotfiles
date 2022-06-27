@@ -1,5 +1,6 @@
 # go
 export GO111MODULE=auto
+export GOWORK=off
 export GOPROXY="https://goproxy.cn/,direct"
 export GOROOT=/usr/local/go
 export GOPATH=~/dev/gopath
