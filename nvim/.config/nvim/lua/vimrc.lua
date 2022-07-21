@@ -19,7 +19,7 @@ opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
 opt.scrolloff = 5
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.cursorline = true
 opt.signcolumn = 'yes'
 opt.mouse = 'a'
@@ -75,3 +75,7 @@ opt.foldenable = false
 
 -- disabled illuminate
 vim.g.Illuminate_ftblacklist = { 'NvimTree' }
+
+-- use filetype.lua instead of filetype.vim
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0

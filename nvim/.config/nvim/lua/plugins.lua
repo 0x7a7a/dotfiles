@@ -116,6 +116,7 @@ packer.startup(function(use)
   use 'junegunn/vim-easy-align'
   use 'AndrewRadev/splitjoin.vim'
   -- use 'mg979/vim-visual-multi'
+  -- use 'terryma/vim-expand-region'
 
   -- Search
   use {
@@ -136,7 +137,7 @@ packer.startup(function(use)
   use { 'folke/trouble.nvim', config = [[ require 'plugins/trouble' ]] }
 
   -- Quick jump in file
-  use { 'phaazon/hop.nvim', config = [[ require 'plugins/hop' ]] }
+  use { 'phaazon/hop.nvim', branch = 'v2', config = [[ require 'plugins/hop' ]] }
 
   -- Outline
   -- use 'preservim/tagbar'
