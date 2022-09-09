@@ -93,6 +93,7 @@ packer.startup(function(use)
       vim.g.copilot_assume_mapped = true
       vim.g.copilot_tab_fallback = ''
     end,
+    disable = true,
   }
 
   -- Neovim colorizer
@@ -109,7 +110,7 @@ packer.startup(function(use)
   -- use("unblevable/quick-scope")
 
   -- Text object edit
-  use 'tommcdo/vim-exchange'
+  -- use 'tommcdo/vim-exchange'
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
   use 'wellle/targets.vim'

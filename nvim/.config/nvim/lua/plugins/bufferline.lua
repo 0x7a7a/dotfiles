@@ -10,7 +10,7 @@ require('bufferline').setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator_icon = '▎',
+    indicator = { style = 'icon' },
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
@@ -49,15 +49,6 @@ require('bufferline').setup {
 Keymap('n', '<A-h>', ':BufferLineCyclePrev<CR>')
 Keymap('n', '<A-l>', ':BufferLineCycleNext<CR>')
 
-Keymap('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>')
-Keymap('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>')
-Keymap('n', '<A-3>', ':BufferLineGoToBuffer 3<CR>')
-Keymap('n', '<A-4>', ':BufferLineGoToBuffer 4<CR>')
-Keymap('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>')
-Keymap('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>')
-Keymap('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>')
-Keymap('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>')
-Keymap('n', '<A-9>', ':BufferLineGoToBuffer 9<CR>')
 Keymap('n', '<leader>br', ':BufferLineCloseRight<CR>')
 Keymap('n', '<leader>bl', ':BufferLineCloseLeft<CR>')
 Keymap('n', '<leader>bp', ':BufferLinePickClose<CR>')

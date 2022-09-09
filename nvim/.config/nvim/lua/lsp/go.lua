@@ -7,11 +7,11 @@ require('lspconfig').gopls.setup {
     basic.on_attach(client, bufnr)
   end,
 
-  filetypes = { 'go', 'gomod', 'gohtmltmpl', 'gotexttmpl' },
+  filetypes = { 'go', 'gomod' },
   message_level = vim.lsp.protocol.MessageType.Error,
   cmd = {
     'gopls',
-    -- 'server',
+    'serve',
   },
   root_dir = util.root_pattern('go.work', 'go.mod', '.git'),
   flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
@@ -25,7 +25,6 @@ require('lspconfig').gopls.setup {
         tidy = true,
       },
       usePlaceholders = true,
-      completeUnimported = true,
       staticcheck = true,
       matcher = 'fuzzy',
       diagnosticsDelay = '500ms',
@@ -38,4 +37,4 @@ require('lspconfig').gopls.setup {
   },
 }
 
--- require('lspconfig').golangci_lint_ls.setup({})
+require('lspconfig').golangci_lint_ls.setup {}
