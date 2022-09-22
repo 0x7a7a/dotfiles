@@ -79,6 +79,9 @@ zinit wait lucid for \
     sbin'fnm' \
   @Schniz/fnm
 
+# pyenv
+zinit pack for pyenv
+
 ### make command run better
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='fd --type f'

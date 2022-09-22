@@ -15,3 +15,12 @@ vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
     vim.opt.cursorline = arg.event == 'InsertLeave'
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  group = config_group,
+  pattern = { 'go' },
+  callback = function()
+    vim.keymap.set('n', '<leader>ds', '<Plug>(go-def-split)')
+    vim.keymap.set('n', '<leader>dv', '<Plug>(go-def-vertical)')
+  end,
+})

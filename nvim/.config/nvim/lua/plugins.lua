@@ -69,7 +69,7 @@ packer.startup(function(use)
   use { 'folke/which-key.nvim', config = [[ require 'plugins/which-key' ]] }
 
   -- Indent tips
-  use { 'lukas-reineke/indent-blankline.nvim', config = [[ require 'plugins/indent-blankline' ]] }
+  use { 'lukas-reineke/indent-blankline.nvim', config = [[ require 'plugins/indent-blankline' ]], disable = true }
 
   -- Auto close html tag
   use 'windwp/nvim-ts-autotag'

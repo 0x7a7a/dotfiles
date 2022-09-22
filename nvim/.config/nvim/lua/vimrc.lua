@@ -58,7 +58,7 @@ opt.fillchars:append {
   verthoriz = '╋',
 }
 
-opt.list = true
+opt.list = false
 opt.listchars:append 'eol:↴'
 opt.termguicolors = true
 
