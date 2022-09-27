@@ -35,7 +35,7 @@ packer.startup(function(use)
   --    https://github.com/lifepillar/vim-colortemplate
   --    https://github.com/rktjmp/lush.nvim
   use 'rebelot/kanagawa.nvim'
-  use 'folke/tokyonight.nvim'
+  -- use 'folke/tokyonight.nvim'
   -- use 'morhetz/gruvbox'
 
   -- Base dependence
@@ -240,11 +240,6 @@ packer.startup(function(use)
   use { 'buoto/gotests-vim', cmd = 'GoTests' }
   -- typescript
   use { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } }
-  use {
-    'jose-elias-alvarez/nvim-lsp-ts-utils',
-    ft = { 'typescript', 'typescriptreact' },
-    config = [[ require 'lsp/typescript' ]],
-  }
   -- rust
   use { 'rust-lang/rust.vim', ft = { 'rust' }, after = 'nvim-lspconfig', config = [[ require 'lsp/rust' ]] }
 

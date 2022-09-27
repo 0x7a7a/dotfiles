@@ -38,9 +38,16 @@ zi wait lucid for \
 zi ice lucid waite=1 as"completion"
 zi snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
-### theme
+### theme p10k
 zi ice depth 1; zi light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+### starship
+# zi for \
+#     from'gh-r' \
+#     sbin'**/starship -> starship' \
+#   starship/starship
+# eval "$(starship init zsh)"
 
 ### tool
 zi wait lucid for \
