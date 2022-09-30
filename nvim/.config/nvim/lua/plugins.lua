@@ -35,7 +35,7 @@ packer.startup(function(use)
   --    https://github.com/lifepillar/vim-colortemplate
   --    https://github.com/rktjmp/lush.nvim
   use 'rebelot/kanagawa.nvim'
-  -- use 'folke/tokyonight.nvim'
+  use 'folke/tokyonight.nvim'
   -- use 'morhetz/gruvbox'
 
   -- Base dependence
@@ -138,7 +138,7 @@ packer.startup(function(use)
   use { 'folke/trouble.nvim', config = [[ require 'plugins/trouble' ]] }
 
   -- Quick jump in file
-  use { 'phaazon/hop.nvim', branch = 'v2', config = [[ require 'plugins/hop' ]] }
+  use { 'ggandor/leap.nvim', config = [[ require 'plugins/leap' ]] }
 
   -- Outline
   -- use 'preservim/tagbar'
