@@ -61,7 +61,7 @@ M.on_attach = function(client, bufnr)
   })
 
   -- autoformat
-  if client.resolved_capabilities.document_formatting then
+  if client.server_capabilities.document_formatting then
     vim.cmd [[
         augroup LspFormatting
         autocmd! * <buffer>
