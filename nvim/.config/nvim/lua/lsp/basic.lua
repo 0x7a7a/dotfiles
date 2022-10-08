@@ -60,15 +60,6 @@ M.on_attach = function(client, bufnr)
     end,
   })
 
-  -- autoformat
-  if client.server_capabilities.document_formatting then
-    vim.cmd [[
-        augroup LspFormatting
-        autocmd! * <buffer>
-        autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-        augroup END
-        ]]
-  end
 end
 
 return M

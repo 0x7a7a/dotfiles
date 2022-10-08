@@ -5,6 +5,18 @@ local linter = builtins.diagnostics
 
 local utils = require('null-ls.utils').make_conditional_utils()
 
+-- format
+local lsp_formatting = function(bufnr)
+    vim.lsp.buf.format({
+        filter = function(client)
+            -- apply whatever logic you want (in this example, we'll only use null-ls)
+            return client.name == "null-ls"
+        end,
+        bufnr = bufnr,
+    })
+end
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 require('null-ls').setup {
   debug = false,
   sources = {
@@ -56,14 +68,16 @@ require('null-ls').setup {
   },
 
   -- format files on save
-  on_attach = function(client)
-    if client.server_capabilities.document_formatting then
-      vim.cmd [[
-            augroup LspFormatting
-                autocmd! * <buffer>
-                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-            augroup END
-            ]]
+  on_attach = function(client,bufnr)
+    if client.supports_method("textDocument/formatting") then
+        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            group = augroup,
+            buffer = bufnr,
+            callback = function()
+                lsp_formatting(bufnr)
+            end,
+        })
     end
   end,
 }
