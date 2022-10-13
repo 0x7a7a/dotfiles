@@ -236,7 +236,13 @@ packer.startup(function(use)
     end,
   }
   -- go
-  use { 'fatih/vim-go', ft = { 'go' }, after = 'nvim-lspconfig', config = [[ require 'lsp/go' ]] }
+  use {
+    'ray-x/go.nvim',
+    requires = { 'ray-x/guihua.lua' },
+    ft = { 'go' },
+    after = 'nvim-lspconfig',
+    config = [[ require 'lsp/go' ]],
+  }
   use { 'buoto/gotests-vim', cmd = 'GoTests' }
   -- typescript
   use { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } }

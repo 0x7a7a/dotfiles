@@ -24,3 +24,12 @@ vim.api.nvim_create_autocmd('FileType', {
     Keymap('n', '<leader>dv', '<Plug>(go-def-vertical)')
   end,
 })
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  group = config_group,
+  pattern = '*.go',
+  callback = function()
+    -- require('go.format').gofmt()
+    vim.lsp.buf.format()
+  end,
+})

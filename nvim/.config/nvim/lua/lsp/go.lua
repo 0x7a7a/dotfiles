@@ -9,10 +9,7 @@ require('lspconfig').gopls.setup {
 
   filetypes = { 'go', 'gomod' },
   message_level = vim.lsp.protocol.MessageType.Error,
-  cmd = {
-    'gopls',
-    'serve',
-  },
+  cmd = { 'gopls' },
   root_dir = util.root_pattern('go.work', 'go.mod', '.git'),
   flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
   settings = {
@@ -26,15 +23,13 @@ require('lspconfig').gopls.setup {
       },
       usePlaceholders = true,
       staticcheck = true,
-      matcher = 'fuzzy',
       diagnosticsDelay = '500ms',
       experimentalWatchedFileDelay = '1000ms',
       symbolMatcher = 'fuzzy',
-      gofumpt = false, -- true, -- turn on for new repos, gofmpt is good but also create code turmoils
-      buildFlags = { '-tags', 'integration' },
-      -- buildFlags = {"-tags", "functional"}
+      gofumpt = false, -- turn on for new repos, gofmpt is good but also create code turmoils
     },
   },
 }
 
 require('lspconfig').golangci_lint_ls.setup {}
+require('go').setup()
