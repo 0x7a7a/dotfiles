@@ -110,12 +110,12 @@ packer.startup(function(use)
   -- use("unblevable/quick-scope")
 
   -- Text object edit
-  -- use 'tommcdo/vim-exchange'
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
   use 'wellle/targets.vim'
   use 'junegunn/vim-easy-align'
   use 'AndrewRadev/splitjoin.vim'
+  -- use 'tommcdo/vim-exchange'
   -- use 'mg979/vim-visual-multi'
   -- use 'terryma/vim-expand-region'
 
@@ -243,7 +243,6 @@ packer.startup(function(use)
     after = 'nvim-lspconfig',
     config = [[ require 'lsp/go' ]],
   }
-  use { 'buoto/gotests-vim', cmd = 'GoTests' }
   -- typescript
   use { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } }
   -- rust
