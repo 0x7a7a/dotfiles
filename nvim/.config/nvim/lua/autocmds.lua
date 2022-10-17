@@ -7,14 +7,14 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
-  group = config_group,
-  pattern = '*',
-  desc = 'smart cursorline',
-  callback = function(arg)
-    vim.opt.cursorline = arg.event == 'InsertLeave'
-  end,
-})
+-- vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
+--   group = config_group,
+--   pattern = '*',
+--   desc = 'smart cursorline',
+--   callback = function(arg)
+--     vim.opt.cursorline = arg.event == 'InsertLeave'
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd('FileType', {
   group = config_group,
@@ -29,7 +29,8 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   group = config_group,
   pattern = '*.go',
   callback = function()
+    -- vim.lsp.buf.format()
     -- require('go.format').gofmt()
-    vim.lsp.buf.format()
+    require('go.format').goimport()
   end,
 })

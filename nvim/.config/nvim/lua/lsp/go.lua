@@ -15,12 +15,12 @@ require('lspconfig').gopls.setup {
   settings = {
     gopls = {
       analyses = { unusedparams = true, unreachable = false },
-      codelenses = {
-        generate = true,
-        gc_details = true,
-        test = true,
-        tidy = true,
-      },
+      -- codelenses = {
+      --   generate = true,
+      --   gc_details = true,
+      --   test = true,
+      --   tidy = true,
+      -- },
       usePlaceholders = true,
       staticcheck = true,
       diagnosticsDelay = '500ms',
