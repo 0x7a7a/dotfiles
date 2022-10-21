@@ -270,6 +270,12 @@ packer.startup(function(use)
 
   -- Search/replace
   -- use 'nvim-pack/nvim-spectre'
+
+  -- Escape Mapping
+  use {
+    'max397574/better-escape.nvim',
+    config = [[ require 'plugins/better_escape' ]],
+  }
 end)
 
 Keymap('n', '<leader>ps', ':PackerSync<CR>')
