@@ -24,7 +24,6 @@ require('lspconfig').gopls.setup {
       usePlaceholders = true,
       staticcheck = true,
       diagnosticsDelay = '500ms',
-      experimentalWatchedFileDelay = '1000ms',
       symbolMatcher = 'fuzzy',
       gofumpt = false, -- turn on for new repos, gofmpt is good but also create code turmoils
     },

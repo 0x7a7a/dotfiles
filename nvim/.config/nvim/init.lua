@@ -13,8 +13,8 @@ require 'keymaps'
 require 'autocmds'
 
 -- colorscheme
-require 'colors/tokyonight'
 require 'colors/kanagawa'
+-- require 'colors/tokyonight'
 
 vim.cmd [[colorscheme kanagawa]]
 -- vim.cmd([[colorscheme tokyonight]])

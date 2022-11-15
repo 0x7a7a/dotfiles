@@ -35,7 +35,7 @@ packer.startup(function(use)
   --    https://github.com/lifepillar/vim-colortemplate
   --    https://github.com/rktjmp/lush.nvim
   use 'rebelot/kanagawa.nvim'
-  use 'folke/tokyonight.nvim'
+  -- use 'folke/tokyonight.nvim'
   -- use 'morhetz/gruvbox'
 
   -- Base dependence
@@ -276,6 +276,9 @@ packer.startup(function(use)
     'max397574/better-escape.nvim',
     config = [[ require 'plugins/better_escape' ]],
   }
+
+  -- fold
+  -- kevinhwang91/nvim-ufo
 end)
 
 Keymap('n', '<leader>ps', ':PackerSync<CR>')
