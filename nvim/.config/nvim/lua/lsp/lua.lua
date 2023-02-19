@@ -3,7 +3,7 @@ local basic = require 'lsp/basic'
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').sumneko_lua.setup {
+require('lspconfig').lua_is.setup {
   on_attach = function(client, bufnr)
     basic.on_attach(client, bufnr)
   end,
