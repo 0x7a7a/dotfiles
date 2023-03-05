@@ -16,7 +16,6 @@ require 'autocmds'
 require 'colors/kanagawa'
 -- require 'colors/tokyonight'
 
-vim.cmd [[colorscheme kanagawa]]
 -- vim.cmd([[colorscheme tokyonight]])
 
 require 'plugins'

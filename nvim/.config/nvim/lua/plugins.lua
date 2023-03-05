@@ -36,7 +36,7 @@ packer.startup(function(use)
   --    https://github.com/rktjmp/lush.nvim
   use 'rebelot/kanagawa.nvim'
   -- use 'folke/tokyonight.nvim'
-  -- use 'morhetz/gruvbox'
+  use 'morhetz/gruvbox'
 
   -- Base dependence
   use 'nvim-lua/plenary.nvim'
