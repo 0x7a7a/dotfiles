@@ -1,230 +1,306 @@
--- Automatically install packer
-local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
     'git',
     'clone',
-    '--depth',
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path,
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
   }
-  vim.api.nvim_command 'packadd packer.nvim'
 end
+vim.opt.rtp:prepend(lazypath)
+-- Make sure to set `mapleader` before lazy so your mappings are correct
+-- vim.g.mapleader = ','
+-- vim.g.maplocalleader = ','
 
-local packer = require 'packer'
--- pop-up window
--- packer.init {
---   display = {
---     open_fn = function()
---       return require('packer.util').float { border = 'rounded' }
---     end,
---   },
--- }
-
-packer.startup(function(use)
-  -- Packer
-  use 'wbthomason/packer.nvim'
-
-  -- Cache
-  use 'lewis6991/impatient.nvim'
-
+require('lazy').setup {
   -- Colorscheme
   -- toolkit:
   --    https://github.com/lifepillar/vim-colortemplate
   --    https://github.com/rktjmp/lush.nvim
-  use 'rebelot/kanagawa.nvim'
-  -- use 'folke/tokyonight.nvim'
-  use 'morhetz/gruvbox'
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd [[colorscheme kanagawa]]
+    end,
+  },
+  { 'folke/tokyonight.nvim', lazy = true },
+  { 'morhetz/gruvbox', lazy = true },
 
   -- Base dependence
-  use 'nvim-lua/plenary.nvim'
-  use 'kyazdani42/nvim-web-devicons'
+  'nvim-lua/plenary.nvim',
+  'kyazdani42/nvim-web-devicons',
 
   -- Smooth scroll
-  use 'psliwka/vim-smoothie'
+  'psliwka/vim-smoothie',
 
   -- Close buffer,keep window
-  use 'moll/vim-bbye'
+  'moll/vim-bbye',
 
   -- Auto save session
-  use { 'rmagatti/auto-session' }
+  { 'rmagatti/auto-session' },
 
   -- Buffer line
-  use { 'akinsho/bufferline.nvim', config = [[ require 'plugins/bufferline' ]] }
+  {
+    'akinsho/bufferline.nvim',
+    config = function()
+      require 'plugins/bufferline'
+    end,
+  },
 
   -- Statusline
-  use { 'nvim-lualine/lualine.nvim', config = [[ require 'plugins/lualine' ]] }
+  {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require 'plugins/lualine'
+    end,
+  },
   -- Show code gps on statusline
-  use 'SmiteshP/nvim-gps'
+  'SmiteshP/nvim-gps',
 
   -- Highlight the variable with the same name
-  use 'RRethy/vim-illuminate'
+  'RRethy/vim-illuminate',
 
   -- Rainbow brackets
-  use 'p00f/nvim-ts-rainbow'
+  'p00f/nvim-ts-rainbow',
 
   -- Keymap tips
-  use { 'folke/which-key.nvim', config = [[ require 'plugins/which-key' ]] }
+  {
+    'folke/which-key.nvim',
+    config = function()
+      require 'plugins/which-key'
+    end,
+  },
 
   -- Indent tips
-  use { 'lukas-reineke/indent-blankline.nvim', config = [[ require 'plugins/indent-blankline' ]], disable = true }
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      require 'plugins/indent-blankline'
+    end,
+    enabled = false,
+  },
 
   -- Auto close html tag
-  use 'windwp/nvim-ts-autotag'
+  'windwp/nvim-ts-autotag',
 
-  use { 'windwp/nvim-autopairs', config = [[ require 'plugins/auto-pairs' ]], after = 'nvim-cmp' }
+  {
+    'windwp/nvim-autopairs',
+    config = function()
+      require 'plugins/auto-pairs'
+    end,
+    dependencies = 'nvim-cmp',
+  },
 
   -- Lsp progress alert
-  use { 'j-hui/fidget.nvim', after = 'auto-session', config = [[ require 'plugins/fidget' ]] }
+  {
+    'j-hui/fidget.nvim',
+    dependencies = 'auto-session',
+    config = function()
+      require 'plugins/fidget'
+    end,
+  },
 
   -- Fzf in vim
-  -- use { 'junegunn/fzf.vim', requires = { 'junegunn/fzf' } }
+  --  { 'junegunn/fzf.vim', dependencies = { 'junegunn/fzf' } },
 
   -- Auto unhighlight after search
-  use { 'romainl/vim-cool', config = [[ vim.g.CoolTotalMatches = 1 ]] }
+  {
+    'romainl/vim-cool',
+    config = function()
+      vim.g.CoolTotalMatches = 1
+    end,
+  },
 
   -- Ai code hint
-  use {
+  {
     'github/copilot.vim',
     config = function()
       vim.g.copilot_no_tab_map = true
       vim.g.copilot_assume_mapped = true
       vim.g.copilot_tab_fallback = ''
     end,
-    disable = true,
-  }
+    enabled = false,
+  },
 
   -- Neovim colorizer
-  use {
+  {
     'norcalli/nvim-colorizer.lua',
     ft = { 'css', 'javascript', 'vim', 'html' },
-    config = [[require('colorizer').setup {'css', 'javascript', 'vim', 'html'}]],
-  }
+    config = function()
+      require('colorizer').setup { 'css', 'javascript', 'vim', 'html' }
+    end,
+  },
 
   -- Highlight matching words
-  use { 'andymass/vim-matchup', config = [[ vim.g.loaded_matchit = true ]] }
+  {
+    'andymass/vim-matchup',
+    config = function()
+      vim.g.loaded_matchit = true
+    end,
+  },
 
   -- Highlighting unique characters within a line
-  -- use("unblevable/quick-scope")
+  -- ("unblevable/quick-scope")
 
   -- Text object edit
-  use 'tpope/vim-repeat'
-  use 'tpope/vim-surround'
-  use 'wellle/targets.vim'
-  use 'junegunn/vim-easy-align'
-  use 'AndrewRadev/splitjoin.vim'
-  -- use 'tommcdo/vim-exchange'
-  -- use 'mg979/vim-visual-multi'
-  -- use 'terryma/vim-expand-region'
+  'tpope/vim-repeat',
+  'tpope/vim-surround',
+  'wellle/targets.vim',
+  'junegunn/vim-easy-align',
+  'AndrewRadev/splitjoin.vim',
+  --  'tommcdo/vim-exchange',
+  --  'mg979/vim-visual-multi',
+  --  'terryma/vim-expand-region',
 
   -- Search
-  use {
+  {
     'nvim-telescope/telescope.nvim',
-    requires = {
-      { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+    dependencies = {
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
-    config = [[ require 'plugins/telescope' ]],
-  }
+    config = function()
+      require 'plugins/telescope'
+    end,
+  },
 
   -- File manager
-  use {
+  {
     'kyazdani42/nvim-tree.lua',
-    config = [[ require 'plugins/nvim-tree']],
-  }
+    config = function()
+      require 'plugins/nvim-tree'
+    end,
+  },
 
   -- Trouble List
-  use { 'folke/trouble.nvim', config = [[ require 'plugins/trouble' ]] }
+  {
+    'folke/trouble.nvim',
+    config = function()
+      require 'plugins/trouble'
+    end,
+  },
 
   -- Quick jump in file
-  use { 'ggandor/leap.nvim', config = [[ require 'plugins/leap' ]] }
+  {
+    'ggandor/leap.nvim',
+    config = function()
+      require 'plugins/leap'
+    end,
+  },
 
   -- Outline
-  -- use 'preservim/tagbar'
+  --  'preservim/tagbar',
 
   -- Smart comment
-  use { 'numToStr/Comment.nvim', config = [[ require 'plugins/comment' ]] }
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require 'plugins/comment'
+    end,
+  },
 
   -- Documentation
-  -- use {
+  --  {
   --   'danymat/neogen',
-  --   requires = 'nvim-treesitter',
+  --   dependencies = 'nvim-treesitter',
   --   config = [[require('config.neogen')]],
-  --   keys = { '<localleader>d', '<localleader>df', '<localleader>dc' },
-  -- }
+  -- },
 
   -- External supplement for lsp
-  use { 'jose-elias-alvarez/null-ls.nvim', config = [[ require 'plugins/null-ls' ]] }
+  {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+      require 'plugins/null-ls'
+    end,
+  },
 
   -- Test helper
-  use 'vim-test/vim-test'
+  'vim-test/vim-test',
 
   -- Analysis of neovim's start-up time
-  use { 'dstein64/vim-startuptime', cmd = 'StartupTime' }
+  { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
 
   -- Async building & commands
-  -- use { 'tpope/vim-dispatch', cmd = { 'Dispatch', 'Make', 'Focus', 'Start' } }
+  --  { 'tpope/vim-dispatch', cmd = { 'Dispatch', 'Make', 'Focus', 'Start' } },
 
   -- Git
-  use {
-    {
-      'tpope/vim-fugitive',
-      cmd = { 'G', 'G!', 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' },
-    },
-    {
-      'lewis6991/gitsigns.nvim',
-      config = [[ require 'plugins.gitsigns' ]],
-    },
-    -- { 'sindrets/diffview.nvim' },
-  }
+  {
+    'tpope/vim-fugitive',
+    -- cmd = { 'G', 'G!', 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' },
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require 'plugins.gitsigns'
+    end,
+  },
+  -- { 'sindrets/diffview.nvim' },
 
   -- Highlights
-  use {
+  {
     'nvim-treesitter/nvim-treesitter',
-    requires = {
+    dependencies = {
       'nvim-treesitter/nvim-treesitter-refactor',
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
-    run = ':TSUpdate',
-    config = [[ require 'plugins/treesitter' ]],
-  }
+    build = ':TSUpdate',
+    config = function()
+      require 'plugins/treesitter'
+    end,
+  },
 
   -- Asyncrun/task,build and test
-  use {
+  {
     'skywind3000/asynctasks.vim',
-    requires = { 'skywind3000/asyncrun.vim' },
+    dependencies = { 'skywind3000/asyncrun.vim' },
     config = function()
       vim.g.asyncrun_open = 6
       vim.g.asynctasks_term_pos = 'floaterm'
     end,
-  }
+  },
 
   -- Parameter hints
-  use { 'ray-x/lsp_signature.nvim', config = [[ require 'plugins/lsp_signature' ]] }
+  {
+    'ray-x/lsp_signature.nvim',
+    config = function()
+      require 'plugins/lsp_signature'
+    end,
+  },
 
   -- Completion and snip
-  use {
+  {
     'hrsh7th/nvim-cmp',
-    requires = {
+    dependencies = {
       'hrsh7th/cmp-nvim-lsp',
       'onsails/lspkind-nvim',
-      { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
-      { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
-      { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' },
-      { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' },
+      { 'hrsh7th/cmp-buffer', dependencies = 'nvim-cmp' },
+      { 'hrsh7th/cmp-path', dependencies = 'nvim-cmp' },
+      { 'hrsh7th/cmp-cmdline', dependencies = 'nvim-cmp' },
+      { 'saadparwaiz1/cmp_luasnip', dependencies = 'nvim-cmp' },
     },
-    config = [[ require 'plugins/lsp-cmp' ]],
-  }
-  use {
+    config = function()
+      require 'plugins/lsp-cmp'
+    end,
+  },
+  {
     'L3MON4D3/LuaSnip',
-    requires = { 'rafamadriz/friendly-snippets' },
-    config = [[ require('luasnip.loaders.from_vscode').lazy_load() ]],
-  }
+    dependencies = { 'rafamadriz/friendly-snippets' },
+    config = function()
+      require('luasnip.loaders.from_vscode').lazy_load()
+    end,
+  },
 
   -- Lsp
-  use { 'neovim/nvim-lspconfig', config = [[ require 'plugins/lsp-config' ]] }
-  use {
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require 'plugins/lsp-config'
+    end,
+  },
+  {
     'folke/lsp-colors.nvim',
     config = function()
       require('lsp-colors').setup {
@@ -234,52 +310,62 @@ packer.startup(function(use)
         Hint = '#10B981',
       }
     end,
-  }
+  },
   -- go
-  use {
+  {
     'ray-x/go.nvim',
-    requires = { 'ray-x/guihua.lua' },
+    dependencies = { 'ray-x/guihua.lua', 'nvim-lspconfig' },
     ft = { 'go' },
-    after = 'nvim-lspconfig',
-    config = [[ require 'lsp/go' ]],
-  }
+    config = function()
+      require 'lsp/go'
+    end,
+  },
   -- typescript
-  use { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } }
+  { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } },
   -- rust
-  use { 'rust-lang/rust.vim', ft = { 'rust' }, after = 'nvim-lspconfig', config = [[ require 'lsp/rust' ]] }
+  {
+    'rust-lang/rust.vim',
+    ft = { 'rust' },
+    dependencies = 'nvim-lspconfig',
+    config = function()
+      require 'lsp/rust'
+    end,
+  },
 
   -- Floaterm
-  use {
+  {
     'voldikss/vim-floaterm',
-    setup = function()
+    config = function()
       vim.g.floaterm_height = 0.8
       vim.g.floaterm_width = 0.7
     end,
     cmd = { 'FloatermNew', 'FloatermToggle' },
-  }
+  },
 
   -- Make quickfix better
-  -- use { 'mhinz/vim-grepper', cmd = 'Grepper' }
-  -- use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
-  -- use {
+  --  { 'mhinz/vim-grepper', cmd = 'Grepper' },
+  --  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
+  --  {
   --   'junegunn/fzf',
-  --   run = function()
+  --   build = function()
   --     vim.fn['fzf#install']()
   --   end,
-  -- }
+  -- },
 
   -- Search/replace
-  -- use 'nvim-pack/nvim-spectre'
+  --  'nvim-pack/nvim-spectre',
 
   -- Escape Mapping
-  use {
+  {
     'max397574/better-escape.nvim',
-    config = [[ require 'plugins/better_escape' ]],
-  }
+    config = function()
+      require 'plugins/better_escape'
+    end,
+  },
 
   -- fold
   -- kevinhwang91/nvim-ufo
-end)
+}
 
 Keymap('n', '<leader>ps', ':PackerSync<CR>')
 Keymap('n', '<leader>pu', ':PackerUpdate<CR>')

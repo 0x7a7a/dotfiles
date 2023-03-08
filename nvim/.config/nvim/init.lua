@@ -1,9 +1,3 @@
--- cache,prevent errors when first time run
-local ok, _ = pcall(require, 'impatient')
-if ok then
-  require 'impatient'
-end
-
 -- some utils function
 require 'globals'
 
@@ -11,12 +5,6 @@ require 'globals'
 require 'vimrc'
 require 'keymaps'
 require 'autocmds'
-
--- colorscheme
-require 'colors/kanagawa'
--- require 'colors/tokyonight'
-
--- vim.cmd([[colorscheme tokyonight]])
 
 require 'plugins'
 
