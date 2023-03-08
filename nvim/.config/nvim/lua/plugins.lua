@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup {
+require('lazy').setup({
   -- Colorscheme
   -- toolkit:
   -- https://github.com/lifepillar/vim-colortemplate
@@ -362,7 +362,9 @@ require('lazy').setup {
 
   -- fold
   -- kevinhwang91/nvim-ufo
-}
+}, {
+  checker = { enabled = true },
+})
 
 Keymap('n', '<leader>ps', '<cmd>Lazy sync<CR>')
 Keymap('n', '<leader>pu', '<cmd>Lazy update<CR>')
