@@ -3,7 +3,7 @@ local basic = require 'lsp/basic'
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').lua_is.setup {
+require('lspconfig').lua_ls.setup {
   on_attach = function(client, bufnr)
     basic.on_attach(client, bufnr)
   end,
@@ -31,8 +31,8 @@ require('lspconfig').lua_is.setup {
       -- use null-ls instead
       format = {
         enable = false,
-        -- NOTE: the value should be STRING!!
-        defaultConfig = {
+        -- note: the value should be string!!
+        defaultconfig = {
           indent_style = 'space',
           indent_size = '2',
         },
