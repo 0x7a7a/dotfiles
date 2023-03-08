@@ -1,9 +1,3 @@
--- cache,prevent errors when first time run
-local ok, _ = pcall(require, 'impatient')
-if ok then
-  require 'impatient'
-end
-
 -- some utils function
 require 'globals'
 
