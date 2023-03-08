@@ -10,15 +10,12 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
--- Make sure to set `mapleader` before lazy so your mappings are correct
--- vim.g.mapleader = ','
--- vim.g.maplocalleader = ','
 
 require('lazy').setup {
   -- Colorscheme
   -- toolkit:
-  --    https://github.com/lifepillar/vim-colortemplate
-  --    https://github.com/rktjmp/lush.nvim
+  -- https://github.com/lifepillar/vim-colortemplate
+  -- https://github.com/rktjmp/lush.nvim
   {
     'rebelot/kanagawa.nvim',
     lazy = false,
@@ -367,7 +364,7 @@ require('lazy').setup {
   -- kevinhwang91/nvim-ufo
 }
 
-Keymap('n', '<leader>ps', ':PackerSync<CR>')
-Keymap('n', '<leader>pu', ':PackerUpdate<CR>')
-Keymap('n', '<leader>pi', ':PackerInstall<CR>')
-Keymap('n', '<leader>pc', ':PackerClean<CR>')
+Keymap('n', '<leader>ps', '<cmd>Lazy sync<CR>')
+Keymap('n', '<leader>pu', '<cmd>Lazy update<CR>')
+Keymap('n', '<leader>pi', '<cmd>Lazy install<CR>')
+Keymap('n', '<leader>pc', '<cmd>Lazy clean<CR>')
