@@ -19,9 +19,16 @@ require('lazy').setup {
   -- toolkit:
   --    https://github.com/lifepillar/vim-colortemplate
   --    https://github.com/rktjmp/lush.nvim
-  'rebelot/kanagawa.nvim',
-  --  'folke/tokyonight.nvim',
-  'morhetz/gruvbox',
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd [[colorscheme kanagawa]]
+    end,
+  },
+  { 'folke/tokyonight.nvim', lazy = true },
+  { 'morhetz/gruvbox', lazy = true },
 
   -- Base dependence
   'nvim-lua/plenary.nvim',
@@ -328,7 +335,7 @@ require('lazy').setup {
   -- Floaterm
   {
     'voldikss/vim-floaterm',
-    setup = function()
+    config = function()
       vim.g.floaterm_height = 0.8
       vim.g.floaterm_width = 0.7
     end,

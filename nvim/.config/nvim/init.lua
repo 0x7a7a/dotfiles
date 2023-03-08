@@ -6,12 +6,6 @@ require 'vimrc'
 require 'keymaps'
 require 'autocmds'
 
--- colorscheme
-require 'colors/kanagawa'
--- require 'colors/tokyonight'
-
--- vim.cmd([[colorscheme tokyonight]])
-
 require 'plugins'
 
 -- lsp config
