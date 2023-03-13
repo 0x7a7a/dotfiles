@@ -18,5 +18,5 @@ require('leap').setup {
 }
 
 -- require('leap').set_default_keymaps()
-Keymap('n', '<leader>s', '<Plug>(leap-forward)')
-Keymap('n', '<leader>S', '<Plug>(leap-backward)')
+Keymap('n', 'ss', '<Plug>(leap-forward)')
+Keymap('n', 'sS', '<Plug>(leap-backward)')

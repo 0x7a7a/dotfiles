@@ -25,7 +25,7 @@ require('lazy').setup({
     end,
   },
   { 'folke/tokyonight.nvim', lazy = true },
-  { 'morhetz/gruvbox', lazy = true },
+  { 'EdenEast/nightfox.nvim', lazy = true },
 
   -- Base dependence
   'nvim-lua/plenary.nvim',
@@ -35,7 +35,7 @@ require('lazy').setup({
   'psliwka/vim-smoothie',
 
   -- Close buffer,keep window
-  'moll/vim-bbye',
+  'ojroques/nvim-bufdel',
 
   -- Auto save session
   { 'rmagatti/auto-session' },
@@ -133,12 +133,7 @@ require('lazy').setup({
   },
 
   -- Highlight matching words
-  {
-    'andymass/vim-matchup',
-    config = function()
-      vim.g.loaded_matchit = true
-    end,
-  },
+  'andymass/vim-matchup',
 
   -- Highlighting unique characters within a line
   -- ("unblevable/quick-scope")
@@ -183,6 +178,7 @@ require('lazy').setup({
   -- Quick jump in file
   {
     'ggandor/leap.nvim',
+    dependencies = { 'tpope/vim-repeat' },
     config = function()
       require 'plugins/leap'
     end,

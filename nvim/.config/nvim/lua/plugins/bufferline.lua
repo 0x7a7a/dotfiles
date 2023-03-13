@@ -48,9 +48,3 @@ require('bufferline').setup {
 
 Keymap('n', '<A-h>', ':BufferLineCyclePrev<CR>')
 Keymap('n', '<A-l>', ':BufferLineCycleNext<CR>')
-
-Keymap('n', '<leader>br', ':BufferLineCloseRight<CR>')
-Keymap('n', '<leader>bl', ':BufferLineCloseLeft<CR>')
-Keymap('n', '<leader>bp', ':BufferLinePickClose<CR>')
-Keymap('n', '<leader>bs', ':BufferLinePick<CR>')
-Keymap('n', '<leader>bS', ':BufferLineSortByDirectory<CR>')
