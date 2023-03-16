@@ -1,5 +1,5 @@
-local basic = require 'lsp/basic'
-local util = require 'lspconfig/util'
+local basic = require 'lsp.basic'
+local util = require 'lspconfig.util'
 
 require('lspconfig').gopls.setup {
   capabilities = basic.capabilities,

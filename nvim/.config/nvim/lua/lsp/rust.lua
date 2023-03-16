@@ -1,4 +1,4 @@
-local basic = require 'lsp/basic'
+local basic = require 'lsp.basic'
 require('lspconfig').rust_analyzer.setup {
   capabilities = basic.capabilities,
   on_attach = function(client, bufnr)

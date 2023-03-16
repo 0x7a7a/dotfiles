@@ -9,7 +9,7 @@ end
 Keymap('n', '<leader>bb', ':BufDel<CR>')
 Keymap('n', '<leader>bB', ':BufDel!<CR>')
 Keymap('n', '<leader>ba', ':BufDelAll<CR>')
-Keymap('n', '<leader>br', ':BufDelOthers<CR>')
+Keymap('n', '<leader>bo', ':BufDelOthers<CR>')
 Keymap('n', '<leader>bp', ':BufferLinePickClose<CR>')
 Keymap('n', '<leader>bs', ':BufferLinePick<CR>')
 

@@ -1,4 +1,4 @@
-local basic = require 'lsp/basic'
+local basic = require 'lsp.basic'
 
 require('lspconfig').tsserver.setup {
   capabilities = basic.capabilities,
