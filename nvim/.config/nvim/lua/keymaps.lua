@@ -69,8 +69,8 @@ Keymap('c', '<C-a>', '<Home>', { noremap = true })
 Keymap('c', '<C-e>', '<End>', { noremap = true })
 Keymap('c', '<A-b>', '<C-Left>', { noremap = true })
 Keymap('c', '<A-f>', '<C-Right>', { noremap = true })
-Keymap('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
-Keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
+-- Keymap('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
+-- Keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 
 -- Floaterm
 Keymap('n', '<leader>f', ':FloatermToggle<CR>')

@@ -141,13 +141,21 @@ require('lazy').setup({
 
   -- Text object edit
   'tpope/vim-repeat',
-  'tpope/vim-surround',
   'wellle/targets.vim',
   'junegunn/vim-easy-align',
   'AndrewRadev/splitjoin.vim',
   --  'tommcdo/vim-exchange',
   --  'mg979/vim-visual-multi',
   --  'terryma/vim-expand-region',
+  -- 'tpope/vim-surround',
+  {
+    'kylechui/nvim-surround',
+    version = '*',
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {}
+    end,
+  },
 
   -- Search
   {
