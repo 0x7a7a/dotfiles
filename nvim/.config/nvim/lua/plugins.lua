@@ -56,8 +56,8 @@ require('lazy').setup({
       require 'plugins.lualine'
     end,
   },
-  -- Show code gps on statusline
-  'SmiteshP/nvim-gps',
+  -- Show code context on statusline
+  'SmiteshP/nvim-navic',
 
   -- Highlight the variable with the same name
   'RRethy/vim-illuminate',
@@ -90,7 +90,6 @@ require('lazy').setup({
     config = function()
       require 'plugins.auto-pairs'
     end,
-    dependencies = 'nvim-cmp',
   },
 
   -- Lsp progress alert
@@ -115,13 +114,13 @@ require('lazy').setup({
 
   -- Ai code hint
   {
-    'github/copilot.vim',
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-      vim.g.copilot_tab_fallback = ''
-    end,
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
     enabled = false,
+    config = function()
+      require('copilot').setup {}
+    end,
   },
 
   -- Neovim colorizer

@@ -64,7 +64,7 @@ zi wait lucid for \
     Aloxaf/fzf-tab
 
 zi wait lucid from"gh-r" as"null" for \
-    sbin"**/lsd" Peltoche/lsd \
+    sbin"**/lsd" lsd-rs/lsd \
     sbin"*/rg"   BurntSushi/ripgrep \
     sbin"**/fd"  @sharkdp/fd \
     sbin"**/bat" @sharkdp/bat \
