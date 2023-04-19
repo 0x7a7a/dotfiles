@@ -1,11 +1,18 @@
+local function my_on_attach(bufnr)
+  local api = require 'nvim-tree.api'
+  api.config.mappings.default_on_attach(bufnr)
+
+  vim.keymap.del('n', 's', { buffer = bufnr })
+end
+
 require('nvim-tree').setup {
+  on_attach = my_on_attach,
   auto_reload_on_write = true,
   create_in_closed_folder = false,
   disable_netrw = false,
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
-  ignore_buffer_on_setup = false,
   open_on_setup = false,
   open_on_setup_file = false,
   open_on_tab = false,
@@ -21,11 +28,6 @@ require('nvim-tree').setup {
     number = false,
     relativenumber = false,
     signcolumn = 'yes',
-    mappings = {
-      custom_only = false,
-      -- disable custom system open
-      list = { { key = 's' } },
-    },
   },
   renderer = {
     add_trailing = false,
@@ -97,7 +99,6 @@ require('nvim-tree').setup {
       error = '',
     },
   },
-  ignore_ft_on_setup = {},
   system_open = {
     cmd = nil,
     args = {},

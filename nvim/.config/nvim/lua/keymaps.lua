@@ -118,3 +118,6 @@ Keymap('n', '<leader>o', ':TagbarToggle<CR>')
 Keymap('n', '<leader>gd', ':GoDoc<CR>')
 Keymap('n', '<leader>gD', ':GoDocBrowser<CR>')
 Keymap('n', '<leader>gf', ':GoFillStruct<CR>')
+
+--Undo Tree
+Keymap('n', '<leader>u', ':UndotreeToggle<CR>')

@@ -246,6 +246,7 @@ require('lazy').setup({
     dependencies = {
       'nvim-treesitter/nvim-treesitter-refactor',
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'nvim-treesitter/nvim-treesitter-context',
     },
     build = ':TSUpdate',
     config = function()
@@ -363,6 +364,9 @@ require('lazy').setup({
       require 'plugins.better_escape'
     end,
   },
+
+  -- Undo tree
+  'mbbill/undotree',
 
   -- fold
   -- kevinhwang91/nvim-ufo
