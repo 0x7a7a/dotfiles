@@ -191,6 +191,7 @@ require('lazy').setup({
       require 'plugins.leap'
     end,
   },
+  'ThePrimeagen/harpoon',
 
   -- Outline
   --  'preservim/tagbar',

@@ -89,7 +89,7 @@ Keymap('n', '<F5>', ':AsyncTask dev<CR>')
 Keymap('n', '<F6>', ':AsyncTask build<CR>')
 
 -- Variable jumping
-Keymap('n', '<a-n>', ':lua require"illuminate".next_reference{wrap=true}<cr>')
+Keymap('n', '<a-n>', ':lua require"illuminate".next_reference{wrap=true}<CR>')
 Keymap('n', '<a-p>', ':lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>')
 
 -- Nvim-lsp-ts-utils
@@ -121,3 +121,11 @@ Keymap('n', '<leader>gf', ':GoFillStruct<CR>')
 
 --Undo Tree
 Keymap('n', '<leader>u', ':UndotreeToggle<CR>')
+
+-- Harpoon
+Keymap('n', '<Space>hm', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
+Keymap('n', '<Space>ha', ':lua require("harpoon.mark").add_file()<CR>')
+Keymap('n', '<Space>hd', ':lua require("harpoon.mark").rm_file()<CR>')
+Keymap('n', '<Space>hc', ':lua require("harpoon.mark").clear_all()<CR>')
+Keymap('n', '<A-]>', ':lua require("harpoon.ui").nav_next()<CR>')
+Keymap('n', '<A-[>', ':lua require("harpoon.ui").nav_prev()<CR>')
