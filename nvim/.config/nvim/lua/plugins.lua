@@ -39,7 +39,15 @@ require('lazy').setup({
   'ojroques/nvim-bufdel',
 
   -- Auto save session
-  { 'rmagatti/auto-session' },
+  {
+    'rmagatti/auto-session',
+    config = function()
+      require('auto-session').setup {
+        log_level = 'error',
+        auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+      }
+    end,
+  },
 
   -- Buffer line
   {
