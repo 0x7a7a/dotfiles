@@ -12,4 +12,7 @@ MYSQL=/usr/local/opt/mysql-client/bin
 NGINXPATH=/usr/local/opt/openresty/nginx/sbin
 export KUBECONFIG=$HOME/.kube/config.d/pro:$HOME/.kube/config
 
-PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$MYGODEV:$NGINXPATH:MYSQL:$RUSTPATH
+#mason
+MASON=~/.local/share/nvim/mason/bin
+
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$MYGODEV:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON
