@@ -71,7 +71,7 @@ require('lazy').setup({
   'RRethy/vim-illuminate',
 
   -- Rainbow brackets
-  'p00f/nvim-ts-rainbow',
+  'hiphish/rainbow-delimiters.nvim',
 
   -- Keymap tips
   {
@@ -322,10 +322,11 @@ require('lazy').setup({
   {
     'ray-x/go.nvim',
     dependencies = { 'ray-x/guihua.lua', 'nvim-lspconfig' },
-    ft = { 'go' },
     config = function()
       require 'lsp.go'
     end,
+    event = { 'CmdlineEnter' },
+    ft = { 'go', 'gomod' },
   },
   -- typescript
   { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } },
