@@ -1,0 +1,26 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.8.5
+#@/tick	33
+#@/user_id	Mac
+bu zhi dao 	不知道	c=1 d=0.909373 t=33
+dan shi 	但是	c=1 d=0.904837 t=33
+hai hao 	还好	c=2 d=1.92669 t=33
+hai ke yi 	还可以	c=2 d=1.91683 t=33
+hen hao 	很好	c=1 d=0.900325 t=33
+jiu 	就	c=1 d=1.08479 t=33
+jue de 	觉得	c=1 d=0.995012 t=33
+kan qi lai 	看起来	c=2 d=1.90727 t=33
+mei wen ti 	没问题	c=1 d=1 t=33
+ni 	你	c=1 d=0.918512 t=33
+ni xian zai 	你现在	c=1 d=0.980199 t=33
+shi 	是	c=1 d=0.923116 t=33
+ta de 	他的	c=0 d=0.0873716 t=33
+wei shen me 	为什么	c=1 d=0.913931 t=33
+wo 	我	c=5 d=4.7163 t=33
+wo jiu ta de 	我就他的	c=1 d=0.878095 t=33
+wo jue de 	我觉得	c=5 d=4.72321 t=33
+wo xian zai 	我现在	c=1 d=0.955997 t=33
+xian zai 	现在	c=3 d=2.77334 t=33
+zhe yang 	这样	c=2 d=1.89534 t=33
