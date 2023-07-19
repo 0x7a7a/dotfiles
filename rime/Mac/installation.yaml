@@ -1,8 +1,8 @@
 distribution_code_name: Squirrel
 distribution_name: "鼠鬚管"
-distribution_version: 0.15.2
+distribution_version: 0.16.2
 install_time: "Thu Apr  1 14:22:30 2021"
-installation_id: "Mac"
-rime_version: 1.7.3
-update_time: "Sat Feb 20 16:01:23 2021"
+installation_id: Mac
+rime_version: 1.8.5
 sync_dir: "/Users/lucky/dotfiles/rime"
+update_time: "Mon Feb  6 10:12:53 2023"
