@@ -2,267 +2,271 @@
 #@/db_name	rime_ice
 #@/db_type	userdb
 #@/rime_version	1.8.5
-#@/tick	464
+#@/tick	474
 #@/user_id	Mac
-ba 	吧	c=2 d=1.90032 t=183
-ba 	把	c=1 d=1 t=115
-ban jin lai 	搬进来	c=1 d=1 t=201
-bang mang 	帮忙	c=1 d=1 t=227
-bang ni 	帮你	c=1 d=1 t=200
-bao guo 	包裹	c=1 d=1 t=294
-bi 	比	c=1 d=1 t=127
-bie 	别	c=1 d=1 t=84
-bu 	不	c=1 d=1 t=237
-bu dong 	不动	c=1 d=1 t=322
-bu guo 	不过	c=1 d=1 t=93
-bu he li 	不合理	c=2 d=1.625 t=421
-bu hui 	不会	c=1 d=1 t=134
-bu neng 	不能	c=1 d=1 t=198
-bu shi 	不是	c=2 d=1.53526 t=188
-bu shi you 	不是有	c=1 d=1 t=202
-bu tai xi guan 	不太习惯	c=1 d=1 t=46
-bu xing 	不行	c=1 d=1 t=216
-bu ying gai 	不应该	c=1 d=1 t=332
-bu yong 	不用	c=1 d=1 t=117
-bu zhi dao 	不知道	c=1 d=0.909373 t=33
-cai 	才	c=1 d=1 t=299
-chai kai lai 	拆开来	c=2 d=1.48919 t=302
-chai le 	拆了	c=1 d=1 t=387
-che 	车	c=1 d=1 t=366
-che wei 	车位	c=4 d=3.70687 t=403
-chen 	沉	c=0 d=0.1 t=299
-chong dian 	充电	c=3 d=2.45259 t=417
-chong dian che 	充电车	c=1 d=1 t=347
-da 	打	c=1 d=1 t=254
-da ge 	大哥	c=1 d=1 t=178
-dai 	带	c=1 d=1 t=296
-dan shi 	但是	c=1 d=0.904837 t=33
-dang ran 	当然	c=1 d=1 t=197
-dao 	到	c=2 d=1.97045 t=111
-dao le 	到了	c=2 d=1.35701 t=319
-dao shi hou 	到时候	c=1 d=1 t=266
-de 	得	c=3 d=1.50074 t=451
-de 	的	c=25 d=10.7694 t=428
-deng deng 	等等	c=1 d=1 t=77
-deng ji 	登记	c=1 d=1 t=404
-di mian 	地面	c=1 d=1 t=413
-dong 	动	c=1 d=0.460595 t=439
-dou 	都	c=3 d=2.10208 t=425
-dou shi 	都是	c=1 d=1 t=148
-dou xiang 	都想	c=1 d=1 t=277
-dun 	蹲	c=2 d=1.98511 t=386
-dun dun 	蹲蹲	c=0 d=0.1 t=209
-dun dun kan 	蹲蹲看	c=1 d=1 t=210
-duo yu 	多余	c=1 d=1 t=116
-fa 	发	c=1 d=1 t=98
-fa 	法	c=2 d=1.8311 t=96
-fa ting 	法庭	c=0 d=0.1 t=57
-fan 	烦	c=1 d=1 t=313
-fan er 	反而	c=1 d=1 t=154
-fen bian 	分辨	c=1 d=1 t=410
-fu zhi 	复制	c=1 d=1 t=104
-gao 	搞	c=1 d=1 t=423
-gao xiao 	搞笑	c=1 d=1 t=362
-ge 	个	c=5 d=3.00024 t=365
-gei 	给	c=1 d=1 t=172
-geng xin 	更新	c=2 d=1.98511 t=38
-gu ji 	估计	c=2 d=1.69073 t=450
-gu jian 	固件	c=1 d=1 t=181
-guo 	过	c=2 d=1.15724 t=464
-hai bu yong 	还不用	c=1 d=1 t=132
-hai hao 	还好	c=3 d=1.54379 t=286
-hai ke yi 	还可以	c=2 d=1.91683 t=33
-hai shi 	还是	c=3 d=2.14359 t=416
-hai you 	还有	c=2 d=1.64082 t=447
-hao 	好	c=1 d=1 t=432
-hao dian 	好点	c=1 d=1 t=305
-hao le 	好了	c=3 d=1.8383 t=427
-hao yong 	好用	c=2 d=1.91249 t=158
-he 	和	c=1 d=1 t=335
-hen duo 	很多	c=1 d=1 t=131
-hen hao 	很好	c=1 d=0.900325 t=33
-hen hao yong 	很好用	c=1 d=1 t=73
-hen jiu le 	很久了	c=1 d=1 t=140
-hua shuo 	华硕	c=1 d=1 t=185
-hui bu hui 	会不会	c=1 d=1 t=304
-hui qu 	回去	c=1 d=1 t=231
-ji qi lai 	记起来	c=0 d=0.1 t=240
-ji qi lai le 	记起来了	c=1 d=1 t=241
-ji zhe 	急着	c=1 d=1 t=85
-jian dan 	简单	c=2 d=1.53259 t=250
-jiang jia 	降价	c=1 d=1 t=80
-jiao 	叫	c=1 d=1 t=223
-jin lai 	进来	c=2 d=1.97531 t=168
-jin qu 	进去	c=1 d=1 t=209
-jin qun 	进群	c=1 d=1 t=309
-jiu 	就	c=2 d=1.43015 t=218
-jiu hao le 	就好了	c=2 d=1.50916 t=257
-jiu zai 	就在	c=0 d=0.1 t=145
-jiu zai yong 	就在用	c=1 d=1 t=146
-jue de 	觉得	c=2 d=1.85214 t=64
-kan 	看	c=0 d=0.1 t=209
-kan dao 	看到	c=1 d=1 t=463
-kan kan 	看看	c=5 d=3.09059 t=375
-kan kan ka 	看看卡	c=1 d=1 t=268
-kan qi lai 	看起来	c=2 d=1.90727 t=33
-ke yi 	可以	c=2 d=1.83946 t=265
-ken ding 	肯定	c=1 d=1 t=429
-la ji 	垃圾	c=1 d=1 t=407
-lai 	来	c=12 d=6.81425 t=457
-le 	了	c=6 d=5.29363 t=460
-li jie 	理解	c=2 d=1.69768 t=402
-lian wang 	联网	c=1 d=1 t=133
-liang ge 	两个	c=2 d=1.3624 t=368
-lin ju 	邻居	c=1 d=1 t=225
-liu chang 	流畅	c=1 d=1 t=130
-lu mian 	路面	c=1 d=1 t=315
-luo si 	螺丝	c=1 d=1 t=424
-ma fan 	麻烦	c=1 d=1 t=66
-mai 	埋	c=1 d=1 t=426
-me 	么	c=2 d=1.57984 t=176
-mei 	没	c=4 d=2.40826 t=462
-mei fa 	没法	c=1 d=1 t=409
-mei lin 	梅林	c=2 d=1.98511 t=196
-mei wen ti 	没问题	c=1 d=1 t=33
-mei you 	没有	c=1 d=1 t=456
-mu lu 	目录	c=1 d=1 t=107
-na 	拿	c=2 d=1.7788 t=371
-na 	那	c=1 d=1 t=372
-na bu dong 	拿不动	c=1 d=1 t=433
-na ge 	哪个	c=1 d=1 t=187
-na ge 	那个	c=4 d=2.56252 t=346
-nan sheng 	男生	c=1 d=1 t=247
-ne 	呢	c=1 d=1 t=352
-neng 	能	c=1 d=1 t=108
-neng bu neng 	能不能	c=2 d=1.73712 t=222
-ni 	你	c=5 d=2.4808 t=411
-ni bu yi ding 	你不一定	c=1 d=1 t=233
-ni ke yi 	你可以	c=1 d=1 t=87
-ni xian zai 	你现在	c=1 d=0.980199 t=33
-niang 	娘	c=2 d=1.99501 t=245
-nie 	捏	c=1 d=1 t=253
-nong 	弄	c=4 d=3.31969 t=453
-nong bu 	弄不	c=0 d=0.1 t=439
-nong bu dong 	弄不动	c=1 d=1 t=440
-o 	哦	c=1 d=1 t=240
-pai ge shi pin 	拍个视频	c=1 d=1 t=267
-pei zhi 	配置	c=8 d=5.75656 t=151
-pen 	喷	c=1 d=1 t=262
-pi qi 	脾气	c=1 d=1 t=285
-pian ji 	偏激	c=1 d=1 t=273
-qi shi 	其实	c=1 d=1 t=284
-que ren 	确认	c=1 d=1 t=343
-que shi 	确实	c=2 d=1.35169 t=420
-qun 	群	c=1 d=1 t=206
-ran hou 	然后	c=1 d=1 t=252
-rang ni men 	让你们	c=1 d=1 t=142
-ren 	人	c=3 d=2.11045 t=338
-ren shi 	认识	c=1 d=1 t=238
-ru guo 	如果	c=1 d=1 t=438
-sha 	啥	c=1 d=1 t=258
-sha shi 	啥事	c=1 d=1 t=276
-shan chu 	删除	c=1 d=1 t=121
-shang lai 	上来	c=1 d=1 t=348
-shen me 	什么	c=1 d=1 t=128
-shi 	是	c=6 d=3.41459 t=414
-shi ba 	是吧	c=1 d=1 t=370
-shi hou 	时候	c=1 d=1 t=145
-shi shi 	事实	c=1 d=1 t=214
-shi shi 	试试	c=3 d=2.42127 t=292
-shou 	收	c=1 d=1 t=86
-shou fei 	收费	c=3 d=2.79967 t=360
-shou ji 	收集	c=1 d=1 t=135
-shu ju 	数据	c=1 d=1 t=175
-shu ru 	输入	c=0 d=0.1 t=57
-shu ru fa 	输入法	c=1 d=1 t=69
-shu ru fa ting hao yong 	输入法庭好用	c=1 d=1 t=58
-shua 	刷	c=3 d=2.93654 t=191
-shua le 	刷了	c=1 d=1 t=195
-shuang pin 	双拼	c=1 d=1 t=144
-shuo bu ding 	说不定	c=1 d=1 t=79
-shuo shi hua 	说实话	c=1 d=1 t=275
-song 	送	c=1 d=1 t=174
-sou gou 	搜狗	c=1 d=1 t=129
-suo wei 	所谓	c=1 d=1 t=324
-ta 	他	c=3 d=2.20492 t=323
-ta de 	他的	c=0 d=0.0873716 t=33
-ta men 	他们	c=1 d=1 t=173
-tai 	太	c=1 d=1 t=406
-tai 	抬	c=4 d=2.36189 t=445
-tai li pu 	太离谱	c=1 d=1 t=395
-ting che 	停车	c=1 d=1 t=415
-ting hao 	挺好	c=1 d=1 t=56
-ting hao yong 	挺好用	c=2 d=1.92312 t=60
-wa 	哇	c=1 d=1 t=239
-wai mian 	外面	c=1 d=1 t=336
-wei 	为	c=2 d=1.98511 t=40
-wei shen me 	为什么	c=1 d=0.913931 t=33
-wei xin 	微信	c=1 d=1 t=170
-wen jian 	文件	c=1 d=1 t=120
-wo 	我	c=20 d=8.02112 t=449
-wo bu tai 	我不太	c=1 d=1 t=47
-wo jiu ta de 	我就他的	c=1 d=0.878095 t=33
-wo jue de 	我觉得	c=9 d=2.15585 t=419
-wo kan dao 	我看到	c=1 d=1 t=310
-wo xian zai 	我现在	c=2 d=1.90032 t=45
-wo zhe ge 	我这个	c=1 d=1 t=51
-wu ye 	物业	c=2 d=1.60653 t=442
-xi guan 	习惯	c=1 d=1 t=48
-xi tong 	系统	c=1 d=1 t=405
-xia 	下	c=2 d=1.28083 t=344
-xian 	先	c=4 d=3.02056 t=291
-xian cheng 	现成	c=1 d=1 t=71
-xian he 	先和	c=1 d=1 t=341
-xian zai 	现在	c=4 d=3.522 t=52
-xiang qi lai 	想起来	c=1 d=1 t=436
-xiao ge 	小哥	c=1 d=1 t=443
-xiao guo 	效果	c=1 d=1 t=270
-xin lai 	信赖	c=1 d=1 t=281
-xin lai 	新来	c=1 d=1 t=282
-xin xi 	信息	c=1 d=1 t=136
-xing hao 	幸好	c=1 d=1 t=306
-xue 	学	c=3 d=2.57803 t=143
-yao 	要	c=4 d=2.98529 t=430
-yao mai 	要买	c=1 d=1 t=74
-ye 	也	c=2 d=1.2739 t=334
-ye bu yong 	也不用	c=1 d=1 t=101
-ye jiu 	也就	c=1 d=1 t=317
-ye zhu 	业主	c=1 d=1 t=333
-yi dian dian 	一点点	c=2 d=1.98511 t=391
-yi ge yue 	一个月	c=1 d=1 t=316
-yi si 	意思	c=1 d=1 t=259
-yi xia 	一下	c=4 d=2.50522 t=446
-yi yang 	一样	c=1 d=1 t=339
-ying gai 	应该	c=2 d=1.35523 t=455
-yong 	用	c=1 d=0.939457 t=145
-yong le 	用了	c=1 d=1 t=139
-you 	又	c=3 d=1.94323 t=354
-you che wei 	有车位	c=1 d=1 t=355
-you de 	有的	c=1 d=1 t=379
-you dian 	有点	c=3 d=2.46708 t=320
-zai 	再	c=3 d=2.17732 t=382
-zai 	在	c=3 d=1.62108 t=412
-zen me 	怎么	c=1 d=1 t=91
-zhao 	找	c=1 d=1 t=441
-zhao hu 	招呼	c=1 d=1 t=256
-zhe bu shi 	这不是	c=1 d=1 t=171
-zhe ge 	这个	c=10 d=3.4839 t=418
-zhe me 	这么	c=0 d=0.1 t=299
-zhe me chen 	这么沉	c=1 d=1 t=300
-zhe teng 	折腾	c=1 d=1 t=152
-zhe yang 	这样	c=4 d=3.68796 t=55
-zhe zhong 	这种	c=2 d=1.86502 t=340
-zhe zhong shi 	这种事	c=1 d=1 t=448
-zhen de 	真的	c=1 d=1 t=361
-zheng 	争	c=1 d=1 t=278
-zheng ge 	整个	c=1 d=1 t=293
-zhi jie 	直接	c=2 d=1.97045 t=109
-zhi neng 	只能	c=3 d=2.36331 t=381
-zhi qian 	之前	c=6 d=2.78633 t=461
-zhi shi 	只是	c=1 d=1 t=380
-zhong 	重	c=1 d=1 t=114
-zhuang 	装	c=2 d=1.34646 t=431
-zhuo tui 	桌腿	c=1 d=1 t=298
-zhuo zi 	桌子	c=1 d=1 t=318
-zi ji 	自己	c=4 d=2.08586 t=452
-zu che wei 	租车位	c=1 d=1 t=204
+ba 	吧	c=2 d=0.466276 t=474
+ba 	把	c=1 d=0.174645 t=474
+ban jin lai 	搬进来	c=1 d=0.268474 t=474
+bang mang 	帮忙	c=1 d=0.305746 t=474
+bang ni 	帮你	c=1 d=0.267135 t=474
+bao guo 	包裹	c=1 d=0.427415 t=474
+bi 	比	c=1 d=0.185444 t=474
+bie 	别	c=1 d=0.149569 t=474
+bu 	不	c=1 d=0.321422 t=474
+bu dong 	不动	c=1 d=0.491644 t=474
+bu guo 	不过	c=1 d=0.156453 t=474
+bu he li 	不合理	c=2 d=1.31063 t=474
+bu hui 	不会	c=1 d=0.19205 t=474
+bu neng 	不能	c=1 d=0.264477 t=474
+bu shi 	不是	c=2 d=0.386238 t=474
+bu shi you 	不是有	c=1 d=0.26982 t=474
+bu tai xi guan 	不太习惯	c=1 d=0.123687 t=474
+bu xing 	不行	c=1 d=0.289384 t=474
+bu ying gai 	不应该	c=1 d=0.516851 t=474
+bu yong 	不用	c=1 d=0.1764 t=474
+bu zhi dao 	不知道	c=1 d=0.105399 t=474
+cai 	才	c=1 d=0.438235 t=474
+chai kai lai 	拆开来	c=2 d=0.662478 t=474
+chai le 	拆了	c=1 d=0.680451 t=474
+che 	车	c=1 d=0.612626 t=474
+che wei 	车位	c=4 d=2.73242 t=474
+chen 	沉	c=0 d=0.0438235 t=474
+chong dian 	充电	c=3 d=1.93895 t=474
+chong dian che 	充电车	c=1 d=0.557106 t=474
+da 	打	c=1 d=0.349938 t=474
+da ge 	大哥	c=1 d=0.239309 t=474
+dai 	带	c=1 d=0.431711 t=474
+dan shi 	但是	c=1 d=0.104873 t=474
+dang ran 	当然	c=1 d=0.263158 t=474
+dao 	到	c=2 d=0.337315 t=474
+dao le 	到了	c=2 d=0.657233 t=474
+dao shi hou 	到时候	c=1 d=0.371577 t=474
+de 	得	c=3 d=1.40629 t=474
+de 	的	c=27 d=10.5467 t=474
+deng deng 	等等	c=1 d=0.144424 t=474
+deng ji 	登记	c=1 d=0.740818 t=474
+di mian 	地面	c=1 d=0.774916 t=474
+dong 	动	c=1 d=0.406474 t=474
+dou 	都	c=3 d=1.72966 t=474
+dou shi 	都是	c=1 d=0.205975 t=474
+dou xiang 	都想	c=1 d=0.392586 t=474
+dun 	蹲	c=2 d=1.34403 t=474
+dun dun 	蹲蹲	c=0 d=0.0279431 t=474
+dun dun kan 	蹲蹲看	c=1 d=0.280832 t=474
+duo yu 	多余	c=1 d=0.17552 t=474
+fa 	发	c=1 d=0.160414 t=474
+fa 	法	c=2 d=0.290811 t=474
+fa ting 	法庭	c=0 d=0.013068 t=474
+fan 	烦	c=1 d=0.470011 t=474
+fan er 	反而	c=1 d=0.212248 t=474
+fen bian 	分辨	c=1 d=0.763379 t=474
+fu zhi 	复制	c=1 d=0.165299 t=474
+gao 	搞	c=1 d=0.814647 t=474
+gao xiao 	搞笑	c=1 d=0.600496 t=474
+ge 	个	c=5 d=1.82886 t=474
+gei 	给	c=1 d=0.232236 t=474
+geng xin 	更新	c=2 d=0.235905 t=474
+gu ji 	估计	c=2 d=1.57643 t=474
+gu jian 	固件	c=1 d=0.242926 t=474
+guo 	过	c=2 d=1.15724 t=474
+hai bu yong 	还不用	c=1 d=0.190139 t=474
+hai hao 	还好	c=3 d=0.633966 t=474
+hai ke yi 	还可以	c=2 d=0.222167 t=474
+hai shi 	还是	c=3 d=1.68621 t=474
+hai you 	还有	c=2 d=1.50711 t=474
+hao 	好	c=1 d=0.852144 t=474
+hao dian 	好点	c=1 d=0.451581 t=474
+hao le 	好了	c=3 d=1.52782 t=474
+hao yong 	好用	c=2 d=0.414122 t=474
+he 	和	c=1 d=0.524663 t=474
+hen duo 	很多	c=1 d=0.189191 t=474
+hen hao 	很好	c=1 d=0.104351 t=474
+hen hao yong 	很好用	c=1 d=0.141564 t=474
+hen jiu le 	很久了	c=1 d=0.197899 t=474
+hua shuo 	华硕	c=1 d=0.247833 t=474
+hui bu hui 	会不会	c=1 d=0.449329 t=474
+hui qu 	回去	c=1 d=0.311923 t=474
+ji qi lai 	记起来	c=0 d=0.032628 t=474
+ji qi lai le 	记起来了	c=1 d=0.327915 t=474
+ji zhe 	急着	c=1 d=0.150318 t=474
+jian dan 	简单	c=2 d=0.525691 t=474
+jiang jia 	降价	c=1 d=0.146607 t=474
+jiao 	叫	c=1 d=0.299692 t=474
+jin lai 	进来	c=2 d=0.449655 t=474
+jin qu 	进去	c=1 d=0.279431 t=474
+jin qun 	进群	c=1 d=0.460704 t=474
+jiu 	就	c=2 d=0.418022 t=474
+jiu hao le 	就好了	c=2 d=0.536093 t=474
+jiu zai 	就在	c=0 d=0.0202909 t=474
+jiu zai yong 	就在用	c=1 d=0.203926 t=474
+jue de 	觉得	c=2 d=0.25066 t=474
+kan 	看	c=0 d=0.0279431 t=474
+kan dao 	看到	c=1 d=0.995012 t=474
+kan kan 	看看	c=5 d=1.98053 t=474
+kan kan ka 	看看卡	c=1 d=0.375311 t=474
+kan qi lai 	看起来	c=2 d=0.221059 t=474
+ke yi 	可以	c=2 d=0.680091 t=474
+ken ding 	肯定	c=1 d=0.839457 t=474
+la 	啦	c=1 d=1 t=470
+la ji 	垃圾	c=1 d=0.752014 t=474
+lai 	来	c=12 d=6.57988 t=474
+le 	了	c=6 d=5.18881 t=474
+li jie 	理解	c=2 d=1.24516 t=474
+li shi 	历史	c=1 d=1 t=466
+lian wang 	联网	c=1 d=0.191092 t=474
+liang ge 	两个	c=2 d=0.84303 t=474
+lin ju 	邻居	c=1 d=0.302704 t=474
+liu chang 	流畅	c=1 d=0.188247 t=474
+lu mian 	路面	c=1 d=0.474734 t=474
+luo si 	螺丝	c=1 d=0.818731 t=474
+ma fan 	麻烦	c=1 d=0.136695 t=474
+mai 	埋	c=1 d=0.826959 t=474
+me 	么	c=2 d=0.374308 t=474
+mei 	没	c=4 d=2.3843 t=474
+mei fa 	没法	c=1 d=0.759572 t=474
+mei lin 	梅林	c=2 d=0.519792 t=474
+mei shi 	没事	c=1 d=1 t=473
+mei shi 	美食	c=1 d=1 t=471
+mei wen ti 	没问题	c=1 d=0.115903 t=474
+mei you 	没有	c=1 d=0.960789 t=474
+mu lu 	目录	c=1 d=0.167797 t=474
+na 	拿	c=2 d=1.11733 t=474
+na 	那	c=1 d=0.631284 t=474
+na bu dong 	拿不动	c=1 d=0.856415 t=474
+na ge 	哪个	c=1 d=0.250324 t=474
+na ge 	那个	c=4 d=1.42047 t=474
+nan sheng 	男生	c=1 d=0.337902 t=474
+ne 	呢	c=1 d=0.571209 t=474
+neng 	能	c=1 d=0.168638 t=474
+neng bu neng 	能不能	c=2 d=0.518004 t=474
+ni 	你	c=5 d=1.90328 t=474
+ni bu yi ding 	你不一定	c=1 d=0.315058 t=474
+ni ke yi 	你可以	c=1 d=0.151829 t=474
+ni xian zai 	你现在	c=1 d=0.113608 t=474
+niang 	娘	c=2 d=0.66741 t=474
+nie 	捏	c=1 d=0.348192 t=474
+nong 	弄	c=4 d=3.14204 t=474
+nong bu 	弄不	c=0 d=0.0882497 t=474
+nong bu dong 	弄不动	c=1 d=0.88692 t=474
+o 	哦	c=1 d=0.32628 t=474
+pai ge shi pin 	拍个视频	c=1 d=0.373439 t=474
+pei zhi 	配置	c=8 d=1.20363 t=474
+pen 	喷	c=1 d=0.364219 t=474
+pi qi 	脾气	c=1 d=0.408608 t=474
+pian ji 	偏激	c=1 d=0.384812 t=474
+qi shi 	其实	c=1 d=0.40657 t=474
+que ren 	确认	c=1 d=0.546074 t=474
+que shi 	确实	c=2 d=1.08476 t=474
+qun 	群	c=1 d=0.275271 t=474
+ran hou 	然后	c=1 d=0.346456 t=474
+rang ni men 	让你们	c=1 d=0.199888 t=474
+ren 	人	c=3 d=1.12401 t=474
+ren shi 	认识	c=1 d=0.323033 t=474
+ru guo 	如果	c=1 d=0.878095 t=474
+sha 	啥	c=1 d=0.357007 t=474
+sha shi 	啥事	c=1 d=0.390628 t=474
+shan chu 	删除	c=2 d=1.12719 t=474
+shang lai 	上来	c=1 d=0.559898 t=474
+shen me 	什么	c=1 d=0.186374 t=474
+shi 	是	c=6 d=2.65929 t=474
+shi ba 	是吧	c=1 d=0.625002 t=474
+shi hou 	时候	c=1 d=0.202909 t=474
+shi shi 	事实	c=1 d=0.286505 t=474
+shi shi 	试试	c=3 d=1.02459 t=474
+shou 	收	c=1 d=0.151072 t=474
+shou fei 	收费	c=3 d=1.66446 t=474
+shou ji 	收集	c=1 d=0.193013 t=474
+shu ju 	数据	c=1 d=0.235746 t=474
+shu ru 	输入	c=0 d=0.013068 t=474
+shu ru fa 	输入法	c=1 d=0.138761 t=474
+shu ru fa ting hao yong 	输入法庭好用	c=1 d=0.131336 t=474
+shua 	刷	c=3 d=0.749936 t=474
+shua le 	刷了	c=1 d=0.26054 t=474
+shuang pin 	双拼	c=1 d=0.201897 t=474
+shuo bu ding 	说不定	c=1 d=0.145876 t=474
+shuo shi hua 	说实话	c=1 d=0.38868 t=474
+song 	送	c=1 d=0.23457 t=474
+sou gou 	搜狗	c=1 d=0.187308 t=474
+suo wei 	所谓	c=1 d=0.496585 t=474
+ta 	他	c=3 d=1.08947 t=474
+ta de 	他的	c=0 d=0.0101266 t=474
+ta men 	他们	c=1 d=0.2334 t=474
+tai 	太	c=1 d=0.748264 t=474
+tai 	抬	c=4 d=2.14784 t=474
+tai li pu 	太离谱	c=1 d=0.70822 t=474
+ting che 	停车	c=1 d=0.782705 t=474
+ting hao 	挺好	c=1 d=0.130029 t=474
+ting hao yong 	挺好用	c=2 d=0.255112 t=474
+wa 	哇	c=1 d=0.324652 t=474
+wai mian 	外面	c=1 d=0.527292 t=474
+wei 	为	c=2 d=0.238276 t=474
+wei shen me 	为什么	c=1 d=0.105928 t=474
+wei xin 	微信	c=1 d=0.229925 t=474
+wen jian 	文件	c=2 d=1.13594 t=474
+wo 	我	c=20 d=7.44154 t=474
+wo bu tai 	我不太	c=1 d=0.124307 t=474
+wo jiu ta de 	我就他的	c=1 d=0.101774 t=474
+wo jue de 	我觉得	c=9 d=1.72148 t=474
+wo kan dao 	我看到	c=1 d=0.463013 t=474
+wo xian zai 	我现在	c=2 d=0.233873 t=474
+wo zhe ge 	我这个	c=1 d=0.126818 t=474
+wu ye 	物业	c=2 d=1.43918 t=474
+xi guan 	习惯	c=1 d=0.12493 t=474
+xi tong 	系统	c=1 d=0.744532 t=474
+xia 	下	c=2 d=0.702934 t=474
+xian 	先	c=4 d=1.27181 t=474
+xian cheng 	现成	c=1 d=0.140156 t=474
+xian he 	先和	c=1 d=0.540641 t=474
+xian zai 	现在	c=4 d=0.448893 t=474
+xiang qi lai 	想起来	c=1 d=0.869358 t=474
+xiao ge 	小哥	c=1 d=0.900325 t=474
+xiao guo 	效果	c=1 d=0.379083 t=474
+xin lai 	信赖	c=1 d=0.400517 t=474
+xin lai 	新来	c=1 d=0.402524 t=474
+xin xi 	信息	c=1 d=0.19398 t=474
+xing hao 	幸好	c=1 d=0.453845 t=474
+xue 	学	c=3 d=0.517899 t=474
+yao 	要	c=4 d=2.51858 t=474
+yao mai 	要买	c=1 d=0.142274 t=474
+ye 	也	c=2 d=0.665034 t=474
+ye bu yong 	也不用	c=1 d=0.162838 t=474
+ye jiu 	也就	c=1 d=0.479505 t=474
+ye zhu 	业主	c=1 d=0.519442 t=474
+yi dian dian 	一点点	c=2 d=1.37806 t=474
+yi ge yue 	一个月	c=1 d=0.477114 t=474
+yi si 	意思	c=1 d=0.358796 t=474
+yi xia 	一下	c=4 d=2.2896 t=474
+yi yang 	一样	c=1 d=0.535261 t=474
+ying gai 	应该	c=2 d=1.2956 t=474
+yong 	用	c=1 d=0.190624 t=474
+yong le 	用了	c=1 d=0.196912 t=474
+you 	又	c=3 d=1.12115 t=474
+you che wei 	有车位	c=1 d=0.579842 t=474
+you de 	有的	c=1 d=0.65377 t=474
+you dian 	有点	c=3 d=1.20086 t=474
+zai 	再	c=3 d=1.44498 t=474
+zai 	在	c=3 d=1.24994 t=474
+zen me 	怎么	c=1 d=0.154896 t=474
+zhao 	找	c=1 d=0.891366 t=474
+zhao hu 	招呼	c=1 d=0.353455 t=474
+zhe bu shi 	这不是	c=1 d=0.231078 t=474
+zhe ge 	这个	c=10 d=2.76808 t=474
+zhe me 	这么	c=0 d=0.0438235 t=474
+zhe me chen 	这么沉	c=1 d=0.440432 t=474
+zhe teng 	折腾	c=1 d=0.210136 t=474
+zhe yang 	这样	c=5 d=1.42919 t=474
+zhe zhong 	这种	c=2 d=1.00328 t=474
+zhe zhong shi 	这种事	c=1 d=0.923116 t=474
+zhen de 	真的	c=1 d=0.597501 t=474
+zheng 	争	c=1 d=0.394554 t=474
+zheng ge 	整个	c=1 d=0.425283 t=474
+zhi jie 	直接	c=2 d=0.333959 t=474
+zhi neng 	只能	c=4 d=2.45493 t=474
+zhi qian 	之前	c=6 d=2.74485 t=474
+zhi shi 	只是	c=1 d=0.657047 t=474
+zhong 	重	c=1 d=0.173774 t=474
+zhuang 	装	c=2 d=1.14165 t=474
+zhuo tui 	桌腿	c=1 d=0.436049 t=474
+zhuo zi 	桌子	c=1 d=0.481909 t=474
+zi ji 	自己	c=4 d=1.96439 t=474
+zu che wei 	租车位	c=1 d=0.272532 t=474
