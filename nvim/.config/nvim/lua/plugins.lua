@@ -374,6 +374,9 @@ require('lazy').setup({
   -- Undo tree
   'mbbill/undotree',
 
+  -- tmux
+  'christoomey/vim-tmux-navigator',
+
   -- fold
   -- kevinhwang91/nvim-ufo
 }, {
