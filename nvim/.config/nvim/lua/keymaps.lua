@@ -20,6 +20,7 @@ Keymap('n', '<leader>qA', ':qa!<CR>')
 Keymap('n', '<leader>qc', ':cclose<CR>')
 Keymap('n', '<leader>w', ':w<CR>')
 
+Keymap('i', '<C-a>', '<Esc>^i')
 Keymap('i', '<C-e>', '<Esc>$a')
 Keymap('n', 'H', '^')
 Keymap('n', 'L', '$')

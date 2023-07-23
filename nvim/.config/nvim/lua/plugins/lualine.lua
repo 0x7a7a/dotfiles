@@ -1,5 +1,5 @@
-local navic = require 'nvim-navic'
-require('lualine').setup {
+local navic = require('nvim-navic')
+require('lualine').setup({
   options = {
     globalstatus = true,
     icons_enabled = true,
@@ -83,4 +83,4 @@ require('lualine').setup {
   tabline = {},
   -- extensions = {"quickfix", "nvim-tree", "toggleterm", "fugitive", symbols_outline}
   extensions = { 'nvim-tree', 'toggleterm', 'fugitive' },
-}
+})

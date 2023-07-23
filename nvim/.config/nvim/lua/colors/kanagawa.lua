@@ -1,4 +1,4 @@
-require('kanagawa').setup {
+require('kanagawa').setup({
   undercurl = true, -- enable undercurls
   commentStyle = { italic = true },
   functionStyle = {},
@@ -22,4 +22,4 @@ require('kanagawa').setup {
     dark = 'wave',
     light = 'lotus',
   },
-}
+})

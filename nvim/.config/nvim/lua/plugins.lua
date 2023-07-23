@@ -1,13 +1,13 @@
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system {
+  vim.fn.system({
     'git',
     'clone',
     '--filter=blob:none',
     'https://github.com/folke/lazy.nvim.git',
     '--branch=stable', -- latest stable release
     lazypath,
-  }
+  })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -21,12 +21,13 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-      require 'colors.kanagawa'
-      vim.cmd [[colorscheme kanagawa]]
+      require('colors.kanagawa')
+      vim.cmd([[colorscheme kanagawa]])
     end,
   },
   { 'folke/tokyonight.nvim', lazy = true },
   { 'EdenEast/nightfox.nvim', lazy = true },
+  { 'AlexvZyl/nordic.nvim', lazy = true },
 
   -- Base dependence
   'nvim-lua/plenary.nvim',
@@ -42,10 +43,10 @@ require('lazy').setup({
   {
     'rmagatti/auto-session',
     config = function()
-      require('auto-session').setup {
+      require('auto-session').setup({
         log_level = 'error',
         auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
-      }
+      })
     end,
   },
 
@@ -53,7 +54,7 @@ require('lazy').setup({
   {
     'akinsho/bufferline.nvim',
     config = function()
-      require 'plugins.bufferline'
+      require('plugins.bufferline')
     end,
   },
 
@@ -61,7 +62,7 @@ require('lazy').setup({
   {
     'nvim-lualine/lualine.nvim',
     config = function()
-      require 'plugins.lualine'
+      require('plugins.lualine')
     end,
   },
   -- Show code context on statusline
@@ -77,7 +78,7 @@ require('lazy').setup({
   {
     'folke/which-key.nvim',
     config = function()
-      require 'plugins.which-key'
+      require('plugins.which-key')
     end,
   },
 
@@ -85,7 +86,7 @@ require('lazy').setup({
   {
     'lukas-reineke/indent-blankline.nvim',
     config = function()
-      require 'plugins.indent-blankline'
+      require('plugins.indent-blankline')
     end,
     enabled = false,
   },
@@ -96,7 +97,7 @@ require('lazy').setup({
   {
     'windwp/nvim-autopairs',
     config = function()
-      require 'plugins.auto-pairs'
+      require('plugins.auto-pairs')
     end,
   },
 
@@ -105,7 +106,7 @@ require('lazy').setup({
     'j-hui/fidget.nvim',
     dependencies = 'auto-session',
     config = function()
-      require 'plugins.fidget'
+      require('plugins.fidget')
     end,
   },
 
@@ -127,7 +128,7 @@ require('lazy').setup({
     event = 'InsertEnter',
     enabled = false,
     config = function()
-      require('copilot').setup {}
+      require('copilot').setup({})
     end,
   },
 
@@ -136,7 +137,7 @@ require('lazy').setup({
     'norcalli/nvim-colorizer.lua',
     ft = { 'css', 'javascript', 'vim', 'html' },
     config = function()
-      require('colorizer').setup { 'css', 'javascript', 'vim', 'html' }
+      require('colorizer').setup({ 'css', 'javascript', 'vim', 'html' })
     end,
   },
 
@@ -160,7 +161,7 @@ require('lazy').setup({
     version = '*',
     event = 'VeryLazy',
     config = function()
-      require('nvim-surround').setup {}
+      require('nvim-surround').setup({})
     end,
   },
 
@@ -171,7 +172,7 @@ require('lazy').setup({
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
     config = function()
-      require 'plugins.telescope'
+      require('plugins.telescope')
     end,
   },
 
@@ -179,7 +180,7 @@ require('lazy').setup({
   {
     'nvim-tree/nvim-tree.lua',
     config = function()
-      require 'plugins.nvim-tree'
+      require('plugins.nvim-tree')
     end,
   },
 
@@ -187,7 +188,7 @@ require('lazy').setup({
   {
     'folke/trouble.nvim',
     config = function()
-      require 'plugins.trouble'
+      require('plugins.trouble')
     end,
   },
 
@@ -196,7 +197,7 @@ require('lazy').setup({
     'ggandor/leap.nvim',
     dependencies = { 'tpope/vim-repeat' },
     config = function()
-      require 'plugins.leap'
+      require('plugins.leap')
     end,
   },
   'ThePrimeagen/harpoon',
@@ -208,7 +209,7 @@ require('lazy').setup({
   {
     'numToStr/Comment.nvim',
     config = function()
-      require 'plugins.comment'
+      require('plugins.comment')
     end,
   },
 
@@ -223,7 +224,7 @@ require('lazy').setup({
   {
     'jose-elias-alvarez/null-ls.nvim',
     config = function()
-      require 'plugins.null-ls'
+      require('plugins.null-ls')
     end,
   },
 
@@ -244,7 +245,7 @@ require('lazy').setup({
   {
     'lewis6991/gitsigns.nvim',
     config = function()
-      require 'plugins.gitsigns'
+      require('plugins.gitsigns')
     end,
   },
   -- { 'sindrets/diffview.nvim' },
@@ -259,7 +260,7 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
     config = function()
-      require 'plugins.treesitter'
+      require('plugins.treesitter')
     end,
   },
 
@@ -277,7 +278,7 @@ require('lazy').setup({
   {
     'ray-x/lsp_signature.nvim',
     config = function()
-      require 'plugins.lsp_signature'
+      require('plugins.lsp_signature')
     end,
   },
 
@@ -293,7 +294,7 @@ require('lazy').setup({
       { 'saadparwaiz1/cmp_luasnip', dependencies = 'nvim-cmp' },
     },
     config = function()
-      require 'plugins.lsp-cmp'
+      require('plugins.lsp-cmp')
     end,
   },
   {
@@ -315,7 +316,7 @@ require('lazy').setup({
   {
     'neovim/nvim-lspconfig',
     config = function()
-      require 'plugins.lsp-config'
+      require('plugins.lsp-config')
     end,
   },
   -- go
@@ -323,7 +324,7 @@ require('lazy').setup({
     'ray-x/go.nvim',
     dependencies = { 'ray-x/guihua.lua', 'nvim-lspconfig' },
     config = function()
-      require 'lsp.go'
+      require('lsp.go')
     end,
     event = { 'CmdlineEnter' },
     ft = { 'go', 'gomod' },
@@ -336,7 +337,7 @@ require('lazy').setup({
     ft = { 'rust' },
     dependencies = 'nvim-lspconfig',
     config = function()
-      require 'lsp.rust'
+      require('lsp.rust')
     end,
   },
 
@@ -367,7 +368,7 @@ require('lazy').setup({
   {
     'max397574/better-escape.nvim',
     config = function()
-      require 'plugins.better_escape'
+      require('plugins.better_escape')
     end,
   },
 
