@@ -26,8 +26,20 @@ require('lazy').setup({
     end,
   },
   { 'folke/tokyonight.nvim', lazy = true },
-  { 'EdenEast/nightfox.nvim', lazy = true },
-  { 'AlexvZyl/nordic.nvim', lazy = true },
+  {
+    'EdenEast/nightfox.nvim',
+    lazy = true,
+    config = function()
+      require('colors.nordfox')
+    end,
+  },
+  {
+    'AlexvZyl/nordic.nvim',
+    lazy = true,
+    config = function()
+      require('colors.nordic')
+    end,
+  },
 
   -- Base dependence
   'nvim-lua/plenary.nvim',
@@ -323,9 +335,6 @@ require('lazy').setup({
   {
     'ray-x/go.nvim',
     dependencies = { 'ray-x/guihua.lua', 'nvim-lspconfig' },
-    config = function()
-      require('lsp.go')
-    end,
     event = { 'CmdlineEnter' },
     ft = { 'go', 'gomod' },
   },
@@ -336,9 +345,6 @@ require('lazy').setup({
     'rust-lang/rust.vim',
     ft = { 'rust' },
     dependencies = 'nvim-lspconfig',
-    config = function()
-      require('lsp.rust')
-    end,
   },
 
   -- Floaterm
