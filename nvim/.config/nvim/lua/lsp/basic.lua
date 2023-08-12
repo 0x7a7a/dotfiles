@@ -47,6 +47,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set({ 'n', 'i' }, '<C-Space>', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gk', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>', opts)
+    vim.keymap.set('n', '<Space>F', ':lua vim.lsp.buf.format()<CR>', opts)
     -- vim.keymap.set('n', '<space>f', function()
     --   vim.lsp.buf.format({ async = true })
     -- end, opts)
