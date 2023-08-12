@@ -66,7 +66,7 @@ M.on_attach = function(client, bufnr)
   -- code context
   navic.attach(client, bufnr)
   -- automatically highlighting same words
-  -- require('illuminate').on_attach(client)
+  require('illuminate').on_attach(client)
 end
 
 return M
