@@ -89,6 +89,7 @@ require('lazy').setup({
   -- Keymap tips
   {
     'folke/which-key.nvim',
+    event = 'VeryLazy',
     config = function()
       require('plugins.which-key')
     end,
@@ -116,7 +117,6 @@ require('lazy').setup({
   -- Lsp progress alert
   {
     'j-hui/fidget.nvim',
-    dependencies = 'auto-session',
     config = function()
       require('plugins.fidget')
     end,
@@ -193,6 +193,12 @@ require('lazy').setup({
     'nvim-tree/nvim-tree.lua',
     config = function()
       require('plugins.nvim-tree')
+    end,
+  },
+  {
+    'stevearc/oil.nvim',
+    config = function()
+      require('plugins.oil')
     end,
   },
 
