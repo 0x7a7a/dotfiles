@@ -59,6 +59,7 @@
     ],
     "diagnostics.globals": [
         "vim",
-        "lfs"
+        "lfs",
+        "fd"
     ]
 }

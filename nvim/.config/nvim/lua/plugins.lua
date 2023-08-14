@@ -18,19 +18,21 @@ require('lazy').setup({
   -- https://github.com/rktjmp/lush.nvim
   {
     'rebelot/kanagawa.nvim',
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require('colors.kanagawa')
-      vim.cmd([[colorscheme kanagawa]])
+      -- vim.cmd([[colorscheme kanagawa]])
     end,
   },
   { 'folke/tokyonight.nvim', lazy = true },
   {
     'EdenEast/nightfox.nvim',
-    lazy = true,
+    lazy = false,
+    priority = 1000,
     config = function()
-      require('colors.nordfox')
+      require('colors.nightfox')
+      vim.cmd([[colorscheme nordfox]])
     end,
   },
   {
@@ -105,7 +107,7 @@ require('lazy').setup({
   },
 
   -- Auto close html tag
-  'windwp/nvim-ts-autotag',
+  { 'windwp/nvim-ts-autotag', ft = { 'html', 'vue' } },
 
   {
     'windwp/nvim-autopairs',
@@ -153,7 +155,7 @@ require('lazy').setup({
     end,
   },
 
-  -- Highlight matching words
+  -- Extends vim's % key
   'andymass/vim-matchup',
 
   -- Highlighting unique characters within a line
@@ -191,12 +193,16 @@ require('lazy').setup({
   -- File manager
   {
     'nvim-tree/nvim-tree.lua',
+    keys = {
+      { '<Space>e', ':NvimTreeFindFileToggle<CR>', desc = 'NeoTree' },
+    },
     config = function()
       require('plugins.nvim-tree')
     end,
   },
   {
     'stevearc/oil.nvim',
+    event = 'VeryLazy',
     config = function()
       require('plugins.oil')
     end,
@@ -205,6 +211,10 @@ require('lazy').setup({
   -- Trouble List
   {
     'folke/trouble.nvim',
+    keys = {
+      { 'gt', ':TroubleToggle document_diagnostics<CR>', desc = 'Open  file trouble menu' },
+      { 'gT', ':TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace trouble menu' },
+    },
     config = function()
       require('plugins.trouble')
     end,
@@ -247,7 +257,7 @@ require('lazy').setup({
   },
 
   -- Test helper
-  'vim-test/vim-test',
+  { 'vim-test/vim-test', enabled = false },
 
   -- Analysis of neovim's start-up time
   { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
@@ -286,6 +296,7 @@ require('lazy').setup({
   {
     'skywind3000/asynctasks.vim',
     dependencies = { 'skywind3000/asyncrun.vim' },
+    enabled = false,
     config = function()
       vim.g.asyncrun_open = 6
       vim.g.asynctasks_term_pos = 'floaterm'
@@ -326,6 +337,7 @@ require('lazy').setup({
   -- Lsp
   {
     'williamboman/mason.nvim',
+    cmd = 'Mason',
     build = ':MasonUpdate', -- :MasonUpdate updates registry contents
     config = function()
       require('mason').setup()
@@ -385,7 +397,7 @@ require('lazy').setup({
   },
 
   -- Undo tree
-  'mbbill/undotree',
+  { 'mbbill/undotree', keys = { { '<leader>u', ':UndotreeToggle<CR>', desc = 'UndoTree' } } },
 
   -- tmux
   'christoomey/vim-tmux-navigator',

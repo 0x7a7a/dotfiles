@@ -1,13 +1,13 @@
-local themes = require 'telescope.themes'
+local themes = require('telescope.themes')
 local M = {}
 
 M.fd_in_dotfiles = function()
-  local cfg_path = vim.fn.expand '~/dotfiles'
+  local cfg_path = vim.fn.expand('~/dotfiles')
   if not vim.loop.fs_stat(cfg_path) then
     vim.api.nvim_err_writeln(string.format('no zsh config path: %s', cfg_path))
     return
   end
-  local opts = vim.deepcopy(themes.get_dropdown {
+  local opts = vim.deepcopy(themes.get_dropdown({
     hidden = true,
     winblend = 10,
     width = 0.5,
@@ -20,13 +20,13 @@ M.fd_in_dotfiles = function()
       '.git',
       'dict.yaml$',
     },
-  })
+  }))
 
   require('telescope.builtin').fd(opts)
 end
 
 M.fd_in_nvim = function()
-  local opts = vim.deepcopy(themes.get_dropdown {
+  local opts = vim.deepcopy(themes.get_dropdown({
     hidden = true,
     follow = true,
     winblend = 10,
@@ -35,15 +35,15 @@ M.fd_in_nvim = function()
     results_height = 15,
     previewer = false,
     prompt_prefix = 'Nvim> ',
-    cwd = vim.fn.stdpath 'config',
-  })
+    cwd = vim.fn.stdpath('config'),
+  }))
 
   require('telescope.builtin').fd(opts)
 end
 
 -- for test
-local opt = themes.get_cursor {}
-function fd()
+local opt = themes.get_cursor({})
+M.fd = function()
   local opts = vim.deepcopy(opt)
   opts.prompt_prefix = 'Code Action>'
   require('telescope.builtin').fd(opts)

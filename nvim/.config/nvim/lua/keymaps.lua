@@ -113,11 +113,10 @@ Keymap('n', '<leader>R', ':source %<CR>')
 Keymap('n', '<leader>L', ':luafile %<CR>')
 
 -- Outline
-Keymap('n', '<leader>o', ':TagbarToggle<CR>')
+-- Keymap('n', '<leader>o', ':TagbarToggle<CR>')
 
 -- Vim-go
 Keymap('n', '<leader>gd', ':GoDoc<CR>')
-Keymap('n', '<leader>gD', ':GoDocBrowser<CR>')
 Keymap('n', '<leader>gf', ':GoFillStruct<CR>')
 
 --Undo Tree

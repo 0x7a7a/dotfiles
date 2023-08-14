@@ -1,6 +1,6 @@
-local basic = require 'lsp.basic'
+local basic = require('lsp.basic')
 
-require('lspconfig').tsserver.setup {
+require('lspconfig').tsserver.setup({
   capabilities = basic.capabilities,
 
   on_attach = function(client, bufnr)
@@ -8,11 +8,8 @@ require('lspconfig').tsserver.setup {
   end,
 
   filetypes = {
-    'javascript',
-    'javascriptreact',
-    'javascript.jsx',
     'typescript',
     'typescriptreact',
     'typescript.tsx',
   },
-}
+})

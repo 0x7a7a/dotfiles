@@ -1,7 +1,7 @@
-local basic = require 'lsp.basic'
-local util = require 'lspconfig.util'
+local basic = require('lsp.basic')
+local util = require('lspconfig.util')
 
-require('lspconfig').gopls.setup {
+require('lspconfig').gopls.setup({
   capabilities = basic.capabilities,
   on_attach = function(client, bufnr)
     basic.on_attach(client, bufnr)
@@ -28,7 +28,9 @@ require('lspconfig').gopls.setup {
       gofumpt = false, -- turn on for new repos, gofmpt is good but also create code turmoils
     },
   },
-}
+})
 
-require('lspconfig').golangci_lint_ls.setup {}
 require('go').setup()
+if vim.fn.executable('golangci-lint-langserver') then
+  require('lspconfig').golangci_lint_ls.setup({})
+end

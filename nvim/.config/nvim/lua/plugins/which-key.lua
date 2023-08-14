@@ -1,4 +1,4 @@
-require('which-key').setup {
+require('which-key').setup({
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
     registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -43,8 +43,9 @@ require('which-key').setup {
     border = 'none', -- none, single, double, shadow
     position = 'bottom', -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
-    padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+    padding = { 1, 2, 1, 2 }, -- extra window padding [top, right, bottom, left]
     winblend = 0,
+    zindex = 1000, -- positive value to position WhichKey above other floating windows.
   },
   layout = {
     height = {
@@ -59,15 +60,34 @@ require('which-key').setup {
     align = 'left', -- align columns left, center or right
   },
   ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
-  hidden = { '<silent>', '<cmd>', '<Cmd>', '<CR>', 'call', 'lua', '^:', '^ ' }, -- hide mapping boilerplate
-  show_help = true, -- show help message on the command line when the popup is visible
+  hidden = { '<silent>', '<cmd>', '<Cmd>', '<CR>', '^:', '^ ', '^call ', '^lua ' }, -- hide mapping boilerplate
+  show_help = true, -- show a help message in the command line for using WhichKey
+  show_keys = true, -- show the currently pressed key and its label as a message in the command line
   triggers = 'auto', -- automatically setup triggers
-  -- triggers = {"<leader>"} -- or specify a list manually
+  -- triggers = {"<leader>"} -- or specifiy a list manually
+  -- list of triggers, where WhichKey should not wait for timeoutlen and show immediately
+  triggers_nowait = {
+    -- marks
+    '`',
+    "'",
+    'g`',
+    "g'",
+    -- registers
+    '"',
+    '<c-r>',
+    -- spelling
+    'z=',
+  },
   triggers_blacklist = {
     -- list of mode / prefixes that should never be hooked by WhichKey
-    -- this is mostly relevant for key maps that start with a native binding
-    -- most people should not need to change this
+    -- this is mostly relevant for keymaps that start with a native binding
     i = { 'j', 'k' },
     v = { 'j', 'k' },
   },
-}
+  -- disable the WhichKey popup for certain buf types and file types.
+  -- Disabled by default for Telescope
+  disable = {
+    buftypes = {},
+    filetypes = {},
+  },
+})
