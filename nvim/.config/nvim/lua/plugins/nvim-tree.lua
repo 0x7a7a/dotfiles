@@ -1,11 +1,11 @@
 local function my_on_attach(bufnr)
-  local api = require 'nvim-tree.api'
+  local api = require('nvim-tree.api')
   api.config.mappings.default_on_attach(bufnr)
 
   vim.keymap.del('n', 's', { buffer = bufnr })
 end
 
-require('nvim-tree').setup {
+require('nvim-tree').setup({
   on_attach = my_on_attach,
   auto_reload_on_write = true,
   create_in_closed_folder = false,
@@ -157,6 +157,4 @@ require('nvim-tree').setup {
       profile = false,
     },
   },
-}
-
-Keymap('n', '<Space>e', ':NvimTreeFindFileToggle<CR>')
+})

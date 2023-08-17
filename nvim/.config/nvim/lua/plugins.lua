@@ -231,7 +231,13 @@ require('lazy').setup({
   'ThePrimeagen/harpoon',
 
   -- Outline
-  --  'preservim/tagbar',
+  {
+    'stevearc/aerial.nvim',
+    event = 'VeryLazy',
+    config = function()
+      require('plugins.aerial')
+    end,
+  },
 
   -- Smart comment
   {
@@ -268,7 +274,7 @@ require('lazy').setup({
   -- Git
   {
     'tpope/vim-fugitive',
-    -- cmd = { 'G', 'G!', 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' },
+    event = 'VeryLazy',
   },
   {
     'lewis6991/gitsigns.nvim',

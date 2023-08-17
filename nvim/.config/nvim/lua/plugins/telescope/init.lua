@@ -1,5 +1,5 @@
-local actions = require 'telescope.actions'
-local previewers = require 'telescope.previewers'
+local actions = require('telescope.actions')
+local previewers = require('telescope.previewers')
 
 -- Preview only small files
 local previewer_maker = function(filepath, bufnr, opts)
@@ -18,7 +18,7 @@ local previewer_maker = function(filepath, bufnr, opts)
   end)
 end
 
-require('telescope').setup {
+require('telescope').setup({
   defaults = {
 
     buffer_previewer_maker = previewer_maker,
@@ -71,9 +71,18 @@ require('telescope').setup {
       override_file_sorter = true, -- override the file sorter
       case_mode = 'smart_case', -- or "ignore_case" or "respect_case",the default case_mode is "smart_case"
     },
+    aerial = {
+      -- Display symbols as <root>.<parent>.<symbol>
+      show_nesting = {
+        ['_'] = false, -- This key will be the default
+        json = true, -- You can set the option for specific filetypes
+        yaml = true,
+      },
+    },
   },
-}
-require('telescope').load_extension 'fzf'
+})
+require('telescope').load_extension('fzf')
+require('telescope').load_extension('aerial')
 
 Keymap('n', 'sf', ':Telescope find_files<CR>')
 Keymap('n', '<Space>fo', ':Telescope oldfiles<CR>')
