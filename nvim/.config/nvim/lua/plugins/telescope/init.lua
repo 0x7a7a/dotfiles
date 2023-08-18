@@ -69,7 +69,8 @@ require('telescope').setup({
       fuzzy = true, -- false will only do exact matching
       override_generic_sorter = true, -- override the generic sorter
       override_file_sorter = true, -- override the file sorter
-      case_mode = 'smart_case', -- or "ignore_case" or "respect_case",the default case_mode is "smart_case"
+      case_mode = 'smart_case', -- or "ignore_case" or "respect_case"
+      -- the default case_mode is "smart_case"
     },
     aerial = {
       -- Display symbols as <root>.<parent>.<symbol>
@@ -91,6 +92,8 @@ Keymap('n', '<Space>fb', ':Telescope buffers<CR>')
 Keymap('n', '<Space>fh', ':Telescope help_tags<CR>')
 Keymap('n', '<Space>fi', ':Telescope lsp_implementations<CR>')
 Keymap('n', '<Space>fd', ':Telescope diagnostics<CR>')
+Keymap('n', '<Space>fa', ':Telescope aerial<CR>')
+Keymap('n', '<Space>fc', ':Telescope commands<CR>')
 
 Keymap('n', '<Space>fn', ':lua require("plugins/telescope/finder").fd_in_nvim()<CR>')
 Keymap('n', '<Space>fd', ':lua require("plugins/telescope/finder").fd_in_dotfiles()<CR>')

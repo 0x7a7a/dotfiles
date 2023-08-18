@@ -1,8 +1,8 @@
-local basic = require 'lsp.basic'
-require('lspconfig').rust_analyzer.setup {
+local basic = require('lsp.basic')
+require('lspconfig').rust_analyzer.setup({
   capabilities = basic.capabilities,
-  on_attach = function(client, bufnr)
-    basic.on_attach(client, bufnr)
+  on_attach = function(client)
+    basic.on_attach(client)
   end,
 
   settings = {
@@ -19,4 +19,4 @@ require('lspconfig').rust_analyzer.setup {
       },
     },
   },
-}
+})

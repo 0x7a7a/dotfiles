@@ -3,8 +3,8 @@ local util = require('lspconfig.util')
 
 require('lspconfig').gopls.setup({
   capabilities = basic.capabilities,
-  on_attach = function(client, bufnr)
-    basic.on_attach(client, bufnr)
+  on_attach = function(client)
+    basic.on_attach(client)
   end,
 
   filetypes = { 'go', 'gomod' },

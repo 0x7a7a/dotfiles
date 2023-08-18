@@ -80,7 +80,7 @@ require('lazy').setup({
     end,
   },
   -- Show code context on statusline
-  'SmiteshP/nvim-navic',
+  -- 'SmiteshP/nvim-navic' -- now use aerial's built-in replacement
 
   -- Highlight the variable with the same name
   'RRethy/vim-illuminate',
@@ -282,7 +282,7 @@ require('lazy').setup({
       require('plugins.gitsigns')
     end,
   },
-  -- { 'sindrets/diffview.nvim' },
+  { 'sindrets/diffview.nvim', cmd = { 'DiffviewOpen' } },
 
   -- Highlights
   {
@@ -358,7 +358,7 @@ require('lazy').setup({
   -- go
   {
     'ray-x/go.nvim',
-    dependencies = { 'ray-x/guihua.lua', 'nvim-lspconfig' },
+    dependencies = { 'ray-x/guihua.lua' },
     event = { 'CmdlineEnter' },
     ft = { 'go', 'gomod' },
   },
@@ -368,7 +368,6 @@ require('lazy').setup({
   {
     'rust-lang/rust.vim',
     ft = { 'rust' },
-    dependencies = 'nvim-lspconfig',
   },
 
   -- Floaterm
@@ -384,12 +383,6 @@ require('lazy').setup({
   -- Make quickfix better
   --  { 'mhinz/vim-grepper', cmd = 'Grepper' },
   --  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
-  --  {
-  --   'junegunn/fzf',
-  --   build = function()
-  --     vim.fn['fzf#install']()
-  --   end,
-  -- },
 
   -- Search/replace
   --  'nvim-pack/nvim-spectre',
@@ -410,6 +403,17 @@ require('lazy').setup({
 
   -- fold
   -- kevinhwang91/nvim-ufo
+
+  -- dev plugin
+  {
+    'folke/neodev.nvim',
+    ft = { 'lua' },
+    config = function()
+      -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+      require('plugins.neodev')
+      require('lsp.lua')
+    end,
+  },
 }, {
   checker = { enabled = true },
 })

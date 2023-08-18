@@ -60,11 +60,7 @@ local M = {}
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-local navic = require('nvim-navic')
-
-M.on_attach = function(client, bufnr)
-  -- code context
-  navic.attach(client, bufnr)
+M.on_attach = function(client)
   -- automatically highlighting same words
   require('illuminate').on_attach(client)
 end

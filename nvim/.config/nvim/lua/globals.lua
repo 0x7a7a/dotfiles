@@ -13,7 +13,7 @@ end
 R = function(name)
   RELOAD(name)
 
-  vim.notify 'Relod Success!'
+  vim.notify('Relod Success!')
 end
 
 P = function(v)
