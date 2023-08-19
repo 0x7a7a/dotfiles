@@ -194,7 +194,7 @@ require('lazy').setup({
   {
     'nvim-tree/nvim-tree.lua',
     keys = {
-      { '<Space>e', ':NvimTreeFindFileToggle<CR>', desc = 'NeoTree' },
+      { '<Space>e', '<CMD>NvimTreeFindFileToggle<CR>', desc = 'NeoTree' },
     },
     config = function()
       require('plugins.nvim-tree')
@@ -212,8 +212,8 @@ require('lazy').setup({
   {
     'folke/trouble.nvim',
     keys = {
-      { 'gt', ':TroubleToggle document_diagnostics<CR>', desc = 'Open  file trouble menu' },
-      { 'gT', ':TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace trouble menu' },
+      { 'gt', '<CMD>TroubleToggle document_diagnostics<CR>', desc = 'Open  file trouble menu' },
+      { 'gT', '<CMD>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace trouble menu' },
     },
     config = function()
       require('plugins.trouble')
@@ -233,7 +233,9 @@ require('lazy').setup({
   -- Outline
   {
     'stevearc/aerial.nvim',
-    event = 'VeryLazy',
+    keys = {
+      { '<Space>a', '<CMD>AerialToggle!<CR>', desc = 'Toggle Aerial' },
+    },
     config = function()
       require('plugins.aerial')
     end,
@@ -269,7 +271,7 @@ require('lazy').setup({
   { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
 
   -- Async building & commands
-  --  { 'tpope/vim-dispatch', cmd = { 'Dispatch', 'Make', 'Focus', 'Start' } },
+  { 'tpope/vim-dispatch', event = 'VeryLazy' },
 
   -- Git
   {
@@ -295,17 +297,6 @@ require('lazy').setup({
     build = ':TSUpdate',
     config = function()
       require('plugins.treesitter')
-    end,
-  },
-
-  -- Asyncrun/task,build and test
-  {
-    'skywind3000/asynctasks.vim',
-    dependencies = { 'skywind3000/asyncrun.vim' },
-    enabled = false,
-    config = function()
-      vim.g.asyncrun_open = 6
-      vim.g.asynctasks_term_pos = 'floaterm'
     end,
   },
 
@@ -396,7 +387,7 @@ require('lazy').setup({
   },
 
   -- Undo tree
-  { 'mbbill/undotree', keys = { { '<leader>u', ':UndotreeToggle<CR>', desc = 'UndoTree' } } },
+  { 'mbbill/undotree', keys = { { '<leader>u', '<CMD>UndotreeToggle<CR>', desc = 'UndoTree' } } },
 
   -- tmux
   'christoomey/vim-tmux-navigator',
@@ -418,7 +409,7 @@ require('lazy').setup({
   checker = { enabled = true },
 })
 
-Keymap('n', '<leader>ps', '<cmd>Lazy sync<CR>')
-Keymap('n', '<leader>pu', '<cmd>Lazy update<CR>')
-Keymap('n', '<leader>pi', '<cmd>Lazy install<CR>')
-Keymap('n', '<leader>pc', '<cmd>Lazy clean<CR>')
+Keymap('n', '<leader>ps', '<CMD>Lazy sync<CR>')
+Keymap('n', '<leader>pu', '<CMD>Lazy update<CR>')
+Keymap('n', '<leader>pi', '<CMD>Lazy install<CR>')
+Keymap('n', '<leader>pc', '<CMD>Lazy clean<CR>')

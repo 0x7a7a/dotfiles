@@ -46,5 +46,5 @@ require('bufferline').setup({
   },
 })
 
-Keymap('n', '<A-h>', ':BufferLineCyclePrev<CR>')
-Keymap('n', '<A-l>', ':BufferLineCycleNext<CR>')
+Keymap('n', '<A-h>', '<CMD>BufferLineCyclePrev<CR>')
+Keymap('n', '<A-l>', '<CMD>BufferLineCycleNext<CR>')
