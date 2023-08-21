@@ -1,16 +1,18 @@
-require('bufferline').setup({
+local bufferline = require('bufferline')
+bufferline.setup({
   options = {
     mode = 'buffers',
+    style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
+    themable = true,
     numbers = 'none',
     close_command = 'bdelete! %d', -- can be a string | function, see "Mouse actions"
     right_mouse_command = 'bdelete! %d', -- can be a string | function, see "Mouse actions"
     left_mouse_command = 'buffer %d', -- can be a string | function, see "Mouse actions"
     middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
 
-    -- NOTE: this plugin is designed with this icon in mind,
-    -- and so changing this is NOT recommended, this is intended
-    -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator = { style = 'icon' },
+    indicator = {
+      style = 'none',
+    },
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
@@ -45,6 +47,3 @@ require('bufferline').setup({
     color_icons = true,
   },
 })
-
-Keymap('n', '<A-h>', '<CMD>BufferLineCyclePrev<CR>')
-Keymap('n', '<A-l>', '<CMD>BufferLineCycleNext<CR>')

@@ -6,12 +6,13 @@ Keymap = function(mode, key, cmd, opts)
   vim.keymap.set(mode, key, cmd, opts)
 end
 
+Keymap('n', '<A-h>', '<CMD>BufferLineCyclePrev<CR>')
+Keymap('n', '<A-l>', '<CMD>BufferLineCycleNext<CR>')
 Keymap('n', '<leader>bb', '<CMD>BufDel<CR>')
 Keymap('n', '<leader>bB', '<CMD>BufDel!<CR>')
 Keymap('n', '<leader>ba', '<CMD>BufDelAll<CR>')
 Keymap('n', '<leader>bo', '<CMD>BufDelOthers<CR>')
-Keymap('n', '<leader>bp', '<CMD>BufferLinePickClose<CR>')
-Keymap('n', '<leader>bs', '<CMD>BufferLinePick<CR>')
+Keymap('n', '<leader>bp', '<CMD>BufferLinePick<CR>')
 
 Keymap('n', '<leader>qq', '<CMD>q<CR>')
 Keymap('n', '<leader>qQ', '<CMD>q!<CR>')
@@ -52,10 +53,6 @@ Keymap('n', 'sv', '<CMD>vsp<CR>')
 Keymap('n', 'sh', '<CMD>sp<CR>')
 Keymap('n', 'sc', '<C-w>c')
 Keymap('n', 'so', '<C-w>o')
--- Keymap('', 'sh', '<C-w>h')
--- Keymap('', 'sj', '<C-w>j')
--- Keymap('', 'sk', '<C-w>k')
--- Keymap('', 'sl', '<C-w>l')
 Keymap('', '<C-h>', '<C-w>h')
 Keymap('', '<C-j>', '<C-w>j')
 Keymap('', '<C-k>', '<C-w>k')
@@ -71,8 +68,6 @@ Keymap('c', '<C-a>', '<Home>', { noremap = true })
 Keymap('c', '<C-e>', '<End>', { noremap = true })
 Keymap('c', '<A-b>', '<C-Left>', { noremap = true })
 Keymap('c', '<A-f>', '<C-Right>', { noremap = true })
--- Keymap('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
--- Keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 
 -- Floaterm
 Keymap('n', '<leader>f', '<CMD>FloatermToggle<CR>')
@@ -102,19 +97,9 @@ Keymap('n', '<leader>io', '<CMD>TSLspOrganize<CR>')
 Keymap('n', 'ga', '<CMD>EasyAlign<CR>')
 Keymap('x', 'ga', '<CMD>EasyAlign<CR>')
 
--- Test
-Keymap('n', '<leader>tt', '<CMD>TestNearest -strategy=floaterm<CR>')
-Keymap('n', '<leader>tf', '<CMD>TestFile<CR>')
-Keymap('n', '<leader>ts', '<CMD>TestSuite<CR>')
-Keymap('n', '<leader>tl', '<CMD>TestLast<CR>')
-Keymap('n', '<leader>tv', '<CMD>TestVisit<CR>')
-
 -- Dev
 Keymap('n', '<leader>R', '<CMD>source %<CR>')
 Keymap('n', '<leader>L', '<CMD>luafile %<CR>')
-
--- Outline
--- Keymap('n', '<leader>o', '<CMD>TagbarToggle<CR>')
 
 -- Vim-go
 Keymap('n', '<leader>gd', '<CMD>GoDoc<CR>')

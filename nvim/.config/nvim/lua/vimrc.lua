@@ -47,7 +47,7 @@ opt.formatoptions = opt.formatoptions
   + 'n' -- Indent past the formatlistpat, not underneath it.
   + 'j' -- Auto-remove comments if possible.
 
-opt.fillchars:append {
+opt.fillchars:append({
   horiz = '━',
   horizup = '┻',
   horizdown = '┳',
@@ -55,10 +55,10 @@ opt.fillchars:append {
   vertleft = '┨',
   vertright = '┣',
   verthoriz = '╋',
-}
+})
 
 opt.list = false
-opt.listchars:append 'eol:↴'
+opt.listchars:append('eol:↴')
 opt.termguicolors = true
 
 -- system clipboard

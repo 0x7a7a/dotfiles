@@ -106,9 +106,6 @@ require('lazy').setup({
     enabled = false,
   },
 
-  -- Auto close html tag
-  { 'windwp/nvim-ts-autotag', ft = { 'html', 'vue' } },
-
   {
     'windwp/nvim-autopairs',
     config = function()
@@ -119,6 +116,7 @@ require('lazy').setup({
   -- Lsp progress alert
   {
     'j-hui/fidget.nvim',
+    tag = 'legacy',
     config = function()
       require('plugins.fidget')
     end,
@@ -180,6 +178,7 @@ require('lazy').setup({
   },
 
   -- Search
+  -- { 'ibhagwan/fzf-lua' },
   {
     'nvim-telescope/telescope.nvim',
     dependencies = {
@@ -264,9 +263,6 @@ require('lazy').setup({
     end,
   },
 
-  -- Test helper
-  { 'vim-test/vim-test', enabled = false },
-
   -- Analysis of neovim's start-up time
   { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
 
@@ -286,19 +282,21 @@ require('lazy').setup({
   },
   { 'sindrets/diffview.nvim', cmd = { 'DiffviewOpen' } },
 
-  -- Highlights
+  -- Highlights and txt select
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
-      'nvim-treesitter/nvim-treesitter-refactor',
       'nvim-treesitter/nvim-treesitter-textobjects',
       'nvim-treesitter/nvim-treesitter-context',
+      'windwp/nvim-ts-autotag',
     },
     build = ':TSUpdate',
     config = function()
       require('plugins.treesitter')
     end,
   },
+  -- Make "w" move better
+  { 'chaoren/vim-wordmotion', event = 'VeryLazy' },
 
   -- Parameter hints
   {
@@ -387,24 +385,16 @@ require('lazy').setup({
   },
 
   -- Undo tree
-  { 'mbbill/undotree', keys = { { '<leader>u', '<CMD>UndotreeToggle<CR>', desc = 'UndoTree' } } },
+  { 'mbbill/undotree', keys = { { '<Space>u', '<CMD>UndotreeToggle<CR>', desc = 'UndoTree' } } },
 
   -- tmux
   'christoomey/vim-tmux-navigator',
 
   -- fold
-  -- kevinhwang91/nvim-ufo
+  -- { 'kevinhwang91/nvim-ufo' },
 
   -- dev plugin
-  {
-    'folke/neodev.nvim',
-    ft = { 'lua' },
-    config = function()
-      -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-      require('plugins.neodev')
-      require('lsp.lua')
-    end,
-  },
+  { 'folke/neodev.nvim' },
 }, {
   checker = { enabled = true },
 })
