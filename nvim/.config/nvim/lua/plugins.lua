@@ -295,8 +295,6 @@ require('lazy').setup({
       require('plugins.treesitter')
     end,
   },
-  -- Make "w" move better
-  { 'chaoren/vim-wordmotion', event = 'VeryLazy' },
 
   -- Parameter hints
   {
@@ -346,9 +344,7 @@ require('lazy').setup({
   },
   -- go
   {
-    'ray-x/go.nvim',
-    dependencies = { 'ray-x/guihua.lua' },
-    event = { 'CmdlineEnter' },
+    'crispgm/nvim-go',
     ft = { 'go', 'gomod' },
   },
   -- typescript

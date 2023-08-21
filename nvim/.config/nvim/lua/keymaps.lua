@@ -6,14 +6,6 @@ Keymap = function(mode, key, cmd, opts)
   vim.keymap.set(mode, key, cmd, opts)
 end
 
-Keymap('n', '<A-h>', '<CMD>BufferLineCyclePrev<CR>')
-Keymap('n', '<A-l>', '<CMD>BufferLineCycleNext<CR>')
-Keymap('n', '<leader>bb', '<CMD>BufDel<CR>')
-Keymap('n', '<leader>bB', '<CMD>BufDel!<CR>')
-Keymap('n', '<leader>ba', '<CMD>BufDelAll<CR>')
-Keymap('n', '<leader>bo', '<CMD>BufDelOthers<CR>')
-Keymap('n', '<leader>bp', '<CMD>BufferLinePick<CR>')
-
 Keymap('n', '<leader>qq', '<CMD>q<CR>')
 Keymap('n', '<leader>qQ', '<CMD>q!<CR>')
 Keymap('n', '<leader>qa', '<CMD>qa<CR>')
@@ -66,8 +58,8 @@ Keymap('n', '<A-down>', '<CMD>resize-5<CR>')
 -- Cmdline shortcuts
 Keymap('c', '<C-a>', '<Home>', { noremap = true })
 Keymap('c', '<C-e>', '<End>', { noremap = true })
-Keymap('c', '<A-b>', '<C-Left>', { noremap = true })
-Keymap('c', '<A-f>', '<C-Right>', { noremap = true })
+Keymap('c', '<C-b>', '<C-Left>', { noremap = true })
+Keymap('c', '<C-f>', '<C-Right>', { noremap = true })
 
 -- Floaterm
 Keymap('n', '<leader>f', '<CMD>FloatermToggle<CR>')
@@ -100,10 +92,6 @@ Keymap('x', 'ga', '<CMD>EasyAlign<CR>')
 -- Dev
 Keymap('n', '<leader>R', '<CMD>source %<CR>')
 Keymap('n', '<leader>L', '<CMD>luafile %<CR>')
-
--- Vim-go
-Keymap('n', '<leader>gd', '<CMD>GoDoc<CR>')
-Keymap('n', '<leader>gf', '<CMD>GoFillStruct<CR>')
 
 --Undo Tree
 Keymap('n', '<leader>u', '<CMD>UndotreeToggle<CR>')

@@ -6,4 +6,8 @@ require('aerial').setup({
   end,
 
   show_guides = true,
+
+  layout = {
+    min_width = 15,
+  },
 })
