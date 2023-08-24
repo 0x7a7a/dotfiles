@@ -1,4 +1,4 @@
-require('leap').setup {
+require('leap').setup({
   max_aot_targets = nil,
   highlight_unlabeled = false,
   max_highlighted_traversal_targets = 10,
@@ -15,8 +15,8 @@ require('leap').setup {
     multi_accept = '<enter>',
     multi_revert = '<backspace>',
   },
-}
+})
 
 -- require('leap').set_default_keymaps()
-Keymap('n', 'ss', '<Plug>(leap-forward)')
-Keymap('n', 'sS', '<Plug>(leap-backward)')
+Keymap('n', 's', '<Plug>(leap-forward)')
+Keymap('n', 'S', '<Plug>(leap-backward)')

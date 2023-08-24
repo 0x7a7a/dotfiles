@@ -38,7 +38,7 @@ require('nordic').setup({
   },
   leap = {
     -- Dims the backdrop when using leap.
-    dim_backdrop = false,
+    dim_backdrop = true,
   },
   ts_context = {
     -- Enables dark background for treesitter-context window

@@ -18,14 +18,12 @@ require('lazy').setup({
   -- https://github.com/rktjmp/lush.nvim
   {
     'rebelot/kanagawa.nvim',
-    lazy = true,
-    priority = 1000,
     config = function()
       require('colors.kanagawa')
       -- vim.cmd([[colorscheme kanagawa]])
     end,
   },
-  { 'folke/tokyonight.nvim', lazy = true },
+  { 'folke/tokyonight.nvim' },
   {
     'EdenEast/nightfox.nvim',
     lazy = false,
@@ -37,11 +35,11 @@ require('lazy').setup({
   },
   {
     'AlexvZyl/nordic.nvim',
-    lazy = true,
     config = function()
       require('colors.nordic')
     end,
   },
+  { 'nyoom-engineering/oxocarbon.nvim' },
 
   -- Base dependence
   'nvim-lua/plenary.nvim',
@@ -324,6 +322,8 @@ require('lazy').setup({
     dependencies = { 'rafamadriz/friendly-snippets' },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
+      require('luasnip.loaders.from_snipmate').lazy_load({ paths = './lua/snippets/snipmate' })
+      require('luasnip.loaders.from_lua').lazy_load({ paths = './lua/snippets/luasnip' })
     end,
   },
 
