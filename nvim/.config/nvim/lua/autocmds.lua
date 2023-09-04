@@ -7,15 +7,15 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-vim.opt.cursorline = true
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
-  group = config_group,
-  pattern = '*',
-  desc = 'smart cursorline',
-  callback = function(arg)
-    vim.opt.cursorline = arg.event == 'InsertLeave'
-  end,
-})
+-- vim.opt.cursorline = true
+-- vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
+--   group = config_group,
+--   pattern = '*',
+--   desc = 'smart cursorline',
+--   callback = function(arg)
+--     vim.opt.cursorline = arg.event == 'InsertLeave'
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
   group = config_group,

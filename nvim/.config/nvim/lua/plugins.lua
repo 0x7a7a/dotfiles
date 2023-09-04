@@ -40,10 +40,16 @@ require('lazy').setup({
     end,
   },
   { 'nyoom-engineering/oxocarbon.nvim' },
+  {
+    'ellisonleao/gruvbox.nvim',
+    config = function()
+      require('colors.gruvbox')
+    end,
+  },
+  'kyazdani42/nvim-web-devicons',
 
   -- Base dependence
   'nvim-lua/plenary.nvim',
-  'kyazdani42/nvim-web-devicons',
 
   -- Smooth scroll
   'psliwka/vim-smoothie',
@@ -355,6 +361,29 @@ require('lazy').setup({
     ft = { 'rust' },
   },
 
+  -- Definition Preview
+  {
+    'rmagatti/goto-preview',
+    keys = {
+      { 'gpd', "<CMD>lua require('goto-preview').goto_preview_definition()<CR>", desc = 'goto_preview_definition' },
+      {
+        'gpt',
+        "<CMD>lua require('goto-preview').goto_preview_type_definition()<CR>",
+        desc = 'goto_preview_type_definition',
+      },
+      {
+        'gpi',
+        "<CMD>lua require('goto-preview').goto_preview_implementation()<CR>",
+        desc = 'goto_preview_implementation',
+      },
+      { 'gP', "<CMD>lua require('goto-preview').close_all_win()<CR>", desc = 'close_all_win' },
+      { 'gpr', "<CMD>lua require('goto-preview').goto_preview_references()<CR>", desc = 'goto_preview_references' },
+    },
+    config = function()
+      require('plugins.preview')
+    end,
+  },
+
   -- Floaterm
   {
     'voldikss/vim-floaterm',
@@ -389,7 +418,7 @@ require('lazy').setup({
   -- fold
   -- { 'kevinhwang91/nvim-ufo' },
 
-  -- dev plugin
+  -- plugin dev plugin
   { 'folke/neodev.nvim' },
 }, {
   checker = { enabled = true },
