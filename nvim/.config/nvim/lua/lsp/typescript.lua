@@ -8,6 +8,7 @@ require('lspconfig').tsserver.setup({
   end,
 
   filetypes = {
+    'javascript',
     'typescript',
     'typescriptreact',
     'typescript.tsx',

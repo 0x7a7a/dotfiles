@@ -266,6 +266,9 @@ require('lazy').setup({
       require('plugins.null-ls')
     end,
   },
+  -- { 'mfussenegger/nvim-lint' },
+  -- { 'stevearc/conform.nvim' },
+  -- { 'nvimdev/guard.nvim' },
 
   -- Analysis of neovim's start-up time
   { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
@@ -346,11 +349,16 @@ require('lazy').setup({
     'neovim/nvim-lspconfig',
     config = function()
       require('plugins.lsp-config')
+      require('lsp')
     end,
   },
   -- go
+  -- {
+  --   'crispgm/nvim-go',
+  --   ft = { 'go', 'gomod' },
+  -- },
   {
-    'crispgm/nvim-go',
+    'olexsmir/gopher.nvim',
     ft = { 'go', 'gomod' },
   },
   -- typescript
@@ -396,7 +404,7 @@ require('lazy').setup({
 
   -- Make quickfix better
   --  { 'mhinz/vim-grepper', cmd = 'Grepper' },
-  --  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
+  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
 
   -- Search/replace
   --  'nvim-pack/nvim-spectre',
@@ -419,7 +427,7 @@ require('lazy').setup({
   -- { 'kevinhwang91/nvim-ufo' },
 
   -- plugin dev plugin
-  { 'folke/neodev.nvim' },
+  { 'folke/neodev.nvim', ft = { 'lua' } },
 }, {
   checker = { enabled = true },
 })

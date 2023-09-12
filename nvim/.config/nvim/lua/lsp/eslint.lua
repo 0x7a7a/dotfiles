@@ -1,2 +1,6 @@
 -- https://github.com/hrsh7th/vscode-langservers-extracted
-require('lspconfig').eslint.setup {}
+if vim.fn.executable('eslint') == 0 then
+  return
+end
+
+require('lspconfig').eslint.setup({})
