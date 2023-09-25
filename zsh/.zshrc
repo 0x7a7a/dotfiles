@@ -23,8 +23,11 @@ zinit light-mode for \
 
 # must be loaded before the fzf plugin
 # https://github.com/jeffreytse/zsh-vi-mode/issues/24
-ZVM_INIT_MODE=sourcing
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+function zvm_config() {
+  ZVM_INIT_MODE=sourcing
+  ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+  ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+}
 
 ### ohmyzsh plugin
 zi for \
