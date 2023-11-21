@@ -76,5 +76,5 @@ opt.foldenable = false
 vim.g.Illuminate_ftblacklist = { 'NvimTree' }
 
 -- undo file
-opt.undofile = false
-opt.undodir = '~/.vim/undodir'
+-- opt.undofile = false
+-- opt.undodir = '~/.vim/undodir'

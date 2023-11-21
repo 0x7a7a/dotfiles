@@ -2,27 +2,17 @@ local null_ls = require('null-ls')
 local builtins = null_ls.builtins
 local formatter = builtins.formatting
 local linter = builtins.diagnostics
-
 local utils = require('null-ls.utils').make_conditional_utils()
-
--- format
-local lsp_formatting = function(bufnr)
-  vim.lsp.buf.format({
-    filter = function(client)
-      -- apply whatever logic you want (in this example, we'll only use null-ls)
-      return client.name == 'null-ls'
-    end,
-    bufnr = bufnr,
-  })
-end
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 require('null-ls').setup({
   debug = false,
   sources = {
     -- go
-    formatter.gofumpt,
+    formatter.goimports,
     formatter.goimports_reviser,
+    formatter.gofumpt,
+
     -- lua
     formatter.stylua.with({
       condition = function()
@@ -85,7 +75,7 @@ require('null-ls').setup({
         group = augroup,
         buffer = bufnr,
         callback = function()
-          lsp_formatting(bufnr)
+          vim.lsp.buf.format({ bufnr = bufnr })
         end,
       })
     end

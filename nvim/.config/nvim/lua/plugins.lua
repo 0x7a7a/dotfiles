@@ -16,6 +16,7 @@ require('lazy').setup({
   -- toolkit:
   -- https://github.com/lifepillar/vim-colortemplate
   -- https://github.com/rktjmp/lush.nvim
+  -- https://github.com/uga-rosa/ccc.nvim
   {
     'rebelot/kanagawa.nvim',
     config = function()
@@ -171,13 +172,12 @@ require('lazy').setup({
   --  'tommcdo/vim-exchange',
   --  'mg979/vim-visual-multi',
   --  'terryma/vim-expand-region',
-  -- 'tpope/vim-surround',
   {
     'kylechui/nvim-surround',
     version = '*',
     event = 'VeryLazy',
     config = function()
-      require('nvim-surround').setup({})
+      require('nvim-surround').setup()
     end,
   },
 
@@ -261,7 +261,7 @@ require('lazy').setup({
 
   -- External supplement for lsp
   {
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
     config = function()
       require('plugins.null-ls')
     end,
@@ -407,7 +407,12 @@ require('lazy').setup({
   { 'kevinhwang91/nvim-bqf', ft = 'qf' },
 
   -- Search/replace
-  --  'nvim-pack/nvim-spectre',
+  {
+    'nvim-pack/nvim-spectre',
+    keys = {
+      { '<leader>S', '<CMD>lua require("spectre").toggle()<CR>', desc = 'Toggle Spectre' },
+    },
+  },
 
   -- Escape Mapping
   {

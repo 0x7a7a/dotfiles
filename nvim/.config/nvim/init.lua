@@ -2,8 +2,9 @@
 require('globals')
 
 -- base vim setting
-require('vimrc')
-require('keymaps')
+require('setting')
+require('mappings')
+require('mappings-leader')
 require('autocmds')
 
 require('plugins')
