@@ -121,7 +121,6 @@ require('lazy').setup({
   -- Lsp progress alert
   {
     'j-hui/fidget.nvim',
-    tag = 'legacy',
     config = function()
       require('plugins.fidget')
     end,

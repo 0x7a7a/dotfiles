@@ -20,3 +20,4 @@ require('lspconfig').rust_analyzer.setup({
     },
   },
 })
+vim.g.rustfmt_autosave = 1
