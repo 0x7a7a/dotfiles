@@ -62,10 +62,7 @@ require('lazy').setup({
   {
     'rmagatti/auto-session',
     config = function()
-      require('auto-session').setup({
-        log_level = 'error',
-        auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
-      })
+      require('plugins.auto-session')
     end,
   },
 
@@ -194,12 +191,19 @@ require('lazy').setup({
 
   -- File manager
   {
-    'nvim-tree/nvim-tree.lua',
+    'nvim-neo-tree/neo-tree.nvim',
     keys = {
-      { '<Space>e', '<CMD>NvimTreeFindFileToggle<CR>', desc = 'NeoTree' },
+      { '<Space>e', '<CMD>Neotree toggle<CR>', desc = 'NeoTree' },
+    },
+    branch = 'v3.x',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim',
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
     config = function()
-      require('plugins.nvim-tree')
+      require('plugins.neo-tree')
     end,
   },
   {
