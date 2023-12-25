@@ -23,25 +23,25 @@ require('goto-preview').setup({
 Keymap(
   'n',
   'gpd',
-  "<CMD>lua require('goto-preview').goto_preview_definition()<CR>",
+  "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>",
   { desc = 'goto_preview_definition' }
 )
 Keymap(
   'n',
   'gpt',
-  "<CMD>lua require('goto-preview').goto_preview_type_definition()<CR>",
+  "<Cmd>lua require('goto-preview').goto_preview_type_definition()<CR>",
   { desc = 'goto_preview_type_definition' }
 )
 Keymap(
   'n',
   'gpi',
-  "<CMD>lua require('goto-preview').goto_preview_implementation()<CR>",
+  "<Cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
   { desc = 'goto_preview_implementation' }
 )
-Keymap('n', 'gP', "<CMD>lua require('goto-preview').close_all_win()<CR>", { desc = 'close_all_win' })
+Keymap('n', 'gP', "<Cmd>lua require('goto-preview').close_all_win()<CR>", { desc = 'close_all_win' })
 Keymap(
   'n',
   'gpr',
-  "<CMD>lua require('goto-preview').goto_preview_references()<CR>",
+  "<Cmd>lua require('goto-preview').goto_preview_references()<CR>",
   { desc = 'goto_preview_references' }
 )

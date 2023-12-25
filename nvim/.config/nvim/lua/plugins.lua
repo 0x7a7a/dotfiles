@@ -193,7 +193,7 @@ require('lazy').setup({
   {
     'nvim-neo-tree/neo-tree.nvim',
     keys = {
-      { '<Space>e', '<CMD>Neotree toggle<CR>', desc = 'NeoTree' },
+      { '<Space>e', '<Cmd>Neotree toggle<CR>', desc = 'NeoTree' },
     },
     branch = 'v3.x',
     dependencies = {
@@ -218,8 +218,8 @@ require('lazy').setup({
   {
     'folke/trouble.nvim',
     keys = {
-      { 'gt', '<CMD>TroubleToggle document_diagnostics<CR>', desc = 'Open  file trouble menu' },
-      { 'gT', '<CMD>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace trouble menu' },
+      { 'gt', '<Cmd>TroubleToggle document_diagnostics<CR>', desc = 'Open  file trouble menu' },
+      { 'gT', '<Cmd>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace trouble menu' },
     },
     config = function()
       require('plugins.trouble')
@@ -240,7 +240,7 @@ require('lazy').setup({
   {
     'stevearc/aerial.nvim',
     keys = {
-      { '<Space>a', '<CMD>AerialToggle!<CR>', desc = 'Toggle Aerial' },
+      { '<Space>a', '<Cmd>AerialToggle!<CR>', desc = 'Toggle Aerial' },
     },
     config = function()
       require('plugins.aerial')
@@ -376,19 +376,19 @@ require('lazy').setup({
   {
     'rmagatti/goto-preview',
     keys = {
-      { 'gpd', "<CMD>lua require('goto-preview').goto_preview_definition()<CR>", desc = 'goto_preview_definition' },
+      { 'gpd', "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", desc = 'goto_preview_definition' },
       {
         'gpt',
-        "<CMD>lua require('goto-preview').goto_preview_type_definition()<CR>",
+        "<Cmd>lua require('goto-preview').goto_preview_type_definition()<CR>",
         desc = 'goto_preview_type_definition',
       },
       {
         'gpi',
-        "<CMD>lua require('goto-preview').goto_preview_implementation()<CR>",
+        "<Cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
         desc = 'goto_preview_implementation',
       },
-      { 'gP', "<CMD>lua require('goto-preview').close_all_win()<CR>", desc = 'close_all_win' },
-      { 'gpr', "<CMD>lua require('goto-preview').goto_preview_references()<CR>", desc = 'goto_preview_references' },
+      { 'gP', "<Cmd>lua require('goto-preview').close_all_win()<CR>", desc = 'close_all_win' },
+      { 'gpr', "<Cmd>lua require('goto-preview').goto_preview_references()<CR>", desc = 'goto_preview_references' },
     },
     config = function()
       require('plugins.preview')
@@ -413,7 +413,7 @@ require('lazy').setup({
   {
     'nvim-pack/nvim-spectre',
     keys = {
-      { '<leader>S', '<CMD>lua require("spectre").toggle()<CR>', desc = 'Toggle Spectre' },
+      { '<leader>S', '<Cmd>lua require("spectre").toggle()<CR>', desc = 'Toggle Spectre' },
     },
   },
 
@@ -426,7 +426,7 @@ require('lazy').setup({
   },
 
   -- Undo tree
-  { 'mbbill/undotree', keys = { { '<Space>u', '<CMD>UndotreeToggle<CR>', desc = 'UndoTree' } } },
+  { 'mbbill/undotree', keys = { { '<Space>u', '<Cmd>UndotreeToggle<CR>', desc = 'UndoTree' } } },
 
   -- tmux
   'christoomey/vim-tmux-navigator',
@@ -440,7 +440,7 @@ require('lazy').setup({
   checker = { enabled = true },
 })
 
-Keymap('n', '<leader>ps', '<CMD>Lazy sync<CR>')
-Keymap('n', '<leader>pu', '<CMD>Lazy update<CR>')
-Keymap('n', '<leader>pi', '<CMD>Lazy install<CR>')
-Keymap('n', '<leader>pc', '<CMD>Lazy clean<CR>')
+Keymap('n', '<leader>ps', '<Cmd>Lazy sync<CR>')
+Keymap('n', '<leader>pu', '<Cmd>Lazy update<CR>')
+Keymap('n', '<leader>pi', '<Cmd>Lazy install<CR>')
+Keymap('n', '<leader>pc', '<Cmd>Lazy clean<CR>')

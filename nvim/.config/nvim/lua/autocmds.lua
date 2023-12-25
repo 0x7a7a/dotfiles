@@ -17,20 +17,20 @@ vim.api.nvim_create_autocmd('FileType', {
 --   end,
 -- })
 
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
-  group = config_group,
-  pattern = '*',
-  desc = 'smart number',
-  callback = function(arg)
-    vim.opt.relativenumber = arg.event == 'InsertLeave'
-  end,
-})
-
 vim.api.nvim_create_autocmd('FileType', {
   group = config_group,
   pattern = { 'go' },
   callback = function()
     Keymap('n', '<leader>ds', '<Plug>(go-def-split)')
     Keymap('n', '<leader>dv', '<Plug>(go-def-vertical)')
+  end,
+})
+
+vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
+  group = vim.api.nvim_create_augroup('CommonConfig', {}),
+  pattern = '*',
+  desc = 'smart number',
+  callback = function(arg)
+    vim.opt.relativenumber = arg.event == 'InsertLeave'
   end,
 })
