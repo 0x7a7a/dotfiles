@@ -93,9 +93,6 @@ Keymap('x', 'ga', '<CMD>EasyAlign<CR>')
 Keymap('n', '<leader>R', '<CMD>source %<CR>')
 Keymap('n', '<leader>L', '<CMD>luafile %<CR>')
 
---Undo Tree
-Keymap('n', '<leader>u', '<CMD>UndotreeToggle<CR>')
-
 -- Harpoon
 Keymap('n', '<Space>hm', '<CMD>lua require("harpoon.ui").toggle_quick_menu()<CR>')
 Keymap('n', '<Space>ha', '<CMD>lua require("harpoon.mark").add_file()<CR>')

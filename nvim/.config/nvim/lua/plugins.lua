@@ -31,7 +31,7 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       require('colors.nightfox')
-      vim.cmd([[colorscheme nordfox]])
+      -- vim.cmd([[colorscheme nordfox]])
     end,
   },
   {
@@ -42,9 +42,10 @@ require('lazy').setup({
   },
   { 'nyoom-engineering/oxocarbon.nvim' },
   {
-    'ellisonleao/gruvbox.nvim',
+    'sainnhe/gruvbox-material',
     config = function()
-      require('colors.gruvbox')
+      require('colors.gruvbox-material')
+      vim.cmd([[colorscheme gruvbox-material]])
     end,
   },
   'kyazdani42/nvim-web-devicons',
