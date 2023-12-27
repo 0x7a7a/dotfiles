@@ -72,11 +72,9 @@ zi wait lucid from"gh-r" as"null" for \
     sbin"*/rg"   BurntSushi/ripgrep \
     sbin"**/fd"  @sharkdp/fd \
     sbin"**/bat" @sharkdp/bat \
-    sbin"fzf"    junegunn/fzf
      # sbin"bin/exa -> exa"  ogham/exa
 
-zi for \
-    https://raw.githubusercontent.com/junegunn/fzf/master/shell/{'completion','key-bindings'}.zsh
+zinit pack"default+keys" for fzf
 
 # fnm
 zinit wait lucid for \
