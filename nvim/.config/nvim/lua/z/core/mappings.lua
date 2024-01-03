@@ -92,11 +92,3 @@ Keymap('x', 'ga', '<CMD>EasyAlign<CR>')
 -- Dev
 Keymap('n', '<leader>R', '<CMD>source %<CR>')
 Keymap('n', '<leader>L', '<CMD>luafile %<CR>')
-
--- Harpoon
-Keymap('n', '<Space>hm', '<CMD>lua require("harpoon.ui").toggle_quick_menu()<CR>')
-Keymap('n', '<Space>ha', '<CMD>lua require("harpoon.mark").add_file()<CR>')
-Keymap('n', '<Space>hd', '<CMD>lua require("harpoon.mark").rm_file()<CR>')
-Keymap('n', '<Space>hc', '<CMD>lua require("harpoon.mark").clear_all()<CR>')
-Keymap('n', '<A-]>', '<CMD>lua require("harpoon.ui").nav_next()<CR>')
-Keymap('n', '<A-[>', '<CMD>lua require("harpoon.ui").nav_prev()<CR>')

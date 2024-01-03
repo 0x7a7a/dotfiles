@@ -32,8 +32,6 @@ return {
   --  'mg979/vim-visual-multi',
   --  'terryma/vim-expand-region',
 
-  'ThePrimeagen/harpoon',
-
   -- Analysis of neovim's start-up time
   { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
 
