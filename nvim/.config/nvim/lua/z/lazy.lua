@@ -16,6 +16,7 @@ require('lazy').setup({
   { import = 'z.colorschemes' },
 }, {
   checker = { enabled = true },
+  change_detection = { enabled = false },
 })
 
 Keymap('n', '<leader>ps', '<Cmd>Lazy sync<CR>')

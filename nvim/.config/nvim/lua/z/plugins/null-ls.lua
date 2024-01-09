@@ -48,7 +48,7 @@ return {
         -- }),
 
         -- javascript
-        formatter.prettier.with({
+        formatter.dprint.with({
           prefer_local = 'node_modules/.bin',
         }),
 
