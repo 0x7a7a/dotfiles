@@ -21,7 +21,6 @@ return {
   -- https://github.com/lifepillar/vim-colortemplate
   -- https://github.com/rktjmp/lush.nvim
   -- https://github.com/uga-rosa/ccc.nvim
-  'kyazdani42/nvim-web-devicons',
 
   -- Text object edit
   'tpope/vim-repeat',

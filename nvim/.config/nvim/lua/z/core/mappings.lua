@@ -81,10 +81,6 @@ Keymap('n', '<F6>', '<CMD>AsyncTask build<CR>')
 Keymap('n', '<a-n>', '<CMD>lua require"illuminate".next_reference{wrap=true}<CR>')
 Keymap('n', '<a-p>', '<CMD>lua require"illuminate".next_reference{reverse=true,wrap=true}<CR>')
 
--- Nvim-lsp-ts-utils
-Keymap('n', '<leader>ia', '<CMD>TSLspImportAll<CR>')
-Keymap('n', '<leader>io', '<CMD>TSLspOrganize<CR>')
-
 -- Easyalign
 Keymap('n', 'ga', '<CMD>EasyAlign<CR>')
 Keymap('x', 'ga', '<CMD>EasyAlign<CR>')
