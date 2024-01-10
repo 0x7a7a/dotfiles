@@ -96,9 +96,9 @@ Keymap('n', '<Space>fa', '<Cmd>Telescope aerial<CR>')
 Keymap('n', '<Space>fc', '<Cmd>Telescope commands<CR>')
 Keymap('n', '<Space>fr', '<Cmd>Telescope registers<CR>')
 
-Keymap('n', '<Space>fn', '<Cmd>lua require("z/plugins/telescope/finder").fd_in_nvim()<CR>')
-Keymap('n', '<Space>fd', '<Cmd>lua require("z/plugins/telescope/finder").fd_in_dotfiles()<CR>')
-Keymap('n', '<Space>fm', '<Cmd>lua require("z/plugins/telescope/finder").fd()<CR>')
+Keymap('n', '<Space>fn', '<Cmd>lua require("plugins/telescope/finder").fd_in_nvim()<CR>')
+Keymap('n', '<Space>fd', '<Cmd>lua require("plugins/telescope/finder").fd_in_dotfiles()<CR>')
+Keymap('n', '<Space>fm', '<Cmd>lua require("plugins/telescope/finder").fd()<CR>')
 
 -- lsp
 Keymap('n', 'gi', '<Cmd>Telescope lsp_implementations<CR>')
