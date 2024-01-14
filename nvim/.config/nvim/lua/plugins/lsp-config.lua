@@ -132,13 +132,21 @@ return {
     if vim.fn.executable('eslint') ~= 0 then
       lspconfig.eslint.setup({})
     end
-    --
+
     -- configure tailwindcss server
     if vim.fn.executable('tailwindcss-language-server') ~= 0 then
       lspconfig.tailwindcss.setup({})
     end
 
+    -- vue
+    -- https://github.com/vuejs/language-tools/discussions/606
+    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
+    lspconfig.volar.setup({
+      filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
+    })
+
     -- configure css server
+    -- npm i -g vscode-langservers-extracted
     lspconfig.html.setup({
       capabilities = capabilities,
       on_attach = custom_attach,

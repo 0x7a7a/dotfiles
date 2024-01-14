@@ -58,6 +58,7 @@ return {
   { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } },
 
   -- rust
+  -- { 'Saecki/crates.nvim' },
   {
     'rust-lang/rust.vim',
     ft = { 'rust' },
