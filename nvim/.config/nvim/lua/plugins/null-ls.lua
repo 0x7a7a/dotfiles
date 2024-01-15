@@ -40,16 +40,11 @@ return {
           end,
         }),
 
-        -- json
-        -- formatter.biome.with({
-        --   condition = function()
-        --     return vim.fn.executable('biome')
-        --   end
-        -- }),
-
-        -- javascript
-        formatter.dprint.with({
-          prefer_local = 'node_modules/.bin',
+        formatter.biome.with({
+          filetypes = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'json', 'jsonc', 'vue' },
+          condition = function()
+            return vim.fn.executable('biome')
+          end,
         }),
 
         -- use lsp eslint instead null-ls eslint

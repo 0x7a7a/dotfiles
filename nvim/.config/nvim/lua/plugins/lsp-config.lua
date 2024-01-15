@@ -138,13 +138,6 @@ return {
       lspconfig.tailwindcss.setup({})
     end
 
-    -- vue
-    -- https://github.com/vuejs/language-tools/discussions/606
-    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
-    lspconfig.volar.setup({
-      filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
-    })
-
     -- configure css server
     -- npm i -g vscode-langservers-extracted
     lspconfig.html.setup({
@@ -152,18 +145,29 @@ return {
       on_attach = custom_attach,
     })
 
-    -- configure tsserver server
-    lspconfig.tsserver.setup({
-      capabilities = capabilities,
-      on_attach = custom_attach,
+    -- vue
+    -- https://github.com/vuejs/language-tools/discussions/606
+    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
+    if npm.is_package_installed('vue') then
+      lspconfig.volar.setup({
+        capabilities = capabilities,
+        on_attach = custom_attach,
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+      })
+    else
+      -- configure tsserver server
+      lspconfig.tsserver.setup({
+        capabilities = capabilities,
+        on_attach = custom_attach,
 
-      filetypes = {
-        'javascript',
-        'typescript',
-        'typescriptreact',
-        'typescript.tsx',
-      },
-    })
+        filetypes = {
+          'javascript',
+          'typescript',
+          'typescriptreact',
+          'typescript.tsx',
+        },
+      })
+    end
 
     -- configure css server
     lspconfig.rust_analyzer.setup({
