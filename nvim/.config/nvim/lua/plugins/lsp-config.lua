@@ -13,25 +13,31 @@ return {
     local util = require('lspconfig.util')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
+
     local custom_attach = function(client, bufnr)
       -- automatically highlighting same words
       require('illuminate').on_attach(client)
 
-      local attach_opts = { silent = true, buffer = bufnr }
+      local nmap = function(keys, func, desc)
+        if desc then
+          desc = 'LSP: ' .. desc
+        end
 
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, attach_opts)
-      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, attach_opts)
-      vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>')
-      -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, attach_opts) -- use lsp_signature
-      vim.keymap.set('n', 'R', vim.lsp.buf.rename, attach_opts)
-      vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', attach_opts)
-      vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
-      vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, attach_opts)
-      vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, attach_opts)
-      vim.keymap.set('n', '<space>wl', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-      end, attach_opts)
+        vim.keymap.set('n', keys, func, { silent = true, buffer = bufnr, desc = desc })
+      end
+
+      nmap('R', vim.lsp.buf.rename)
+      nmap('gd', function()
+        require('telescope.builtin').lsp_definitions()
+      end, '[G]oto [D]efinition')
+      nmap('gD', require('telescope.builtin').lsp_type_definitions, '[G]oto type [D]eclaration')
+      nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+      nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+      nmap('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+
+      -- See `:help K` for why this keymap
+      nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+      -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation') --use lsp_signature
     end
 
     -- configure go server

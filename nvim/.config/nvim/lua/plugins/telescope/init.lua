@@ -66,17 +66,17 @@ require('telescope').setup({
   },
   extensions = {
     fzf = {
-      fuzzy = true,                   -- false will only do exact matching
+      fuzzy = true, -- false will only do exact matching
       override_generic_sorter = true, -- override the generic sorter
-      override_file_sorter = true,    -- override the file sorter
-      case_mode = 'smart_case',       -- or "ignore_case" or "respect_case"
+      override_file_sorter = true, -- override the file sorter
+      case_mode = 'smart_case', -- or "ignore_case" or "respect_case"
       -- the default case_mode is "smart_case"
     },
     aerial = {
       -- Display symbols as <root>.<parent>.<symbol>
       show_nesting = {
         ['_'] = false, -- This key will be the default
-        json = true,   -- You can set the option for specific filetypes
+        json = true, -- You can set the option for specific filetypes
         yaml = true,
       },
     },
@@ -85,18 +85,21 @@ require('telescope').setup({
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('aerial')
 
-Keymap('n', '<leader><space>', '<cmd>Telescope find_files<cr>')
-Keymap('n', '<leader>?', function()
-  require('telescope.builtin').buffers({ sort_lastused = true })
-end)
-Keymap('n', '<leader>sg', '<cmd>Telescope live_grep<cr>')
-Keymap('n', '<leader>sb', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
-Keymap('n', '<leader>sh', '<cmd>Telescope help_tags<cr>')
-Keymap('n', '<leader>sd', '<cmd>Telescope diagnostics<cr>')
-Keymap('n', '<leader>sa', '<cmd>Telescope aerial<cr>')
-Keymap('n', '<leader>sc', '<cmd>Telescope commands<cr>')
-Keymap('n', '<leader>sr', '<cmd>Telescope registers<cr>')
+Keymap('n', '<leader>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
+Keymap(
+  'n',
+  '<leader>/',
+  '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+  { desc = '[/] Fuzzily search in current buffer' }
+)
+Keymap('n', 'sf', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
+Keymap('n', '<leader>sg', '<cmd>Telescope live_grep<cr>', { desc = '[S]earch by [G]rep' })
+Keymap('n', '<leader>sG', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
+Keymap('n', '<leader>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
+Keymap('n', '<leader>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
+Keymap('n', '<leader>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch current [W]ord' })
+Keymap('n', '<leader>sc', '<cmd>Telescope commands<cr>', { desc = '[S]earch [C]ommands' })
+Keymap('n', '<leader>sr', '<cmd>Telescope registers<cr>', { desc = '[S]earch [R]egisters' })
 
-Keymap('n', '<leader>sN', '<cmd>lua require("plugins/telescope/finder").fd_in_nvim()<cr>')
-Keymap('n', '<leader>sD', '<cmd>lua require("plugins/telescope/finder").fd_in_dotfiles()<cr>')
--- Keymap('n', '<leader>sm', '<cmd>lua require("plugins/telescope/finder").fd()<cr>')
+Keymap('n', '<leader>sN', require('plugins/telescope/finder').fd_in_nvim, { desc = '[S]earch [N]vim config files' })
+Keymap('n', '<leader>sD', require('plugins/telescope/finder').fd_in_dotfiles, { desc = '[S]earch [D]otfiles' })

@@ -6,6 +6,10 @@ Keymap = function(mode, key, cmd, opts)
   vim.keymap.set(mode, key, cmd, opts)
 end
 
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
 Keymap('n', '<leader>qq', '<cmd>q<cr>')
 Keymap('n', '<leader>qQ', '<cmd>q!<cr>')
 Keymap('n', '<leader>qa', '<cmd>qa<cr>')
@@ -51,13 +55,13 @@ Keymap('c', '<C-b>', '<C-Left>', { noremap = true })
 Keymap('c', '<C-f>', '<C-Right>', { noremap = true })
 
 -- Floaterm
-Keymap('n', '<leader>f', '<cmd>FloatermToggle<cr>')
-Keymap('t', '<leader>f', '<C-\\><C-n>:FloatermToggle<cr>')
-Keymap('t', '<A-n>', '<C-\\><C-n>:FloatermNew<cr>')
-Keymap('t', '<A-k>', '<C-\\><C-n>:FloatermKill<cr>')
-Keymap('t', '<A-h>', '<C-\\><C-n>:FloatermPrev<cr>')
-Keymap('t', '<A-l>', '<C-\\><C-n>:FloatermNext<cr>')
-Keymap('t', '<A-q>', '<C-\\><C-n>')
+-- Keymap('n', '<leader>f', '<cmd>FloatermToggle<cr>')
+-- Keymap('t', '<leader>f', '<C-\\><C-n>:FloatermToggle<cr>')
+-- Keymap('t', '<A-n>', '<C-\\><C-n>:FloatermNew<cr>')
+-- Keymap('t', '<A-k>', '<C-\\><C-n>:FloatermKill<cr>')
+-- Keymap('t', '<A-h>', '<C-\\><C-n>:FloatermPrev<cr>')
+-- Keymap('t', '<A-l>', '<C-\\><C-n>:FloatermNext<cr>')
+-- Keymap('t', '<A-q>', '<C-\\><C-n>')
 
 Keymap('n', '<leader>lg', '<cmd>FloatermNew --title=lazygit --autoclose=2 lazygit<cr>')
 Keymap('n', '<leader>lf', '<cmd>FloatermNew --title=fl --autoclose=2 lf<cr>')
@@ -67,9 +71,15 @@ Keymap('n', '<a-n>', '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>
 Keymap('n', '<a-p>', '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>')
 
 -- Easyalign
-Keymap('n', 'ga', '<cmd>EasyAlign<cr>')
-Keymap('x', 'ga', '<cmd>EasyAlign<cr>')
+Keymap({ 'n', 'x' }, 'ga', '<cmd>EasyAlign<cr>')
 
 -- diagnostic
 Keymap('n', '[d', vim.diagnostic.goto_prev)
 Keymap('n', ']d', vim.diagnostic.goto_next)
+Keymap('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- quickfix
+Keymap('n', '[q', '<cmd>cprevious<cr>')
+Keymap('n', ']q', '<cmd>cnext<cr>')
+Keymap('n', '<leader>qo', '<cmd>copen<cr>')
+Keymap('n', '<leader>qc', '<cmd>cclose<cr>')

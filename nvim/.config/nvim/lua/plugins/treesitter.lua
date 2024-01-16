@@ -54,7 +54,7 @@ return {
         keymaps = {
           init_selection = '<C-space>',
           node_incremental = '<C-space>',
-          scope_incremental = '<ENTER>',
+          scope_incremental = '<C-s>',
           node_decremental = false,
         },
       },
@@ -100,8 +100,12 @@ return {
 
           keymaps = {
             -- You can use the capture groups defined in textobjects.scm
+            ['aa'] = '@parameter.outer',
+            ['ia'] = '@parameter.inner',
             ['af'] = '@function.outer',
             ['if'] = '@function.inner',
+            ['ac'] = '@class.outer',
+            ['ic'] = '@class.inner',
           },
         },
       },
