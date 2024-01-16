@@ -65,9 +65,6 @@ return {
     opt = {},
   },
 
-  -- Make quickfix better
-  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
-
   -- Search/replace
   {
     'nvim-pack/nvim-spectre',

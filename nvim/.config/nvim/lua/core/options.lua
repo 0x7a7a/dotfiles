@@ -23,8 +23,8 @@ opt.signcolumn = 'yes'
 opt.mouse = 'a'
 opt.writebackup = false
 opt.swapfile = false
-opt.updatetime = 500
-opt.timeoutlen = 500
+opt.updatetime = 250
+opt.timeoutlen = 300
 opt.splitbelow = true
 opt.splitright = true
 opt.tabstop = 4
@@ -37,14 +37,14 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.completeopt = 'menu,menuone,noselect,noinsert'
 opt.formatoptions = opt.formatoptions
-  - 'a' -- Auto formatting is BAD.
-  - 't' -- Don't auto format my code. I got linters for that.
-  + 'c' -- In general, I like it when comments respect textwidth
-  + 'q' -- Allow formatting comments w/ gq
-  - 'o' -- O and o, don't continue comments
-  + 'r' -- But do continue when pressing enter.
-  + 'n' -- Indent past the formatlistpat, not underneath it.
-  + 'j' -- Auto-remove comments if possible.
+    - 'a' -- Auto formatting is BAD.
+    - 't' -- Don't auto format my code. I got linters for that.
+    + 'c' -- In general, I like it when comments respect textwidth
+    + 'q' -- Allow formatting comments w/ gq
+    - 'o' -- O and o, don't continue comments
+    + 'r' -- But do continue when pressing enter.
+    + 'n' -- Indent past the formatlistpat, not underneath it.
+    + 'j' -- Auto-remove comments if possible.
 
 opt.fillchars:append({
   horiz = '━',

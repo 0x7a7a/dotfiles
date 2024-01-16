@@ -25,19 +25,6 @@ Keymap('i', '<A-k>', '<Esc><cmd>move-2<cr>==gi')
 Keymap('v', '<A-j>', "<Esc><cmd>'<,'>move'>+1<cr>gv=gv")
 Keymap('v', '<A-k>', "<Esc><cmd>'<,'>move'<-2<cr>gv=gv")
 
--- Navigation in the quickfix and location
-Keymap('n', '[q', '<cmd>cprevious<cr>')
-Keymap('n', ']q', '<cmd>cnext<cr>')
-Keymap('n', '[Q', '<cmd>cfirst<cr>')
-Keymap('n', ']Q', '<cmd>clast<cr>')
-Keymap('n', '<leader>qo', '<cmd>copen<cr>')
-Keymap('n', '<leader>qc', '<cmd>cclose<cr>')
-
-Keymap('n', '[l', '<cmd>lprevious<cr>')
-Keymap('n', ']l', '<cmd>lnext<cr>')
-Keymap('n', '[L', '<cmd>lfirst<cr>')
-Keymap('n', ']L', '<cmd>llast<cr>')
-
 Keymap('n', ']<Space>', 'o<Esc>k')
 Keymap('n', '[<Space>', 'O<Esc>j')
 
@@ -75,10 +62,6 @@ Keymap('t', '<A-q>', '<C-\\><C-n>')
 Keymap('n', '<leader>lg', '<cmd>FloatermNew --title=lazygit --autoclose=2 lazygit<cr>')
 Keymap('n', '<leader>lf', '<cmd>FloatermNew --title=fl --autoclose=2 lf<cr>')
 
--- Async task
-Keymap('n', '<F5>', '<cmd>AsyncTask dev<cr>')
-Keymap('n', '<F6>', '<cmd>AsyncTask build<cr>')
-
 -- Variable jumping
 Keymap('n', '<a-n>', '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>')
 Keymap('n', '<a-p>', '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>')
@@ -87,9 +70,6 @@ Keymap('n', '<a-p>', '<cmd>lua require"illuminate".next_reference{reverse=true,w
 Keymap('n', 'ga', '<cmd>EasyAlign<cr>')
 Keymap('x', 'ga', '<cmd>EasyAlign<cr>')
 
--- Dev
-Keymap('n', '<leader>R', '<cmd>source %<cr>')
-Keymap('n', '<leader>L', '<cmd>luafile %<cr>')
-
+-- diagnostic
 Keymap('n', '[d', vim.diagnostic.goto_prev)
 Keymap('n', ']d', vim.diagnostic.goto_next)
