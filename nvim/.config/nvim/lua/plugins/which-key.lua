@@ -16,7 +16,7 @@ return {
           operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
           motions = true, -- adds help for motions
           text_objects = true, -- help for text objects triggered after entering an operator
-          windows = true, -- default bindings on <c-w>
+          windows = true, -- default bindings on <C-w>
           nav = true, -- misc bindings to work with windows
           z = true, -- bindings for folds, spelling and others prefixed with z
           g = true, -- bindings for prefixed with g
@@ -40,8 +40,8 @@ return {
         group = '+', -- symbol prepended to a group
       },
       popup_mappings = {
-        scroll_down = '<c-d>', -- binding to scroll down inside the popup
-        scroll_up = '<c-u>', -- binding to scroll up inside the popup
+        scroll_down = '<C-d>', -- binding to scroll down inside the popup
+        scroll_up = '<C-u>', -- binding to scroll up inside the popup
       },
       window = {
         border = 'none', -- none, single, double, shadow
@@ -64,7 +64,7 @@ return {
         align = 'left', -- align columns left, center or right
       },
       ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
-      hidden = { '<silent>', '<cmd>', '<Cmd>', '<CR>', '^:', '^ ', '^call ', '^lua ' }, -- hide mapping boilerplate
+      hidden = { '<silent>', '<cmd>', '<cmd>', '<cr>', '^:', '^ ', '^call ', '^lua ' }, -- hide mapping boilerplate
       show_help = true, -- show a help message in the command line for using WhichKey
       show_keys = true, -- show the currently pressed key and its label as a message in the command line
       triggers = 'auto', -- automatically setup triggers
@@ -78,7 +78,7 @@ return {
         "g'",
         -- registers
         '"',
-        '<c-r>',
+        '<C-r>',
         -- spelling
         'z=',
       },

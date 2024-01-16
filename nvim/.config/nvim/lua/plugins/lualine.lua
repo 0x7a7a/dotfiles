@@ -1,3 +1,4 @@
+-- https://github.com/rebelot/heirline.nvim
 return {
   'nvim-lualine/lualine.nvim',
   config = function()

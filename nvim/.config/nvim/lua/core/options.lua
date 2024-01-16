@@ -19,7 +19,6 @@ opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
 opt.scrolloff = 5
 opt.number = true
-opt.relativenumber = true
 opt.signcolumn = 'yes'
 opt.mouse = 'a'
 opt.writebackup = false
@@ -75,7 +74,7 @@ opt.foldenable = false
 vim.g.Illuminate_ftblacklist = { 'NvimTree' }
 
 -- undo file
-opt.undofile = false
+opt.undofile = true
 opt.undodir = vim.fn.stdpath('config') .. '/misc/undodir'
 
 -- diagnostic

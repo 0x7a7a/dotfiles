@@ -34,7 +34,7 @@ return {
 
       highlight = {
         enable = true,
-        disable = function(lang, buf)
+        disable = function(_, buf)
           local max_filesize = 1024 * 1024 -- 1MB
           local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
           if ok and stats and stats.size > max_filesize then
@@ -52,8 +52,8 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<c-space>',
-          node_incremental = '<c-space>',
+          init_selection = '<C-space>',
+          node_incremental = '<C-space>',
           scope_incremental = '<ENTER>',
           node_decremental = false,
         },

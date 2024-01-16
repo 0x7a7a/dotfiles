@@ -96,7 +96,7 @@ return {
         -- map('n', '<leader>td', gs.toggle_deleted, { desc = 'toggle deleted' })
 
         -- Text object
-        -- map({ 'o', 'x' }, 'ih', '<Cmd><C-U>Gitsigns select_hunk<CR>', { desc = 'gitsigns select hunk' })
+        -- map({ 'o', 'x' }, 'ih', '<cmd><C-U>Gitsigns select_hunk<cr>', { desc = 'gitsigns select hunk' })
       end,
     })
   end,

@@ -1,19 +1,19 @@
 return {
   'rmagatti/goto-preview',
   keys = {
-    { 'gpd', "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", desc = 'goto_preview_definition' },
+    { 'gpd', "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", desc = 'goto_preview_definition' },
     {
       'gpt',
-      "<Cmd>lua require('goto-preview').goto_preview_type_definition()<CR>",
+      "<cmd>lua require('goto-preview').goto_preview_type_definition()<cr>",
       desc = 'goto_preview_type_definition',
     },
     {
       'gpi',
-      "<Cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
+      "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>",
       desc = 'goto_preview_implementation',
     },
-    { 'gP', "<Cmd>lua require('goto-preview').close_all_win()<CR>", desc = 'close_all_win' },
-    { 'gpr', "<Cmd>lua require('goto-preview').goto_preview_references()<CR>", desc = 'goto_preview_references' },
+    { 'gP', "<cmd>lua require('goto-preview').close_all_win()<cr>", desc = 'close_all_win' },
+    { 'gpr', "<cmd>lua require('goto-preview').goto_preview_references()<cr>", desc = 'goto_preview_references' },
   },
   config = function()
     require('goto-preview').setup({
@@ -41,26 +41,26 @@ return {
     Keymap(
       'n',
       'gpd',
-      "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>",
+      "<cmd>lua require('goto-preview').goto_preview_definition()<cr>",
       { desc = 'goto_preview_definition' }
     )
     Keymap(
       'n',
       'gpt',
-      "<Cmd>lua require('goto-preview').goto_preview_type_definition()<CR>",
+      "<cmd>lua require('goto-preview').goto_preview_type_definition()<cr>",
       { desc = 'goto_preview_type_definition' }
     )
     Keymap(
       'n',
       'gpi',
-      "<Cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
+      "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>",
       { desc = 'goto_preview_implementation' }
     )
-    Keymap('n', 'gP', "<Cmd>lua require('goto-preview').close_all_win()<CR>", { desc = 'close_all_win' })
+    Keymap('n', 'gP', "<cmd>lua require('goto-preview').close_all_win()<cr>", { desc = 'close_all_win' })
     Keymap(
       'n',
       'gpr',
-      "<Cmd>lua require('goto-preview').goto_preview_references()<CR>",
+      "<cmd>lua require('goto-preview').goto_preview_references()<cr>",
       { desc = 'goto_preview_references' }
     )
   end,

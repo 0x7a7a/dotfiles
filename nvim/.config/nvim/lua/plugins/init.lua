@@ -60,8 +60,9 @@ return {
   -- rust
   -- { 'Saecki/crates.nvim' },
   {
-    'rust-lang/rust.vim',
+    'vxpm/ferris.nvim',
     ft = { 'rust' },
+    opt = {},
   },
 
   -- Make quickfix better
@@ -71,7 +72,7 @@ return {
   {
     'nvim-pack/nvim-spectre',
     keys = {
-      { '<leader>S', '<Cmd>lua require("spectre").toggle()<CR>', desc = 'Toggle Spectre' },
+      { '<leader>S', '<cmd>lua require("spectre").toggle()<cr>', desc = 'Toggle Spectre' },
     },
   },
 
@@ -86,7 +87,7 @@ return {
   },
 
   -- Undo tree
-  { 'mbbill/undotree', keys = { { '<Space>u', '<Cmd>UndotreeToggle<CR>', desc = 'UndoTree' } } },
+  { 'mbbill/undotree', keys = { { '<Space>u', '<cmd>UndotreeToggle<cr>', desc = 'UndoTree' } } },
 
   -- tmux
   'christoomey/vim-tmux-navigator',

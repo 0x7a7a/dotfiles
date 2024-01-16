@@ -1,6 +1,6 @@
-_G.npm = {}
+local M = {}
 
-function npm.read_json_file(filename)
+M.npm_read_json_file = function(filename)
   local Path = require('plenary.path')
   local path = Path:new(filename)
   if not path:exists() then
@@ -13,8 +13,8 @@ function npm.read_json_file(filename)
   return json
 end
 
-function npm.is_package_installed(package)
-  local package_json = npm.read_json_file('package.json')
+M.npm_is_package_installed = function(package)
+  local package_json = M.npm_read_json_file('package.json')
   if not package_json then
     return false
   end
@@ -29,3 +29,5 @@ function npm.is_package_installed(package)
 
   return false
 end
+
+return M

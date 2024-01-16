@@ -1,5 +1,4 @@
 require('core')
-require('utils')
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -27,7 +26,7 @@ require('lazy').setup({ {
   },
 })
 
-Keymap('n', '<leader>ps', '<Cmd>Lazy sync<CR>')
-Keymap('n', '<leader>pu', '<Cmd>Lazy update<CR>')
-Keymap('n', '<leader>pi', '<Cmd>Lazy install<CR>')
-Keymap('n', '<leader>pc', '<Cmd>Lazy clean<CR>')
+Keymap('n', '<leader>ps', '<cmd>Lazy sync<cr>')
+Keymap('n', '<leader>pu', '<cmd>Lazy update<cr>')
+Keymap('n', '<leader>pi', '<cmd>Lazy install<cr>')
+Keymap('n', '<leader>pc', '<cmd>Lazy clean<cr>')
