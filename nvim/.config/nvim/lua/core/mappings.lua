@@ -88,3 +88,6 @@ Keymap('x', 'ga', '<CMD>EasyAlign<CR>')
 -- Dev
 Keymap('n', '<leader>R', '<CMD>source %<CR>')
 Keymap('n', '<leader>L', '<CMD>luafile %<CR>')
+
+Keymap('n', '[d', vim.diagnostic.goto_prev)
+Keymap('n', ']d', vim.diagnostic.goto_next)

@@ -1,36 +1,34 @@
-local config_group = vim.api.nvim_create_augroup('Config', {})
-vim.api.nvim_create_autocmd('FileType', {
-  group = config_group,
-  pattern = { 'javascript' },
-  callback = function()
-    vim.opt.shiftwidth = 2
-  end,
-})
+local function highlight_cursorline()
+  vim.opt.cursorline = true
+  vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
+    pattern = '*',
+    desc = 'smart cursorline',
+    callback = function(arg)
+      vim.opt.cursorline = arg.event == 'InsertLeave'
+    end,
+  })
+end
 
--- vim.opt.cursorline = true
--- vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
---   group = config_group,
---   pattern = '*',
---   desc = 'smart cursorline',
---   callback = function(arg)
---     vim.opt.cursorline = arg.event == 'InsertLeave'
---   end,
--- })
+local function smart_number()
+  vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
+    pattern = '*',
+    desc = 'smart number',
+    callback = function(arg)
+      vim.opt.relativenumber = arg.event == 'InsertLeave'
+    end,
+  })
+end
 
-vim.api.nvim_create_autocmd('FileType', {
-  group = config_group,
-  pattern = { 'go' },
-  callback = function()
-    Keymap('n', '<leader>ds', '<Plug>(go-def-split)')
-    Keymap('n', '<leader>dv', '<Plug>(go-def-vertical)')
-  end,
-})
+local function hightlight_yank()
+  local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+  vim.api.nvim_create_autocmd('TextYankPost', {
+    callback = function()
+      vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = '*',
+  })
+end
 
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
-  group = vim.api.nvim_create_augroup('CommonConfig', {}),
-  pattern = '*',
-  desc = 'smart number',
-  callback = function(arg)
-    vim.opt.relativenumber = arg.event == 'InsertLeave'
-  end,
-})
+smart_number()
+hightlight_yank()

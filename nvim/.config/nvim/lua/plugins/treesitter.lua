@@ -52,15 +52,15 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = false, -- set to `false` to disable one of the mappings
-          node_incremental = false,
+          init_selection = '<c-space>',
+          node_incremental = '<c-space>',
           scope_incremental = '<ENTER>',
           node_decremental = false,
         },
       },
 
       indent = {
-        enable = false,
+        enable = true,
       },
       context_commentstring = {
         enable = true,

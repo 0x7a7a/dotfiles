@@ -59,7 +59,6 @@ opt.fillchars:append({
 
 opt.list = false
 opt.listchars:append('eol:↴')
-opt.termguicolors = true
 
 -- system clipboard
 -- opt.clipboard = 'unnamedplus'
@@ -78,3 +77,8 @@ vim.g.Illuminate_ftblacklist = { 'NvimTree' }
 -- undo file
 opt.undofile = false
 opt.undodir = vim.fn.stdpath('config') .. '/misc/undodir'
+
+-- diagnostic
+vim.diagnostic.config({
+  virtual_text = false,
+})
