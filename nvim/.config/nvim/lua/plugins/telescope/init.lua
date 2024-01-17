@@ -37,6 +37,10 @@ require('telescope').setup({
         ['<C-u>'] = actions.results_scrolling_up,
       },
     },
+    -- https://github.com/nvim-telescope/telescope.nvim/issues/522
+    -- It is first recommended to install rg to increase the filtering speed
+    -- rg only ignores files in the .gitignore of remote repositories(not completely right)
+    -- local project If you need to ignore some large file directories, such as node_modules, you can add a.ignore file to make rg effective
     file_ignore_patterns = {
       'node_modules',
       'vendor',
