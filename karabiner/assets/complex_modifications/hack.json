@@ -1,0 +1,75 @@
+{
+	"title": "Hack Keyboard",
+	"rules": [
+		{
+			"description": "Move left and right like vim",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "h",
+						"modifiers": {
+							"mandatory": ["left_control"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "left_arrow"
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": ["^net\\.kovidgoyal\\.kitty$"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "l",
+						"modifiers": {
+							"mandatory": ["left_control"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "right_arrow"
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": ["^net\\.kovidgoyal\\.kitty$"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "[Ctrl-b] to BackSapce",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "b",
+						"modifiers": {
+							"mandatory": ["left_control"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "delete_or_backspace"
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": ["^net\\.kovidgoyal\\.kitty$"]
+						}
+					]
+				}
+			]
+		}
+	]
+}

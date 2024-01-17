@@ -43,7 +43,8 @@ zi ice lucid waite=1 as"completion"
 zi snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
 ### theme p10k
-zi ice depth 1; zi light romkatv/powerlevel10k
+zi ice depth 1  
+zi light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ### starship
@@ -77,19 +78,16 @@ zi wait lucid from"gh-r" as"null" for \
 zinit pack"default+keys" for fzf
 
 # fnm
-zinit wait lucid for \
-    as'completion' \
-    atclone"./fnm completions --shell zsh > _fnm.zsh" \
-    atload'eval $(fnm env --shell zsh)' \
-    atpull'%atclone' \
-    blockf \
-    from'gh-r' \
-    nocompile \
-    sbin'fnm' \
-  @Schniz/fnm
-
-# pyenv
-zinit pack for pyenv
+# zinit wait lucid for \
+#     as'completion' \
+#     atclone"./fnm completions --shell zsh > _fnm.zsh" \
+#     atload'eval $(fnm env --shell zsh)' \
+#     atpull'%atclone' \
+#     blockf \
+#     from'gh-r' \
+#     nocompile \
+#     sbin'fnm' \
+#   @Schniz/fnm
 
 ### make command run better
 export EDITOR=nvim
@@ -100,3 +98,8 @@ export HISTIGNORE='pwd:exit:fg:bg:top:clear:history:ls:uptime:df'
 [ -f ~/.func.sh ] && source ~/.func.sh
 [ -f ~/.env.sh ] && source ~/.env.sh
 [ -f ~/.alias.sh ] && source ~/.alias.sh
+
+# version control
+if which mise >/dev/null; then
+    eval "$(mise activate zsh)"
+fi

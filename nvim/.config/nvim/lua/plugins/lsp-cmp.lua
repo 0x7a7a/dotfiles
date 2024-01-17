@@ -23,6 +23,7 @@ return {
         format = lspkind.cmp_format({
           mode = 'symbol_text',
           maxwidth = 50,
+          symbol_map = { Codeium = '' },
           -- Show Source
           -- before = function(entry, vim_item)
           --   vim_item.menu = '[' .. string.upper(entry.source.name) .. ']'
@@ -81,6 +82,7 @@ return {
       }),
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
+        { name = 'codeium' },
         { name = 'luasnip' },
       }, {
         {

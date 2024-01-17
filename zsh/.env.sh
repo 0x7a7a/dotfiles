@@ -15,4 +15,7 @@ export KUBECONFIG=$HOME/.kube/config.d/pro:$HOME/.kube/config
 #mason
 MASON=~/.local/share/nvim/mason/bin
 
-PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$MYGODEV:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON
+#mise
+MISE=~/.local/share/mise/shims
+
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$MYGODEV:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON:$MISE
