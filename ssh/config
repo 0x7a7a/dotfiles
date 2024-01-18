@@ -1,0 +1,14 @@
+TCPKeepAlive yes
+ServerAliveInterval 120
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+# 禁用GSSAPI认证
+# GSSAPIAuthentication no
+# 如果已经有一个ssh到目标主机的连接了，那么新的ssh将复用老连接
+ControlMaster auto
+# 关闭每次连接新服务器时候的yes/no
+StrictHostKeyChecking no
+UserKnownHostsFile /dev/null
+
+Include config.d/*
+Include ~/.orbstack/ssh/config
