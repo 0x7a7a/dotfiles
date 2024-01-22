@@ -45,7 +45,7 @@ require('telescope').setup({
       'node_modules',
       'vendor',
       'dist',
-      '/.git',
+      '.git',
       '.idea',
       '.DS_Store',
     },

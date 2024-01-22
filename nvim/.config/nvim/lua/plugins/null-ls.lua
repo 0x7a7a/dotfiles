@@ -41,7 +41,17 @@ return {
         }),
 
         formatter.biome.with({
-          filetypes = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'json', 'jsonc', 'vue' },
+          filetypes = {
+            'javascript',
+            'typescript',
+            'javascriptreact',
+            'typescriptreact',
+            'json',
+            'jsonc',
+            'vue',
+            'svelte',
+            'css',
+          },
           condition = function()
             return vim.fn.executable('biome')
           end,

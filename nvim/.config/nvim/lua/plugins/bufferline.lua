@@ -65,6 +65,7 @@ return {
     Keymap('n', '<A-h>', '<cmd>BufferLineCyclePrev<cr>')
     Keymap('n', '<A-l>', '<cmd>BufferLineCycleNext<cr>')
     Keymap('n', '<leader>bb', '<cmd>BufDel<cr>')
+    Keymap('n', '<leader>bc', '<cmd>BufferLinePickClose<cr>')
     Keymap('n', '<leader>bs', '<cmd>BufferLineSortByDirectory<cr>')
     Keymap('n', '<leader>bo', '<cmd>BufDelOthers<cr>')
     Keymap('n', '<leader>bp', '<cmd>BufferLinePick<cr>')

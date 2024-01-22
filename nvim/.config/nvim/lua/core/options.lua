@@ -69,7 +69,10 @@ opt.background = 'dark'
 opt.termguicolors = true
 
 -- fold
-opt.foldenable = false
+-- opt.foldcolumn = '1'
+opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+opt.foldlevelstart = 99
+opt.foldenable = true
 
 -- disabled illuminate
 vim.g.Illuminate_ftblacklist = { 'NvimTree' }

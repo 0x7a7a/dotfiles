@@ -9,6 +9,7 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
     end
 
+    local utils = require('utils')
     local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -73,7 +74,7 @@ return {
       lspconfig.eslint.setup({})
     end
 
-    if vim.fn.executable('tailwindcss-language-server') ~= 0 then
+    if vim.fn.executable('tailwindcss-language-server') ~= 0 and utils.npm_is_package_installed('tailwindcss') then
       lspconfig.tailwindcss.setup({})
     end
 
@@ -81,12 +82,12 @@ return {
     lspconfig.html.setup({
       capabilities = capabilities,
       on_attach = custom_attach,
+      filetypes = { 'html', 'svelte' },
     })
 
     -- vue
     -- https://github.com/vuejs/language-tools/discussions/606
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
-    local utils = require('utils')
     if utils.npm_is_package_installed('vue') then
       lspconfig.volar.setup({
         capabilities = capabilities,
@@ -107,6 +108,11 @@ return {
         },
       })
     end
+
+    lspconfig.svelte.setup({
+      capabilities = capabilities,
+      on_attach = custom_attach,
+    })
 
     lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
