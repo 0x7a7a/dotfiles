@@ -109,9 +109,23 @@ return {
       })
     end
 
+    -- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin
     lspconfig.svelte.setup({
       capabilities = capabilities,
-      on_attach = custom_attach,
+      on_attach = function(client, bufnr)
+        custom_attach(client, bufnr)
+
+        -- https://github.com/sveltejs/language-tools/issues/2008
+        local group = vim.api.nvim_create_augroup('svelte_ondidchangetsorjsfile', { clear = true })
+        vim.api.nvim_create_autocmd('BufWritePost', {
+          group = group,
+          pattern = { '*.js', '*.ts' },
+          callback = function(ctx)
+            -- Here use ctx.match instead of ctx.file
+            client.notify('$/onDidChangeTsOrJsFile', { uri = ctx.match })
+          end,
+        })
+      end,
     })
 
     lspconfig.rust_analyzer.setup({

@@ -1,5 +1,6 @@
 return {
   'AlexvZyl/nordic.nvim',
+  lazy = true,
   config = function()
     require('nordic').setup({
       -- This callback can be used to override the colors used in the palette.
