@@ -68,14 +68,14 @@ return {
       on_attach = custom_attach,
     })
 
-    lspconfig.bashls.setup({})
-
+    -- use lsp eslint instead null-ls eslint
+    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
     if vim.fn.executable('eslint') ~= 0 then
-      lspconfig.eslint.setup({})
+      lspconfig.eslint.setup()
     end
 
     if vim.fn.executable('tailwindcss-language-server') ~= 0 and utils.npm_is_package_installed('tailwindcss') then
-      lspconfig.tailwindcss.setup({})
+      lspconfig.tailwindcss.setup()
     end
 
     -- npm i -g vscode-langservers-extracted
@@ -116,6 +116,7 @@ return {
         custom_attach(client, bufnr)
 
         -- https://github.com/sveltejs/language-tools/issues/2008
+        -- https://www.reddit.com/r/neovim/comments/1598ewp/neovim_svelte/
         local group = vim.api.nvim_create_augroup('svelte_ondidchangetsorjsfile', { clear = true })
         vim.api.nvim_create_autocmd('BufWritePost', {
           group = group,

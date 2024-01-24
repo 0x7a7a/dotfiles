@@ -53,10 +53,7 @@ return {
     'olexsmir/gopher.nvim',
     ft = { 'go', 'gomod' },
   },
-
-  -- typescript
-  { 'leafgarland/typescript-vim', ft = { 'typescript', 'typescriptreact' } },
-
+  --
   -- rust
   -- { 'Saecki/crates.nvim' },
   {

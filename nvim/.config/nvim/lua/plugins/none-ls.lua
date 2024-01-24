@@ -40,43 +40,43 @@ return {
           end,
         }),
 
-        formatter.biome.with({
+        -- formatter.prettierd,
+        formatter.prettierd.with({
           filetypes = {
             'javascript',
-            'typescript',
             'javascriptreact',
+            'typescript',
             'typescriptreact',
+            'vue',
+            'css',
+            'scss',
+            'less',
+            'html',
             'json',
             'jsonc',
-            'vue',
+            'yaml',
+            'markdown',
+            'markdown.mdx',
+            'graphql',
             'svelte',
-            'css',
+            'handlebars',
           },
-          condition = function()
-            return vim.fn.executable('biome')
-          end,
         }),
 
-        -- use lsp eslint instead null-ls eslint
-        -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
-
-        -- linter.eslint_d.with({
-        --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+        -- formatter.biome.with({
+        --   filetypes = {
+        --     'javascript',
+        --     'typescript',
+        --     'javascriptreact',
+        --     'typescriptreact',
+        --     'json',
+        --     'jsonc',
+        --     'css',
+        --   },
         --   condition = function()
-        --     return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json', '.eslintrc.yaml' })
+        --     return vim.fn.executable('biome')
         --   end,
         -- }),
-        -- linter.eslint.with({
-        --   prefer_local = 'node_modules/.bin',
-        --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
-        --   condition = function()
-        --     local has_eslintd = vim.fn.executable('eslint_d')
-        --     local has_eslint_fils = utils.root_has_file({ '.eslintrc.js', '.eslintrc.json', '.eslintrc.yaml' })
-        --
-        --     return not has_eslintd and has_eslint_fils
-        --   end,
-        -- }),
-        -- builtins.code_actions.eslint_d,
       },
 
       -- format files on save
