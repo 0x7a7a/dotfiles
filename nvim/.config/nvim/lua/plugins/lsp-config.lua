@@ -35,6 +35,7 @@ return {
       nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
       nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
       nmap('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+      nmap('ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', '[D]ocument [S]ymbols')
 
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
@@ -75,10 +76,11 @@ return {
     end
 
     if vim.fn.executable('tailwindcss-language-server') ~= 0 and utils.npm_is_package_installed('tailwindcss') then
-      lspconfig.tailwindcss.setup()
+      lspconfig.tailwindcss.setup({})
     end
 
     -- npm i -g vscode-langservers-extracted
+    -- include cssls
     lspconfig.html.setup({
       capabilities = capabilities,
       on_attach = custom_attach,
@@ -110,6 +112,7 @@ return {
     end
 
     -- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin
+    -- inlcude emmet
     lspconfig.svelte.setup({
       capabilities = capabilities,
       on_attach = function(client, bufnr)
