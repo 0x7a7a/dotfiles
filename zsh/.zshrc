@@ -73,6 +73,7 @@ zi wait lucid from"gh-r" as"null" for \
     sbin"*/rg"   BurntSushi/ripgrep \
     sbin"**/fd"  @sharkdp/fd \
     sbin"**/bat" @sharkdp/bat \
+    sbin"**/bob" @MordechaiHadad/bob
      # sbin"bin/exa -> exa"  ogham/exa
 
 zinit pack"default+keys" for fzf

@@ -120,15 +120,15 @@ return {
 
         -- https://github.com/sveltejs/language-tools/issues/2008
         -- https://www.reddit.com/r/neovim/comments/1598ewp/neovim_svelte/
-        local group = vim.api.nvim_create_augroup('svelte_ondidchangetsorjsfile', { clear = true })
-        vim.api.nvim_create_autocmd('BufWritePost', {
-          group = group,
-          pattern = { '*.js', '*.ts' },
-          callback = function(ctx)
-            -- Here use ctx.match instead of ctx.file
-            client.notify('$/onDidChangeTsOrJsFile', { uri = ctx.match })
-          end,
-        })
+        -- local group = vim.api.nvim_create_augroup('svelte_ondidchangetsorjsfile', { clear = true })
+        -- vim.api.nvim_create_autocmd('BufWritePost', {
+        --   group = group,
+        --   pattern = { '*.js', '*.ts' },
+        --   callback = function(ctx)
+        --     -- Here use ctx.match instead of ctx.file
+        --     client.notify('$/onDidChangeTsOrJsFile', { uri = ctx.match })
+        --   end,
+        -- })
       end,
     })
 
