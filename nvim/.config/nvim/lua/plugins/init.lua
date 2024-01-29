@@ -14,7 +14,10 @@ return {
   'hiphish/rainbow-delimiters.nvim',
 
   -- Close buffer,keep window
-  'ojroques/nvim-bufdel',
+  {
+    'ojroques/nvim-bufdel',
+    enabled = false,
+  },
 
   -- Colorscheme
   -- toolkit:

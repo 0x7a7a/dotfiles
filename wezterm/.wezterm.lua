@@ -20,6 +20,7 @@ end
 -- font
 -- config.font = wezterm.font('Fira Code', { weight = 450, stretch = 'Normal', style = 'Normal' })
 config.font = wezterm.font_with_fallback({
+  'Hack',
   {
     family = 'JetBrains Mono',
     weight = 'DemiBold',

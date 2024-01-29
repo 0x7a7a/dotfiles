@@ -118,6 +118,7 @@ return {
       on_attach = function(client, bufnr)
         custom_attach(client, bufnr)
 
+        -- https://github.com/neovim/nvim-lspconfig/issues/725
         -- https://github.com/sveltejs/language-tools/issues/2008
         -- https://www.reddit.com/r/neovim/comments/1598ewp/neovim_svelte/
         -- local group = vim.api.nvim_create_augroup('svelte_ondidchangetsorjsfile', { clear = true })
@@ -128,6 +129,11 @@ return {
         --     -- Here use ctx.match instead of ctx.file
         --     client.notify('$/onDidChangeTsOrJsFile', { uri = ctx.match })
         --   end,
+        -- })
+        -- vim.api.nvim_create_autocmd({ 'BufWrite' }, {
+        --   group = group,
+        --   pattern = { '+page.server.ts', '+page.ts', '+layout.server.ts', '+layout.ts' },
+        --   command = 'LspRestart svelte',
         -- })
       end,
     })
