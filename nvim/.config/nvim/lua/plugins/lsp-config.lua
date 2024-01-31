@@ -72,7 +72,7 @@ return {
     -- use lsp eslint instead null-ls eslint
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
     if vim.fn.executable('eslint') ~= 0 then
-      lspconfig.eslint.setup()
+      lspconfig.eslint.setup({})
     end
 
     if vim.fn.executable('tailwindcss-language-server') ~= 0 and utils.npm_is_package_installed('tailwindcss') then
@@ -109,6 +109,10 @@ return {
           'typescript.tsx',
         },
       })
+    end
+
+    if not utils.npm_is_package_installed('svelte') then
+      lspconfig.emmet_language_server.setup({})
     end
 
     -- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin

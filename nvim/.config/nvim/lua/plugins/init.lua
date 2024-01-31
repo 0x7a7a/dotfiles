@@ -16,7 +16,7 @@ return {
   -- Close buffer,keep window
   {
     'ojroques/nvim-bufdel',
-    enabled = false,
+    -- enabled = false,
   },
 
   -- Colorscheme
@@ -88,7 +88,4 @@ return {
 
   -- tmux
   'christoomey/vim-tmux-navigator',
-
-  -- fold
-  -- { 'kevinhwang91/nvim-ufo' },
 }

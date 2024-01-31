@@ -104,3 +104,6 @@ export HISTIGNORE='pwd:exit:fg:bg:top:clear:history:ls:uptime:df'
 if which mise >/dev/null; then
     eval "$(mise activate zsh)"
 fi
+
+# tmuxifier
+eval "$(tmuxifier init -)"
