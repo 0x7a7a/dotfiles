@@ -79,7 +79,9 @@ Keymap('n', ']d', vim.diagnostic.goto_next)
 Keymap('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- quickfix
-Keymap('n', '[q', '<cmd>cprevious<cr>')
-Keymap('n', ']q', '<cmd>cnext<cr>')
+Keymap('n', '[q', '<cmd>cprevious<cr>zz')
+Keymap('n', ']q', '<cmd>cnext<cr>zz')
+Keymap('n', '[Q', '<cmd>cfirst<cr>zz')
+Keymap('n', ']Q', '<cmd>clast<cr>zz')
 Keymap('n', '<leader>qo', '<cmd>copen<cr>')
 Keymap('n', '<leader>qc', '<cmd>cclose<cr>')

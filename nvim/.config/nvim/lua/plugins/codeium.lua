@@ -21,6 +21,7 @@
 
 return {
   'Exafunction/codeium.nvim',
+  enabled = false,
   event = 'BufEnter',
   config = function()
     require('codeium').setup({})
