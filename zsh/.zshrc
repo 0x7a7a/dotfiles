@@ -106,4 +106,4 @@ if which mise >/dev/null; then
 fi
 
 # tmuxifier
-eval "$(tmuxifier init -)"
+# eval "$(tmuxifier init -)"

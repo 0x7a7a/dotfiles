@@ -22,6 +22,6 @@ MASON=~/.local/share/nvim/mason/bin
 MISE=~/.local/share/mise/shims
 
 #tmuxifier
-TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
+# TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
 
-PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$MYGODEV:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON:$MISE:$BOB:$TMUXIFIERPATH
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$MYGODEV:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON:$MISE:$BOB
