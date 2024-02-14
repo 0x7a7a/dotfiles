@@ -1,6 +1,7 @@
 return {
   'kevinhwang91/nvim-ufo',
   dependencies = 'kevinhwang91/promise-async',
+  enabled = false,
   config = function()
     Keymap('n', 'zR', require('ufo').openAllFolds, { desc = 'open all folds' })
     Keymap('n', 'zM', require('ufo').closeAllFolds, { desc = 'close all folds' })
