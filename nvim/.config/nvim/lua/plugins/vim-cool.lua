@@ -1,6 +1,6 @@
 return {
   'romainl/vim-cool',
-  config = function()
+  init = function()
     vim.g.CoolTotalMatches = 1
   end,
 }
