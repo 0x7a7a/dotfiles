@@ -3,6 +3,9 @@ snippet ifen "err check"
 		$1
 	}
 
+snippet mysqldsn "mysql connect string"
+	$1:$2@tcp($3:3306)/$4?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+
 snippet ifnn "nil check"
 	if $1 !=nil{
 		$0
