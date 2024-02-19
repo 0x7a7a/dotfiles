@@ -48,6 +48,7 @@ require('telescope').setup({
       '.git',
       '.idea',
       '.DS_Store',
+      'Session.vim',
     },
     -- preview = false,
     layout_strategy = 'horizontal',

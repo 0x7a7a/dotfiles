@@ -15,3 +15,11 @@ return {
     require('auto-session').setup(opts)
   end,
 }
+
+-- return {
+--   'tpope/vim-obsession',
+--   config = function()
+--     Keymap('n', '<leader>ss', '<cmd>mksession!<cr>', { desc = 'save session' })
+--     Keymap('n', '<leader>ls', '<cmd>source Session.vim<cr>', { desc = 'load session' })
+--   end,
+-- }
