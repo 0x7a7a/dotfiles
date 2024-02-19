@@ -23,5 +23,6 @@ MISE=~/.local/share/mise/shims
 
 #tmuxifier
 TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
+export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 
 PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$MYGODEV:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON:$MISE:$BOB:$TMUXIFIERPATH
