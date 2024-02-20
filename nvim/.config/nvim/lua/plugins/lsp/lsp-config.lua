@@ -42,17 +42,42 @@ return {
       -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation') --use lsp_signature
     end
 
-    lspconfig.lua_ls.setup({
+    local function default_lua_settings()
+      return {
+        Lua = {
+          runtime = {
+            version = 'LuaJIT',
+          },
+          workspace = {
+            checkThirdParty = false,
+            library = {
+              vim.env.VIMRUNTIME,
+              '${3rd}/busted/library',
+              '${3rd}/luv/library',
+            },
+            -- library = vim.api.nvim_get_runtime_file("", true)
+          },
+        },
+      }
+    end
+    -- https://github.com/neovim/neovim/pull/24592
+    require('lspconfig').lua_ls.setup({
       capabilities = capabilities,
       on_attach = custom_attach,
-      before_init = function(...)
-        require('neodev.lsp').before_init(...)
+      on_init = function(client)
+        local path = client.workspace_folders[1].name
+        if not vim.loop.fs_stat(path .. '/.luarc.json') and not vim.loop.fs_stat(path .. '/.luarc.jsonc') then
+          client.config.settings = vim.tbl_deep_extend('force', client.config.settings, default_lua_settings())
+          client.notify('workspace/didChangeConfiguration', { settings = client.config.settings })
+        end
+        return true
       end,
 
       settings = {
         Lua = {
-          completion = {
-            callSnippet = 'Replace',
+          hint = {
+            enable = true,
+            setType = true,
           },
         },
       },

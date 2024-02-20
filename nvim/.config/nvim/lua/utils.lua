@@ -1,12 +1,19 @@
-local M = {}
+local M = {
+  Path = require('plenary.path'),
+}
+
+M.root_has_file = function(filename)
+  local path = M.Path:new(filename)
+
+  return path:exists()
+end
 
 M.npm_read_json_file = function(filename)
-  local Path = require('plenary.path')
-  local path = Path:new(filename)
-  if not path:exists() then
+  if not M.root_has_file(filename) then
     return nil
   end
 
+  local path = M.Path:new(filename)
   local json_contents = path:read()
   local json = vim.fn.json_decode(json_contents)
 
