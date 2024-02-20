@@ -4,6 +4,7 @@ return {
   -- { 'nvimdev/guard.nvim' },
 
   'nvimtools/none-ls.nvim',
+  enabled = false,
   config = function()
     local null_ls = require('null-ls')
     local builtins = null_ls.builtins

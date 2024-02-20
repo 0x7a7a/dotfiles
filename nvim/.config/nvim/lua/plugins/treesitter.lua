@@ -1,5 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  commit = 'b3e53e94232d2bc6d70516efbd932bcce3ba8e1e',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
     'nvim-treesitter/nvim-treesitter-context',

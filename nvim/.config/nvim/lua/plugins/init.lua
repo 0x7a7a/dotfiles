@@ -8,7 +8,10 @@ return {
   -- Highlight the variable with the same name
   'RRethy/vim-illuminate',
 
-  'andymass/vim-matchup',
+  {
+    'andymass/vim-matchup',
+    -- enabled = false,
+  },
 
   -- Rainbow brackets
   'hiphish/rainbow-delimiters.nvim',
@@ -43,7 +46,7 @@ return {
   --Git
   {
     'tpope/vim-fugitive',
-    event = 'VeryLazy',
+    cmd = { 'G', 'Git' },
   },
 
   {

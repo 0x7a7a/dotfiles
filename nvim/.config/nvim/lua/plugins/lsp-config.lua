@@ -42,6 +42,22 @@ return {
       -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation') --use lsp_signature
     end
 
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities,
+      on_attach = custom_attach,
+      before_init = function(...)
+        require('neodev.lsp').before_init(...)
+      end,
+
+      settings = {
+        Lua = {
+          completion = {
+            callSnippet = 'Replace',
+          },
+        },
+      },
+    })
+
     -- configure go server
     lspconfig.gopls.setup({
       capabilities = capabilities,
