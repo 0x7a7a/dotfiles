@@ -16,12 +16,12 @@ return {
       },
     })
 
-    local function stylua_config()
-      return vim.fn.expand('~/.config/nvim/stylua.toml')
-    end
-
-    conform.formatters.stylua = {
-      prepend_args = { '--config-path', stylua_config() },
-    }
+    -- local function stylua_config()
+    --   return vim.fn.expand('~/.config/nvim/stylua.toml')
+    -- end
+    --
+    -- conform.formatters.stylua = {
+    --   prepend_args = { '--config-path', stylua_config() },
+    -- }
   end,
 }

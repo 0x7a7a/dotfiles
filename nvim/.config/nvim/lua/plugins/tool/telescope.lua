@@ -4,7 +4,7 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   config = function()
-    require('plugins.telescope.init')
-    require('plugins.telescope.finder')
+    require('plugins.tool.telescope.init')
+    require('plugins.tool.telescope.finder')
   end,
 }

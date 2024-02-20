@@ -74,9 +74,6 @@ opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrea
 opt.foldlevelstart = 99
 opt.foldenable = true
 
--- disabled illuminate
-vim.g.Illuminate_ftblacklist = { 'NvimTree' }
-
 -- undo file
 opt.undofile = true
 opt.undodir = vim.fn.stdpath('config') .. '/misc/undodir'

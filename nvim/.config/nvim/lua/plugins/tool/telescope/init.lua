@@ -106,5 +106,10 @@ Keymap('n', '<leader>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch c
 Keymap('n', '<leader>sc', '<cmd>Telescope commands<cr>', { desc = '[S]earch [C]ommands' })
 Keymap('n', '<leader>sr', '<cmd>Telescope registers<cr>', { desc = '[S]earch [R]egisters' })
 
-Keymap('n', '<leader>sN', require('plugins/telescope/finder').fd_in_nvim, { desc = '[S]earch [N]vim config files' })
-Keymap('n', '<leader>sD', require('plugins/telescope/finder').fd_in_dotfiles, { desc = '[S]earch [D]otfiles' })
+Keymap(
+  'n',
+  '<leader>sN',
+  require('plugins/tool/telescope/finder').fd_in_nvim,
+  { desc = '[S]earch [N]vim config files' }
+)
+Keymap('n', '<leader>sD', require('plugins/tool/telescope/finder').fd_in_dotfiles, { desc = '[S]earch [D]otfiles' })
