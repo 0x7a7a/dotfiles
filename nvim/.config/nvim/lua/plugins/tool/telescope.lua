@@ -1,12 +1,13 @@
 return {
   'nvim-telescope/telescope.nvim',
-  enabled = false,
   dependencies = {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },
   },
   config = function()
     local actions = require('telescope.actions')
     local previewers = require('telescope.previewers')
+    local lga_actions = require('telescope-live-grep-args.actions')
 
     -- Preview only small files
     local previewer_maker = function(filepath, bufnr, opts)
@@ -84,6 +85,17 @@ return {
           case_mode = 'smart_case', -- or "ignore_case" or "respect_case"
           -- the default case_mode is "smart_case"
         },
+        live_grep_args = {
+          auto_quoting = true, -- enable/disable auto-quoting
+          -- define mappings, e.g.
+          mappings = { -- extend mappings
+            i = {
+              ['<C-k>'] = lga_actions.quote_prompt(),
+              ['<C-i>'] = lga_actions.quote_prompt({ postfix = ' --iglob ' }),
+              ['<C-t>'] = lga_actions.quote_prompt({ postfix = ' -t' }),
+            },
+          },
+        },
         aerial = {
           -- Display symbols as <root>.<parent>.<symbol>
           show_nesting = {
@@ -96,8 +108,8 @@ return {
     })
     require('telescope').load_extension('fzf')
     require('telescope').load_extension('aerial')
+    require('telescope').load_extension('live_grep_args')
 
-    Keymap('n', '<leader>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
     Keymap(
       'n',
       '<leader>/',
@@ -105,7 +117,14 @@ return {
       { desc = '[/] Fuzzily search in current buffer' }
     )
     Keymap('n', 'sf', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
+    Keymap('n', '<leader>so', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
     Keymap('n', '<leader>sg', '<cmd>Telescope live_grep<cr>', { desc = '[S]earch by [G]rep' })
+    Keymap(
+      'n',
+      '<leader>sg',
+      '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>',
+      { desc = '[S]earch by [G]rep' }
+    )
     Keymap('n', '<leader>sG', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
     Keymap('n', '<leader>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
     Keymap('n', '<leader>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
