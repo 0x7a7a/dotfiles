@@ -76,7 +76,7 @@ Keymap({ 'n', 'x' }, 'ga', '<cmd>EasyAlign<cr>')
 -- diagnostic
 Keymap('n', '[d', vim.diagnostic.goto_prev)
 Keymap('n', ']d', vim.diagnostic.goto_next)
-Keymap('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+Keymap('n', '<leader>d', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 
 -- quickfix
 Keymap('n', '[q', '<cmd>cprevious<cr>zz')

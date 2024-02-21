@@ -2,10 +2,8 @@ return {
   'ibhagwan/fzf-lua',
   enabled = false,
   events = 'VeryLazy',
-  -- optional for icon support
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
-    -- calling `setup` is optional for customization
     require('fzf-lua').setup()
 
     Keymap(
@@ -17,7 +15,7 @@ return {
     Keymap(
       'n',
       'sf',
-      '<cmd>lua require("fzf-lua").files({cwd_prompt = false,prompt = "Files❯ " })<cr>',
+      '<cmd>lua require("fzf-lua").files({cwd_prompt = false,prompt = "Files❯ ",winopts = { height=0.5, width=0.4 },previewer=false })<cr>',
       { desc = '[S]earch [F]iles' }
     )
     Keymap('n', '<leader>sg', '<cmd>lua require("fzf-lua").live_grep_native()<cr>', { desc = '[S]earch by [G]rep' })
