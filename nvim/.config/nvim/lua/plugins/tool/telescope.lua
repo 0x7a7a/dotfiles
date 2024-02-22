@@ -1,5 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
+  event = 'VeryLazy',
   dependencies = {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },

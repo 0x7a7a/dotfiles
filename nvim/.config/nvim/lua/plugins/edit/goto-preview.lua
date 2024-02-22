@@ -1,5 +1,6 @@
 return {
   'rmagatti/goto-preview',
+  enable = false,
   keys = {
     { 'gpd', "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", desc = 'goto_preview_definition' },
     {

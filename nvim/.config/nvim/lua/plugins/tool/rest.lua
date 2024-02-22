@@ -5,6 +5,7 @@ vim.filetype.add({
 return {
   'rest-nvim/rest.nvim',
   dependencies = { 'nvim-lua/plenary.nvim' },
+  events = 'VeryLazy',
   keys = {
     { '<leader>r', '<Plug>RestNvim', desc = 'start rest' },
   },
