@@ -82,7 +82,16 @@ return {
         -- end, { 'i', 's' }),
       }),
       sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
+        {
+          name = 'nvim_lsp',
+          entry_filter = function(entry, ctx)
+            -- Filter the text after the dot symbol
+            if ctx.cursor_line:sub(-1, -1) == '.' and entry:get_kind() == 1 then
+              return false
+            end
+            return true
+          end,
+        },
         -- { name = 'codeium' },
         { name = 'luasnip' },
       }, {

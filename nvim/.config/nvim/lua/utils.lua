@@ -37,4 +37,8 @@ M.npm_is_package_installed = function(package)
   return false
 end
 
+M.log = function(...)
+  print(vim.inspect({ ... }))
+end
+
 return M
