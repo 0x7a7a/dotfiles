@@ -1,6 +1,6 @@
 return {
   'RRethy/vim-illuminate',
-  events = 'VeryLazy',
+  event = 'VeryLazy',
   config = function()
     vim.g.Illuminate_ftblacklist = { 'NvimTree' }
   end,

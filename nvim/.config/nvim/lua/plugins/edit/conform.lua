@@ -7,10 +7,10 @@ return {
     conform.setup({
       formatters_by_ft = {
         lua = { 'stylua' },
-        go = { 'goimports', 'goimports_reviser', 'gofumpt' },
-        javascript = { { 'prettierd', 'prettier' } },
-        json = { { 'prettierd', 'prettier' } },
-        svelte = { { 'prettierd', 'prettier' } },
+        go = { 'goimports', 'goimports-reviser', 'gofumpt' },
+        javascript = { 'prettierd' },
+        json = { 'prettierd' },
+        svelte = { 'prettierd' },
       },
       format_on_save = {
         -- I recommend these options. See :help conform.format for details.

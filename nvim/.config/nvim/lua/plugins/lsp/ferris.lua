@@ -2,5 +2,5 @@
 return {
   'vxpm/ferris.nvim',
   ft = { 'rust' },
-  opt = {},
+  opts = {},
 }
