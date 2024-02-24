@@ -15,10 +15,7 @@ return {
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-    local custom_attach = function(client, bufnr)
-      -- automatically highlighting same words
-      require('illuminate').on_attach(client)
-
+    local custom_attach = function(_client, bufnr)
       local nmap = function(keys, func, desc)
         if desc then
           desc = 'LSP: ' .. desc
@@ -50,6 +47,10 @@ return {
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
       -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation') --use lsp_signature
+
+      nmap('[d', vim.diagnostic.goto_prev)
+      nmap(']d', vim.diagnostic.goto_next)
+      nmap('<leader>d', vim.diagnostic.setqflist, 'Open diagnostics list')
     end
 
     local function default_lua_settings()
