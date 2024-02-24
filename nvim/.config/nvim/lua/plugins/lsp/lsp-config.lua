@@ -85,9 +85,23 @@ return {
 
       settings = {
         Lua = {
+          workspace = {
+            library = {
+              vim.env.VIMRUNTIME .. '/lua',
+              '${3rd}/busted/library',
+              '${3rd}/luv/library',
+            },
+            checkThirdParty = 'Disable',
+          },
+          diagnostics = {
+            unusedLocalExclude = { '_*' },
+          },
           hint = {
             enable = true,
             setType = true,
+          },
+          completion = {
+            callSnippet = 'Replace',
           },
         },
       },

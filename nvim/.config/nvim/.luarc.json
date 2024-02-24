@@ -10,6 +10,6 @@
       "${3rd}/luassert/library",
       "${3rd}/luv/library"
     ],
-    "checkThirdParty": false
+    "checkThirdParty": "Disable"
   }
 }
