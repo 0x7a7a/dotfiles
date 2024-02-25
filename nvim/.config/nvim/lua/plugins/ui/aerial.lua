@@ -5,10 +5,9 @@ return {
   },
   config = function()
     require('aerial').setup({
-      on_attach = function(bufnr)
-        -- Jump forwards/backwards with '{' and '}'
-        vim.keymap.set('n', '[f', '<cmd>AerialPrev<cr>', { buffer = bufnr })
-        vim.keymap.set('n', ']f', '<cmd>AerialNext<cr>', { buffer = bufnr })
+      on_attach = function(_bufnr)
+        -- vim.keymap.set('n', '[f', '<cmd>AerialPrev<cr>', { buffer = bufnr })
+        -- vim.keymap.set('n', ']f', '<cmd>AerialNext<cr>', { buffer = bufnr })
       end,
 
       show_guides = true,

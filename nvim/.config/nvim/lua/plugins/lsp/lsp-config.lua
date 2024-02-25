@@ -50,7 +50,7 @@ return {
 
       nmap('[d', vim.diagnostic.goto_prev)
       nmap(']d', vim.diagnostic.goto_next)
-      nmap('<leader>d', vim.diagnostic.setqflist, 'Open diagnostics list')
+      nmap('<leader>D', vim.diagnostic.setqflist, 'Open diagnostics list')
     end
 
     local function default_lua_settings()

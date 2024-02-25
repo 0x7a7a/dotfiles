@@ -9,7 +9,6 @@ return {
     local actions = require('telescope.actions')
     local previewers = require('telescope.previewers')
     local lga_actions = require('telescope-live-grep-args.actions')
-    local action_state = require('telescope.actions.state')
 
     -- Preview only small files
     local previewer_maker = function(filepath, bufnr, opts)
