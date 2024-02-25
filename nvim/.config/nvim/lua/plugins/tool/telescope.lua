@@ -9,6 +9,7 @@ return {
     local actions = require('telescope.actions')
     local previewers = require('telescope.previewers')
     local lga_actions = require('telescope-live-grep-args.actions')
+    local action_state = require('telescope.actions.state')
 
     -- Preview only small files
     local previewer_maker = function(filepath, bufnr, opts)
@@ -35,7 +36,6 @@ return {
         mappings = {
           i = {
             ['<esc>'] = actions.close,
-
             ['<C-k>'] = actions.cycle_history_next,
             ['<C-j>'] = actions.cycle_history_prev,
             ['<C-d>'] = actions.results_scrolling_down,
@@ -118,7 +118,8 @@ return {
       { desc = '[/] Fuzzily search in current buffer' }
     )
     Keymap('n', 'sf', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
-    Keymap('n', '<leader>so', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
+    Keymap('n', '<leader><space>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
+    Keymap('n', '<leader>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
     Keymap('n', '<leader>sg', '<cmd>Telescope live_grep<cr>', { desc = '[S]earch by [G]rep' })
     Keymap(
       'n',
