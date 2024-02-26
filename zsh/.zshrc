@@ -29,34 +29,15 @@ function zvm_config() {
   ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 }
 
-### ohmyzsh plugin
-zi for \
-    OMZL::git.zsh \
-    OMZL::history.zsh \
-
-zi wait lucid for \
-    OMZP::extract \
-    # OMZP::git \
-
-### completion
-zi ice lucid waite=1 as"completion"
-zi snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-
 ### theme p10k
 zi ice depth 1  
 zi light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-### starship
-# zi for \
-#     from'gh-r' \
-#     sbin'**/starship -> starship' \
-#   starship/starship
-# eval "$(starship init zsh)"
-
 ### tool
 zi wait lucid for \
- atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    OMZP::extract \
+ atinit"zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
  blockf \
     zsh-users/zsh-completions \
@@ -64,6 +45,7 @@ zi wait lucid for \
     zsh-users/zsh-autosuggestions
 
 zi light jeffreytse/zsh-vi-mode
+
 zi wait lucid for \
     skywind3000/z.lua \
     Aloxaf/fzf-tab
@@ -73,37 +55,14 @@ zi wait lucid from"gh-r" as"null" for \
     sbin"*/rg"   BurntSushi/ripgrep \
     sbin"**/fd"  @sharkdp/fd \
     sbin"**/bat" @sharkdp/bat \
-    sbin"**/bob" @MordechaiHadad/bob
-     # sbin"bin/exa -> exa"  ogham/exa
+    sbin"**/bob" @MordechaiHadad/bob \
 
 zinit pack"default+keys" for fzf
-
-# fnm
-# zinit wait lucid for \
-#     as'completion' \
-#     atclone"./fnm completions --shell zsh > _fnm.zsh" \
-#     atload'eval $(fnm env --shell zsh)' \
-#     atpull'%atclone' \
-#     blockf \
-#     from'gh-r' \
-#     nocompile \
-#     sbin'fnm' \
-#   @Schniz/fnm
-
-### make command run better
-export EDITOR=nvim
-export FZF_DEFAULT_COMMAND='fd --type f'
-export HISTIGNORE='pwd:exit:fg:bg:top:clear:history:ls:uptime:df'
 
 ### profile
 [ -f ~/.func.sh ] && source ~/.func.sh
 [ -f ~/.env.sh ] && source ~/.env.sh
 [ -f ~/.alias.sh ] && source ~/.alias.sh
-
-# version control
-if which mise >/dev/null; then
-    eval "$(mise activate zsh)"
-fi
 
 # tmuxifier
 eval "$(tmuxifier init -)"

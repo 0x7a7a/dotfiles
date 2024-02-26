@@ -1,3 +1,6 @@
+### make command run better
+export EDITOR=nvim
+export FZF_DEFAULT_COMMAND='fd --type f'
 # go
 export GO111MODULE=auto
 export GOWORK=off
