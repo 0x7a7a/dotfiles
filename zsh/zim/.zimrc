@@ -1,0 +1,9 @@
+# zmodule jeffreytse/zsh-vi-mode
+zmodule romkatv/powerlevel10k --use degit
+zmodule Aloxaf/fzf-tab
+zmodule zsh-users/zsh-completions --fpath src
+zmodule zdharma-continuum/fast-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
+zmodule skywind3000/z.lua --cmd 'eval "$(lua {}/z.lua --init zsh enhanced once)"'
+zmodule ohmyzsh/ohmyzsh --root plugins/extract
+zmodule completion
