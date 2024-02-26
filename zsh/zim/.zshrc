@@ -15,7 +15,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export FZF_DEFAULT_COMMAND='fd --type f'
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # Must before $ZIM_HOME/init.zsh
 # Must be loaded before the fzf plugin
@@ -27,16 +29,75 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 #   ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 # }
 
+# Emacs-style keybinding
+bindkey -e
+
 # Load plugins.
 source $ZIM_HOME/init.zsh
 
 source ~/.p10k.zsh
-
-# Profile
-[ -f ~/.func.sh ] && source ~/.func.sh
-[ -f ~/.env.sh ] && source ~/.env.sh
-[ -f ~/.alias.sh ] && source ~/.alias.sh
-
 eval "$(tmuxifier init -)"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+##### Env #####
+GO111MODULE=auto
+GOPROXY="https://goproxy.cn/,direct"
+RUSTPATH=~/.cargo/bin
+
+MYSQL=/usr/local/opt/mysql-client/bin
+NGINXPATH=/usr/local/opt/openresty/nginx/sbin
+KUBECONFIG=$HOME/.kube/config.d/pro:$HOME/.kube/config
+
+#bob,neovim version control
+BOB=~/.local/share/bob/nvim-bin
+
+#mason
+MASON=~/.local/share/nvim/mason/bin
+
+#tmuxifier
+TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
+TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
+
+PATH=$PATH:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON:$BOB:$TMUXIFIERPATH
+
+##### Alias #####
+PROXY='http://127.0.0.1:7890'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ls='lsd'
+alias l='ls -l'
+alias ll='ls -l'
+alias lla='ls -la'
+alias la='ls -a'
+alias lt='ls --tree'
+alias nv='nvim'
+alias v='nvim'
+alias lg='lazygit'
+alias kc='kubectl'
+alias grep='rg'
+alias find='fd'
+alias tr='trash'
+alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
+alias tf='tmuxifier'
+alias tfp='cd $TMUXIFIER_LAYOUT_PATH'
+alias proxy='export http_proxy=$PROXY https_proxy=$PROXY'
+alias noproxy='unset http_proxy https_proxy'
+
+##### Functions #####
+function pb () {
+  echo `pbpaste` | xxd -r -p | protoc --decode_raw
+}
+
+function pj() {
+  pbpaste | jq
+}
+
+fkill() {
+  local pid
+  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+	echo $pid | xargs kill -${1:-9}
+  fi
+}
