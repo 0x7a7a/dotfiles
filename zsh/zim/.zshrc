@@ -36,9 +36,10 @@ bindkey -e
 source $ZIM_HOME/init.zsh
 
 source ~/.p10k.zsh
-eval "$(tmuxifier init -)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+#
+# ------------- Personal Config ---------------
+#
 ##### Env #####
 GO111MODULE=auto
 GOPROXY="https://goproxy.cn/,direct"
@@ -101,3 +102,7 @@ fkill() {
 	echo $pid | xargs kill -${1:-9}
   fi
 }
+
+##### Load tools and theme #####
+eval "$(tmuxifier init -)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
