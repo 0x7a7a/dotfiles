@@ -76,7 +76,7 @@ opt.foldenable = true
 
 -- undo file
 opt.undofile = true
-opt.undodir = vim.fn.stdpath('config') .. '/misc/undodir'
+opt.undodir = vim.fn.stdpath('data') .. '/undodir'
 
 -- diagnostic
 vim.diagnostic.config({

@@ -1,6 +1,7 @@
 -- https://github.com/rebelot/heirline.nvim
 return {
   'nvim-lualine/lualine.nvim',
+  event = 'BufEnter',
   opts = {
     options = {
       globalstatus = true,

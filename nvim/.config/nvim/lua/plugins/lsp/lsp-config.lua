@@ -2,6 +2,7 @@
 -- https://github.com/mjlbach/starter.nvim/blob/master/init.lua
 return {
   'neovim/nvim-lspconfig',
+  event = { 'BufReadPost', 'BufNewFile' },
   config = function()
     local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
     for type, icon in pairs(signs) do
