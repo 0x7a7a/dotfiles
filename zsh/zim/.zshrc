@@ -43,26 +43,22 @@ source ~/.p10k.zsh
 ##### Env #####
 GO111MODULE=auto
 GOPROXY="https://goproxy.cn/,direct"
-RUSTPATH=~/.cargo/bin
-
-MYSQL=/usr/local/opt/mysql-client/bin
-NGINXPATH=/usr/local/opt/openresty/nginx/sbin
-KUBECONFIG=$HOME/.kube/config.d/pro:$HOME/.kube/config
-
-#bob,neovim version control
-BOB=~/.local/share/bob/nvim-bin
-
-#mason
-MASON=~/.local/share/nvim/mason/bin
 
 #tmuxifier
 TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
 TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 
-PATH=$PATH:$NGINXPATH:$MYSQL:$RUSTPATH:$MASON:$BOB:$TMUXIFIERPATH
+path=(
+  $HOME/.cargo/bin
+  $HOME/.local/share/bob/nvim-bin
+  $HOME/.local/share/nvim/mason/bin
+  /usr/local/opt/mysql-client/bin
+  /usr/local/opt/openresty/nginx/sbin/
+  $TMUXIFIERPATH
+  $path
+)
 
 ##### Alias #####
-PROXY='http://127.0.0.1:7890'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ls='lsd'
@@ -81,6 +77,8 @@ alias tr='trash'
 alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
 alias tf='tmuxifier'
 alias tfp='cd $TMUXIFIER_LAYOUT_PATH'
+
+PROXY='http://127.0.0.1:7890'
 alias proxy='export http_proxy=$PROXY https_proxy=$PROXY'
 alias noproxy='unset http_proxy https_proxy'
 
