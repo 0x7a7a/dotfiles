@@ -44,6 +44,8 @@ source ~/.p10k.zsh
 GO111MODULE=auto
 GOPROXY="https://goproxy.cn/,direct"
 
+export EDITOR=nvim
+
 #tmuxifier
 TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
 TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
