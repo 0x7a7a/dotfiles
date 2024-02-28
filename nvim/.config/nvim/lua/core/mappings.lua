@@ -22,10 +22,13 @@ Keymap('n', '<leader>qa', '<cmd>qa<cr>')
 Keymap('n', '<leader>qA', '<cmd>qa!<cr>')
 Keymap('n', '<leader>w', '<cmd>w<cr>')
 
+Keymap('n', '[b', '<cmd>bprevious<cr>')
+Keymap('n', ']b', '<cmd>bnext<cr>')
+Keymap('n', '[B', '<cmd>bfirst<cr>')
+Keymap('n', ']B', '<cmd>blast<cr>')
+
 Keymap('i', '<C-a>', '<Esc>^i')
 Keymap('i', '<C-e>', '<Esc>$a')
-Keymap('n', 'H', '^')
-Keymap('n', 'L', '$')
 
 -- Move lines
 Keymap('n', '<A-j>', '<cmd>move+1<cr>==')
@@ -46,8 +49,6 @@ Keymap('n', '<C-h>', '<C-w>h')
 Keymap('n', '<C-j>', '<C-w>j')
 Keymap('n', '<C-k>', '<C-w>k')
 Keymap('n', '<C-l>', '<C-w>l')
-Keymap('i', '<C-h>', '<Left>')
-Keymap('i', '<C-l>', '<Right>')
 
 Keymap('n', '<A-right>', '<cmd>vertical resize+5<cr>')
 Keymap('n', '<A-left>', '<cmd>vertical resize-5<cr>')

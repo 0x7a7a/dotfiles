@@ -35,7 +35,7 @@ return {
       nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
       nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
       nmap('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-      nmap('ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', '[D]ocument [S]ymbols')
+      nmap('gA', '<cmd>lua vim.lsp.buf.code_action()<cr>', '[D]ocument [S]ymbols')
 
       -- fzflua mappings
       -- nmap('gd', '<cmd>lua require("fzf-lua").lsp_definitions()<cr>', '[G]oto [D]efinition')

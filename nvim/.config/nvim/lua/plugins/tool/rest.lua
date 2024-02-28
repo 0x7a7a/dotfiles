@@ -5,9 +5,7 @@ vim.filetype.add({
 return {
   'rest-nvim/rest.nvim',
   dependencies = { 'nvim-lua/plenary.nvim' },
-  keys = {
-    { '<leader>r', '<Plug>RestNvim', desc = 'start rest' },
-  },
+  ft = 'http',
   config = function()
     require('rest-nvim').setup({
       -- Open request results in a horizontal split
