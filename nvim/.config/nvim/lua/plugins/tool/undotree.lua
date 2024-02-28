@@ -1,3 +1,5 @@
 return {
-  { 'mbbill/undotree', keys = { { '<Space>u', '<cmd>UndotreeToggle<cr>', desc = 'UndoTree' } } },
+  'mbbill/undotree',
+  enabled = false,
+  keys = { { '<Space>u', '<cmd>UndotreeToggle<cr>', desc = 'UndoTree' } },
 }

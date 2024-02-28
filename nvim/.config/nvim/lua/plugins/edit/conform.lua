@@ -1,5 +1,6 @@
 return {
   'stevearc/conform.nvim',
+  event = 'BufWritePre',
   config = function()
     local conform = require('conform')
     local utils = require('utils')

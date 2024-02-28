@@ -114,14 +114,21 @@ return {
       }),
     })
 
-    -- Use buffer source for `/`.
+    -- Automatically add dot after module is confirmed
+    cmp.event:on('confirm_done', function(ops)
+      local kind = ops.entry.cache.entries.get_completion_item.kind
+      -- 9 means cmp_kind is module
+      if kind == 9 then
+        vim.api.nvim_put({ '.' }, 'c', true, true)
+      end
+    end)
+
     cmp.setup.cmdline({ '/', '?' }, {
       sources = { {
         name = 'buffer',
       } },
     })
 
-    -- Use cmdline & path source for ':'.
     cmp.setup.cmdline(':', {
       mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources({
