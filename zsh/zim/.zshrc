@@ -48,9 +48,10 @@ export EDITOR=nvim
 
 #tmuxifier
 TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
-TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
+export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 
 path=(
+  $HOME/go/bin
   $HOME/.cargo/bin
   $HOME/.local/share/bob/nvim-bin
   $HOME/.local/share/nvim/mason/bin

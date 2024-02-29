@@ -54,7 +54,6 @@ return {
           'node_modules',
           'vendor',
           'dist',
-          '.git',
           '.idea',
           '.DS_Store',
           'Session.vim',
