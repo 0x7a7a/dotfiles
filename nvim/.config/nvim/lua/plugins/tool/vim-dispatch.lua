@@ -1,3 +1,7 @@
 return {
-  { 'tpope/vim-dispatch', event = 'VeryLazy' },
+  {
+    'tpope/vim-dispatch',
+    enbabled = false,
+    event = 'VeryLazy',
+  },
 }

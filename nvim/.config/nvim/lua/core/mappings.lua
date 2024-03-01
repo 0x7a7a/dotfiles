@@ -70,8 +70,8 @@ Keymap('n', '<leader>qo', '<cmd>copen<cr>')
 Keymap('n', '<leader>qc', '<cmd>cclose<cr>')
 
 -- Floaterm
-Keymap('n', '<leader>t', '<cmd>FloatermToggle<cr>')
-Keymap('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<cr>')
+-- Keymap('n', '<leader>t', '<cmd>FloatermToggle<cr>')
+-- Keymap('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<cr>')
 -- Keymap('t', '<A-n>', '<C-\\><C-n>:FloatermNew<cr>')
 -- Keymap('t', '<A-k>', '<C-\\><C-n>:FloatermKill<cr>')
 -- Keymap('t', '<A-h>', '<C-\\><C-n>:FloatermPrev<cr>')
