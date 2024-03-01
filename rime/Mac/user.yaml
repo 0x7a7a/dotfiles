@@ -1,9 +1,9 @@
 var:
-  last_build_time: 1689825385
+  last_build_time: 1709279641
   option:
     ascii_punct: true
   previously_selected_schema: double_pinyin_flypy
   schema_access_time:
-    double_pinyin_flypy: 1689800725
+    double_pinyin_flypy: 1708873483
     double_pinyin_ziguang: 1689799631
-    rime_ice: 1689800711
+    rime_ice: 1708873475

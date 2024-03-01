@@ -5,6 +5,7 @@ return {
     modes = {
       char = {
         jump_labels = true,
+        multi_line = false,
       },
     },
   },
