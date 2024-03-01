@@ -125,7 +125,7 @@ return {
       { desc = '[/] Fuzzily search in current buffer' }
     )
     Keymap('n', 'sf', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
-    Keymap('n', '<leader><space>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
+    Keymap('n', '<tab><tab>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
     Keymap('n', '<leader>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
     Keymap('n', '<leader>sg', '<cmd>Telescope live_grep<cr>', { desc = '[S]earch by [G]rep' })
     Keymap(

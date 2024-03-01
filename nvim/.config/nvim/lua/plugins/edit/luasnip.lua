@@ -8,6 +8,5 @@ return {
     -- Must start with. / lua
     -- Snipmate examples: https://github.com/honza/vim-snippets
     require('luasnip.loaders.from_snipmate').lazy_load({ paths = './lua/snippets/snipmate' })
-    require('luasnip.loaders.from_lua').lazy_load({ paths = './lua/snippets/luasnip' })
   end,
 }

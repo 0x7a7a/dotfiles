@@ -16,26 +16,20 @@ return {
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+    -- stylua: ignore
     local custom_attach = function(_client, bufnr)
-      local nmap = function(keys, func, desc)
-        if desc then
-          desc = 'LSP: ' .. desc
-        end
-
-        vim.keymap.set('n', keys, func, { silent = true, buffer = bufnr, desc = desc })
+      local nmap = function(keys, func, opts)
+        local _opts = opts or {}
+        opts = vim.tbl_extend('keep', _opts, { silent = true, buffer = bufnr }) vim.keymap.set('n', keys, func, opts)
       end
 
-      nmap('R', vim.lsp.buf.rename)
-
       -- telescope mappings
-      nmap('gd', function()
-        require('telescope.builtin').lsp_definitions()
-      end, '[G]oto [D]efinition')
-      nmap('gD', require('telescope.builtin').lsp_type_definitions, '[G]oto type [D]eclaration')
-      nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-      nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-      nmap('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-      nmap('gA', '<cmd>lua vim.lsp.buf.code_action()<cr>', '[D]ocument [S]ymbols')
+      nmap('gd', function() require('telescope.builtin').lsp_definitions() end, { desc = '[G]oto [D]efinition' })
+      nmap('gD', require('telescope.builtin').lsp_type_definitions, { desc = '[G]oto type [D]eclaration' })
+      nmap('gI', require('telescope.builtin').lsp_implementations, { desc = '[G]oto [I]mplementation' })
+      nmap('gr', require('telescope.builtin').lsp_references, { desc = '[G]oto [R]eferences' })
+      nmap('gs', require('telescope.builtin').lsp_document_symbols, { desc = '[D]ocument [S]ymbols' })
+      nmap('gA', '<cmd>lua vim.lsp.buf.code_action()<cr>', { desc = '[D]ocument [S]ymbols' })
 
       -- fzflua mappings
       -- nmap('gd', '<cmd>lua require("fzf-lua").lsp_definitions()<cr>', '[G]oto [D]efinition')
@@ -45,13 +39,16 @@ return {
       -- nmap('gs', '<cmd>lua require("fzf-lua").lsp_document_symbols()<cr>', '[G]oto Document [S]ymbols')
       -- nmap('ga', '<cmd>lua require("fzf-lua").lsp_code_actions()<cr>', '[G]oto Code [A]ctions')
 
+      nmap('R', vim.lsp.buf.rename, { desc = 'Rename Variable' })
       -- See `:help K` for why this keymap
-      nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-      -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation') --use lsp_signature
-
+      nmap('K', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
+      nmap('<C-k>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation' }) --use lsp_signature
+      nmap('<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })
+      nmap('<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
+      nmap('<C-w>gD', '<C-w>vgD', { desc = 'LSP type definition in window split', remap = true })
       nmap('[d', vim.diagnostic.goto_prev)
       nmap(']d', vim.diagnostic.goto_next)
-      nmap('<leader>D', vim.diagnostic.setqflist, 'Open diagnostics list')
+      nmap('<leader>D', vim.diagnostic.setqflist, { desc='Open diagnostics list' })
     end
 
     local function default_lua_settings()

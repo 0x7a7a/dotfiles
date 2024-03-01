@@ -20,7 +20,6 @@ return {
         'vue',
         'svelte',
         'lua',
-        'vim',
         'http',
         'json',
         'rust',
