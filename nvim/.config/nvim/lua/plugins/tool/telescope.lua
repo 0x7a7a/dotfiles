@@ -40,10 +40,12 @@ return {
             ['<C-j>'] = actions.cycle_history_prev,
             ['<C-d>'] = actions.results_scrolling_down,
             ['<C-u>'] = actions.results_scrolling_up,
+            ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
           },
           n = {
             ['<C-d>'] = actions.results_scrolling_down,
             ['<C-u>'] = actions.results_scrolling_up,
+            ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
           },
         },
         -- https://github.com/nvim-telescope/telescope.nvim/issues/522
@@ -55,6 +57,7 @@ return {
           'vendor',
           'dist',
           '.idea',
+          '^.git',
           '.DS_Store',
           'Session.vim',
         },
@@ -91,7 +94,7 @@ return {
           mappings = { -- extend mappings
             i = {
               ['<C-k>'] = lga_actions.quote_prompt(),
-              ['<C-i>'] = lga_actions.quote_prompt({ postfix = ' --iglob ' }),
+              ['<C-g>'] = lga_actions.quote_prompt({ postfix = ' --iglob ' }),
               ['<C-t>'] = lga_actions.quote_prompt({ postfix = ' -t' }),
             },
           },
@@ -120,27 +123,27 @@ return {
 
     Keymap(
       'n',
-      '<leader>/',
+      '<Space>/',
       '<cmd>Telescope current_buffer_fuzzy_find<cr>',
       { desc = '[/] Fuzzily search in current buffer' }
     )
     Keymap('n', 'sf', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
-    Keymap('n', '<tab><tab>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
-    Keymap('n', '<leader>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
-    Keymap('n', '<leader>sg', '<cmd>Telescope live_grep<cr>', { desc = '[S]earch by [G]rep' })
+    Keymap('n', '<Tab><Tab>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
+    Keymap('n', '<Space>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
+    Keymap('n', '<Space>sg', '<cmd>Telescope live_grep<cr>', { desc = '[S]earch by [G]rep' })
     Keymap(
       'n',
-      '<leader>sg',
+      '<Space>sg',
       '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>',
       { desc = '[S]earch by [G]rep' }
     )
-    Keymap('n', '<leader>sa', '<cmd>Telescope aerial<cr>', { desc = '[S]earch [U]ndo' })
-    Keymap('n', '<leader>su', '<cmd>Telescope undo<cr>', { desc = '[S]earch [U]ndo' })
-    Keymap('n', '<leader>sG', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
-    Keymap('n', '<leader>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
-    Keymap('n', '<leader>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
-    Keymap('n', '<leader>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch current [W]ord' })
-    Keymap('n', '<leader>sc', '<cmd>Telescope commands<cr>', { desc = '[S]earch [C]ommands' })
-    Keymap('n', '<leader>sr', '<cmd>Telescope registers<cr>', { desc = '[S]earch [R]egisters' })
+    Keymap('n', '<Space>sa', '<cmd>Telescope aerial<cr>', { desc = '[S]earch [U]ndo' })
+    Keymap('n', '<Space>su', '<cmd>Telescope undo<cr>', { desc = '[S]earch [U]ndo' })
+    Keymap('n', '<Space>sG', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
+    Keymap('n', '<Space>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
+    Keymap('n', '<Space>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
+    Keymap('n', '<Space>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch current [W]ord' })
+    Keymap('n', '<Space>sc', '<cmd>Telescope commands<cr>', { desc = '[S]earch [C]ommands' })
+    Keymap('n', '<Space>sr', '<cmd>Telescope registers<cr>', { desc = '[S]earch [R]egisters' })
   end,
 }

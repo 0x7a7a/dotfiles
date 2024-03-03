@@ -1,7 +1,7 @@
 return {
   'nvim-neo-tree/neo-tree.nvim',
   keys = {
-    { '<Space>e', '<cmd>Neotree toggle<cr>', desc = 'NeoTree' },
+    { '<Space>f', '<cmd>Neotree toggle<cr>', desc = 'NeoTree' },
   },
   branch = 'v3.x',
   dependencies = {
