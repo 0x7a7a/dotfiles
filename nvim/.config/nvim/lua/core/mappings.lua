@@ -6,9 +6,12 @@ Keymap = function(mode, key, cmd, opts)
   vim.keymap.set(mode, key, cmd, opts)
 end
 
--- Remap for dealing with word wrap
-Keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-Keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- Keymap('n', 'j', [[ v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj' ]])
+-- Keymap('n', 'k', [[ v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk' ]])
+-- stylua: ignore
+Keymap('n', 'j', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
+-- stylua: ignore
+Keymap('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
 
 Keymap('v', '<leader>y', '"+y')
 Keymap('x', '<leader>p', '"_dP')

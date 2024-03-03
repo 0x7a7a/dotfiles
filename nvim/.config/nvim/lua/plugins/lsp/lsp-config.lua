@@ -43,7 +43,7 @@ return {
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
       -- nmap('<C-k>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation' }) --use lsp_signature
-      nmap('<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })
+      nmap('<C-w>gd', '<C-w>v<cmd>lua vim.lsp.buf.definition()<cr>', { desc = 'LSP definition in window split', remap = true })
       nmap('<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
       nmap('<C-w>gD', '<C-w>vgD', { desc = 'LSP type definition in window split', remap = true })
       nmap('[d', vim.diagnostic.goto_prev)

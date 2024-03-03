@@ -9,5 +9,6 @@ return {
     { '<leader>ga', '<cmd>Gwrite<cr>', { desc = 'Git add' } },
     { '<leader>gc', '<cmd>G commit<cr>', { desc = 'Git commit' } },
     { '<leader>gp', '<cmd>G push<cr>', { desc = 'Git push' } },
+    { '<leader>gd', '<cmd>Gvdiffsplit<CR>', { desc = 'Git diff view' } },
   },
 }
