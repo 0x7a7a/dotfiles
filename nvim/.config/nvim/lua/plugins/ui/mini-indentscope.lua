@@ -7,6 +7,7 @@ return {
       symbol = '│',
       options = { try_as_border = true },
     })
+
     vim.api.nvim_create_autocmd('FileType', {
       pattern = {
         'help',
