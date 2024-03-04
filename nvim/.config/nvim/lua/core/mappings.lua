@@ -6,11 +6,7 @@ Keymap = function(mode, key, cmd, opts)
   vim.keymap.set(mode, key, cmd, opts)
 end
 
--- Keymap('n', 'j', [[ v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj' ]])
--- Keymap('n', 'k', [[ v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk' ]])
--- stylua: ignore
 Keymap('n', 'j', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
--- stylua: ignore
 Keymap('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
 
 Keymap('v', '<leader>y', '"+y')

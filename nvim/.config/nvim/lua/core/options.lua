@@ -76,7 +76,6 @@ opt.foldenable = true
 
 -- undo file
 opt.undofile = true
--- opt.undodir = vim.fn.stdpath('data') .. '/undodir'
 opt.undodir = '/tmp/.undodir'
 
 -- diagnostic
