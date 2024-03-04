@@ -40,12 +40,12 @@ return {
             ['<C-j>'] = actions.cycle_history_prev,
             ['<C-d>'] = actions.results_scrolling_down,
             ['<C-u>'] = actions.results_scrolling_up,
-            ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
+            ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
           },
           n = {
             ['<C-d>'] = actions.results_scrolling_down,
             ['<C-u>'] = actions.results_scrolling_up,
-            ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
+            ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
           },
         },
         -- https://github.com/nvim-telescope/telescope.nvim/issues/522

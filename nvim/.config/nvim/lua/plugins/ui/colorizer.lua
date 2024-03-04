@@ -1,7 +1,6 @@
 return {
-  'NvChad/nvim-colorizer.lua',
-  ft = { 'css', 'javascript', 'vim', 'html' },
-  config = function()
-    require('colorizer').setup({ 'css', 'javascript', 'vim', 'html' })
-  end,
+  'brenoprata10/nvim-highlight-colors',
+  event = 'VeryLazy',
+  ft = { 'css', 'javascript', 'vim', 'html', 'svelte' },
+  opts = {},
 }

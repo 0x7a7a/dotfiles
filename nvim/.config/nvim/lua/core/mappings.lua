@@ -55,10 +55,10 @@ Keymap('n', '<A-up>', '<cmd>resize+5<cr>')
 Keymap('n', '<A-down>', '<cmd>resize-5<cr>')
 
 -- Cmdline shortcuts
-Keymap('c', '<C-a>', '<Home>', { noremap = true })
-Keymap('c', '<C-e>', '<End>', { noremap = true })
-Keymap('c', '<C-b>', '<C-Left>', { noremap = true })
-Keymap('c', '<C-f>', '<C-Right>', { noremap = true })
+Keymap('c', '<C-a>', '<Home>')
+Keymap('c', '<C-e>', '<End>')
+Keymap('c', '<C-b>', '<C-Left>')
+Keymap('c', '<C-f>', '<C-Right>')
 
 -- quickfix
 Keymap('n', '[q', '<cmd>cprevious<cr>zz')
