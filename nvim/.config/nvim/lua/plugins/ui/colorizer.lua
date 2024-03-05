@@ -1,6 +1,7 @@
 return {
-  'brenoprata10/nvim-highlight-colors',
-  event = 'VeryLazy',
-  ft = { 'css', 'javascript', 'vim', 'html', 'svelte' },
-  opts = {},
+  'NvChad/nvim-colorizer.lua',
+  ft = { 'lua', 'css', 'javascript', 'vim', 'html', 'svelte' },
+  opts = {
+    filetypes = { 'css', 'javascript', 'vim', 'html', 'svelte', 'lua' },
+  },
 }

@@ -1,6 +1,6 @@
 return {
   'sainnhe/gruvbox-material',
-  lazy = true,
+  lazy = false,
   priority = 1000,
   config = function()
     -- vim.g.gruvbox_material_transparent_background = 1
