@@ -10,6 +10,10 @@ return {
     require('mason-tool-installer').setup({
       ensure_installed = {
         'gopls',
+        'gotests',
+        'gofumpt',
+        'goimports',
+        'goimports-reviser',
         'stylua',
         'eslint_d',
         'prettierd',
