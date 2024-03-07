@@ -26,9 +26,7 @@ require('lazy').setup({
 })
 
 Keymap('n', '<leader>ps', '<cmd>Lazy sync<cr>')
-Keymap('n', '<leader>pu', '<cmd>Lazy update<cr>')
-Keymap('n', '<leader>pi', '<cmd>Lazy install<cr>')
-Keymap('n', '<leader>pc', '<cmd>Lazy clean<cr>')
+Keymap('n', '<leader>pp', '<cmd>Lazy profile<cr>')
 
 vim.cmd.colorscheme('gruvbox-material')
 -- vim.cmd.colorscheme('kanagawa')

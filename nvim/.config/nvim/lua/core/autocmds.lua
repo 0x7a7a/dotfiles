@@ -17,10 +17,15 @@ local function smart_number()
     group = common_group,
     desc = 'smart number',
     callback = function(arg)
+      if vim.bo.filetype == 'help' then
+        return
+      end
+
       if vim.bo.filetype == 'qf' then
         vim.opt.relativenumber = false
         return
       end
+
       vim.opt.relativenumber = arg.event == 'InsertLeave'
     end,
   })
