@@ -11,6 +11,11 @@ return {
     Keymap('n', '<A-2>', function() harpoon:list():select(2) end)
     Keymap('n', '<A-3>', function() harpoon:list():select(3) end)
     Keymap('n', '<A-4>', function() harpoon:list():select(4) end)
+    Keymap('n', '<A-5>', function() harpoon:list():select(5) end)
+    Keymap('n', '<A-6>', function() harpoon:list():select(6) end)
+    Keymap('n', '<A-7>', function() harpoon:list():select(7) end)
+    Keymap('n', '<A-8>', function() harpoon:list():select(8) end)
+    Keymap('n', '<A-9>', function() harpoon:list():select(9) end)
 
     Keymap('n', '<C-e>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = 'toggle harpoon menu' })
     Keymap('n', '<leader>a', function() harpoon:list():append() end, { desc = 'add the file to harpoon menu' })

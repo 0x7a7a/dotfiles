@@ -11,7 +11,7 @@ Keymap('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']]
 
 Keymap('v', '<leader>y', '"+y')
 Keymap('x', '<leader>p', '"_dP')
-Keymap('n', '<Tab><Tab>', '<C-^>')
+Keymap('n', '<leader><leader>', '<C-^>')
 
 Keymap('n', '<leader>bb', '<cmd>bd<cr>')
 Keymap('n', '<leader>bB', '<cmd>bd!<cr>')
