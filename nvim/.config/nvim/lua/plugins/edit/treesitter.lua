@@ -52,7 +52,7 @@ return {
       --
       --Incremental selection based on the named nodes from the grammar.
       incremental_selection = {
-        enable = true,
+        enable = false,
         keymaps = {
           init_selection = '<C-space>',
           node_incremental = '<C-space>',

@@ -4,7 +4,6 @@ return {
   dependencies = {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },
-    { 'debugloop/telescope-undo.nvim', version = '^1.0.0' },
   },
   config = function()
     local actions = require('telescope.actions')
@@ -107,18 +106,10 @@ return {
             yaml = true,
           },
         },
-        undo = {
-          side_by_side = true,
-          layout_strategy = 'vertical',
-          layout_config = {
-            preview_height = 0.8,
-          },
-        },
       },
     })
     require('telescope').load_extension('fzf')
     require('telescope').load_extension('aerial')
-    require('telescope').load_extension('undo')
     require('telescope').load_extension('live_grep_args')
 
     Keymap(
@@ -138,7 +129,6 @@ return {
       { desc = '[S]earch by [G]rep' }
     )
     Keymap('n', '<Space>sa', '<cmd>Telescope aerial<cr>', { desc = '[S]earch [U]ndo' })
-    Keymap('n', '<Space>su', '<cmd>Telescope undo<cr>', { desc = '[S]earch [U]ndo' })
     Keymap('n', '<Space>sG', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
     Keymap('n', '<Space>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
     Keymap('n', '<Space>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })

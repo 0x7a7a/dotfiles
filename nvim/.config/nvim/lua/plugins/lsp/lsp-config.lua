@@ -32,12 +32,12 @@ return {
       nmap('gA', '<cmd>lua vim.lsp.buf.code_action()<cr>', { desc = '[D]ocument [S]ymbols' })
 
       -- fzflua mappings
-      -- nmap('gd', '<cmd>lua require("fzf-lua").lsp_definitions()<cr>', '[G]oto [D]efinition')
-      -- nmap('gD', '<cmd>lua require("fzf-lua").lsp_declarations()<cr>', '[G]oto type [D]eclaration')
-      -- nmap('gI', '<cmd>lua require("fzf-lua").lsp_implementations()<cr>', '[G]oto [I]mplementation')
-      -- nmap('gr', '<cmd>lua require("fzf-lua").lsp_references()<cr>', '[G]oto [R]eferences')
-      -- nmap('gs', '<cmd>lua require("fzf-lua").lsp_document_symbols()<cr>', '[G]oto Document [S]ymbols')
-      -- nmap('ga', '<cmd>lua require("fzf-lua").lsp_code_actions()<cr>', '[G]oto Code [A]ctions')
+      -- nmap('gd', '<cmd>lua require("fzf-lua").lsp_definitions()<cr>', { desc='[G]oto [D]efinition' })
+      -- nmap('gD', '<cmd>lua require("fzf-lua").lsp_declarations()<cr>', { desc = '[G]oto type [D]eclaration' })
+      -- nmap('gI', '<cmd>lua require("fzf-lua").lsp_implementations()<cr>', { desc = '[G]oto [I]mplementation' })
+      -- nmap('gr', '<cmd>lua require("fzf-lua").lsp_references()<cr>', { desc = '[G]oto [R]eferences' })
+      -- nmap('gs', '<cmd>lua require("fzf-lua").lsp_document_symbols()<cr>', { desc = '[G]oto Document [S]ymbols' })
+      -- nmap('gA', '<cmd>lua require("fzf-lua").lsp_code_actions()<cr>', { desc = '[G]oto Code [A]ctions' })
 
       nmap('R', vim.lsp.buf.rename, { desc = 'Rename Variable' })
       -- See `:help K` for why this keymap

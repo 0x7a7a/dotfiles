@@ -67,8 +67,8 @@ Keymap('n', '[q', '<cmd>cprevious<cr>zz')
 Keymap('n', ']q', '<cmd>cnext<cr>zz')
 Keymap('n', '[Q', '<cmd>cfirst<cr>zz')
 Keymap('n', ']Q', '<cmd>clast<cr>zz')
-Keymap('n', '<Space>qo', '<cmd>copen<cr>')
-Keymap('n', '<Space>qc', '<cmd>cclose<cr>')
+Keymap('n', '<leader>qo', '<cmd>copen<cr>')
+Keymap('n', '<leader>qc', '<cmd>cclose<cr>')
 
 -- Floaterm
 -- Keymap('n', '<Space>t', '<cmd>FloatermToggle<cr>')
