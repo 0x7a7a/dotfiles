@@ -115,13 +115,13 @@ return {
     })
 
     -- Automatically add dot after module is confirmed
-    cmp.event:on('confirm_done', function(ops)
-      local kind = ops.entry.cache.entries.get_completion_item.kind
-      -- 9 means cmp_kind is module
-      if kind == 9 then
-        vim.api.nvim_put({ '.' }, 'c', true, true)
-      end
-    end)
+    -- cmp.event:on('confirm_done', function(ops)
+    --   local kind = ops.entry.cache.entries.get_completion_item.kind
+    --   -- 9 means cmp_kind is module
+    --   if kind == 9 then
+    --     vim.api.nvim_put({ '.' }, 'c', true, true)
+    --   end
+    -- end)
 
     cmp.setup.cmdline({ '/', '?' }, {
       sources = { {
