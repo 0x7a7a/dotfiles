@@ -153,17 +153,25 @@ return {
     -- vue
     -- https://github.com/vuejs/language-tools/discussions/606
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
-    if utils.npm_is_package_installed('vue') then
+    if not utils.npm_is_package_installed('typescript') then
       lspconfig.volar.setup({
         capabilities = capabilities,
         on_attach = custom_attach,
-        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
       })
     else
-      -- configure tsserver server
       lspconfig.tsserver.setup({
         capabilities = capabilities,
         on_attach = custom_attach,
+
+        init_options = {
+          plugins = {
+            {
+              name = '@vue/typescript-plugin',
+              location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
+              languages = { 'javascript', 'typescript', 'vue' },
+            },
+          },
+        },
 
         filetypes = {
           'javascript',
