@@ -2,6 +2,7 @@
 -- https://github.com/mjlbach/starter.nvim/blob/master/init.lua
 return {
   'neovim/nvim-lspconfig',
+  event = 'BufEnter',
   config = function()
     local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
     for type, icon in pairs(signs) do
@@ -153,6 +154,7 @@ return {
     -- vue
     -- https://github.com/vuejs/language-tools/discussions/606
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
+    -- https://www.reddit.com/r/neovim/comments/1bcdm6r/volar_not_showing_errors_in_typescript_files/
     if not utils.npm_is_package_installed('typescript') then
       lspconfig.volar.setup({
         capabilities = capabilities,
@@ -178,6 +180,7 @@ return {
           'typescript',
           'typescriptreact',
           'typescript.tsx',
+          'vue',
         },
       })
     end
