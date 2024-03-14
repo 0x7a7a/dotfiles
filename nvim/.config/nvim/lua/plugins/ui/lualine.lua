@@ -42,6 +42,7 @@ return {
             error = ' ',
             warn = ' ',
             info = ' ',
+            hint = ' ',
           },
         },
         { 'aerial' },
