@@ -2,7 +2,7 @@ return {
   'echasnovski/mini.files',
   version = '*',
   keys = {
-    { '-', '<cmd>lua require("mini.files").open()<cr>', desc = 'Open MiniFiles' },
+    { '<Space>f', '<cmd>lua require("mini.files").open()<cr>', desc = 'Open MiniFiles' },
   },
   config = function()
     local minifiles = require('mini.files')
@@ -55,7 +55,7 @@ return {
         local buf_id = args.data.buf_id
         -- Tweak left-hand side of mapping to your liking
         vim.keymap.set('n', 'g.', toggle_dotfiles, { buffer = buf_id })
-        vim.keymap.set('n', '-', minifiles_toggle, { buffer = buf_id })
+        vim.keymap.set('n', '<Space>f', minifiles_toggle, { buffer = buf_id })
         split_open(buf_id, 'gs', 'belowright horizontal')
         split_open(buf_id, 'gv', 'belowright vertical')
       end,
