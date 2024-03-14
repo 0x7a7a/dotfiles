@@ -6,7 +6,12 @@ return {
   },
   config = function()
     local minifiles = require('mini.files')
-    minifiles.setup()
+    minifiles.setup({
+      mappings = {
+        go_in = 'L',
+        go_in_plus = 'l',
+      },
+    })
 
     local minifiles_toggle = function(...)
       if not minifiles.close() then

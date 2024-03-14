@@ -23,21 +23,23 @@ return {
         opts = vim.tbl_extend('keep', _opts, { silent = true, buffer = bufnr }) vim.keymap.set('n', keys, func, opts)
       end
 
-      -- telescope mappings
-      nmap('gd', function() require('telescope.builtin').lsp_definitions() end, { desc = '[G]oto [D]efinition' })
-      nmap('gD', require('telescope.builtin').lsp_type_definitions, { desc = '[G]oto type [D]eclaration' })
-      nmap('gI', require('telescope.builtin').lsp_implementations, { desc = '[G]oto [I]mplementation' })
-      nmap('gr', require('telescope.builtin').lsp_references, { desc = '[G]oto [R]eferences' })
-      nmap('gs', require('telescope.builtin').lsp_document_symbols, { desc = '[D]ocument [S]ymbols' })
-      nmap('gA', '<cmd>lua vim.lsp.buf.code_action()<cr>', { desc = '[D]ocument [S]ymbols' })
+      if package.loaded['telescope'] then
+          nmap('gd', function() require('telescope.builtin').lsp_definitions() end, { desc = '[G]oto [D]efinition' })
+          nmap('gD', require('telescope.builtin').lsp_type_definitions, { desc = '[G]oto type [D]eclaration' })
+          nmap('gI', require('telescope.builtin').lsp_implementations, { desc = '[G]oto [I]mplementation' })
+          nmap('gr', require('telescope.builtin').lsp_references, { desc = '[G]oto [R]eferences' })
+          nmap('gs', require('telescope.builtin').lsp_document_symbols, { desc = '[D]ocument [S]ymbols' })
+          nmap('gA', '<cmd>lua vim.lsp.buf.code_action()<cr>', { desc = '[D]ocument [S]ymbols' })
+      end
 
-      -- fzflua mappings
-      -- nmap('gd', '<cmd>lua require("fzf-lua").lsp_definitions()<cr>', { desc='[G]oto [D]efinition' })
-      -- nmap('gD', '<cmd>lua require("fzf-lua").lsp_declarations()<cr>', { desc = '[G]oto type [D]eclaration' })
-      -- nmap('gI', '<cmd>lua require("fzf-lua").lsp_implementations()<cr>', { desc = '[G]oto [I]mplementation' })
-      -- nmap('gr', '<cmd>lua require("fzf-lua").lsp_references()<cr>', { desc = '[G]oto [R]eferences' })
-      -- nmap('gs', '<cmd>lua require("fzf-lua").lsp_document_symbols()<cr>', { desc = '[G]oto Document [S]ymbols' })
-      -- nmap('gA', '<cmd>lua require("fzf-lua").lsp_code_actions()<cr>', { desc = '[G]oto Code [A]ctions' })
+      if package.loaded['fzf-lua'] then
+          nmap('gd', '<cmd>lua require("fzf-lua").lsp_definitions()<cr>', { desc='[G]oto [D]efinition' })
+          nmap('gD', '<cmd>lua require("fzf-lua").lsp_declarations()<cr>', { desc = '[G]oto type [D]eclaration' })
+          nmap('gI', '<cmd>lua require("fzf-lua").lsp_implementations()<cr>', { desc = '[G]oto [I]mplementation' })
+          nmap('gr', '<cmd>lua require("fzf-lua").lsp_references()<cr>', { desc = '[G]oto [R]eferences' })
+          nmap('gs', '<cmd>lua require("fzf-lua").lsp_document_symbols()<cr>', { desc = '[G]oto Document [S]ymbols' })
+          nmap('gA', '<cmd>lua require("fzf-lua").lsp_code_actions()<cr>', { desc = '[G]oto Code [A]ctions' })
+      end
 
       nmap('R', vim.lsp.buf.rename, { desc = 'Rename Variable' })
       -- See `:help K` for why this keymap
