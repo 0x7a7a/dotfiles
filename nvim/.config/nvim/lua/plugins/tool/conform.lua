@@ -21,12 +21,12 @@ return {
     })
 
     local function stylua_config()
-      local conf_file = '/stylua.toml'
+      local stylua_conf = '.stylua.toml'
 
-      if not utils.root_has_file('stylua.toml') then
-        return vim.fn.stdpath('config') .. conf_file
+      if not utils.root_has_file(stylua_conf) then
+        return vim.fn.stdpath('config') .. '/' .. stylua_conf
       end
-      return vim.fn.getcwd() .. conf_file
+      return vim.fn.getcwd() .. '/' .. stylua_conf
     end
 
     conform.formatters.stylua = {
