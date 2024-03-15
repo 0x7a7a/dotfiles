@@ -121,11 +121,9 @@ return {
       settings = {
         gopls = {
           analyses = { unusedparams = true, unreachable = false },
-          usePlaceholders = true,
+          usePlaceholders = false,
           staticcheck = true,
           diagnosticsDelay = '500ms',
-          symbolMatcher = 'fuzzy',
-          gofumpt = false, -- turn on for new repos, gofmpt is good but also create code turmoils
         },
       },
     })

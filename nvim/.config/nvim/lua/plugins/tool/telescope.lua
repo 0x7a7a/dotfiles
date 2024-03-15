@@ -1,7 +1,6 @@
 return {
   -- '0x7a7a/telescope.nvim',
   'nvim-telescope/telescope.nvim',
-  events = 'LspAttach',
   dependencies = {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },
