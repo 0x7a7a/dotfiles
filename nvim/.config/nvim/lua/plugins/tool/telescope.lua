@@ -1,7 +1,7 @@
 return {
   -- '0x7a7a/telescope.nvim',
   'nvim-telescope/telescope.nvim',
-  event = 'VeryLazy',
+  events = 'LspAttach',
   dependencies = {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },
@@ -122,7 +122,12 @@ return {
     Keymap('n', 'sf', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
     Keymap('n', '<Space><Space>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
     Keymap('n', '<Space>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
-    Keymap('n', '<Space>sg', '<cmd>Telescope live_grep<cr>', { desc = '[S]earch by [G]rep' })
+    Keymap(
+      'n',
+      '<Space>sg',
+      '<cmd>lua require("telescope.builtin").live_grep({ additional_args = { "-j1" }})<CR>',
+      { desc = '[S]earch by [G]rep' }
+    )
     Keymap(
       'n',
       '<Space>sg',

@@ -1,6 +1,6 @@
 return {
   'ibhagwan/fzf-lua',
-  event = 'VeryLazy',
+  events = 'LspAttach',
   enabled = false,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   -- stylua: ignore
