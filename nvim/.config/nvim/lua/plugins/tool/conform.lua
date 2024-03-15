@@ -20,7 +20,7 @@ return {
       },
     })
 
-    local function stylua_config()
+    local function get_stylua_config()
       local stylua_conf = '.stylua.toml'
 
       if not utils.root_has_file(stylua_conf) then
@@ -29,8 +29,11 @@ return {
       return vim.fn.getcwd() .. '/' .. stylua_conf
     end
 
-    conform.formatters.stylua = {
-      prepend_args = { '--config-path', stylua_config() },
-    }
+    local stylua_conf = get_stylua_config()
+    if vim.fn.filereadable(stylua_conf) == 1 then
+      conform.formatters.stylua = {
+        prepend_args = { '--config-path', stylua_conf },
+      }
+    end
   end,
 }
