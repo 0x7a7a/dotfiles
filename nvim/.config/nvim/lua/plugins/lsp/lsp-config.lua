@@ -44,13 +44,16 @@ return {
       nmap('R', vim.lsp.buf.rename, { desc = 'Rename Variable' })
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
-      -- nmap('<C-k>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation' }) --use lsp_signature
       nmap('<C-w>gd', '<C-w>v<cmd>lua vim.lsp.buf.definition()<cr>', { desc = 'LSP definition in window split', remap = true })
       nmap('<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
       nmap('<C-w>gD', '<C-w>vgD', { desc = 'LSP type definition in window split', remap = true })
       nmap('[d', vim.diagnostic.goto_prev,{ desc='previous diagnostic' })
       nmap(']d', vim.diagnostic.goto_next,{ desc='next diagnostic' })
       nmap('<leader>D', vim.diagnostic.setqflist, { desc='Open diagnostics list' })
+
+      vim.keymap.set("i", '<C-k>',function ()
+        require('lsp_signature').toggle_float_win()
+      end, {desc='Lsp buffer Signature Help'})
     end
 
     local function default_lua_settings()
