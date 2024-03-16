@@ -18,6 +18,10 @@ return {
         l = { name = 'Open the tui application' },
         s = { name = 'Search with telescope' },
       },
+      ['g'] = {
+        J = { name = 'Joining the block of codes' },
+        S = { name = 'Splitting the block of codes' },
+      },
     })
   end,
 }
