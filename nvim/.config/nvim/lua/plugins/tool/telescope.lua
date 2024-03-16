@@ -133,7 +133,7 @@ return {
       { desc = '[S]earch by [G]rep' }
     )
     Keymap('n', '<Space>sa', '<cmd>Telescope aerial<cr>', { desc = '[S]earch [U]ndo' })
-    Keymap('n', '<Space>sG', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
+    Keymap('n', '<Space>st', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
     Keymap('n', '<Space>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
     Keymap('n', '<Space>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
     Keymap('n', '<Space>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch current [W]ord' })

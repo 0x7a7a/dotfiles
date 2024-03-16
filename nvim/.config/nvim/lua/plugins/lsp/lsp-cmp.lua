@@ -1,6 +1,6 @@
 return {
   'hrsh7th/nvim-cmp',
-  event = 'VeryLazy',
+  event = 'InsertEnter',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     'onsails/lspkind-nvim',
@@ -36,11 +36,6 @@ return {
         format = lspkind.cmp_format({
           mode = 'symbol_text',
           maxwidth = 50,
-          -- Show Source
-          -- before = function(entry, vim_item)
-          --   vim_item.menu = '[' .. string.upper(entry.source.name) .. ']'
-          --   return vim_item
-          -- end,
         }),
       },
       snippet = {
@@ -48,9 +43,10 @@ return {
           require('luasnip').lsp_expand(args.body)
         end,
       },
-      window = {
-        -- completion = cmp.config.window.bordered(),
-        -- documentation = cmp.config.window.bordered(),
+      experimental = {
+        ghost_text = {
+          hl_group = 'CmpGhostText',
+        },
       },
       mapping = cmp.mapping.preset.insert({
         ['<cr>'] = cmp.mapping.confirm({ select = true }),
