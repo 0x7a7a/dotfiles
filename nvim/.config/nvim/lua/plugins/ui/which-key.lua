@@ -17,6 +17,7 @@ return {
       ['<Space>'] = {
         l = { name = 'Open the tui application' },
         s = { name = 'Search with telescope' },
+        q = { name = 'Quickfix window' },
       },
       ['g'] = {
         J = { name = 'Joining the block of codes' },

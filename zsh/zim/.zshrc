@@ -23,6 +23,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Must be loaded before the fzf plugin
 # Will affect the load speed a bit
 # https://github.com/jeffreytse/zsh-vi-mode/issues/24
+# But it doesn't seem to be a problem now. It's just for the record.
+#
 # function zvm_config() {
 #   ZVM_INIT_MODE=sourcing
 #   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
@@ -40,6 +42,9 @@ source ~/.p10k.zsh
 #
 # ------------- Personal Config ---------------
 #
+#ZVIM
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+
 ##### Env #####
 GO111MODULE=auto
 GOPROXY="https://goproxy.cn/,direct"

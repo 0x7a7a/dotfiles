@@ -1,4 +1,4 @@
-# zmodule jeffreytse/zsh-vi-mode
+zmodule jeffreytse/zsh-vi-mode
 zmodule environment
 zmodule romkatv/powerlevel10k --use degit
 zmodule Aloxaf/fzf-tab
