@@ -41,5 +41,18 @@ local function hightlight_yank()
   })
 end
 
+local function close_aerial_before_quit()
+  vim.api.nvim_create_autocmd('QuitPre', {
+    group = common_group,
+    pattern = '*',
+    callback = function()
+      if not package.loaded['aerial'] then
+        require('aerial').close_all()
+      end
+    end,
+  })
+end
+
 smart_number()
 hightlight_yank()
+close_aerial_before_quit()

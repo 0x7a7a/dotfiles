@@ -48,7 +48,7 @@ return {
         map('gA', fzflua.lsp_code_actions, { desc = '[G]oto Code [A]ctions' })
       end
 
-      map('gr', vim.lsp.buf.rename, { desc = 'Rename Variable' })
+      map('R', vim.lsp.buf.rename, { desc = 'Rename Variable' })
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
       map('<leader>D', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 
