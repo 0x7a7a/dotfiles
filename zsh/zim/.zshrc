@@ -19,17 +19,10 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-# Must before $ZIM_HOME/init.zsh
 # Must be loaded before the fzf plugin
-# Will affect the load speed a bit
 # https://github.com/jeffreytse/zsh-vi-mode/issues/24
-# But it doesn't seem to be a problem now. It's just for the record.
-#
-# function zvm_config() {
-#   ZVM_INIT_MODE=sourcing
-#   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-#   ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-# }
+zvm_after_init(){
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Emacs-style keybinding
 bindkey -e
@@ -112,4 +105,3 @@ fkill() {
 
 ##### Load tools and theme #####
 eval "$(tmuxifier init -)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
