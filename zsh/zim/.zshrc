@@ -23,6 +23,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # https://github.com/jeffreytse/zsh-vi-mode/issues/24
 zvm_after_init(){
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
 
 # Emacs-style keybinding
 bindkey -e
