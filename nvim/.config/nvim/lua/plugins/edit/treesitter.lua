@@ -13,7 +13,9 @@ return {
     require('nvim-treesitter.configs').setup({
       ensure_installed = {
         'html',
+        'xml',
         'css',
+        'graphql',
         'javascript',
         'typescript',
         'tsx',

@@ -3,10 +3,18 @@ vim.filetype.add({
 })
 
 return {
-  'rest-nvim/rest.nvim',
-  dependencies = { 'nvim-lua/plenary.nvim' },
-  ft = 'http',
-  config = function()
-    require('rest-nvim').setup({})
-  end,
+  {
+    'vhyrro/luarocks.nvim',
+    opts = {
+      rocks = { 'lua-curl', 'nvim-nio', 'mimetypes', 'xml2lua' },
+    },
+  },
+  {
+    'rest-nvim/rest.nvim',
+    ft = 'http',
+    dependencies = { 'luarocks.nvim' },
+    config = function()
+      require('rest-nvim').setup()
+    end,
+  },
 }
