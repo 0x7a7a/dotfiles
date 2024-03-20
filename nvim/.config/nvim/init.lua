@@ -25,10 +25,9 @@ require('lazy').setup({
   },
 })
 
-Keymap('n', '<leader>ps', '<cmd>Lazy sync<cr>')
-Keymap('n', '<leader>pp', '<cmd>Lazy profile<cr>')
+Keymap('n', '<leader>Ps', '<cmd>Lazy sync<cr>')
+Keymap('n', '<leader>Pp', '<cmd>Lazy profile<cr>')
 
 vim.cmd.colorscheme('gruvbox-material')
 -- vim.cmd.colorscheme('kanagawa')
--- vim.cmd.colorscheme('melange')
 -- vim.cmd.colorscheme('nordfox')

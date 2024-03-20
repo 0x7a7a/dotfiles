@@ -15,13 +15,5 @@ end, {})
 -- fast hot reloading while developing plugins
 usercmd('R', function(cmd)
   local name = cmd.args
-
-  if package.loaded[name] then
-    package.loaded[name] = nil
-
-    local new_module = require(name)
-    if type(new_module['setup']) == 'function' then
-      new_module.setup({})
-    end
-  end
+  require('lazy.core.loader').reload(name)
 end, { nargs = 1 })
