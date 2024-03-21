@@ -1,6 +1,5 @@
 return {
   'nvim-neotest/neotest',
-  enabled = false,
   dependencies = {
     'nvim-neotest/nvim-nio',
     'nvim-lua/plenary.nvim',
@@ -28,7 +27,7 @@ return {
     { "<leader>to", function() require("neotest").output.open({ enter = true, auto_close = true }) end, desc = "Show Output" },
     { "<leader>tO", function() require("neotest").output_panel.toggle() end, desc = "Toggle Output Panel" },
     { "<leader>tS", function() require("neotest").run.stop() end, desc = "Stop" },
-    { "<leader>tw", function() require("neotest").watch.toggle() end, desc = "Neotest watch nearest" },
-    { "<leader>tW", function() require("neotest").watch.toggle(vim.fn.expand("%")) end, desc = "Neotest watch file" },
+    { "<leader>tw", function() require("neotest").watch.toggle() end, desc = "Neotest toggle watch nearest" },
+    { "<leader>tW", function() require("neotest").watch.toggle(vim.fn.expand("%")) end, desc = "Neotest toggle watch current file" },
   },
 }
