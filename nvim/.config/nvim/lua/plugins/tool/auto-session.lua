@@ -1,8 +1,14 @@
 return {
   'rmagatti/auto-session',
-  enabled = false,
+  enabled = true,
   config = function()
     vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
+
+    local function close_bufpin()
+      local bufpin = require('bufpin')
+      bufpin.close()
+    end
+
     local opts = {
       log_level = 'error',
       auto_session_enable_last_session = false,
@@ -24,6 +30,8 @@ return {
         theme_conf = { border = true },
         previewer = false,
       },
+
+      pre_save_cmds = { close_bufpin },
     }
 
     require('auto-session').setup(opts)

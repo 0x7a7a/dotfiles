@@ -53,6 +53,11 @@ return {
           require('lazy.status').updates,
           cond = require('lazy.status').has_updates,
           color = { fg = '#ff9e64' },
+          {
+            'rest',
+            icon = ' ',
+            fg = '#428890',
+          },
         },
       },
       lualine_y = {

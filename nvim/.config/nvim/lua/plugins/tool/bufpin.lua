@@ -15,8 +15,10 @@ return {
     Keymap('n', '<A-5>', function() bufpin.go_to(5) end, { desc = 'BufPin: go to file 5' })
     Keymap('n', '<C-e>', function() bufpin.toggle() end, { desc = 'BufPin: toggle board' })
     Keymap('n', '<leader>pp', function() bufpin.toggle_pin() end, { desc = 'BufPin: toggle pin' })
-    Keymap('n', '[p', function() bufpin.prev() end, { desc = 'BufPin: toggle pin' })
-    Keymap('n', ']p', function() bufpin.next() end, { desc = 'BufPin: toggle pin' })
+    Keymap('n', '<leader>pr', function() bufpin.remove() end, { desc = 'BufPin: remove entry' })
+    Keymap('n', '<leader>pa', function() bufpin.remove_all() end, { desc = 'BufPin: remove all entry' })
+    Keymap('n', '[p', function() bufpin.prev_pinned() end, { desc = 'BufPin: toggle pin' })
+    Keymap('n', ']p', function() bufpin.next_pinned() end, { desc = 'BufPin: toggle pin' })
     -- stylua: ignore end
   end,
 }

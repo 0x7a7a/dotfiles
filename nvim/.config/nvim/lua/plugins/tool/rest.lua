@@ -5,14 +5,16 @@ vim.filetype.add({
 return {
   {
     'vhyrro/luarocks.nvim',
-    opts = {
-      rocks = { 'lua-curl', 'nvim-nio', 'mimetypes', 'xml2lua' },
-    },
+    branch = 'go-away-python',
+    config = function()
+      require('luarocks').setup({
+        rocks = { 'lua-curl', 'nvim-nio', 'mimetypes', 'xml2lua' },
+      })
+    end,
   },
   {
     'rest-nvim/rest.nvim',
     ft = 'http',
-    dependencies = { 'luarocks.nvim' },
     config = function()
       require('rest-nvim').setup()
     end,
