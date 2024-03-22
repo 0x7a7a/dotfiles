@@ -57,6 +57,12 @@ return {
 
       map('[d', vim.diagnostic.goto_prev, { desc = 'Previous diagnostic' })
       map(']d', vim.diagnostic.goto_next, { desc = 'Next diagnostic' })
+      map('[e', function()
+        vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+      end, { desc = 'Previous error diagnostic' })
+      map(']e', function()
+        vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+      end, { desc = 'Next error diagnostic' })
     end
 
     local function default_lua_settings()

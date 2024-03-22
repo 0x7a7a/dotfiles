@@ -1,5 +1,6 @@
 return {
   dir = '~/dev/project/neovim-plugins/bufpin.nvim',
+  event = 'VeryLazy',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },

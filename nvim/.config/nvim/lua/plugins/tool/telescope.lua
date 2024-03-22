@@ -1,5 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
+  event = 'VeryLazy',
   dependencies = {
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
@@ -118,7 +119,7 @@ return {
       '<cmd>Telescope current_buffer_fuzzy_find<cr>',
       { desc = '[/] Fuzzily search in current buffer' }
     )
-    Keymap('n', 'sf', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
+    Keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
     Keymap('n', '<Space><Space>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
     Keymap('n', '<Space>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
     Keymap(
