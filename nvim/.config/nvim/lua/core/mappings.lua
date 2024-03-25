@@ -22,7 +22,6 @@ Keymap('n', '<leader>bb', '<cmd>bd<cr>', { desc = ':bdelete' })
 Keymap('n', '<leader>bB', '<cmd>bd!<cr>', { desc = ':bdelete!' })
 -- close other buffers except the current
 Keymap('n', '<leader>bo', '<cmd>%bd|e#|bd#<cr>', { desc = 'bdelete other buffers' })
--- Keymap('n', '<leader>qq', '<cmd>q<cr>', { desc = ':quit' })
 Keymap('n', '<leader>qq', '<cmd>q<cr>', { desc = ':quit' })
 Keymap('n', '<leader>qQ', '<cmd>q!<cr>', { desc = ':quit!' })
 Keymap('n', '<leader>qa', '<cmd>qa<cr>', { desc = ':qall' })
