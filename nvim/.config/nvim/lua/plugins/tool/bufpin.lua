@@ -1,6 +1,6 @@
 return {
-  '0x7a7a/bufpin.nvim',
-  -- dir = '~/dev/project/neovim-plugins/bufpin.nvim',
+  -- '0x7a7a/bufpin.nvim',
+  dir = '~/dev/project/neovim-plugins/bufpin.nvim',
   event = 'VeryLazy',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
