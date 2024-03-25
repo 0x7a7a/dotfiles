@@ -9,6 +9,11 @@ end
 Keymap('n', 'j', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
 Keymap('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
 
+Keymap('n', 'H', '^')
+Keymap('v', 'H', '^')
+Keymap('n', 'L', '$')
+Keymap('v', 'L', '$')
+
 Keymap('v', '<leader>y', '"+y', { desc = 'Copy to system clipboard' })
 Keymap('x', '<leader>p', '"_dP', { desc = 'Paste but do not replace register' })
 Keymap('n', '<leader><leader>', '<C-^>', { desc = 'Toggle last jumppath' })

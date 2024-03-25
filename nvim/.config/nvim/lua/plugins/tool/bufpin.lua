@@ -1,12 +1,13 @@
 return {
-  dir = '~/dev/project/neovim-plugins/bufpin.nvim',
+  '0x7a7a/bufpin.nvim',
+  -- dir = '~/dev/project/neovim-plugins/bufpin.nvim',
   event = 'VeryLazy',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
     local bufpin = require('bufpin')
-    bufpin.setup({})
+    bufpin.setup()
 
     -- stylua: ignore start
     Keymap('n', '<A-1>', function() bufpin.go_to(1) end, { desc = 'BufPin: go to file 1' })
@@ -18,8 +19,8 @@ return {
     Keymap('n', '<leader>pp', function() bufpin.toggle_pin() end, { desc = 'BufPin: toggle pin' })
     Keymap('n', '<leader>pr', function() bufpin.remove() end, { desc = 'BufPin: remove entry' })
     Keymap('n', '<leader>pa', function() bufpin.remove_all() end, { desc = 'BufPin: remove all entry' })
-    Keymap('n', '[p', function() bufpin.prev_pinned() end, { desc = 'BufPin: toggle pin' })
-    Keymap('n', ']p', function() bufpin.next_pinned() end, { desc = 'BufPin: toggle pin' })
+    Keymap('n', '<A-h>', function() bufpin.prev_pinned() end, { desc = 'BufPin: toggle pin' })
+    Keymap('n', '<A-l>', function() bufpin.next_pinned() end, { desc = 'BufPin: toggle pin' })
     -- stylua: ignore end
   end,
 }
