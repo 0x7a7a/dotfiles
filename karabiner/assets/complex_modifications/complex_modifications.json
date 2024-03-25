@@ -2,7 +2,7 @@
   "title": "Hack Keyboard",
   "rules": [
     {
-      "description": "Held_down Tab and use as Alt",
+      "description": "Held down Tab and use as Alt",
       "manipulators": [
         {
           "from": {
@@ -29,6 +29,31 @@
           "to_if_held_down": [
             {
               "key_code": "left_alt"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Replace caps lock with left ctrl",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^net\\.kovidgoyal\\.kitty$"]
+            }
+          ],
+          "to": [
+            {
+              "key_code": "left_control"
             }
           ],
           "type": "basic"
