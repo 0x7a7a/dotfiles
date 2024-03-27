@@ -17,7 +17,8 @@ local function smart_number()
     group = common_group,
     desc = 'smart number',
     callback = function(arg)
-      if vim.bo.filetype == 'help' then
+      local ft = vim.bo.filetype
+      if ft == 'help' or ft == 'alpha' then
         return
       end
 

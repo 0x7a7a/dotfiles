@@ -1,6 +1,6 @@
 return {
   'rmagatti/auto-session',
-  enabled = true,
+  enabled = false,
   config = function()
     vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
 
