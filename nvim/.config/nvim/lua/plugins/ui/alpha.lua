@@ -1,5 +1,6 @@
 return {
   'goolord/alpha-nvim',
+  enabled = false,
   config = function()
     local alpha = require('alpha')
     local theta = require('alpha.themes.theta')
@@ -39,18 +40,16 @@ return {
     }
 
     theta.header.val = logo
-    -- theta.header.opts.hl = 'String'
+    theta.buttons.val = {}
 
-    theta.buttons.val = {
-      dashboard.button('<C-p>', '  Find File'),
-      dashboard.button('<Space>f', '  File Explorer'),
-      dashboard.button('<Space>sg', '  Find Word'),
-      dashboard.button('<leader>Ps', '  Update plugins'),
-      dashboard.button('q', '  Quit', ':qa<cr>'),
-    }
+    -- theta.buttons.val = {
+    --   dashboard.button('<C-p>', '  Find File'),
+    --   dashboard.button('<Space>f', '  File Explorer'),
+    --   dashboard.button('<Space>sg', '  Find Word'),
+    --   dashboard.button('<leader>Ps', '  Update plugins'),
+    --   dashboard.button('q', '  Quit', ':qa<cr>'),
+    -- }
 
     alpha.setup(theta.config)
-
-    -- vim.cmd([[ autocmd FileType alpha setlocal nofoldenable ]])
   end,
 }

@@ -17,3 +17,6 @@ return {
     end,
   },
 }
+
+-- vim-test
+-- vimux
