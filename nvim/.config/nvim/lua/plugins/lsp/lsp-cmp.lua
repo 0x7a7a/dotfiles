@@ -90,6 +90,7 @@ return {
         -- end, { 'i', 's' }),
       }),
       sources = cmp.config.sources({
+        { name = 'cody' },
         {
           name = 'nvim_lsp',
           entry_filter = function(entry, ctx)
