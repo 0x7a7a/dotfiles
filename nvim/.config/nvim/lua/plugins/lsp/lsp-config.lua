@@ -10,7 +10,9 @@ return {
     --   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
     -- end
     vim.diagnostic.config({
-      virtual_text = true,
+      -- virtual_text = true,
+      jump = { float = true },
+      float = { border = 'solid' },
       signs = {
         text = {
           [vim.diagnostic.severity.ERROR] = ' ',
