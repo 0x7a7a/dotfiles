@@ -1,8 +1,8 @@
 return {
   'rmagatti/auto-session',
-  enabled = true,
+  -- enabled = false,
   config = function()
-    vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
+    vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
     local function close_bufpin()
       local bufpin = require('bufpin')
@@ -16,7 +16,8 @@ return {
       auto_session_enabled = true,
       auto_save_enabled = nil,
       auto_restore_enabled = nil,
-      auto_session_suppress_dirs = nil,
+      auto_session_suppress_dirs = { '~/', '/' },
+
       auto_session_use_git_branch = nil,
       -- the configs below are lua only
       bypass_session_save_file_types = nil,

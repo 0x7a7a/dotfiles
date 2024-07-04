@@ -64,6 +64,13 @@ return {
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-e>'] = cmp.mapping.abort(),
+        ['<C-Space>'] = cmp.mapping.complete({
+          config = {
+            sources = {
+              { name = 'cody' },
+            },
+          },
+        }),
 
         ['<Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then

@@ -125,12 +125,6 @@ return {
     Keymap(
       'n',
       '<Space>sg',
-      '<cmd>lua require("telescope.builtin").live_grep({ additional_args = { "-j1" }})<CR>',
-      { desc = '[S]earch by [G]rep' }
-    )
-    Keymap(
-      'n',
-      '<Space>sg',
       '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>',
       { desc = '[S]earch by [G]rep' }
     )
