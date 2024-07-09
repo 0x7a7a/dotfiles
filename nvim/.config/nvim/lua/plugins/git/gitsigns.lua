@@ -30,9 +30,9 @@ return {
       Keymap('n', '<leader>gp', gs.preview_hunk, { desc = 'Gitsigns: preview diff hunk' })
       Keymap('n', '<leader>grh', gs.reset_hunk, { desc = 'Gitsigns: reset diff hunk over cursor' })
       Keymap('n', '<leader>grb', gs.reset_buffer, { desc = 'Gitsigns: reset diff for entire buffer' })
-      -- Keymap('n', '<leader>gb', gs.blame_line, { desc = 'Gitsigns: blame line' })
+      Keymap('n', '<leader>gb', gs.blame_line, { desc = 'Gitsigns: blame line' })
     end,
 
-    current_line_blame = true,
+    -- current_line_blame = true,
   },
 }

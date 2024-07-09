@@ -4,15 +4,10 @@ return {
   'neovim/nvim-lspconfig',
   event = 'BufEnter',
   config = function()
-    -- local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
-    -- for type, icon in pairs(signs) do
-    --   local hl = 'DiagnosticSign' .. type
-    --   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-    -- end
     vim.diagnostic.config({
-      -- virtual_text = true,
-      jump = { float = true },
-      float = { border = 'solid' },
+      -- jump = { float = true },
+      -- float = { border = 'solid' },
+      virtual_text = true,
       signs = {
         text = {
           [vim.diagnostic.severity.ERROR] = ' ',
@@ -48,7 +43,9 @@ return {
         map('gI', builtin.lsp_implementations, { desc = '[G]oto [I]mplementation' })
         map('gr', builtin.lsp_references, { desc = '[G]oto [R]eferences' })
         map('gs', builtin.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
-        map('gA', vim.lsp.buf.code_action, { desc = '[G]oto Code [A]ction' })
+        map('gA', function()
+          vim.lsp.buf.code_action()
+        end, { desc = '[G]oto Code [A]ction' })
       end
 
       if package.loaded['fzf-lua'] then
