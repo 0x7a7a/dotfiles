@@ -19,8 +19,8 @@ return {
     Keymap('n', '<leader>pp', function() bufpin.toggle_pin() end, { desc = 'BufPin: toggle pin' })
     Keymap('n', '<leader>pr', function() bufpin.remove() end, { desc = 'BufPin: remove entry' })
     Keymap('n', '<leader>pa', function() bufpin.remove_all() end, { desc = 'BufPin: remove all entry' })
-    Keymap('n', '<A-h>', function() bufpin.prev_pinned() end, { desc = 'BufPin: toggle pin' })
-    Keymap('n', '<A-l>', function() bufpin.next_pinned() end, { desc = 'BufPin: toggle pin' })
+    Keymap('n', '<A-h>', function() bufpin.prev_pinned() end, { desc = 'BufPin: prev pin' })
+    Keymap('n', '<A-l>', function() bufpin.next_pinned() end, { desc = 'BufPin: next pin' })
     -- stylua: ignore end
   end,
 }

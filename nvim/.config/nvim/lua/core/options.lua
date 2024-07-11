@@ -78,7 +78,8 @@ opt.foldenable = true
 opt.undofile = true
 opt.undodir = '/tmp/.undodir'
 
--- diagnostic
-vim.diagnostic.config({
-  virtual_text = false,
+vim.filetype.add({
+  extension = {
+    http = 'http',
+  },
 })
