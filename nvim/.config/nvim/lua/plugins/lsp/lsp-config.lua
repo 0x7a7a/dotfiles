@@ -178,38 +178,38 @@ return {
     })
 
     -- vue
-    -- https://github.com/vuejs/language-tools/discussions/606
-    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
-    -- https://www.reddit.com/r/neovim/comments/1bcdm6r/volar_not_showing_errors_in_typescript_files/
-    if not utils.npm_is_package_installed('typescript') then
-      lspconfig.volar.setup({
-        capabilities = capabilities,
-        on_attach = custom_attach,
-      })
-    else
-      lspconfig.tsserver.setup({
-        capabilities = capabilities,
-        on_attach = custom_attach,
+    -- https://github.com/vuejs/language-tools/issues/3925
+    -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371
+    -- https://www.reddit.com/r/neovim/comments/1bib0v3/help_vuelanguageserver_setup_with_kickstartmason/
+    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vue-support
+    lspconfig.volar.setup({
+      init_options = {
+        vue = {
+          hybridMode = false,
+        },
+      },
+    })
 
-        init_options = {
-          plugins = {
-            {
-              name = '@vue/typescript-plugin',
-              location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
-              languages = { 'javascript', 'typescript', 'vue' },
-            },
+    lspconfig.tsserver.setup({
+      capabilities = capabilities,
+      on_attach = custom_attach,
+
+      init_options = {
+        plugins = {
+          {
+            name = '@vue/typescript-plugin',
+            location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
+            languages = { 'vue' },
           },
         },
+      },
 
-        filetypes = {
-          'javascript',
-          'typescript',
-          'typescriptreact',
-          'typescript.tsx',
-          'vue',
-        },
-      })
-    end
+      filetypes = {
+        'javascript',
+        'typescript',
+        'vue',
+      },
+    })
 
     if not utils.npm_is_package_installed('svelte') then
       lspconfig.emmet_language_server.setup({})

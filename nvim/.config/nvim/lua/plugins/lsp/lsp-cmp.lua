@@ -50,27 +50,19 @@ return {
       --   },
       -- },
       mapping = cmp.mapping.preset.insert({
-        -- Manually trigger cody completions
-        -- ['<c-a>'] = cmp.mapping.complete({
-        --   config = {
-        --     sources = {
-        --       { name = 'cody' },
-        --     },
-        --   },
-        -- }),
         ['<cr>'] = cmp.mapping.confirm({ select = true }),
         ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
         ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<C-Space>'] = cmp.mapping.complete({
-          config = {
-            sources = {
-              { name = 'cody' },
-            },
-          },
-        }),
+        -- ['<C-Space>'] = cmp.mapping.complete({
+        --   config = {
+        --     sources = {
+        --       { name = 'cody' },
+        --     },
+        --   },
+        -- }),
 
         ['<Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -93,17 +85,6 @@ return {
             fallback()
           end
         end, { 'i', 's' }),
-
-        -- Accept the selected completion with the copilot plugin
-        -- ['<C-j>'] = cmp.mapping(function(fallback)
-        --   cmp.mapping.abort()
-        --   local copilot_keys = vim.fn['copilot#Accept']()
-        --   if copilot_keys ~= '' then
-        --     vim.api.nvim_feedkeys(copilot_keys, 'i', true)
-        --   else
-        --     fallback()
-        --   end
-        -- end, { 'i', 's' }),
       }),
       sources = cmp.config.sources({
         { name = 'cody' },
