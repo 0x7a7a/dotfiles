@@ -1,28 +1,23 @@
 return {
   'folke/which-key.nvim',
   event = 'VeryLazy',
-  opts = {},
   config = function()
     local wk = require('which-key')
     wk.setup()
 
-    wk.register({
-      ['<leader>'] = {
-        b = { name = 'Prefix for bdelete' },
-        g = { name = 'Prefix for git/fugtive' },
-        t = { name = 'Prefix for neotest' },
-        p = { name = 'Prefix for lazy' },
-        q = { name = 'Prefix for qucikfix and quit' },
-      },
-      ['<Space>'] = {
-        l = { name = 'Open the tui application' },
-        s = { name = 'Search with telescope' },
-        q = { name = 'Quickfix window' },
-      },
-      ['g'] = {
-        J = { name = 'Joining the block of codes' },
-        S = { name = 'Splitting the block of codes' },
-      },
+    wk.add({
+      { '<leader>b', group = 'Prefix for bdelete' },
+      { '<leader>g', group = 'Prefix for git/fugtive' },
+      { '<leader>t', group = 'Prefix for neotest' },
+      { '<leader>p', group = 'Prefix for lazy' },
+      { '<leader>q', group = 'Prefix for quicikfix and quit' },
+
+      { '<Space>l', group = 'Open the tui application' },
+      { '<Space>s', group = 'Search with telescope' },
+      { '<Space>q', group = 'Quickfix window' },
+
+      { 'gJ', desc = 'Joining the block of codes' },
+      { 'gS', desc = 'Splitting the block of codes' },
     })
   end,
 }
