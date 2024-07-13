@@ -36,16 +36,13 @@ return {
         vim.keymap.set(mode, keys, func, opts)
       end
 
+      -- refrences/rename/code action is built-in by default
+      -- https://github.com/neovim/neovim/pull/28500
       if package.loaded['telescope'] then
-        local builtin = require('telescope.builtin')
-        map('gd', builtin.lsp_definitions, { desc = '[g]oto [d]efinition' })
-        map('gD', builtin.lsp_type_definitions, { desc = '[G]oto type [D]eclaration' })
-        map('gI', builtin.lsp_implementations, { desc = '[G]oto [I]mplementation' })
-        map('gr', builtin.lsp_references, { desc = '[G]oto [R]eferences' })
-        map('gs', builtin.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
-        map('gA', function()
-          vim.lsp.buf.code_action()
-        end, { desc = '[G]oto Code [A]ction' })
+        map('gd', '<cmd>Telescope lsp_definitions<cr>', { desc = '[g]oto [d]efinition' })
+        map('gD', '<cmd>Telescope lsp_type_definitions<cr>', { desc = '[G]oto type [D]eclaration' })
+        map('gI', '<cmd>Telescope lsp_implementations<cr>', { desc = '[G]oto [I]mplementation' })
+        map('gs', '<cmd>Telescope lsp_document_symbols<cr>', { desc = '[G]oto Document [S]ymbols' })
       end
 
       if package.loaded['fzf-lua'] then
@@ -53,12 +50,9 @@ return {
         map('gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
         map('gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
         map('gI', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
-        map('gr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
         map('gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
-        map('gA', fzflua.lsp_code_actions, { desc = '[G]oto Code [A]ctions' })
       end
 
-      map('R', vim.lsp.buf.rename, { desc = 'Rename Variable' })
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
       map('<leader>D', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 
@@ -207,6 +201,7 @@ return {
       filetypes = {
         'javascript',
         'typescript',
+        'typescriptreact',
         'vue',
       },
     })
