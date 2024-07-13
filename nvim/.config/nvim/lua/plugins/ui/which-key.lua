@@ -3,7 +3,19 @@ return {
   event = 'VeryLazy',
   config = function()
     local wk = require('which-key')
-    wk.setup()
+    wk.setup({
+      icons = {
+        rules = false,
+      },
+      disable = {
+        trigger = function(ctx)
+          if ctx.keys == '`' and ctx.mode == 'n' then
+            return true
+          end
+          return false
+        end,
+      },
+    })
 
     wk.add({
       { '<leader>b', group = 'Prefix for bdelete' },
