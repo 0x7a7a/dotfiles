@@ -1,17 +1,28 @@
 return {
   'ibhagwan/fzf-lua',
-  enabled = false,
+  -- enabled = false,
   -- dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     local fzflua = require('fzf-lua')
     fzflua.setup()
 
-    Keymap('n', '<C-p>', fzflua.files, { desc = '[S]earch [F]iles' })
-    Keymap('n', '<Space><Space>', fzflua.buffers, { desc = 'Search buffers' })
+    local files_opts = {
+      previewer = false,
+      cwd_prompt = false,
+      prompt = 'Files❯ ',
+      winopts = {
+        height = 0.5,
+        width = 0.5,
+      },
+    }
+
+    Keymap('n', '<C-p>', function()
+      fzflua.files(files_opts)
+    end, { desc = '[S]earch [F]iles' })
+    Keymap('n', '<C-\\>', fzflua.buffers, { desc = 'Search buffers' })
     Keymap('n', '<Space>/', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
     Keymap('n', '<Space>sg', fzflua.live_grep_native, { desc = '[S]earch by [G]rep' })
     Keymap('n', '<Space>ss', fzflua.live_grep_resume, { desc = '[S]earch by [G]rep' })
-    Keymap('n', '<Space>st', fzflua.git_files, { desc = '[S]earch by [G]it files' })
     Keymap('n', '<Space>sh', fzflua.help_tags, { desc = '[S]earch [H]elp' })
     Keymap('n', '<Space>so', fzflua.oldfiles, { desc = '[S]earch [O]ldfiles' })
     Keymap('n', '<Space>sd', fzflua.diagnostics_workspace, { desc = '[S]earch [D]iagnostics' })

@@ -7,12 +7,12 @@ return {
       icons = {
         rules = false,
       },
+      modes = {
+        x = false,
+      },
       disable = {
         trigger = function(ctx)
-          if ctx.keys == '`' and ctx.mode == 'n' then
-            return true
-          end
-          return false
+          return ctx.keys == '`'
         end,
       },
     })

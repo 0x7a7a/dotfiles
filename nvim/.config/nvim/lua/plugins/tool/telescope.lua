@@ -2,7 +2,7 @@ return {
   'nvim-telescope/telescope.nvim',
   -- Lazy loading affects mappings in lsp-config
   -- event = 'VeryLazy',
-  -- enabled = false,
+  enabled = false,
   dependencies = {
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
@@ -122,7 +122,7 @@ return {
       { desc = '[/] Fuzzily search in current buffer' }
     )
     Keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
-    Keymap('n', '<Space><Space>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
+    Keymap('n', '<C-\\>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
     Keymap('n', '<Space>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
     Keymap(
       'n',
