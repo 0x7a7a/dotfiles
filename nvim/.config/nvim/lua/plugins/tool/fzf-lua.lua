@@ -19,7 +19,7 @@ return {
     Keymap('n', '<C-p>', function()
       fzflua.files(files_opts)
     end, { desc = '[S]earch [F]iles' })
-    Keymap('n', '<C-\\>', fzflua.buffers, { desc = 'Search buffers' })
+    Keymap('n', '<Space><Space>', fzflua.buffers, { desc = 'Search buffers' })
     Keymap('n', '<Space>/', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
     Keymap('n', '<Space>sg', fzflua.live_grep_native, { desc = '[S]earch by [G]rep' })
     Keymap('n', '<Space>ss', fzflua.live_grep_resume, { desc = '[S]earch by [G]rep' })
