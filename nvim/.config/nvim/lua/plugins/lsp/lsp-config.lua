@@ -24,6 +24,12 @@ return {
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+    -- refrences/rename/code action is built-in by default
+    -- https://github.com/neovim/neovim/pull/28500
+    vim.keymap.del('n', 'grn')
+    vim.keymap.del('n', 'grr')
+    vim.keymap.del({ 'n', 'v' }, 'gra')
+
     local custom_attach = function(_client, bufnr)
       local map = function(...)
         local args = { ... }
@@ -36,13 +42,14 @@ return {
         vim.keymap.set(mode, keys, func, opts)
       end
 
-      -- refrences/rename/code action is built-in by default
-      -- https://github.com/neovim/neovim/pull/28500
       if package.loaded['telescope'] then
         map('gd', '<cmd>Telescope lsp_definitions<cr>', { desc = '[g]oto [d]efinition' })
         map('gD', '<cmd>Telescope lsp_type_definitions<cr>', { desc = '[G]oto type [D]eclaration' })
         map('gI', '<cmd>Telescope lsp_implementations<cr>', { desc = '[G]oto [I]mplementation' })
         map('gs', '<cmd>Telescope lsp_document_symbols<cr>', { desc = '[G]oto Document [S]ymbols' })
+        map('grr', '<cmd>Telescope lsp_references<cr>', { desc = '[G]oto [R]eferences' })
+        map('gra', '<cmd>Telescope lsp_code_actions<cr>', { desc = 'Code Actions' })
+        map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       end
 
       if package.loaded['fzf-lua'] then
@@ -51,6 +58,9 @@ return {
         map('gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
         map('gI', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
         map('gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
+        map('grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
+        map('gra', fzflua.lsp_code_actions, { desc = 'Code Actions' })
+        map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       end
 
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })

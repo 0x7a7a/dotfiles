@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+-- vim.g.tmux_navigator_no_mappings = 1
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
@@ -83,3 +84,6 @@ vim.filetype.add({
     http = 'http',
   },
 })
+
+-- disable vim-tmux-navigator default mappings
+vim.g.tmux_navigator_no_mappings = 1
