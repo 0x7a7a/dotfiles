@@ -84,6 +84,3 @@ vim.filetype.add({
     http = 'http',
   },
 })
-
--- disable vim-tmux-navigator default mappings
-vim.g.tmux_navigator_no_mappings = 1
