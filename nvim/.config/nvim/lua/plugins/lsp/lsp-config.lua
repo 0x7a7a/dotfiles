@@ -26,9 +26,9 @@ return {
 
     -- refrences/rename/code action is built-in by default
     -- https://github.com/neovim/neovim/pull/28500
-    vim.keymap.del('n', 'grn')
-    vim.keymap.del('n', 'grr')
-    vim.keymap.del({ 'n', 'v' }, 'gra')
+    -- vim.keymap.del('n', 'grn')
+    -- vim.keymap.del('n', 'grr')
+    -- vim.keymap.del({ 'n', 'v' }, 'gra')
 
     local custom_attach = function(_client, bufnr)
       local map = function(...)
@@ -49,7 +49,6 @@ return {
         map('gs', '<cmd>Telescope lsp_document_symbols<cr>', { desc = '[G]oto Document [S]ymbols' })
         map('grr', '<cmd>Telescope lsp_references<cr>', { desc = '[G]oto [R]eferences' })
         map('gra', '<cmd>Telescope lsp_code_actions<cr>', { desc = 'Code Actions' })
-        map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       end
 
       if package.loaded['fzf-lua'] then
@@ -59,10 +58,9 @@ return {
         map('gI', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
         map('gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
         map('grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
-        map('gra', fzflua.lsp_code_actions, { desc = 'Code Actions' })
-        map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       end
 
+      map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
       map('<leader>D', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 

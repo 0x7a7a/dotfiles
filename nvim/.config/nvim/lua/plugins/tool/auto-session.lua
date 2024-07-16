@@ -5,8 +5,9 @@ return {
     vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
     local function close_bufpin()
-      local bufpin = require('bufpin')
-      bufpin.close()
+      if package.loaded['bufpin'] then
+        require('bufpin').close()
+      end
     end
 
     local opts = {
