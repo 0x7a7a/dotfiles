@@ -7,14 +7,9 @@ return {
       icons = {
         rules = false,
       },
-      modes = {
-        x = false,
-      },
-      disable = {
-        trigger = function(ctx)
-          return ctx.keys == '`'
-        end,
-      },
+      defer = function(ctx)
+        return ctx.mode == 'V' or ctx.mode == '<C-V>'
+      end,
     })
 
     wk.add({

@@ -34,9 +34,10 @@ style:
   # color_scheme: purity_of_form_custom
   # color_scheme_dark: purity_of_form_custom
   color_scheme: apathy
-  color_scheme_dark: apathy
+  # color_scheme_dark: apathy
 
   # 预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
+  candidate_list_layout: linear
   text_orientation: horizontal # horizontal | vertical
   inline_preedit: true
   corner_radius: 10
@@ -68,7 +69,7 @@ preset_color_schemes:
     label_font_point: 12
     comment_font_face: "Helvetica" # 注字体及大小
     comment_font_point: 16
-    candidate_list_layout: stacked # 候选项排列方向 stacked | linear
+    candidate_list_layout: stack # 候选项排列方向 stacked | linear
     text_orientation: horizontal # 文字排列方向 horizontal | vertical
     inline_preedit: true # 拼音位于： 候选框 false | 行内 true
     translucency: false # 磨砂： false | true
