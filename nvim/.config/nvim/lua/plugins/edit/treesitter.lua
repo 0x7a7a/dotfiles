@@ -4,7 +4,6 @@ return {
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
     'nvim-treesitter/nvim-treesitter-context',
-    'windwp/nvim-ts-autotag',
   },
   build = ':TSUpdate',
   config = function()
@@ -91,9 +90,6 @@ return {
         enable = true, -- mandatory, false will disable the whole extension
         -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
         -- [options]
-      },
-      autotag = {
-        enable = true,
       },
       textobjects = {
         select = {
