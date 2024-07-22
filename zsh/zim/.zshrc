@@ -52,6 +52,7 @@ export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 path=(
   $HOME/go/bin
   $HOME/.cargo/bin
+  $HOME/.zig
   $HOME/.local/share/bob/nvim-bin
   /usr/local/opt/mysql-client/bin
   /usr/local/opt/openresty/nginx/sbin/

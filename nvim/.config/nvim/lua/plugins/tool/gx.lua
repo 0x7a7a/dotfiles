@@ -1,5 +1,6 @@
 return {
-  'chrishrb/gx.nvim',
+  '0x7a7a/gx.nvim',
+  -- dir = '/Users/lucky/dev/project/neovim-plugins/gx.nvim',
   keys = { { 'gx', '<cmd>Browse<cr>', mode = { 'n', 'x' } } },
   cmd = { 'Browse' },
   init = function()

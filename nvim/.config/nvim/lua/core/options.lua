@@ -78,9 +78,3 @@ opt.foldenable = true
 -- undo file
 opt.undofile = true
 opt.undodir = '/tmp/.undodir'
-
-vim.filetype.add({
-  extension = {
-    http = 'http',
-  },
-})

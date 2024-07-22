@@ -1,5 +1,6 @@
 return {
   'christoomey/vim-tmux-navigator',
+  enabled = false,
   init = function()
     -- disable vim-tmux-navigator default mappings
     vim.g.tmux_navigator_no_mappings = 1

@@ -1,6 +1,13 @@
 return {
   'mistweaverco/kulala.nvim',
   ft = { 'http' },
+  init = function()
+    vim.filetype.add({
+      extension = {
+        http = 'http',
+      },
+    })
+  end,
   config = function()
     -- Setup is required, even if you don't pass any options
     require('kulala').setup({
