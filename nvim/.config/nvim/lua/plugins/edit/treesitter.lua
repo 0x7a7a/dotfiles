@@ -6,12 +6,13 @@ return {
     'nvim-treesitter/nvim-treesitter-context',
   },
   build = ':TSUpdate',
-  config = function()
+  init = function()
     vim.api.nvim_command('set foldmethod=expr')
     vim.api.nvim_command('set foldexpr=nvim_treesitter#foldexpr()')
+  end,
+  config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = {
-        'zig',
         'html',
         'xml',
         'css',
