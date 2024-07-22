@@ -45,10 +45,6 @@ GOPROXY="https://goproxy.cn/,direct"
 
 export EDITOR=nvim
 
-#tmuxifier
-TMUXIFIERPATH=$HOME/.tmux/plugins/tmuxifier/bin
-export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
-
 path=(
   $HOME/go/bin
   $HOME/.cargo/bin
@@ -56,7 +52,6 @@ path=(
   $HOME/.local/share/bob/nvim-bin
   /usr/local/opt/mysql-client/bin
   /usr/local/opt/openresty/nginx/sbin/
-  $TMUXIFIERPATH
   $path
 )
 
@@ -104,6 +99,3 @@ fkill() {
 	echo $pid | xargs kill -${1:-9}
   fi
 }
-
-##### Load tools and theme #####
-eval "$(tmuxifier init -)"
