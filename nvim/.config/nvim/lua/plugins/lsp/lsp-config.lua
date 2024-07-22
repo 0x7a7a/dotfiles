@@ -265,5 +265,10 @@ return {
       },
     })
     vim.g.rustfmt_autosave = 1
+
+    lspconfig.zls.setup({
+      capabilities = capabilities,
+      on_attach = custom_attach,
+    })
   end,
 }
