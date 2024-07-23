@@ -129,9 +129,6 @@ return {
             enable = true,
             setType = true,
           },
-          completion = {
-            callSnippet = 'Replace',
-          },
         },
       },
     })
