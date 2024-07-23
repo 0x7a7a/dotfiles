@@ -1,7 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
   -- Lazy loading affects mappings in lsp-config
-  -- event = 'VeryLazy',
   enabled = false,
   dependencies = {
     { 'nvim-lua/plenary.nvim' },

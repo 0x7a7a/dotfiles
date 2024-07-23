@@ -1,7 +1,5 @@
 return {
   'ibhagwan/fzf-lua',
-  -- enabled = false,
-  -- dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     local fzflua = require('fzf-lua')
     fzflua.setup()

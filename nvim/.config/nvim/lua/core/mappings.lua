@@ -30,8 +30,8 @@ Keymap('n', '<leader>w', '<cmd>w<cr>', { desc = ':write' })
 
 Keymap('n', '[b', '<cmd>bprevious<cr>')
 Keymap('n', ']b', '<cmd>bnext<cr>')
-Keymap('n', '[B', '<cmd>bfirst<cr>')
-Keymap('n', ']B', '<cmd>blast<cr>')
+Keymap('n', '[t', '<cmd>tabprevious<cr>')
+Keymap('n', ']t', '<cmd>tabnext<cr>')
 
 Keymap('i', '<C-a>', '<Esc>^i')
 Keymap('i', '<C-e>', '<Esc>$a')
@@ -70,10 +70,6 @@ Keymap('c', '<C-f>', '<C-Right>')
 -- quickfix
 Keymap('n', '[q', '<cmd>cprevious<cr>zz')
 Keymap('n', ']q', '<cmd>cnext<cr>zz')
-Keymap('n', '[Q', '<cmd>cfirst<cr>zz')
-Keymap('n', ']Q', '<cmd>clast<cr>zz')
-Keymap('n', '<Space>qo', '<cmd>copen<cr>')
-Keymap('n', '<Space>qc', '<cmd>cclose<cr>')
 
 -- Floaterm
 -- Keymap('n', '<Space>t', '<cmd>FloatermToggle<cr>')
