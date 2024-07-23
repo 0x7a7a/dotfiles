@@ -1,6 +1,5 @@
 return {
   'echasnovski/mini.files',
-  version = '*',
   keys = {
     { '<Space>f', '<cmd>lua require("mini.files").open()<cr>', desc = 'Open MiniFiles' },
   },
