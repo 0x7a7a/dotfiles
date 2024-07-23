@@ -1,10 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   event = 'BufEnter',
-  dependencies = {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    'nvim-treesitter/nvim-treesitter-context',
-  },
   build = ':TSUpdate',
   init = function()
     vim.api.nvim_command('set foldmethod=expr')
@@ -63,69 +59,8 @@ return {
           node_decremental = false,
         },
       },
-
       indent = {
         enable = false,
-      },
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
-        context_commentstring = {
-          enable = true,
-          config = {
-            javascript = {
-              __default = '// %s',
-              jsx_element = '{/* %s */}',
-              jsx_fragment = '{/* %s */}',
-              jsx_attribute = '// %s',
-              comment = '// %s',
-            },
-          },
-        },
-      },
-      rainbow = {
-        enable = true,
-        extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
-        max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
-      },
-      matchup = {
-        enable = true, -- mandatory, false will disable the whole extension
-        -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
-        -- [options]
-      },
-      textobjects = {
-        select = {
-          enable = true,
-
-          -- Automatically jump forward to textobj, similar to targets.vim
-          lookahead = true,
-
-          keymaps = {
-            -- You can use the capture groups defined in textobjects.scm
-            -- ['aa'] = '@parameter.outer',
-            -- ['ia'] = '@parameter.inner',
-            ['af'] = '@function.outer',
-            ['if'] = '@function.inner',
-            ['ac'] = '@class.outer',
-            ['ic'] = '@class.inner',
-          },
-        },
-        move = {
-          enable = true,
-          set_jumps = true, -- whether to set jumps in the jumplist
-          goto_next_start = {
-            [']]'] = '@function.outer',
-          },
-          goto_next_end = {
-            [']['] = '@function.outer',
-          },
-          goto_previous_start = {
-            ['[['] = '@function.outer',
-          },
-          goto_previous_end = {
-            ['[]'] = '@function.outer',
-          },
-        },
       },
     })
   end,
