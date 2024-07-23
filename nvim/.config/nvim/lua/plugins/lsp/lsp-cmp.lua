@@ -50,7 +50,7 @@ return {
       --   },
       -- },
       mapping = cmp.mapping.preset.insert({
-        ['<cr>'] = cmp.mapping.confirm({ select = true }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
         ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),

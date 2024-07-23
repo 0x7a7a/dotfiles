@@ -14,8 +14,14 @@ Keymap('v', 'H', '^')
 Keymap('n', 'L', '$')
 Keymap('v', 'L', '$')
 
+Keymap('i', '<C-h>', '<left>')
+Keymap('i', '<C-j>', '<down>')
+Keymap('i', '<C-k>', '<up>')
+Keymap('i', '<C-l>', '<right>')
+
 Keymap('v', '<leader>y', '"+y', { desc = 'Copy to system clipboard' })
 Keymap('x', '<leader>p', '"_dP', { desc = 'Paste but do not replace register' })
+Keymap('n', 'c', '"_c', { desc = 'Pure key c' })
 Keymap('n', '<leader><leader>', '<C-^>', { desc = 'Toggle last jumppath' })
 
 Keymap('n', '<leader>bb', '<cmd>bd<cr>', { desc = ':bdelete' })
