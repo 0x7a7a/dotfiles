@@ -43,6 +43,7 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 GO111MODULE=auto
 GOPROXY="https://goproxy.cn/,direct"
 
+## Lf default editor
 export EDITOR=nvim
 
 path=(
