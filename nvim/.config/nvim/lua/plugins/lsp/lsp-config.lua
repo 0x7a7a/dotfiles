@@ -164,16 +164,15 @@ return {
       lspconfig.eslint.setup({})
     end
 
-    if vim.fn.executable('tailwindcss-language-server') ~= 0 and utils.npm_is_package_installed('tailwindcss') then
+    if vim.fn.executable('tailwindcss-language-server') ~= 0 and utils.npm_pkg_installed('tailwindcss') then
       lspconfig.tailwindcss.setup({})
     end
 
-    -- npm i -g vscode-langservers-extracted
     -- include cssls
     lspconfig.html.setup({
       capabilities = capabilities,
       on_attach = custom_attach,
-      filetypes = { 'html', 'svelte' },
+      filetypes = { 'html', 'templ', 'svelte' },
     })
 
     -- vue
@@ -189,11 +188,9 @@ return {
       },
     })
 
-    lspconfig.tsserver.setup({
-      capabilities = capabilities,
-      on_attach = custom_attach,
-
-      init_options = {
+    local ts_init = {}
+    if utils.npm_pkg_installed('vue') then
+      ts_init = {
         plugins = {
           {
             name = '@vue/typescript-plugin',
@@ -201,7 +198,13 @@ return {
             languages = { 'vue' },
           },
         },
-      },
+      }
+    end
+    lspconfig.tsserver.setup({
+      capabilities = capabilities,
+      on_attach = custom_attach,
+
+      init_options = ts_init,
 
       filetypes = {
         'javascript',
@@ -211,7 +214,7 @@ return {
       },
     })
 
-    if not utils.npm_is_package_installed('svelte') then
+    if not utils.npm_pkg_installed('svelte') then
       lspconfig.emmet_language_server.setup({})
     end
 

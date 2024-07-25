@@ -20,7 +20,7 @@ M.npm_read_json_file = function(filename)
   return json
 end
 
-M.npm_is_package_installed = function(package)
+M.npm_pkg_installed = function(package)
   local package_json = M.npm_read_json_file('package.json')
   if not package_json then
     return false

@@ -1,5 +1,6 @@
 return {
   'rebelot/kanagawa.nvim',
+  enabled = false,
   lazy = true,
   opts = {
     undercurl = true, -- enable undercurls

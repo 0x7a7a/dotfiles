@@ -16,6 +16,7 @@ return {
         'goimports',
         'goimports-reviser',
         'stylua',
+        'html-lsp',
         'eslint_d',
         'prettierd',
         'lua-language-server',
