@@ -9,6 +9,7 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         go = { 'goimports', 'goimports-reviser', 'gofumpt' },
+        typescript = { 'prettierd' },
         javascript = { 'prettierd' },
         json = { 'prettierd' },
         svelte = { 'prettierd' },

@@ -1,8 +1,13 @@
 return {
   'ibhagwan/fzf-lua',
+  enabled = false,
   config = function()
     local fzflua = require('fzf-lua')
-    fzflua.setup()
+    fzflua.setup({
+      files = {
+        file_icons = 'mini',
+      },
+    })
 
     local files_opts = {
       previewer = false,

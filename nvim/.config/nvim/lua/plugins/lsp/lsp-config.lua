@@ -43,12 +43,12 @@ return {
       end
 
       if package.loaded['telescope'] then
-        map('gd', '<cmd>Telescope lsp_definitions<cr>', { desc = '[g]oto [d]efinition' })
-        map('gD', '<cmd>Telescope lsp_type_definitions<cr>', { desc = '[G]oto type [D]eclaration' })
-        map('gI', '<cmd>Telescope lsp_implementations<cr>', { desc = '[G]oto [I]mplementation' })
-        map('gs', '<cmd>Telescope lsp_document_symbols<cr>', { desc = '[G]oto Document [S]ymbols' })
-        map('grr', '<cmd>Telescope lsp_references<cr>', { desc = '[G]oto [R]eferences' })
-        map('gra', '<cmd>Telescope lsp_code_actions<cr>', { desc = 'Code Actions' })
+        local builtin = require('telescope.builtin')
+        map('gd', builtin.lsp_definitions, { desc = '[g]oto [d]efinition' })
+        map('gD', builtin.lsp_type_definitions, { desc = '[G]oto type [D]eclaration' })
+        map('gI', builtin.lsp_implementations, { desc = '[G]oto [I]mplementation' })
+        map('gs', builtin.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
+        map('grr', builtin.lsp_references, { desc = '[G]oto [R]eferences' })
       end
 
       if package.loaded['fzf-lua'] then

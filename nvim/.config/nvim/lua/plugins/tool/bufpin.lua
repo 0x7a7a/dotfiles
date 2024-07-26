@@ -3,9 +3,6 @@ return {
   dir = '~/dev/project/neovim-plugins/bufpin.nvim',
   event = 'VeryLazy',
   enabled = false,
-  -- dependencies = {
-  --   'nvim-tree/nvim-web-devicons',
-  -- },
   config = function()
     local bufpin = require('bufpin')
     bufpin.setup()
