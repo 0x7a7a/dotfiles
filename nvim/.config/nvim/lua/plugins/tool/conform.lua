@@ -11,6 +11,7 @@ return {
         go = { 'goimports', 'goimports-reviser', 'gofumpt' },
         typescript = { 'prettierd' },
         javascript = { 'prettierd' },
+        css = { 'prettierd' },
         json = { 'prettierd' },
         svelte = { 'prettierd' },
       },
