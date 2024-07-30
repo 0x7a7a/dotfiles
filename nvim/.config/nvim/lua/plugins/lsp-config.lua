@@ -28,9 +28,9 @@ return {
         },
       },
     })
-    -- vim.auto('CursorHold', function()
-    --   vim.diagnostic.open_float()
-    -- end)
+    Z.autocmd('CursorHold', function()
+      vim.diagnostic.open_float()
+    end)
 
     local utils = require('utils')
     local lspconfig = require('lspconfig')

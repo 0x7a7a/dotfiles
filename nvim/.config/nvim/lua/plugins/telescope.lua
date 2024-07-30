@@ -116,27 +116,27 @@ return {
     map(
       'n',
       '<Space>/',
-      '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+      '<Cmd>Telescope current_buffer_fuzzy_find<CR>',
       { desc = '[/] Fuzzily search in current buffer' }
     )
-    map('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
-    map('n', '<C-\\>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
-    map('n', '<Space>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
+    map('n', '<C-p>', '<Cmd>Telescope find_files<CR>', { desc = '[S]earch [F]iles' })
+    map('n', '<C-\\>', '<Cmd>Telescope buffers<CR>', { desc = 'Search Buffers' })
+    map('n', '<Space>?', '<Cmd>Telescope oldfiles<CR>', { desc = '[?] Find recently opened files' })
     map(
       'n',
       '<Space>sg',
-      '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>',
+      '<Cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
       { desc = '[S]earch by [G]rep' }
     )
-    map('n', '<Space>sa', '<cmd>Telescope aerial<cr>', { desc = '[S]earch [U]ndo' })
-    map('n', '<Space>st', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
-    map('n', '<Space>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
-    map('n', '<Space>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
+    map('n', '<Space>sa', '<Cmd>Telescope aerial<CR>', { desc = '[S]earch [U]ndo' })
+    map('n', '<Space>st', '<Cmd>Telescope git_files<CR>', { desc = '[S]earch by [G]it files' })
+    map('n', '<Space>sh', '<Cmd>Telescope help_tags<CR>', { desc = '[S]earch [H]elp' })
+    map('n', '<Space>sd', '<Cmd>Telescope diagnostics<CR>', { desc = '[S]earch [D]iagnostics' })
     map('n', '<Space>sD', function()
       require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config'), fllow = true })
     end, { desc = '[S]earch [D]otfiles' })
-    map('n', '<Space>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch current [W]ord' })
-    map('n', '<Space>sc', '<cmd>Telescope commands<cr>', { desc = '[S]earch [C]ommands' })
-    map('n', '<Space>sr', '<cmd>Telescope registers<cr>', { desc = '[S]earch [R]egisters' })
+    map('n', '<Space>sw', '<Cmd>Telescope grep_string<CR>', { desc = '[S]earch current [W]ord' })
+    map('n', '<Space>sc', '<Cmd>Telescope commands<CR>', { desc = '[S]earch [C]ommands' })
+    map('n', '<Space>sr', '<Cmd>Telescope registers<CR>', { desc = '[S]earch [R]egisters' })
   end,
 }

@@ -1,15 +1,17 @@
 local opt = vim.opt
 -- stylua: ignore start
+-- Leader
 vim.g.mapleader = ','
 
 -- General
-opt.backup       = false
-opt.writebackup  = false
-opt.mouse        = 'a'
-opt.mousescroll  = 'ver:25,hor:6'
-opt.switchbuf    = 'usetab'
-opt.undofile     = true
-opt.undodir = '/tmp/.undodir'
+opt.backup      = false
+opt.writebackup = false
+opt.noswapfile  = true
+opt.mouse       = 'a'
+opt.mousescroll = 'ver:25,hor:6'
+opt.switchbuf   = 'usetab'
+opt.undofile    = true
+opt.undodir     = '/tmp/.undodir'
 
 -- UI
 opt.wrap           = false
@@ -23,17 +25,16 @@ opt.showmode       = false
 opt.signcolumn     = 'yes'
 opt.splitbelow     = true
 opt.splitright     = true
-opt.background     = 'dark'
 opt.termguicolors  = true
 opt.winblend       = 10
 opt.cursorline     = true
-opt.cursorlineopt='number'
+opt.cursorlineopt  = 'number'
 
 vim.o.fillchars = table.concat(
   { 'eob: ', 'fold:╌', 'horiz:═', 'horizdown:╦', 'horizup:╩', 'vert:║', 'verthoriz:╬', 'vertleft:╣', 'vertright:╠' },
   ','
 )
-vim.o.listchars = table.concat({'eol:↴', 'extends:…', 'nbsp:␣', 'precedes:…', 'tab:> ' }, ',')
+vim.o.listchars = table.concat({ 'extends:…', 'nbsp:␣', 'precedes:…', 'tab:> ' }, ',')
 
 -- Edit
 opt.autoindent    = true
@@ -49,9 +50,9 @@ opt.virtualedit   = 'block'
 opt.iskeyword:append('-')
 
 -- Fold
-opt.foldmethod  = 'indent'
-opt.foldlevel   = 1
-opt.foldnestmax = 10
+-- opt.foldmethod  = 'indent'
+-- opt.foldlevel   = 1
+-- opt.foldnestmax = 10
 
 -- Command Menu
 opt.wildmode = 'longest:full,full'
@@ -62,7 +63,8 @@ opt.timeoutlen = 300
 -- stylua: ignore end
 
 -- Automatic switching of relative and absolute line numbers
-Z.autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
+local autocmd = Z.autocmd
+autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
   local ft = vim.bo.filetype
   if ft == 'help' then
     return
@@ -77,7 +79,15 @@ Z.autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
 end)
 
 -- Flash yanked lines
-Z.autocmd('TextYankPost', function()
+autocmd('TextYankPost', function()
+  vim.highlight.on_yank({
+    higroup = 'IncSearch',
+    on_visual = false,
+    timeout = 150,
+  })
+end)
+
+autocmd('TextYankPost', function()
   vim.highlight.on_yank({
     higroup = 'IncSearch',
     on_visual = false,

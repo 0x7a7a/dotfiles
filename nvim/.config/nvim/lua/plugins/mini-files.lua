@@ -1,7 +1,7 @@
 return {
   'echasnovski/mini.files',
   keys = {
-    { '<Space>f', '<cmd>lua require("mini.files").open()<cr>', desc = 'Open MiniFiles' },
+    { '<Space>f', '<Cmd>lua require("mini.files").open()<CR>', desc = 'Open MiniFiles' },
   },
   config = function()
     local minifiles = require('mini.files')

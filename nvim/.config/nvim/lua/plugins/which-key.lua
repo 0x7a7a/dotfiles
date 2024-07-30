@@ -4,7 +4,7 @@ return {
   config = function()
     local wk = require('which-key')
     wk.setup({
-      delay = 1000,
+      delay = 500,
       icons = {
         rules = false,
       },
