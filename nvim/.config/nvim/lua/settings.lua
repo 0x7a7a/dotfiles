@@ -25,7 +25,6 @@ opt.signcolumn     = 'yes'
 opt.splitbelow     = true
 opt.splitright     = true
 opt.termguicolors  = true
-opt.winblend       = 10
 opt.cursorline     = true
 opt.cursorlineopt  = 'number'
 

@@ -3,7 +3,6 @@ return {
   event = 'BufWritePre',
   config = function()
     local conform = require('conform')
-    local utils = require('utils')
 
     conform.setup({
       formatters_by_ft = {
@@ -25,7 +24,7 @@ return {
     local function get_stylua_config()
       local stylua_conf = '.stylua.toml'
 
-      if not utils.root_has_file(stylua_conf) then
+      if not vim.fs.find(stylua_conf, { upward = true }) then
         return vim.fn.stdpath('config') .. '/' .. stylua_conf
       end
       return vim.fn.getcwd() .. '/' .. stylua_conf
