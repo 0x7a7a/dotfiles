@@ -34,10 +34,29 @@ function Z.toggle_quickfix()
   vim.cmd(cmd)
 end
 
-function Z.update_plugins()
-  vim.cmd(':TSUpdate')
-  require('lazy').sync()
+function Z.npm_installed(package)
+  local paths = vim.fs.find('package.json', { upward = true })
+  if #paths == 0 then
+    return false
+  end
+
+  local package_file = paths[1]
+  local package_json = vim.fn.json_decode(vim.fn.readfile(package_file))
+
+  if package_json.dependencies and package_json.dependencies[package] then
+    return true
+  end
+  if package_json.devDependencies and package_json.devDependencies[package] then
+    return true
+  end
+
+  return false
 end
+
+-- function Z.update_plugins()
+--   vim.cmd(':TSUpdate')
+--   require('lazy').sync()
+-- end
 
 -- User command
 local usercmd = vim.api.nvim_create_user_command

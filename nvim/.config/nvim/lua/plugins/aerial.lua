@@ -2,16 +2,12 @@ return {
   'stevearc/aerial.nvim',
   keys = {
     { '<Space>a', '<Cmd>AerialToggle!<CR>', desc = 'Toggle Aerial' },
+    { '[f', '<Cmd>AerialPrev<CR>', desc = 'Prev Function' },
+    { ']f', '<Cmd>AerialNext<CR>', desc = 'Next Fcuntion' },
   },
   config = function()
     require('aerial').setup({
-      on_attach = function(_bufnr)
-        -- vim.keymap.set('n', '[f', '<Cmd>AerialPrev<CR>', { buffer = bufnr })
-        -- vim.keymap.set('n', ']f', '<Cmd>AerialNext<CR>', { buffer = bufnr })
-      end,
-
       show_guides = true,
-
       layout = {
         min_width = 15,
       },

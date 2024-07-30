@@ -32,7 +32,7 @@ return {
       vim.diagnostic.open_float()
     end)
 
-    local utils = require('utils')
+    local npm_installed = Z.npm_installed
     local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -172,7 +172,7 @@ return {
       lspconfig.eslint.setup({})
     end
 
-    if utils.npm_pkg_installed('tailwindcss') then
+    if npm_installed('tailwindcss') then
       lspconfig.tailwindcss.setup({})
     end
 
@@ -200,7 +200,7 @@ return {
     })
 
     local ts_init = {}
-    if utils.npm_pkg_installed('vue') then
+    if npm_installed('vue') then
       ts_init = {
         plugins = {
           {
@@ -225,7 +225,7 @@ return {
       },
     })
 
-    if not utils.npm_pkg_installed('svelte') then
+    if not npm_installed('svelte') then
       lspconfig.emmet_language_server.setup({})
     end
 

@@ -29,10 +29,15 @@ opt.winblend       = 10
 opt.cursorline     = true
 opt.cursorlineopt  = 'number'
 
-vim.o.fillchars = table.concat(
-  { 'eob: ', 'fold:╌', 'horiz:═', 'horizdown:╦', 'horizup:╩', 'vert:║', 'verthoriz:╬', 'vertleft:╣', 'vertright:╠' },
-  ','
-)
+vim.o.fillchars = table.concat({
+  horiz = '━',
+  horizup = '┻',
+  horizdown = '┳',
+  vert = '┃',
+  vertleft = '┨',
+  vertright = '┣',
+  verthoriz = '╋',
+})
 vim.o.listchars = table.concat({ 'extends:…', 'nbsp:␣', 'precedes:…', 'tab:> ' }, ',')
 
 -- Edit
