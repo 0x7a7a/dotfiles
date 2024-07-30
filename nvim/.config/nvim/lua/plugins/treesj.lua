@@ -4,7 +4,7 @@ return {
   config = function()
     local treesj = require('treesj')
     treesj.setup({ use_default_keymaps = false })
-    Keymap('n', 'gJ', treesj.join)
-    Keymap('n', 'gS', treesj.split)
+    vim.keymap.set('n', 'gJ', treesj.join)
+    vim.keymap.set('n', 'gS', treesj.split)
   end,
 }

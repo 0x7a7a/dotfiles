@@ -53,8 +53,6 @@ return {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
         ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-e>'] = cmp.mapping.abort(),
 
         ['<Tab>'] = cmp.mapping(function(fallback)
@@ -96,14 +94,17 @@ return {
             end
             return true
           end,
+          priority = 9,
         },
-        { name = 'luasnip' },
+        { name = 'luasnip', priority = 10 },
       }, {
         {
           name = 'buffer',
+          priority = 9,
         },
         {
           name = 'path',
+          priority = 8,
         },
       }),
     })

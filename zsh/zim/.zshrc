@@ -41,7 +41,8 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 ##### Env #####
 GO111MODULE=auto
-GOPROXY="https://goproxy.cn/,direct"
+GOPROXY="https://proxy.golang.org,direct"
+# GOPROXY="https://goproxy.cn/,direct"
 
 ## Lf default editor
 export EDITOR=nvim
@@ -100,3 +101,4 @@ fkill() {
 	echo $pid | xargs kill -${1:-9}
   fi
 }
+

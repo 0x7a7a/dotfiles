@@ -1,4 +1,8 @@
-require('core')
+_G.Z = {}
+
+require('functions')
+require('settings')
+require('mappings')
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -24,9 +28,6 @@ require('lazy').setup({
     enabled = false,
   },
 })
-
-Keymap('n', '<leader>Ps', '<cmd>Lazy sync<cr>')
-Keymap('n', '<leader>Pp', '<cmd>Lazy profile<cr>')
 
 vim.cmd.colorscheme('gruvbox-material')
 -- vim.cmd.colorscheme('kanagawa')

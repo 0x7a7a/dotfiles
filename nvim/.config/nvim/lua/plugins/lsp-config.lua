@@ -4,19 +4,33 @@ return {
   'neovim/nvim-lspconfig',
   event = 'BufEnter',
   config = function()
+    local ERROR = vim.diagnostic.severity.ERROR
+    local WARN = vim.diagnostic.severity.WARN
+    local HINT = vim.diagnostic.severity.HINT
+    local INFO = vim.diagnostic.severity.INFO
     vim.diagnostic.config({
-      -- jump = { float = true },
-      -- float = { border = 'solid' },
-      virtual_text = true,
+      float = {
+        close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
+        focusable = false,
+        prefix = ' ',
+        source = 'if_many',
+      },
+      virtual_text = {
+        min = ERROR,
+        max = ERROR,
+      },
       signs = {
         text = {
-          [vim.diagnostic.severity.ERROR] = ' ',
-          [vim.diagnostic.severity.WARN] = ' ',
-          [vim.diagnostic.severity.HINT] = ' ',
-          [vim.diagnostic.severity.INFO] = ' ',
+          [ERROR] = ' ',
+          [WARN] = ' ',
+          [HINT] = ' ',
+          [INFO] = ' ',
         },
       },
     })
+    -- vim.auto('CursorHold', function()
+    --   vim.diagnostic.open_float()
+    -- end)
 
     local utils = require('utils')
     local lspconfig = require('lspconfig')
@@ -24,7 +38,7 @@ return {
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-    -- refrences/rename/code action is built-in by default
+    -- Refrences/rename/code action is built-in by default
     -- https://github.com/neovim/neovim/pull/28500
     -- vim.keymap.del('n', 'grn')
     -- vim.keymap.del('n', 'grr')
@@ -133,7 +147,6 @@ return {
       },
     })
 
-    -- configure go server
     lspconfig.gopls.setup({
       capabilities = capabilities,
       on_attach = custom_attach,
@@ -153,29 +166,27 @@ return {
       },
     })
 
-    lspconfig.cssls.setup({
-      capabilities = capabilities,
-      on_attach = custom_attach,
-    })
-
     -- use lsp eslint instead null-ls eslint
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
     if vim.fn.executable('eslint') ~= 0 then
       lspconfig.eslint.setup({})
     end
 
-    if vim.fn.executable('tailwindcss-language-server') ~= 0 and utils.npm_pkg_installed('tailwindcss') then
+    if utils.npm_pkg_installed('tailwindcss') then
       lspconfig.tailwindcss.setup({})
     end
 
-    -- include cssls
     lspconfig.html.setup({
       capabilities = capabilities,
       on_attach = custom_attach,
       filetypes = { 'html', 'templ', 'svelte' },
     })
+    lspconfig.cssls.setup({
+      capabilities = capabilities,
+      on_attach = custom_attach,
+    })
 
-    -- vue
+    -- Vue language server
     -- https://github.com/vuejs/language-tools/issues/3925
     -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371
     -- https://www.reddit.com/r/neovim/comments/1bib0v3/help_vuelanguageserver_setup_with_kickstartmason/

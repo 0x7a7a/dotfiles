@@ -111,31 +111,32 @@ return {
     require('telescope').load_extension('fzf')
     require('telescope').load_extension('aerial')
     require('telescope').load_extension('live_grep_args')
+    local map = vim.keymap.set
 
-    Keymap(
+    map(
       'n',
       '<Space>/',
       '<cmd>Telescope current_buffer_fuzzy_find<cr>',
       { desc = '[/] Fuzzily search in current buffer' }
     )
-    Keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
-    Keymap('n', '<C-\\>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
-    Keymap('n', '<Space>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
-    Keymap(
+    map('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = '[S]earch [F]iles' })
+    map('n', '<C-\\>', '<cmd>Telescope buffers<cr>', { desc = 'Search Buffers' })
+    map('n', '<Space>?', '<cmd>Telescope oldfiles<cr>', { desc = '[?] Find recently opened files' })
+    map(
       'n',
       '<Space>sg',
       '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>',
       { desc = '[S]earch by [G]rep' }
     )
-    Keymap('n', '<Space>sa', '<cmd>Telescope aerial<cr>', { desc = '[S]earch [U]ndo' })
-    Keymap('n', '<Space>st', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
-    Keymap('n', '<Space>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
-    Keymap('n', '<Space>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
-    Keymap('n', '<Space>sD', function()
+    map('n', '<Space>sa', '<cmd>Telescope aerial<cr>', { desc = '[S]earch [U]ndo' })
+    map('n', '<Space>st', '<cmd>Telescope git_files<cr>', { desc = '[S]earch by [G]it files' })
+    map('n', '<Space>sh', '<cmd>Telescope help_tags<cr>', { desc = '[S]earch [H]elp' })
+    map('n', '<Space>sd', '<cmd>Telescope diagnostics<cr>', { desc = '[S]earch [D]iagnostics' })
+    map('n', '<Space>sD', function()
       require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config'), fllow = true })
     end, { desc = '[S]earch [D]otfiles' })
-    Keymap('n', '<Space>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch current [W]ord' })
-    Keymap('n', '<Space>sc', '<cmd>Telescope commands<cr>', { desc = '[S]earch [C]ommands' })
-    Keymap('n', '<Space>sr', '<cmd>Telescope registers<cr>', { desc = '[S]earch [R]egisters' })
+    map('n', '<Space>sw', '<cmd>Telescope grep_string<cr>', { desc = '[S]earch current [W]ord' })
+    map('n', '<Space>sc', '<cmd>Telescope commands<cr>', { desc = '[S]earch [C]ommands' })
+    map('n', '<Space>sr', '<cmd>Telescope registers<cr>', { desc = '[S]earch [R]egisters' })
   end,
 }

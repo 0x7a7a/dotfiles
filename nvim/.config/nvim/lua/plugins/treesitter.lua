@@ -22,7 +22,6 @@ return {
         'vimdoc',
       },
       sync_install = true,
-      auto_install = false,
 
       highlight = {
         enable = true,
@@ -34,6 +33,16 @@ return {
           end
         end,
       },
+
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = '<Enter>',
+          node_incremental = '<Enter>',
+          node_decremental = '<BS>',
+        },
+      },
+
       indent = {
         enable = false,
       },

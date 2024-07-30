@@ -24,13 +24,12 @@ return {
         return '<Ignore>'
       end
 
-      -- Navigation
-      Keymap('n', ']c', next_hunk, { expr = true, desc = 'Next git hunk' })
-      Keymap('n', '[c', prev_hunk, { expr = true, desc = 'Prev git hunk' })
-      Keymap('n', '<leader>gp', gs.preview_hunk, { desc = 'Gitsigns: preview diff hunk' })
-      Keymap('n', '<leader>grh', gs.reset_hunk, { desc = 'Gitsigns: reset diff hunk over cursor' })
-      Keymap('n', '<leader>grb', gs.reset_buffer, { desc = 'Gitsigns: reset diff for entire buffer' })
-      Keymap('n', '<leader>gb', gs.blame_line, { desc = 'Gitsigns: blame line' })
+      vim.keymap.set('n', ']c', next_hunk, { expr = true, desc = 'Next git hunk' })
+      vim.keymap.set('n', '[c', prev_hunk, { expr = true, desc = 'Prev git hunk' })
+      vim.keymap.set('n', '<leader>gp', gs.preview_hunk, { desc = 'Gitsigns: preview diff hunk' })
+      vim.keymap.set('n', '<leader>grh', gs.reset_hunk, { desc = 'Gitsigns: reset diff hunk over cursor' })
+      vim.keymap.set('n', '<leader>grb', gs.reset_buffer, { desc = 'Gitsigns: reset diff for entire buffer' })
+      vim.keymap.set('n', '<leader>gb', gs.blame_line, { desc = 'Gitsigns: blame line' })
     end,
 
     -- current_line_blame = true,
