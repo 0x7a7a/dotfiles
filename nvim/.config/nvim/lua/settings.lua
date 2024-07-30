@@ -6,7 +6,6 @@ vim.g.mapleader = ','
 -- General
 opt.backup      = false
 opt.writebackup = false
-opt.noswapfile  = true
 opt.mouse       = 'a'
 opt.mousescroll = 'ver:25,hor:6'
 opt.switchbuf   = 'usetab'

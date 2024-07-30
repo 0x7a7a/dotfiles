@@ -19,18 +19,18 @@ return {
       },
     }
 
-    map('n', '<C-p>', function()
+    vim.keymap.set('n', '<C-p>', function()
       fzflua.files(files_opts)
     end, { desc = '[S]earch [F]iles' })
-    map('n', '<C-\\>', fzflua.buffers, { desc = 'Search buffers' })
-    map('n', '<Space>/', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
-    map('n', '<Space>sg', fzflua.live_grep_native, { desc = '[S]earch by [G]rep' })
-    map('n', '<Space>ss', fzflua.live_grep_resume, { desc = '[S]earch by [G]rep' })
-    map('n', '<Space>sh', fzflua.help_tags, { desc = '[S]earch [H]elp' })
-    map('n', '<Space>so', fzflua.oldfiles, { desc = '[S]earch [O]ldfiles' })
-    map('n', '<Space>sd', fzflua.diagnostics_workspace, { desc = '[S]earch [D]iagnostics' })
-    map('n', '<Space>sw', fzflua.grep_cword, { desc = '[S]earch current [W]ord' })
-    map('n', '<Space>sc', fzflua.commands, { desc = '[S]earch [C]ommands' })
-    map('n', '<Space>sr', fzflua.registers, { desc = '[S]earch [R]egisters' })
+    vim.keymap.set('n', '<C-\\>', fzflua.buffers, { desc = 'Search buffers' })
+    vim.keymap.set('n', '<Space>/', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
+    vim.keymap.set('n', '<Space>sg', fzflua.live_grep_native, { desc = '[S]earch by [G]rep' })
+    vim.keymap.set('n', '<Space>ss', fzflua.live_grep_resume, { desc = '[S]earch by [G]rep' })
+    vim.keymap.set('n', '<Space>sh', fzflua.help_tags, { desc = '[S]earch [H]elp' })
+    vim.keymap.set('n', '<Space>so', fzflua.oldfiles, { desc = '[S]earch [O]ldfiles' })
+    vim.keymap.set('n', '<Space>sd', fzflua.diagnostics_workspace, { desc = '[S]earch [D]iagnostics' })
+    vim.keymap.set('n', '<Space>sw', fzflua.grep_cword, { desc = '[S]earch current [W]ord' })
+    vim.keymap.set('n', '<Space>sc', fzflua.commands, { desc = '[S]earch [C]ommands' })
+    vim.keymap.set('n', '<Space>sr', fzflua.registers, { desc = '[S]earch [R]egisters' })
   end,
 }
