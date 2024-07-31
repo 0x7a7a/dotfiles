@@ -111,8 +111,8 @@ return {
     require('telescope').load_extension('fzf')
     require('telescope').load_extension('aerial')
     require('telescope').load_extension('live_grep_args')
-    local map = vim.keymap.set
 
+    local map = vim.keymap.set
     map(
       'n',
       '<Space>/',

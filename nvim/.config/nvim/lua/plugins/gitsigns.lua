@@ -32,6 +32,6 @@ return {
       vim.keymap.set('n', '<leader>gb', gs.blame_line, { desc = 'Gitsigns: blame line' })
     end,
 
-    current_line_blame = true,
+    -- current_line_blame = true,
   },
 }

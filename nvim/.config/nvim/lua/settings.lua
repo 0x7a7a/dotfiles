@@ -15,7 +15,7 @@ opt.updatetime  = 250
 opt.timeoutlen  = 300
 
 -- UI
-opt.wrap           = false
+opt.wrap           = true
 opt.list           = true
 opt.breakindent    = true
 opt.linebreak      = true
