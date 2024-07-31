@@ -11,6 +11,8 @@ opt.mousescroll = 'ver:25,hor:6'
 opt.switchbuf   = 'usetab'
 opt.undofile    = true
 opt.undodir     = '/tmp/.undodir'
+opt.updatetime  = 250
+opt.timeoutlen  = 300
 
 -- UI
 opt.wrap           = false
@@ -27,6 +29,7 @@ opt.splitright     = true
 opt.termguicolors  = true
 opt.cursorline     = true
 opt.cursorlineopt  = 'number'
+opt.wildmode       = 'longest:full,full'
 
 vim.o.fillchars = table.concat({
   horiz = '━',
@@ -56,13 +59,6 @@ opt.iskeyword:append('-')
 -- opt.foldmethod  = 'indent'
 -- opt.foldlevel   = 1
 -- opt.foldnestmax = 10
-
--- Command Menu
-opt.wildmode = 'longest:full,full'
-
--- Performance
-opt.updatetime = 100
-opt.timeoutlen = 300
 -- stylua: ignore end
 
 -- Automatic switching of relative and absolute line numbers
@@ -82,14 +78,6 @@ autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
 end)
 
 -- Flash yanked lines
-autocmd('TextYankPost', function()
-  vim.highlight.on_yank({
-    higroup = 'IncSearch',
-    on_visual = false,
-    timeout = 150,
-  })
-end)
-
 autocmd('TextYankPost', function()
   vim.highlight.on_yank({
     higroup = 'IncSearch',
