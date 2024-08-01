@@ -21,6 +21,7 @@ opt.breakindent    = true
 opt.linebreak      = true
 opt.number         = true
 opt.relativenumber = true
+opt.scrolloff      = 5
 opt.pumblend       = 10
 opt.showmode       = false
 opt.signcolumn     = 'yes'

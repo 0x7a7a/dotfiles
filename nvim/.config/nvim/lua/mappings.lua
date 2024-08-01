@@ -65,12 +65,5 @@ map('c', '<C-e>', '<End>')
 map('n', '[q', '<Cmd>cprevious<CR>zz')
 map('n', ']q', '<Cmd>cnext<CR>zz')
 
--- Floaterm
-map('n', '<leader>t', '<Cmd>FloatermToggle<CR>')
-map('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>')
-
-map('n', '<Space>lg', '<Cmd>FloatermNew --title=lazygit --autoclose=2 lazygit<CR>')
-map('n', '<Space>lf', '<Cmd>FloatermNew --title=fl --autoclose=2 lf<CR>')
-
 -- Lazy
 map('n', '<Leader>ps', '<Cmd>Lazy sync<CR>', { desc = 'Update plugins' })

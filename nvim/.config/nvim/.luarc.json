@@ -11,5 +11,8 @@
       "${3rd}/luv/library"
     ],
     "checkThirdParty": "Disable"
-  }
+  },
+    "diagnostics.globals": [
+        "_lazygit_toggle"
+    ]
 }
