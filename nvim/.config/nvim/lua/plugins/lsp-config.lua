@@ -12,12 +12,14 @@ return {
       float = {
         close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
         focusable = false,
+        source = true,
         prefix = ' ',
-        source = 'if_many',
       },
       virtual_text = {
-        min = ERROR,
-        max = ERROR,
+        severity = {
+          min = ERROR,
+          max = ERROR,
+        },
       },
       signs = {
         text = {
@@ -165,12 +167,6 @@ return {
         },
       },
     })
-
-    -- use lsp eslint instead null-ls eslint
-    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
-    if vim.fn.executable('eslint') ~= 0 then
-      lspconfig.eslint.setup({})
-    end
 
     if npm_installed('tailwindcss') then
       lspconfig.tailwindcss.setup({})
