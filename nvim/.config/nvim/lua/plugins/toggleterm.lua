@@ -1,9 +1,10 @@
 return {
   'akinsho/toggleterm.nvim',
-  events = 'VeryLazy',
-  enabled = false,
+  event = 'VeryLazy',
   keys = {
-    { '<leader>t', '<Cmd>ToggleTerm<CR>', desc = 'Toggle Terminal' },
+    { '<Space>t', '<Cmd>ToggleTerm<CR>', desc = 'Toggle Terminal' },
+    { '<Space>lg', '<Cmd>lua _lazygit_toggle<CR>', desc = 'Lazygit TUI' },
+    { '<Space>lf', '<Cmd>lua _lf_toggle<CR>', desc = 'lf TUI' },
   },
   config = function()
     require('toggleterm').setup()
@@ -44,7 +45,7 @@ return {
       vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
       vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
       vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
-      vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:ToggleTerm<CR>')
+      vim.keymap.set('t', '<Space>t', '<C-\\><C-n>:ToggleTerm<CR>')
     end
     -- if you only want these mappings for toggle term use term://*toggleterm#* instead
     vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')

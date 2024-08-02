@@ -76,8 +76,6 @@ alias tr='trash'
 alias rm='rm -i'
 alias cp='cp -r'
 alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
-alias tf='tmuxifier'
-alias tfp='cd $TMUXIFIER_LAYOUT_PATH'
 
 PROXY='http://127.0.0.1:7890'
 alias proxy='export http_proxy=$PROXY https_proxy=$PROXY'

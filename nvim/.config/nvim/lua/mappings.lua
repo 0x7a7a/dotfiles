@@ -3,11 +3,6 @@ local map = vim.keymap.set
 map('n', 'j', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
 map('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
 
-map('n', 'H', '^')
-map('v', 'H', '^')
-map('n', 'L', '$')
-map('v', 'L', '$')
-
 map('i', '<C-h>', '<left>')
 map('i', '<C-j>', '<down>')
 map('i', '<C-k>', '<up>')
