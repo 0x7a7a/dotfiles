@@ -30,5 +30,6 @@ require('lazy').setup({
 })
 
 vim.cmd.colorscheme('gruvbox-material')
+-- vim.cmd.colorscheme('rose-pine')
 -- vim.cmd.colorscheme('kanagawa')
 -- vim.cmd.colorscheme('nordfox')

@@ -85,3 +85,7 @@ autocmd('TextYankPost', function()
     timeout = 150,
   })
 end)
+
+autocmd({ 'BufEnter', 'WinEnter' }, function()
+  vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange' })
+end)

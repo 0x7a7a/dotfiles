@@ -7,17 +7,16 @@ return {
       globalstatus = true,
       icons_enabled = true,
       theme = 'auto',
-      disabled_filetypes = {},
-      component_separators = '|',
+      component_separators = '',
       section_separators = {
         left = '',
         right = '',
       },
     },
     sections = {
-      lualine_a = { 'mode' },
+      lualine_a = { { 'mode', icon = ' ' } },
       lualine_b = {
-        { 'branch' },
+        { 'branch', icon = ' ' },
         {
           'filename',
           file_status = true,
@@ -29,22 +28,27 @@ return {
           symbols = {
             modified = '[+]',
             readonly = '[-]',
+            newfile = '[New]',
             unnamed = '[No Name]',
           },
         },
         { 'diff' },
-      },
-      lualine_c = {
         {
           'diagnostics',
           sources = { 'nvim_diagnostic' },
           symbols = {
-            error = ' ',
-            warn = ' ',
-            info = ' ',
-            hint = ' ',
+            -- error = ' ',
+            -- warn = ' ',
+            -- info = ' ',
+            -- hint = ' ',
+            error = ' ',
+            warn = ' ',
+            info = ' ',
+            hint = '󰝶 ',
           },
         },
+      },
+      lualine_c = {
         { 'aerial' },
       },
 
@@ -53,24 +57,11 @@ return {
           require('lazy.status').updates,
           cond = require('lazy.status').has_updates,
           color = { fg = '#ff9e64' },
-          {
-            'rest',
-            icon = ' ',
-            fg = '#428890',
-          },
         },
       },
       lualine_y = {
         'filetype',
         'encoding',
-        {
-          'fileformat',
-          symbols = {
-            unix = ' ', -- e712
-            dos = ' ', -- e70f
-            mac = ' ', -- e711
-          },
-        },
       },
       lualine_z = { 'progress', 'location' },
     },
