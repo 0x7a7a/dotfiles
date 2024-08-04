@@ -34,6 +34,11 @@ function Z.toggle_quickfix()
   vim.cmd(cmd)
 end
 
+function Z.is_npm_project()
+  local paths = vim.fs.find('package.json', { upward = true })
+  return #paths > 0
+end
+
 function Z.npm_installed(package)
   local paths = vim.fs.find('package.json', { upward = true })
   if #paths == 0 then
@@ -52,22 +57,3 @@ function Z.npm_installed(package)
 
   return false
 end
-
--- function Z.update_plugins()
---   vim.cmd(':TSUpdate')
---   require('lazy').sync()
--- end
-
--- User command
-local usercmd = vim.api.nvim_create_user_command
-usercmd('CopyRelPath', function()
-  local path = vim.fn.expand('%')
-  vim.fn.setreg('+', path)
-  vim.notify('Copied "' .. path .. '" to the clipboard!')
-end, {})
-
-usercmd('CopyPath', function()
-  local path = vim.fn.expand('%:p')
-  vim.fn.setreg('+', path)
-  vim.notify('Copied "' .. path .. '" to the clipboard!')
-end, {})

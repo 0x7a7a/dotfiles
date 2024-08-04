@@ -7,8 +7,6 @@ vim.g.mapleader = ','
 opt.backup      = false
 opt.writebackup = false
 opt.mouse       = 'a'
-opt.mousescroll = 'ver:25,hor:6'
-opt.switchbuf   = 'usetab'
 opt.undofile    = true
 opt.undodir     = '/tmp/.undodir'
 opt.updatetime  = 250
@@ -89,3 +87,17 @@ end)
 autocmd({ 'BufEnter', 'WinEnter' }, function()
   vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange' })
 end)
+
+-- User command
+local usercmd = vim.api.nvim_create_user_command
+usercmd('CopyRelPath', function()
+  local path = vim.fn.expand('%')
+  vim.fn.setreg('+', path)
+  vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
+
+usercmd('CopyPath', function()
+  local path = vim.fn.expand('%:p')
+  vim.fn.setreg('+', path)
+  vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})

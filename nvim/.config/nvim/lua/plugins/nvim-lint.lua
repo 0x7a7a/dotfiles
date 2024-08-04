@@ -12,7 +12,7 @@ return {
       svelte = { 'eslint_d' },
     }
 
-    if Z.npm_installed('eslint') then
+    if not Z.is_npm_project() or Z.npm_installed('eslint') then
       local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
       vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
         group = lint_augroup,
