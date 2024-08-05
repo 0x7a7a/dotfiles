@@ -14,7 +14,6 @@ opt.timeoutlen  = 300
 
 -- UI
 opt.wrap           = true
-opt.list           = true
 opt.breakindent    = true
 opt.linebreak      = true
 opt.number         = true
@@ -39,7 +38,8 @@ vim.o.fillchars = table.concat({
   vertright = '┣',
   verthoriz = '╋',
 })
-vim.o.listchars = table.concat({ 'extends:…', 'nbsp:␣', 'precedes:…', 'tab:> ' }, ',')
+opt.list = false
+opt.listchars = table.concat({ 'extends:…', 'nbsp:␣', 'precedes:…', 'tab:> ' }, ',')
 
 -- Edit
 opt.autoindent    = true
