@@ -10,16 +10,8 @@ return {
     local INFO = vim.diagnostic.severity.INFO
     vim.diagnostic.config({
       float = {
-        close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
-        focusable = false,
         source = true,
         prefix = ' ',
-      },
-      virtual_text = {
-        severity = {
-          min = ERROR,
-          max = ERROR,
-        },
       },
       signs = {
         text = {
@@ -30,9 +22,6 @@ return {
         },
       },
     })
-    Z.autocmd('CursorHold', function()
-      vim.diagnostic.open_float()
-    end)
 
     local npm_installed = Z.npm_installed
     local lspconfig = require('lspconfig')
@@ -78,7 +67,8 @@ return {
 
       map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
-      map('<leader>D', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
+      map('<leader>dl', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
+      map('<leader>df', vim.diagnostic.open_float, { desc = 'Open diagnostic float win' })
 
       map('<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
       map('<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })

@@ -44,11 +44,6 @@ return {
           require('luasnip').lsp_expand(args.body)
         end,
       },
-      -- experimental = {
-      --   ghost_text = {
-      --     hl_group = 'CmpGhostText',
-      --   },
-      -- },
       mapping = cmp.mapping.preset.insert({
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),

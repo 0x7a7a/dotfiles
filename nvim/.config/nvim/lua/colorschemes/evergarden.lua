@@ -1,6 +1,6 @@
 return {
   'comfysage/evergarden',
-  enalbed = false,
+  -- enalbed = false,
   lazy = true,
   priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
   opts = {
