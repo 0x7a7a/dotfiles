@@ -1,5 +1,9 @@
 return {
   'stevearc/overseer.nvim',
   enabled = false,
-  opts = {},
+  opts = {
+    task_list = {
+      direction = 'left',
+    },
+  },
 }
