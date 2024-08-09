@@ -13,6 +13,7 @@ return {
         source = true,
         prefix = ' ',
       },
+      virtual_text = false,
       signs = {
         text = {
           [ERROR] = ' ',
@@ -67,8 +68,7 @@ return {
 
       map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
-      map('<leader>dl', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
-      map('<leader>df', vim.diagnostic.open_float, { desc = 'Open diagnostic float win' })
+      map('<leader>d', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 
       map('<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
       map('<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })
