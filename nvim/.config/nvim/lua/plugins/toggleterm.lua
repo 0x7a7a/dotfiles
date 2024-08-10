@@ -1,6 +1,7 @@
 return {
   'akinsho/toggleterm.nvim',
   event = 'VeryLazy',
+  enabled = false,
   keys = {
     { '<leader>t', '<Cmd>ToggleTerm<CR>', desc = 'Toggle Terminal' },
     { '<Space>lg', '<Cmd>lua _lazygit_toggle<CR>', desc = 'Lazygit TUI' },

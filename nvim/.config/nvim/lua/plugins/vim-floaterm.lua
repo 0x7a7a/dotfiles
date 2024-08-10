@@ -1,6 +1,5 @@
 return {
   'voldikss/vim-floaterm',
-  enabled = false,
   cmd = { 'FloatermNew', 'FloatermToggle' },
   init = function()
     vim.keymap.set('n', '<Space>lg', '<Cmd>FloatermNew --title=lazygit --autoclose=2 lazygit<CR>')
@@ -9,7 +8,7 @@ return {
     vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>')
   end,
   config = function()
-    vim.g.floaterm_height = 0.9
-    vim.g.floaterm_width = 0.9
+    vim.g.floaterm_height = 0.95
+    vim.g.floaterm_width = 0.95
   end,
 }
