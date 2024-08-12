@@ -42,10 +42,11 @@ map('v', '<A-k>', "<Esc><Cmd>'<,'>move'<-2<CR>gv=gv")
 map('n', ']<Space>', 'o<Esc>k', { desc = 'Add a blank line above' })
 map('n', '[<Space>', 'O<Esc>j', { desc = 'Add a blank line below' })
 
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
+-- Smart-splites plugin replaced
+-- map('n', '<C-h>', '<C-w>h')
+-- map('n', '<C-j>', '<C-w>j')
+-- map('n', '<C-k>', '<C-w>k')
+-- map('n', '<C-l>', '<C-w>l')
 
 map('n', '<A-right>', '<Cmd>vertical resize+5<CR>')
 map('n', '<A-left>', '<Cmd>vertical resize-5<CR>')

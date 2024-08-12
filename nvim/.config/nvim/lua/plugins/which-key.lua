@@ -16,9 +16,8 @@ return {
     wk.add({
       { '<leader>b', group = 'Prefix for bdelete' },
       { '<leader>g', group = 'Prefix for git/fugtive' },
-      { '<leader>t', group = 'Prefix for neotest' },
       { '<leader>p', group = 'Prefix for lazy' },
-      { '<leader>q', group = 'Prefix for quicikfix and quit' },
+      { '<leader>q', group = 'Prefix for quickfix and quit' },
 
       { '<Space>l', group = 'Open the tui application' },
       { '<Space>s', group = 'Search with telescope' },
