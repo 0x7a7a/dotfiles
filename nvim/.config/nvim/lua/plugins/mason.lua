@@ -15,6 +15,7 @@ return {
         'gofumpt',
         'goimports',
         'goimports-reviser',
+        'golangci-lint',
         'stylua',
         'css-lsp',
         'html-lsp',
