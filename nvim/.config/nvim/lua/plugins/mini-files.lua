@@ -1,5 +1,14 @@
 return {
   'echasnovski/mini.files',
+  dependencies = {
+    {
+      's1n7ax/nvim-window-picker',
+      name = 'window-picker',
+      event = 'VeryLazy',
+      version = '2.*',
+      opts = {},
+    },
+  },
   keys = {
     { '<Space>f', '<Cmd>lua require("mini.files").open()<CR>', desc = 'Open MiniFiles' },
   },
@@ -62,6 +71,19 @@ return {
         vim.keymap.set('n', '<Space>f', minifiles_toggle, { buffer = buf_id })
         split_open(buf_id, 'gs', 'belowright horizontal')
         split_open(buf_id, 'gv', 'belowright vertical')
+
+        -- Window Pick
+        local open_in_window_picker = function()
+          local fs_entry = minifiles.get_fs_entry()
+          if fs_entry ~= nil and fs_entry.fs_type == 'file' then
+            local picked_window_id = require('window-picker').pick_window()
+            minifiles.set_target_window(picked_window_id)
+          end
+          minifiles.go_in({
+            close_on_file = true,
+          })
+        end
+        vim.keymap.set('n', 'l', open_in_window_picker, { buffer = buf_id, desc = 'Open in target window' })
       end,
     })
   end,
