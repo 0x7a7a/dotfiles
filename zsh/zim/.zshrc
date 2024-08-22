@@ -76,7 +76,7 @@ alias find='fd'
 alias tr='trash'
 alias rm='rm -i'
 alias cp='cp -r'
-alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
+alias up='brew update && brew upgrade && zimfw update -v && bob update --all'
 
 PROXY='http://127.0.0.1:7890'
 alias proxy='export http_proxy=$PROXY https_proxy=$PROXY'

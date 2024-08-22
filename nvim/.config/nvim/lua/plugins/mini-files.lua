@@ -6,7 +6,14 @@ return {
       name = 'window-picker',
       event = 'VeryLazy',
       version = '2.*',
-      opts = {},
+      opts = {
+        filter_rules = {
+          bo = {
+            filetype = { 'minifiles', 'fidget' },
+            buftype = { 'terminal' },
+          },
+        },
+      },
     },
   },
   keys = {

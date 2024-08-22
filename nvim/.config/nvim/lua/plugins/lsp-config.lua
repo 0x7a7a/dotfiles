@@ -162,6 +162,14 @@ return {
       lspconfig.tailwindcss.setup({})
     end
 
+    lspconfig.eslint.setup({
+      on_attach = function(_client, bufnr)
+        vim.api.nvim_create_autocmd('BufWritePre', {
+          buffer = bufnr,
+          command = 'EslintFixAll',
+        })
+      end,
+    })
     lspconfig.html.setup({
       capabilities = capabilities,
       on_attach = custom_attach,

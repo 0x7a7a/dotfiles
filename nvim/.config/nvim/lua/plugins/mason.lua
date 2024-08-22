@@ -19,7 +19,7 @@ return {
         'stylua',
         'css-lsp',
         'html-lsp',
-        'eslint_d',
+        'eslint-lsp',
         'prettierd',
         'lua-language-server',
         'vue-language-server',
