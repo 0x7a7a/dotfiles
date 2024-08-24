@@ -39,11 +39,6 @@ source ~/.p10k.zsh
 #ZVIM
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
-##### Env #####
-GO111MODULE=auto
-GOPROXY="https://proxy.golang.org,direct"
-# GOPROXY="https://goproxy.cn/,direct"
-
 ## Lf default editor
 export EDITOR=nvim
 
@@ -76,7 +71,7 @@ alias find='fd'
 alias tr='trash'
 alias rm='rm -i'
 alias cp='cp -r'
-alias up='brew update && brew upgrade && zimfw update -v && bob update --all'
+alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
 
 PROXY='http://127.0.0.1:7890'
 alias proxy='export http_proxy=$PROXY https_proxy=$PROXY'
