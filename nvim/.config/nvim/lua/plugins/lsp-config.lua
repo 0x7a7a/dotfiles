@@ -275,5 +275,7 @@ return {
       capabilities = capabilities,
       on_attach = custom_attach,
     })
+
+    lspconfig.nil_ls.setup({})
   end,
 }
