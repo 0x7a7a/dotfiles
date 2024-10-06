@@ -10,6 +10,7 @@ return {
         go = { 'goimports', 'goimports-reviser', 'gofumpt' },
         typescript = { 'prettierd' },
         javascript = { 'prettierd' },
+        vue = { 'prettierd' },
         css = { 'prettierd' },
         json = { 'prettierd' },
         svelte = { 'prettierd' },

@@ -1,15 +1,16 @@
 return {
   -- 'hrsh7th/nvim-cmp',
-  'yioneko/nvim-cmp',
-  branch = 'perf',
+  -- 'yioneko/nvim-cmp',
+  -- branch = 'perf',
+  'iguanacucumber/magazine.nvim',
   event = 'VeryLazy',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     'onsails/lspkind-nvim',
-    { 'hrsh7th/cmp-buffer', dependencies = 'nvim-cmp' },
-    { 'hrsh7th/cmp-path', dependencies = 'nvim-cmp' },
-    { 'hrsh7th/cmp-cmdline', dependencies = 'nvim-cmp' },
-    { 'saadparwaiz1/cmp_luasnip', dependencies = 'nvim-cmp' },
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'saadparwaiz1/cmp_luasnip',
   },
   config = function()
     local lspkind = require('lspkind')

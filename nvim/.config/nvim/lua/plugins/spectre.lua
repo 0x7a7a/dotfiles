@@ -1,3 +1,4 @@
+-- MagicDuck/grug-far.nvim
 return {
   'nvim-pack/nvim-spectre',
   keys = {
