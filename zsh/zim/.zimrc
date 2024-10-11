@@ -1,10 +1,12 @@
-zmodule jeffreytse/zsh-vi-mode
-zmodule environment
-zmodule romkatv/powerlevel10k --use degit
-zmodule Aloxaf/fzf-tab
 zmodule zsh-users/zsh-completions --fpath src
-zmodule zdharma-continuum/fast-syntax-highlighting
-zmodule zsh-users/zsh-autosuggestions
-zmodule skywind3000/z.lua --cmd 'eval "$(lua {}/z.lua --init zsh enhanced once)"'
-zmodule ohmyzsh/ohmyzsh --root plugins/extract
+zmodule changyuheng/fz
 zmodule completion
+
+zmodule environment
+zmodule Aloxaf/fzf-tab
+zmodule romkatv/powerlevel10k --use degit
+zmodule zsh-users/zsh-autosuggestions
+zmodule zdharma-continuum/fast-syntax-highlighting
+zmodule ohmyzsh/ohmyzsh --root plugins/extract
+zmodule jeffreytse/zsh-vi-mode
+zmodule skywind3000/z.lua -c 'eval "$(lua {}/z.lua --init zsh enhanced once)"'

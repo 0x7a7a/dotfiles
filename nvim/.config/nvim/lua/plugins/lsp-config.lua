@@ -73,12 +73,6 @@ return {
       map('<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
       map('<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })
 
-      map('[d', function()
-        vim.diagnostic.jump({ count = -1 })
-      end, { desc = 'Previous diagnostic' })
-      map(']d', function()
-        vim.diagnostic.jump({ count = 1 })
-      end, { desc = 'Next diagnostic' })
       map('[e', function()
         vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
       end, { desc = 'Previous error diagnostic' })

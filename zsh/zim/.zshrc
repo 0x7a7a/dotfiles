@@ -42,6 +42,10 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 ## Lf default editor
 export EDITOR=nvim
 
+## fz setting
+FZ_HISTORY_CD_CMD=_zlua
+FZ_CASE_INSENSITIVE=0
+
 path=(
   $HOME/go/bin
   $HOME/.cargo/bin
