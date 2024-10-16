@@ -1,4 +1,4 @@
--- https://github.com/neovim/nvim-lspconfig/blob/master/README.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 -- https://github.com/mjlbach/starter.nvim/blob/master/init.lua
 return {
   'neovim/nvim-lspconfig',
@@ -177,7 +177,6 @@ return {
     -- Vue language server
     -- https://github.com/vuejs/language-tools/issues/3925
     -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371
-    -- https://www.reddit.com/r/neovim/comments/1bib0v3/help_vuelanguageserver_setup_with_kickstartmason/
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vue-support
     lspconfig.volar.setup({
       init_options = {
