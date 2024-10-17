@@ -57,24 +57,30 @@ path=(
   $path
 )
 
-##### Alias #####
 alias ..='cd ..'
 alias ...='cd ../..'
+
 alias ls='lsd'
 alias l='ls -l'
 alias ll='ls -l'
 alias lla='ls -la'
 alias la='ls -a'
 alias lt='ls --tree'
+
 alias nv='nvim'
 alias v='nvim'
 alias lg='lazygit'
 alias kc='kubectl'
 alias grep='rg'
 alias find='fd'
+
 alias tr='trash'
+alias mv='mv -i'
 alias rm='rm -i'
-alias cp='cp -r'
+alias cp='cp -i'
+alias mkdir='mkdir -pv'
+alias genv='printenv | rg -i'
+
 alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
 
 PROXY='http://127.0.0.1:7890'
