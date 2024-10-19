@@ -50,10 +50,11 @@ path=(
   $HOME/go/bin
   $HOME/.cargo/bin
   $HOME/zig
+  $HOME/.krew/bin
   $HOME/.local/share/bob/nvim-bin
   $HOME/.local/share/nvim/mason/bin
   /usr/local/opt/mysql-client/bin
-  /usr/local/opt/openresty/nginx/sbin/
+  /usr/local/opt/openresty/nginx/sbin
   $path
 )
 

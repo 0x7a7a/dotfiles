@@ -3,6 +3,7 @@ zmodule changyuheng/fz
 zmodule completion
 
 zmodule environment
+zmodule ahmetb/kubectl-aliases -s ".kubectl_aliases"
 zmodule Aloxaf/fzf-tab
 zmodule romkatv/powerlevel10k --use degit
 zmodule zsh-users/zsh-autosuggestions
