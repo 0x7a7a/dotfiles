@@ -1,8 +1,6 @@
 return {
-  -- 'hrsh7th/nvim-cmp',
-  -- 'yioneko/nvim-cmp',
-  -- branch = 'perf',
-  'iguanacucumber/magazine.nvim',
+  'hrsh7th/nvim-cmp',
+  -- 'iguanacucumber/magazine.nvim',
   event = 'VeryLazy',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
