@@ -38,6 +38,7 @@ source ~/.p10k.zsh
 #
 #ZVIM
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+ZVM_VI_EDITOR=nvim
 
 ## Lf default editor
 export EDITOR=nvim
