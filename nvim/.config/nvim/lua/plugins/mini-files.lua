@@ -13,6 +13,7 @@ return {
             buftype = { 'terminal' },
           },
         },
+        selection_chars = 'hjkl;',
       },
     },
   },
@@ -21,12 +22,7 @@ return {
   },
   config = function()
     local MiniFiles = require('mini.files')
-    MiniFiles.setup({
-      mappings = {
-        go_in = 'L',
-        go_in_plus = 'l',
-      },
-    })
+    MiniFiles.setup()
 
     local minifiles_toggle = function(...)
       if not MiniFiles.close() then
@@ -60,6 +56,7 @@ return {
         end)
 
         MiniFiles.set_target_window(new_target)
+        MiniFiles.go_in({ close_on_file = true })
       end
 
       -- Adding `desc` will result into `show_help` entries
@@ -72,7 +69,7 @@ return {
       callback = function(args)
         local buf_id = args.data.buf_id
         -- Tweak left-hand side of mapping to your liking
-        vim.keymap.set('n', 'g.', toggle_dotfiles, { buffer = buf_id })
+        vim.keymap.set('n', 'g.', toggle_dotfiles, { buffer = buf_id, desc = 'toggle dotfiles' })
         vim.keymap.set('n', '<Space>f', minifiles_toggle, { buffer = buf_id })
         map_split(buf_id, '<C-s>', 'belowright horizontal')
         map_split(buf_id, '<C-v>', 'belowright vertical')
@@ -82,7 +79,11 @@ return {
           local fs_entry = MiniFiles.get_fs_entry()
           if fs_entry ~= nil and fs_entry.fs_type == 'file' then
             local picked_window_id = require('window-picker').pick_window()
+            if picked_window_id == nil then
+              return
+            end
             MiniFiles.set_target_window(picked_window_id)
+            return
           end
           MiniFiles.go_in({
             close_on_file = true,
