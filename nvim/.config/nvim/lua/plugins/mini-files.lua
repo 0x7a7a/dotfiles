@@ -83,7 +83,6 @@ return {
               return
             end
             MiniFiles.set_target_window(picked_window_id)
-            return
           end
           MiniFiles.go_in({
             close_on_file = true,
