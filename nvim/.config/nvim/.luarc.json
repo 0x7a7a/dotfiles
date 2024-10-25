@@ -4,15 +4,10 @@
     "version": "LuaJIT"
   },
   "workspace": {
-    "library": [
-      "$VIMRUNTIME",
-      "$HOME/.local/share/nvim/lazy/plenary.nvim/lua",
-      "${3rd}/luassert/library",
-      "${3rd}/luv/library"
-    ],
+    "library": ["$VIMRUNTIME", "${3rd}/luv/library"],
     "checkThirdParty": "Disable"
   },
-    "diagnostics.globals": [
-        "_lazygit_toggle"
-    ]
+  "diagnostics": {
+    "unusedLocalExclude": ["_*"]
+  }
 }

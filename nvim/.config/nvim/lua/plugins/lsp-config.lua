@@ -81,9 +81,18 @@ return {
       end, { desc = 'Next error diagnostic' })
     end
 
-    local function default_lua_settings()
-      return {
-        Lua = {
+    require('lspconfig').lua_ls.setup({
+      capabilities = capabilities,
+      on_attach = custom_attach,
+      on_init = function(client)
+        if client.workspace_folders then
+          local path = client.workspace_folders[1].name
+          if vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc') then
+            return
+          end
+        end
+
+        client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
           runtime = {
             version = 'LuaJIT',
           },
@@ -91,36 +100,8 @@ return {
             checkThirdParty = false,
             library = {
               vim.env.VIMRUNTIME,
-              '${3rd}/busted/library',
               '${3rd}/luv/library',
             },
-            -- library = vim.api.nvim_get_runtime_file("", true)
-          },
-        },
-      }
-    end
-    -- https://github.com/neovim/neovim/pull/24592
-    require('lspconfig').lua_ls.setup({
-      capabilities = capabilities,
-      on_attach = custom_attach,
-      on_init = function(client)
-        local path = client.workspace_folders[1].name
-        if not vim.loop.fs_stat(path .. '/.luarc.json') and not vim.loop.fs_stat(path .. '/.luarc.jsonc') then
-          client.config.settings = vim.tbl_deep_extend('force', client.config.settings, default_lua_settings())
-          client.notify('workspace/didChangeConfiguration', { settings = client.config.settings })
-        end
-        return true
-      end,
-
-      settings = {
-        Lua = {
-          workspace = {
-            library = {
-              vim.env.VIMRUNTIME .. '/lua',
-              '${3rd}/busted/library',
-              '${3rd}/luv/library',
-            },
-            checkThirdParty = 'Disable',
           },
           diagnostics = {
             unusedLocalExclude = { '_*' },
@@ -129,7 +110,11 @@ return {
             enable = true,
             setType = true,
           },
-        },
+        })
+      end,
+
+      settings = {
+        Lua = {},
       },
     })
 
