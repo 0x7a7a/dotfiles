@@ -101,7 +101,7 @@ return {
           priority = 9,
         },
         {
-          name = 'path',
+          name = 'async_path',
           priority = 8,
         },
       }),
