@@ -30,6 +30,7 @@ return {
       vim.keymap.set('n', '<leader>grh', gs.reset_hunk, { desc = 'Gitsigns: reset diff hunk over cursor' })
       vim.keymap.set('n', '<leader>grb', gs.reset_buffer, { desc = 'Gitsigns: reset diff for entire buffer' })
       vim.keymap.set('n', '<leader>gb', gs.blame_line, { desc = 'Gitsigns: blame line' })
+      vim.keymap.set('n', '<leader>gB', gs.toggle_current_line_blame, { desc = 'Gitsigns: toggle blame line' })
     end,
 
     -- current_line_blame = true,
