@@ -39,7 +39,7 @@ vim.o.fillchars = table.concat({
   verthoriz = '╋',
 })
 opt.list = false
-opt.listchars = table.concat({ 'extends:…', 'nbsp:␣', 'precedes:…', 'tab:> ' }, ',')
+opt.listchars = table.concat({ 'extends:…', 'nbsp:+', 'precedes:…', 'tab:> ' }, ',')
 
 -- Edit
 opt.autoindent    = true
@@ -54,11 +54,11 @@ opt.tabstop       = 2
 opt.virtualedit   = 'block'
 opt.iskeyword:append('-')
 
--- Fold
--- opt.foldmethod  = 'indent'
--- opt.foldlevel   = 1
--- opt.foldnestmax = 10
--- stylua: ignore end
+-- Fold(nvim-ufo)
+vim.o.foldcolumn = "0"
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 -- Automatic switching of relative and absolute line numbers
 local autocmd = Z.autocmd

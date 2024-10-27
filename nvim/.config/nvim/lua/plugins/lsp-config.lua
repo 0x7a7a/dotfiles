@@ -29,6 +29,11 @@ return {
     local util = require('lspconfig.util')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
+    -- nvim-ufo setting
+    capabilities.textDocument.foldingRange = {
+      dynamicRegistration = false,
+      lineFoldingOnly = true,
+    }
 
     -- Refrences/rename/code action is built-in by default
     -- https://github.com/neovim/neovim/pull/28500
