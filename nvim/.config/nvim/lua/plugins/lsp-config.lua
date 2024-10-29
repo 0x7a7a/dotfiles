@@ -53,23 +53,12 @@ return {
         vim.keymap.set(mode, keys, func, opts)
       end
 
-      if Z.has('telescope') then
-        local builtin = require('telescope.builtin')
-        map('gd', builtin.lsp_definitions, { desc = '[g]oto [d]efinition' })
-        map('gD', builtin.lsp_type_definitions, { desc = '[G]oto type [D]eclaration' })
-        map('gI', builtin.lsp_implementations, { desc = '[G]oto [I]mplementation' })
-        map('gs', builtin.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
-        map('grr', builtin.lsp_references, { desc = '[G]oto [R]eferences' })
-      end
-
-      if Z.has('fzf-lua') then
-        local fzflua = require('fzf-lua')
-        map('gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
-        map('gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
-        map('gI', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
-        map('gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
-        map('grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
-      end
+      local fzflua = require('fzf-lua')
+      map('gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
+      map('gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
+      map('gI', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
+      map('gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
+      map('grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
 
       map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })

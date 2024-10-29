@@ -20,7 +20,7 @@ return {
       { '<leader>q', group = 'Prefix for quickfix and quit' },
 
       { '<Space>l', group = 'Open the tui application' },
-      { '<Space>s', group = 'Search with telescope/fzflua' },
+      { '<Space>s', group = 'Fuzzy Search' },
       { '<Space>q', group = 'Quickfix window' },
 
       { 'gJ', desc = 'Joining the block of codes' },

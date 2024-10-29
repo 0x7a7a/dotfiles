@@ -27,8 +27,8 @@ return {
       sorting = {
         comparators = {
           cmp.config.compare.offset,
-          cmp.config.compare.recently_used,
           cmp.config.compare.score,
+          cmp.config.compare.recently_used,
           cmp.config.compare.kind,
           cmp.config.compare.exact,
           cmp.config.compare.locality,
