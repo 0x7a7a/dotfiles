@@ -12,14 +12,14 @@ return {
   s({ trig = 'timef', desc = 'Time formatting template' }, { t('2006-01-02 03:04:05') }),
   -- Check err
   s(
-    { trig = 'iferr', dscr = 'Check err' },
+    { trig = 'ifer', dscr = 'Check err' },
     fmt(
       [[
-    if err != nil {{
-        return {}
+    if {} != nil {{
+      return {}
     }}
     ]],
-      { i(1, 'err') }
+      { i(1), i(2, 'err') }
     )
   ),
   -- Check if the variable is nil
@@ -27,6 +27,16 @@ return {
     d(1, function(_, parent)
       return sn(nil, {
         t('if ' .. parent.env.POSTFIX_MATCH .. ' != nil '),
+        t({ '{', '\treturn ' }),
+        i(1),
+        t({ '', '}' }),
+      })
+    end),
+  }),
+  postfix('.en', {
+    d(1, function(_, parent)
+      return sn(nil, {
+        t('if ' .. parent.env.POSTFIX_MATCH .. ' == nil '),
         t({ '{', '\treturn ' }),
         i(1),
         t({ '', '}' }),
