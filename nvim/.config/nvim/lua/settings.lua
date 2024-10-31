@@ -88,13 +88,13 @@ autocmd({ 'BufEnter', 'WinEnter' }, function()
   vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange' })
 end)
 
--- Kitty
-autocmd({'VimEnter'},function ()
-  os.execute('kitty @ set-spacing padding=0 margin=0')
-end)
-autocmd({'VimLeave'},function ()
-  os.execute('kitty @ set-spacing padding=10 margin=0')
-end)
+-- Kitty auto padding
+-- autocmd({'VimEnter'},function ()
+--   os.execute('kitty @ set-spacing padding=0 margin=0')
+-- end)
+-- autocmd({'VimLeave'},function ()
+--   os.execute('kitty @ set-spacing padding=10 margin=0')
+-- end)
 
 -- User command
 local usercmd = vim.api.nvim_create_user_command
