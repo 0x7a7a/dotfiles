@@ -9,7 +9,7 @@ local postfix = require('luasnip.extras.postfix').postfix
 
 return {
   -- Time formatting template
-  s({ trig = 'timef', desc = 'Time formatting template' }, { t('2006-01-02 03:04:05') }),
+  s({ trig = 'timef', desc = 'Time formatting template' }, { t('"2006-01-02 03:04:05"') }),
   -- Check err
   s(
     { trig = 'ifer', dscr = 'Check err' },
@@ -46,7 +46,7 @@ return {
   -- MySql Connect DSN
   s(
     { trig = 'mysqldsn', desc = 'Mysql connect dsn' },
-    fmt('{}:{}@tcp({}:3306)/{}?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai', {
+    fmt('"{}:{}@tcp({}:3306)/{}?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"', {
       i(1, 'username'),
       i(2, 'password'),
       i(3, 'host'),
