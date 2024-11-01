@@ -17,7 +17,7 @@ map('n', 'c', '"_c', { desc = 'Pure key c' })
 map('n', '<leader><leader>', '<C-^>', { desc = 'Toggle last jumppath' })
 
 -- Close other buffers except the current
-map('n', '<leader>bo', '<Cmd>%bd|e#|bd#<CR>', { desc = 'bdelete other buffers' })
+map('n', '<leader>bo', Z.close_other_bufs, { desc = 'bdelete other buffers' })
 map('n', '<leader>bb', '<Cmd>bd<CR>', { desc = ':bdelete' })
 map('n', '<leader>bB', '<Cmd>bd!<CR>', { desc = ':bdelete!' })
 map('n', '<leader>qa', '<Cmd>qa<CR>', { desc = ':qall' })

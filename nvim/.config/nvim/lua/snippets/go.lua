@@ -15,11 +15,11 @@ return {
     { trig = 'ifer', dscr = 'Check err' },
     fmt(
       [[
-    if {} != nil {{
+    if err != nil {{
       return {}
     }}
     ]],
-      { i(1), i(2, 'err') }
+      { i(1, 'err') }
     )
   ),
   -- Check if the variable is nil

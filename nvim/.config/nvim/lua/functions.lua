@@ -25,6 +25,11 @@ function Z.has(mod)
   return exists
 end
 
+function Z.close_other_bufs()
+  vim.cmd('FloatermKill')
+  vim.cmd('%bd|e#|bd#')
+end
+
 function Z.toggle_quickfix()
   local qf_windows = vim.tbl_filter(function(winid)
     return vim.fn.getwininfo(winid)[1].quickfix == 1
