@@ -26,7 +26,9 @@ function Z.has(mod)
 end
 
 function Z.close_other_bufs()
-  vim.cmd('FloatermKill')
+  if vim.fn.exists(':FloatermKill') > 0 then
+    vim.cmd('FloatermKill')
+  end
   vim.cmd('%bd|e#|bd#')
 end
 
