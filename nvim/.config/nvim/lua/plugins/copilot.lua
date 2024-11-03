@@ -11,40 +11,6 @@ return {
     },
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
-      {
-        'zbirenbaum/copilot.lua',
-        opts = {
-          panel = {
-            enabled = false,
-            auto_refresh = false,
-            keymap = {
-              jump_prev = '[[',
-              jump_next = ']]',
-              accept = '<CR>',
-              refresh = 'gr',
-              open = '<M-CR>',
-            },
-            layout = {
-              position = 'bottom', -- | top | left | right
-              ratio = 0.4,
-            },
-          },
-          suggestion = {
-            enabled = true,
-            auto_trigger = true,
-            hide_during_completion = true,
-            debounce = 75,
-            keymap = {
-              accept = '<M-l>',
-              accept_word = false,
-              accept_line = false,
-              next = '<M-]>',
-              prev = '<M-[>',
-              dismiss = '<C-]>',
-            },
-          },
-        },
-      },
     },
     -- use 'luarocks install --lua-version 5.1 tiktoken_core' instead
     -- build = 'make tiktoken',
