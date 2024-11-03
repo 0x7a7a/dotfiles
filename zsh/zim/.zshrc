@@ -50,7 +50,7 @@ FZ_CASE_INSENSITIVE=0
 path=(
   $HOME/go/bin
   $HOME/.cargo/bin
-  $HOME/zig
+  $HOME/.zvm/bin
   $HOME/.krew/bin
   $HOME/.local/share/bob/nvim-bin
   $HOME/.local/share/nvim/mason/bin

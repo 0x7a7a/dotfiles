@@ -10,6 +10,7 @@ return {
       show_guides = true,
       layout = {
         min_width = 15,
+        default_direction = 'prefer_left',
       },
     })
   end,

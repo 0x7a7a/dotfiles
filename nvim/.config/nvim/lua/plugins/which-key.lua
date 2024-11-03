@@ -15,6 +15,7 @@ return {
 
     wk.add({
       { '<leader>b', group = 'Prefix for bdelete' },
+      { '<leader>c', group = 'Copilot Chat' },
       { '<leader>g', group = 'Prefix for git/fugtive' },
       { '<leader>p', group = 'Prefix for lazy' },
       { '<leader>q', group = 'Prefix for quickfix and quit' },

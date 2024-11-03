@@ -55,7 +55,7 @@ opt.virtualedit   = 'block'
 opt.iskeyword:append('-')
 
 -- Fold(nvim-ufo)
-vim.o.foldcolumn = "0"
+vim.o.foldcolumn = '0'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
@@ -64,7 +64,7 @@ vim.o.foldenable = true
 local autocmd = Z.autocmd
 autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
   local ft = vim.bo.filetype
-  if ft == 'help' then
+  if ft == 'help' or ft == 'copilot-chat' then
     return
   end
 
