@@ -7,7 +7,8 @@ map({ '', '!' }, '<C-c>', '<Esc>')
 map('i', '<S-CR>', '<Esc>o')
 
 map('i', '<C-h>', '<left>')
-map('i', '<C-j>', '<down>')
+-- Mapping to copolot chat
+-- map('i', '<C-j>', '<down>')
 map('i', '<C-k>', '<up>')
 map('i', '<C-l>', '<right>')
 

@@ -13,7 +13,7 @@ return {
         source = true,
         prefix = ' ',
       },
-      virtual_text = false,
+      virtual_text = true,
       signs = {
         text = {
           [ERROR] = ' ',
