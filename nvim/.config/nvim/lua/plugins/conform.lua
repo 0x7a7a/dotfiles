@@ -8,12 +8,12 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         go = { 'goimports', 'goimports-reviser', 'gofumpt' },
-        typescript = { 'prettierd' },
-        javascript = { 'prettierd' },
-        vue = { 'prettierd' },
-        css = { 'prettierd' },
-        json = { 'prettierd' },
-        svelte = { 'prettierd' },
+        typescript = { 'prettier' },
+        javascript = { 'prettier' },
+        vue = { 'prettier' },
+        css = { 'prettier' },
+        json = { 'prettier' },
+        svelte = { 'prettier' },
       },
       format_on_save = function(bufnr)
         -- Disable with a global or buffer-local variable

@@ -16,10 +16,10 @@ return {
     fmt(
       [[
     if err != nil {{
-      return {}
+      {}
     }}
     ]],
-      { i(1, 'err') }
+      { i(1) }
     )
   ),
   -- Check if the variable is nil

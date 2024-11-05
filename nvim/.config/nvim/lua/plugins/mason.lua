@@ -20,7 +20,7 @@ return {
         'css-lsp',
         'html-lsp',
         'eslint-lsp',
-        'prettierd',
+        'prettier',
         'lua-language-server',
         'vue-language-server',
         'emmet-language-server',

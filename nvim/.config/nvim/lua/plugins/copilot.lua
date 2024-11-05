@@ -16,7 +16,7 @@ return {
         accept_line = false,
         next = '<C-]>',
         prev = '<C-[>',
-        dismiss = '<C-e>',
+        dismiss = nil,
       },
     },
   },
