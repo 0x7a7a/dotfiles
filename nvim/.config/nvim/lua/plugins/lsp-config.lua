@@ -177,26 +177,30 @@ return {
       end,
     })
 
-    local ts_init = {}
-    if npm_installed('vue') then
-      ts_init = {
-        plugins = {
-          {
-            name = '@vue/typescript-plugin',
-            location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
-            languages = { 'vue' },
-          },
-        },
-      }
-    end
-    lspconfig.ts_ls.setup({
+    -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371#issuecomment-2018863753
+    lspconfig.vtsls.setup({
       capabilities = capabilities,
       on_attach = custom_attach,
 
-      init_options = ts_init,
+      settings = {
+        vtsls = {
+          tsserver = {
+            globalPlugins = {
+              {
+                name = '@vue/typescript-plugin',
+                location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
+                languages = { 'vue' },
+                configNamespace = 'typescript',
+                enableForWorkspaceTypeScriptVersions = true,
+              },
+            },
+          },
+        },
+      },
 
       filetypes = {
         'javascript',
+        'javascriptreact',
         'typescript',
         'typescriptreact',
         'vue',

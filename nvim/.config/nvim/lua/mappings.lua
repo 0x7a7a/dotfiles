@@ -32,6 +32,8 @@ map('n', ']t', '<Cmd>tabnext<CR>')
 
 map('i', '<C-a>', '<Esc>^i')
 map('i', '<C-e>', '<Esc>$a')
+map('n', 'H', '^')
+map('n', 'L', 'g_')
 
 -- Move lines
 map('n', '<A-j>', '<Cmd>move+1<CR>==')
