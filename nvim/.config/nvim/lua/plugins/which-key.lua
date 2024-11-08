@@ -20,6 +20,7 @@ return {
       { '<leader>p', group = 'Prefix for lazy' },
       { '<leader>q', group = 'Prefix for quickfix and quit' },
 
+      { '<Space>d', group = 'Preifx for diffview' },
       { '<Space>l', group = 'Open the tui application' },
       { '<Space>s', group = 'Fuzzy Search' },
       { '<Space>q', group = 'Quickfix window' },
