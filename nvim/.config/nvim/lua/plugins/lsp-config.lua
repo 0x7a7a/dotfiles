@@ -3,7 +3,8 @@
 return {
   'neovim/nvim-lspconfig',
   event = 'BufEnter',
-  config = function()
+  dependencies = { 'saghen/blink.cmp' },
+  config = function(_, _opts)
     local ERROR = vim.diagnostic.severity.ERROR
     local WARN = vim.diagnostic.severity.WARN
     local HINT = vim.diagnostic.severity.HINT
@@ -27,13 +28,26 @@ return {
     local npm_installed = Z.npm_installed
     local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    capabilities.textDocument.completion.completionItem.snippetSupport = true
-    -- nvim-ufo setting
-    capabilities.textDocument.foldingRange = {
-      dynamicRegistration = false,
-      lineFoldingOnly = true,
-    }
+    -- cmp
+    for server, config in pairs(_opts.servers or {}) do
+      config.capabilities = require('cmp_nvim_lsp').default_capabilities()
+      config.capabilities.textDocument.completion.completionItem.snippetSupport = true
+      config.capabilities.textDocument.foldingRange = {
+        dynamicRegistration = false,
+        lineFoldingOnly = true,
+      }
+      lspconfig[server].setup(config)
+    end
+
+    -- blink
+    -- for server, config in pairs(_opts.servers or {}) do
+    --   config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+    --   config.capabilities.textDocument.foldingRange = {
+    --     dynamicRegistration = false,
+    --     lineFoldingOnly = true,
+    --   }
+    --   lspconfig[server].setup(config)
+    -- end
 
     -- Refrences/rename/code action is built-in by default
     -- https://github.com/neovim/neovim/pull/28500
@@ -76,7 +90,6 @@ return {
     end
 
     require('lspconfig').lua_ls.setup({
-      capabilities = capabilities,
       on_attach = custom_attach,
       on_init = function(client)
         if client.workspace_folders then
@@ -113,7 +126,6 @@ return {
     })
 
     lspconfig.gopls.setup({
-      capabilities = capabilities,
       on_attach = custom_attach,
 
       filetypes = { 'go', 'gomod' },
@@ -144,24 +156,20 @@ return {
       end,
     })
     lspconfig.html.setup({
-      capabilities = capabilities,
       on_attach = custom_attach,
       filetypes = { 'html', 'templ', 'svelte' },
     })
     lspconfig.cssls.setup({
-      capabilities = capabilities,
       on_attach = custom_attach,
     })
 
     -- Vue language server
     lspconfig.volar.setup({
       on_attach = custom_attach,
-      capabilities = capabilities,
     })
 
     -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371#issuecomment-2018863753
     lspconfig.vtsls.setup({
-      capabilities = capabilities,
       on_attach = custom_attach,
 
       settings = {
@@ -205,7 +213,6 @@ return {
     -- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin
     -- inlcude emmet
     lspconfig.svelte.setup({
-      capabilities = capabilities,
       on_attach = function(client, bufnr)
         custom_attach(client, bufnr)
 
@@ -230,7 +237,6 @@ return {
     })
 
     lspconfig.rust_analyzer.setup({
-      capabilities = capabilities,
       on_attach = custom_attach,
 
       settings = {
@@ -251,7 +257,6 @@ return {
     vim.g.rustfmt_autosave = 1
 
     lspconfig.zls.setup({
-      capabilities = capabilities,
       on_attach = custom_attach,
     })
 
