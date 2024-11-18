@@ -10,8 +10,6 @@ return {
     -- build = 'make tiktoken',
     config = function()
       local chat = require('CopilotChat')
-      -- Registers copilot-chat source and enables it for copilot-chat filetype (so copilot chat window)
-      require('CopilotChat.integrations.cmp').setup()
 
       chat.setup({
         debug = false,
@@ -34,6 +32,8 @@ return {
             prompt = '/COPILOT_GENERATE Optimize the selected code to improve performance and readability.Simple explanation in Chinese',
           },
         },
+
+        chat_autocomplete = true,
       })
 
       vim.keymap.set('n', '<Space>c', '<Cmd>CopilotChatToggle<CR>')

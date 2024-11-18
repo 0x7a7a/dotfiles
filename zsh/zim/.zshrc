@@ -89,22 +89,4 @@ PROXY='http://127.0.0.1:7890'
 alias proxy='export http_proxy=$PROXY https_proxy=$PROXY'
 alias noproxy='unset http_proxy https_proxy'
 
-##### Functions #####
-function pb () {
-  echo `pbpaste` | xxd -r -p | protoc --decode_raw
-}
-
-function pj() {
-  pbpaste | jq
-}
-
-fkill() {
-  local pid
-  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
-
-  if [ "x$pid" != "x" ]
-  then
-	echo $pid | xargs kill -${1:-9}
-  fi
-}
-
+alias gf=gf

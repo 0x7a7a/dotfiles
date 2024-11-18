@@ -53,4 +53,14 @@ return {
       i(4, 'dbname'),
     })
   ),
+  -- GoFrame
+  s(
+    { trig = 'gm', desc = 'g.Meta' },
+    fmt('`path:"/v1/{}" tags:"{}" method:"{}" summary:"{}"`', {
+      i(1),
+      i(2),
+      i(3, 'get'),
+      i(4),
+    })
+  ),
 }
