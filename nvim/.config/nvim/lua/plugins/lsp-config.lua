@@ -70,7 +70,7 @@ return {
       local fzflua = require('fzf-lua')
       map('gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
       map('gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
-      map('gI', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
+      map('gri', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
       map('gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
       map('grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
 
@@ -166,6 +166,11 @@ return {
     -- Vue language server
     lspconfig.volar.setup({
       on_attach = custom_attach,
+      settings = {
+        emmet = {
+          showExpandedAbbreviation = 'never',
+        },
+      },
     })
 
     -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371#issuecomment-2018863753
@@ -206,9 +211,21 @@ return {
       },
     })
 
-    if not npm_installed('svelte') then
-      lspconfig.emmet_language_server.setup({})
-    end
+    lspconfig.emmet_language_server.setup({
+      filetypes = {
+        'css',
+        'eruby',
+        'html',
+        'vue',
+        'javascript',
+        'javascriptreact',
+        'less',
+        'sass',
+        'scss',
+        'pug',
+        'typescriptreact',
+      },
+    })
 
     -- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin
     -- inlcude emmet

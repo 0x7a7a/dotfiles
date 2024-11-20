@@ -33,7 +33,7 @@ return {
           },
         },
 
-        chat_autocomplete = true,
+        chat_autocomplete = false,
       })
 
       vim.keymap.set('n', '<Space>c', '<Cmd>CopilotChatToggle<CR>')
