@@ -4,7 +4,7 @@ return {
   'neovim/nvim-lspconfig',
   event = 'BufEnter',
   dependencies = { 'saghen/blink.cmp' },
-  config = function(_, _opts)
+  config = function()
     local ERROR = vim.diagnostic.severity.ERROR
     local WARN = vim.diagnostic.severity.WARN
     local HINT = vim.diagnostic.severity.HINT
@@ -29,15 +29,14 @@ return {
     local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
     -- cmp
-    for server, config in pairs(_opts.servers or {}) do
-      config.capabilities = require('cmp_nvim_lsp').default_capabilities()
-      config.capabilities.textDocument.completion.completionItem.snippetSupport = true
-      config.capabilities.textDocument.foldingRange = {
-        dynamicRegistration = false,
-        lineFoldingOnly = true,
-      }
-      lspconfig[server].setup(config)
-    end
+    -- TODO Refactor to table config
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    capabilities.offsetEncoding = { 'utf-16' }
+    capabilities.textDocument.foldingRange = {
+      dynamicRegistration = false,
+      lineFoldingOnly = true,
+    }
 
     -- blink
     -- for server, config in pairs(_opts.servers or {}) do
@@ -91,6 +90,7 @@ return {
 
     require('lspconfig').lua_ls.setup({
       on_attach = custom_attach,
+      capabilities = capabilities,
       on_init = function(client)
         if client.workspace_folders then
           local path = client.workspace_folders[1].name
@@ -126,6 +126,7 @@ return {
     })
 
     lspconfig.gopls.setup({
+      capabilities = capabilities,
       on_attach = custom_attach,
 
       filetypes = { 'go', 'gomod' },
@@ -165,6 +166,7 @@ return {
 
     -- Vue language server
     lspconfig.volar.setup({
+      capabilities = capabilities,
       on_attach = custom_attach,
       settings = {
         emmet = {
@@ -175,6 +177,7 @@ return {
 
     -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371#issuecomment-2018863753
     lspconfig.vtsls.setup({
+      capabilities = capabilities,
       on_attach = custom_attach,
 
       settings = {
@@ -230,6 +233,7 @@ return {
     -- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin
     -- inlcude emmet
     lspconfig.svelte.setup({
+      capabilities = capabilities,
       on_attach = function(client, bufnr)
         custom_attach(client, bufnr)
 
@@ -254,6 +258,7 @@ return {
     })
 
     lspconfig.rust_analyzer.setup({
+      capabilities = capabilities,
       on_attach = custom_attach,
 
       settings = {
@@ -275,6 +280,7 @@ return {
 
     lspconfig.zls.setup({
       on_attach = custom_attach,
+      capabilities = capabilities,
     })
 
     lspconfig.nil_ls.setup({})
