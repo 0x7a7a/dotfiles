@@ -29,6 +29,9 @@ map('n', '[b', '<Cmd>bprevious<CR>')
 map('n', ']b', '<Cmd>bnext<CR>')
 map('n', '[t', '<Cmd>tabprevious<CR>')
 map('n', ']t', '<Cmd>tabnext<CR>')
+-- Quickfix
+map('n', '[q', '<Cmd>cprevious<CR>zz')
+map('n', ']q', '<Cmd>cnext<CR>zz')
 
 map('i', '<C-a>', '<Esc>^i')
 map('i', '<C-e>', '<Esc>$a')
@@ -60,10 +63,6 @@ map('n', '<A-down>', '<Cmd>resize-5<CR>')
 -- Cmdline shortcuts
 map('c', '<C-a>', '<Home>')
 map('c', '<C-e>', '<End>')
-
--- Quickfix
-map('n', '[q', '<Cmd>cprevious<CR>zz')
-map('n', ']q', '<Cmd>cnext<CR>zz')
 
 -- Lazy
 map('n', '<Leader>ps', '<Cmd>Lazy sync<CR>', { desc = 'Update plugins' })

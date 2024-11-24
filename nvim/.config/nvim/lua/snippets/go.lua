@@ -56,7 +56,7 @@ return {
   -- GoFrame
   s(
     { trig = 'gm', desc = 'g.Meta' },
-    fmt('`path:"/v1/{}" tags:"{}" method:"{}" summary:"{}"`', {
+    fmt('`path:"/v1/{}" tags:"{}" method:"{}" sm:"{}"`', {
       i(1),
       i(2),
       i(3, 'get'),
