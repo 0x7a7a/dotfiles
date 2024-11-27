@@ -13,6 +13,7 @@ return {
         vue = { 'prettier' },
         css = { 'prettier' },
         json = { 'prettier' },
+        jsonc = { 'prettier' },
         svelte = { 'prettier' },
       },
       format_on_save = function(bufnr)
