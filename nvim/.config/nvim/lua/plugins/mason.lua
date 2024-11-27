@@ -26,7 +26,6 @@ return {
         'emmet-language-server',
         'svelte-language-server',
         'typescript-language-server',
-        'vtsls',
         'tailwindcss-language-server',
       },
     })

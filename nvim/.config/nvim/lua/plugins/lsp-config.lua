@@ -175,44 +175,21 @@ return {
       },
     })
 
-    -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371#issuecomment-2018863753
-    -- lspconfig.vtsls.setup({
-    --   capabilities = capabilities,
-    --   on_attach = custom_attach,
-    --
-    --   settings = {
-    --     vtsls = {
-    --       tsserver = {
-    --         globalPlugins = {
-    --           {
-    --             name = '@vue/typescript-plugin',
-    --             location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
-    --             languages = { 'vue' },
-    --             configNamespace = 'typescript',
-    --             enableForWorkspaceTypeScriptVersions = true,
-    --           },
-    --         },
-    --       },
-    --       autoUseWorkspaceTsdk = true,
-    --       experimental = {
-    --         completion = {
-    --           enableServerSideFuzzyMatch = true,
-    --         },
-    --       },
-    --       typescript = {
-    --         updateImportsOnFileMove = { enabled = 'always' },
-    --       },
-    --     },
-    --   },
-    --
-    --   filetypes = {
-    --     'javascript',
-    --     'javascriptreact',
-    --     'typescript',
-    --     'typescriptreact',
-    --     'vue',
-    --   },
-    -- })
+    require('typescript-tools').setup({
+      filetypes = {
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+        'vue',
+      },
+      settings = {
+        capabilities = capabilities,
+        tsserver_plugins = {
+          '@vue/typescript-plugin',
+        },
+      },
+    })
 
     lspconfig.emmet_language_server.setup({
       filetypes = {
