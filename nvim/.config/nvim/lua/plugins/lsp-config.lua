@@ -183,6 +183,8 @@ return {
         'typescriptreact',
         'vue',
       },
+
+      on_attach = custom_attach,
       settings = {
         capabilities = capabilities,
         tsserver_plugins = {
