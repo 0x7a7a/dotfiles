@@ -1,6 +1,7 @@
 return {
   'hrsh7th/nvim-cmp',
   -- 'iguanacucumber/magazine.nvim',
+  enabled = false,
   event = 'VeryLazy',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
@@ -9,8 +10,10 @@ return {
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
     -- 'hrsh7th/cmp-path',
-    'FelipeLema/cmp-async-path',
-    url = 'https://codeberg.org/FelipeLema/cmp-async-path',
+    {
+      'FelipeLema/cmp-async-path',
+      url = 'https://codeberg.org/FelipeLema/cmp-async-path',
+    },
     {
       'L3MON4D3/LuaSnip',
       config = function()

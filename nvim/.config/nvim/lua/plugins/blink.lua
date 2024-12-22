@@ -1,8 +1,7 @@
 return {
   'Saghen/blink.cmp',
   lazy = false, -- lazy loading handled internally
-  enabled = false,
-  version = 'v0.*',
+  version = '*',
   dependencies = {
     {
       'L3MON4D3/LuaSnip',
@@ -22,22 +21,22 @@ return {
         preset = 'super-tab',
         ['<CR>'] = { 'accept', 'fallback' },
       },
-
-      accept = {
-        expand_snippet = vim.snippet.expand,
-      },
-
-      highlight = {
+      appearance = {
         use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono',
       },
-      nerd_font_variant = 'mono',
-      trigger = {
-        signature_help = { enabled = false },
+      completion = {
+        menu = {
+          draw = {
+            columns = {
+              { 'label', 'label_description', gap = 1 },
+              { 'kind_icon', 'kind' },
+            },
+          },
+        },
+        documentation = { auto_show = true, auto_show_delay_ms = 500 },
       },
-
-      -- allows extending the enabled_providers array elsewhere in your config
-      -- without having to redefining it
-      opts_extend = { 'sources.completion.enabled_providers' },
+      signature = { enabled = true },
     })
   end,
 }

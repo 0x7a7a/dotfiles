@@ -25,28 +25,8 @@ return {
       },
     })
 
-    local npm_installed = Z.npm_installed
     local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
-    -- cmp
-    -- TODO Refactor to table config
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    capabilities.textDocument.completion.completionItem.snippetSupport = true
-    capabilities.offsetEncoding = { 'utf-16' }
-    capabilities.textDocument.foldingRange = {
-      dynamicRegistration = false,
-      lineFoldingOnly = true,
-    }
-
-    -- blink
-    -- for server, config in pairs(_opts.servers or {}) do
-    --   config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-    --   config.capabilities.textDocument.foldingRange = {
-    --     dynamicRegistration = false,
-    --     lineFoldingOnly = true,
-    --   }
-    --   lspconfig[server].setup(config)
-    -- end
 
     -- Refrences/rename/code action is built-in by default
     -- https://github.com/neovim/neovim/pull/28500
@@ -88,92 +68,116 @@ return {
       end, { desc = 'Next error diagnostic' })
     end
 
-    require('lspconfig').lua_ls.setup({
-      on_attach = custom_attach,
-      capabilities = capabilities,
-      on_init = function(client)
-        if client.workspace_folders then
-          local path = client.workspace_folders[1].name
-          if vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc') then
-            return
+    local servers = {
+      lua_ls = {
+        on_init = function(client)
+          if client.workspace_folders then
+            local path = client.workspace_folders[1].name
+            if vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc') then
+              return
+            end
           end
-        end
 
-        client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-          runtime = {
-            version = 'LuaJIT',
+          client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+            runtime = {
+              version = 'LuaJIT',
+            },
+            workspace = {
+              checkThirdParty = false,
+              library = {
+                vim.env.VIMRUNTIME,
+                '${3rd}/luv/library',
+              },
+            },
+            diagnostics = {
+              unusedLocalExclude = { '_*' },
+            },
+            hint = {
+              enable = true,
+              setType = true,
+            },
+          })
+        end,
+
+        settings = {
+          Lua = {},
+        },
+      },
+      gopls = {
+        filetypes = { 'go', 'gomod' },
+        message_level = vim.lsp.protocol.MessageType.Error,
+        cmd = { 'gopls' },
+        root_dir = util.root_pattern('go.work', 'go.mod', '.git'),
+        flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
+        settings = {
+          gopls = {
+            analyses = { unusedparams = true, unreachable = false },
+            usePlaceholders = false,
+            staticcheck = true,
+            diagnosticsDelay = '500ms',
           },
-          workspace = {
-            checkThirdParty = false,
-            library = {
-              vim.env.VIMRUNTIME,
-              '${3rd}/luv/library',
+        },
+      },
+      tailwindcss = {},
+      eslint = {
+        on_attach = function(_client, bufnr)
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = bufnr,
+            command = 'EslintFixAll',
+          })
+        end,
+      },
+      html = {
+        filetypes = { 'html', 'templ', 'svelte' },
+      },
+      cssls = {},
+      volar = {
+        settings = {
+          emmet = {
+            showExpandedAbbreviation = 'never',
+          },
+        },
+      },
+      emmet_language_server = {
+        filetypes = {
+          'css',
+          'eruby',
+          'html',
+          'vue',
+          'javascript',
+          'javascriptreact',
+          'less',
+          'sass',
+          'scss',
+          'pug',
+          'typescriptreact',
+        },
+      },
+      svelte = {},
+      rust_analyzer = {
+        settings = {
+          ['rust-analyzer'] = {
+            assist = {
+              importGranularity = 'module',
+              importPrefix = 'self',
+            },
+            cargo = {
+              loadOutDirsFromCheck = true,
+            },
+            procMacro = {
+              enable = true,
             },
           },
-          diagnostics = {
-            unusedLocalExclude = { '_*' },
-          },
-          hint = {
-            enable = true,
-            setType = true,
-          },
-        })
-      end,
-
-      settings = {
-        Lua = {},
-      },
-    })
-
-    lspconfig.gopls.setup({
-      capabilities = capabilities,
-      on_attach = custom_attach,
-
-      filetypes = { 'go', 'gomod' },
-      message_level = vim.lsp.protocol.MessageType.Error,
-      cmd = { 'gopls' },
-      root_dir = util.root_pattern('go.work', 'go.mod', '.git'),
-      flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
-      settings = {
-        gopls = {
-          analyses = { unusedparams = true, unreachable = false },
-          usePlaceholders = false,
-          staticcheck = true,
-          diagnosticsDelay = '500ms',
         },
       },
-    })
+      zls = {},
+    }
 
-    if npm_installed('tailwindcss') then
-      lspconfig.tailwindcss.setup({})
+    for server, config in pairs(servers) do
+      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+      config.on_attach = custom_attach
+      lspconfig[server].setup(config)
     end
-
-    lspconfig.eslint.setup({
-      on_attach = function(_client, bufnr)
-        vim.api.nvim_create_autocmd('BufWritePre', {
-          buffer = bufnr,
-          command = 'EslintFixAll',
-        })
-      end,
-    })
-    lspconfig.html.setup({
-      on_attach = custom_attach,
-      filetypes = { 'html', 'templ', 'svelte' },
-    })
-    lspconfig.cssls.setup({
-      on_attach = custom_attach,
-    })
-
-    -- Vue language server
-    lspconfig.volar.setup({
-      capabilities = capabilities,
-      on_attach = custom_attach,
-      settings = {
-        emmet = {
-          showExpandedAbbreviation = 'never',
-        },
-      },
-    })
 
     require('typescript-tools').setup({
       filetypes = {
@@ -186,82 +190,11 @@ return {
 
       on_attach = custom_attach,
       settings = {
-        capabilities = capabilities,
+        -- capabilities = capabilities,
         tsserver_plugins = {
           '@vue/typescript-plugin',
         },
       },
     })
-
-    lspconfig.emmet_language_server.setup({
-      filetypes = {
-        'css',
-        'eruby',
-        'html',
-        'vue',
-        'javascript',
-        'javascriptreact',
-        'less',
-        'sass',
-        'scss',
-        'pug',
-        'typescriptreact',
-      },
-    })
-
-    -- https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin
-    -- inlcude emmet
-    lspconfig.svelte.setup({
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        custom_attach(client, bufnr)
-
-        -- https://github.com/neovim/nvim-lspconfig/issues/725
-        -- https://github.com/sveltejs/language-tools/issues/2008
-        -- https://www.reddit.com/r/neovim/comments/1598ewp/neovim_svelte/
-        -- local group = vim.api.nvim_create_augroup('svelte_ondidchangetsorjsfile', { clear = true })
-        -- vim.api.nvim_create_autocmd('BufWritePost', {
-        --   group = group,
-        --   pattern = { '*.js', '*.ts' },
-        --   callback = function(ctx)
-        --     -- Here use ctx.match instead of ctx.file
-        --     client.notify('$/onDidChangeTsOrJsFile', { uri = ctx.match })
-        --   end,
-        -- })
-        -- vim.api.nvim_create_autocmd({ 'BufWrite' }, {
-        --   group = group,
-        --   pattern = { '+page.server.ts', '+page.ts', '+layout.server.ts', '+layout.ts' },
-        --   command = 'LspRestart svelte',
-        -- })
-      end,
-    })
-
-    lspconfig.rust_analyzer.setup({
-      capabilities = capabilities,
-      on_attach = custom_attach,
-
-      settings = {
-        ['rust-analyzer'] = {
-          assist = {
-            importGranularity = 'module',
-            importPrefix = 'self',
-          },
-          cargo = {
-            loadOutDirsFromCheck = true,
-          },
-          procMacro = {
-            enable = true,
-          },
-        },
-      },
-    })
-    vim.g.rustfmt_autosave = 1
-
-    lspconfig.zls.setup({
-      on_attach = custom_attach,
-      capabilities = capabilities,
-    })
-
-    lspconfig.nil_ls.setup({})
   end,
 }
