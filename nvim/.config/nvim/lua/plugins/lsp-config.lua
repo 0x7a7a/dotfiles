@@ -34,7 +34,7 @@ return {
     -- vim.keymap.del('n', 'grr')
     -- vim.keymap.del({ 'n', 'v' }, 'gra')
 
-    local custom_attach = function(_client, bufnr)
+    local lsp_keymap = function(bufnr)
       local map = function(...)
         local args = { ... }
         if #args == 3 then
@@ -67,6 +67,21 @@ return {
         vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
       end, { desc = 'Next error diagnostic' })
     end
+
+    -- automatically sign up lsp
+    vim.api.nvim_create_autocmd('LspAttach', {
+      desc = 'General LSP Attach',
+      callback = function(args)
+        -- buf keymap
+        lsp_keymap(args.buf)
+
+        -- inlay hints
+        -- local client = vim.lsp.get_client_by_id(args.data.client_id)
+        -- if client and client.server_capabilities.inlayHintProvider then
+        --   vim.lsp.inlay_hint.enable(true)
+        -- end
+      end,
+    })
 
     local servers = {
       lua_ls = {
@@ -176,7 +191,6 @@ return {
 
     for server, config in pairs(servers) do
       config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-      config.on_attach = custom_attach
       lspconfig[server].setup(config)
     end
 
@@ -189,7 +203,6 @@ return {
         'vue',
       },
 
-      on_attach = custom_attach,
       settings = {
         capabilities = require('blink.cmp').get_lsp_capabilities(),
         tsserver_plugins = {
