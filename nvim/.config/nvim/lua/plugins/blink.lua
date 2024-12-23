@@ -63,6 +63,9 @@ return {
             },
           },
         },
+        -- trigger = {
+        --   show_in_snippet = false,
+        -- },
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
       },
       signature = { enabled = true },
@@ -83,6 +86,9 @@ return {
       },
       sources = {
         default = { 'lsp', 'path', 'luasnip', 'buffer' },
+        -- cmdline = {
+        --   min_keyword_length = 2,
+        -- },
       },
     })
   end,

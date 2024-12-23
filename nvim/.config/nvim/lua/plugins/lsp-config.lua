@@ -133,26 +133,27 @@ return {
       cssls = {},
       volar = {
         settings = {
-          emmet = {
-            showExpandedAbbreviation = 'never',
-          },
+          -- emmet = {
+          --   showExpandedAbbreviation = 'never',
+          -- },
         },
       },
-      emmet_language_server = {
-        filetypes = {
-          'css',
-          'eruby',
-          'html',
-          'vue',
-          'javascript',
-          'javascriptreact',
-          'less',
-          'sass',
-          'scss',
-          'pug',
-          'typescriptreact',
-        },
-      },
+      -- It may cause the blink menu to flicker.
+      -- emmet_language_server = {
+      --   filetypes = {
+      --     'css',
+      --     'eruby',
+      --     'html',
+      --     'vue',
+      --     'javascript',
+      --     'javascriptreact',
+      --     'less',
+      --     'sass',
+      --     'scss',
+      --     'pug',
+      --     'typescriptreact',
+      --   },
+      -- },
       svelte = {},
       rust_analyzer = {
         settings = {
@@ -190,7 +191,7 @@ return {
 
       on_attach = custom_attach,
       settings = {
-        -- capabilities = capabilities,
+        capabilities = require('blink.cmp').get_lsp_capabilities(),
         tsserver_plugins = {
           '@vue/typescript-plugin',
         },
