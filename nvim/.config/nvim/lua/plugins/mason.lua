@@ -23,7 +23,6 @@ return {
         'prettier',
         'lua-language-server',
         'vue-language-server',
-        'emmet-language-server',
         'svelte-language-server',
         'typescript-language-server',
         'tailwindcss-language-server',

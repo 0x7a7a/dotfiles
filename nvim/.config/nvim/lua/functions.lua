@@ -47,27 +47,3 @@ function Z.toggle_quickfix()
   local cmd = #qf_windows == 0 and 'copen' or 'cclose'
   vim.cmd(cmd)
 end
-
-function Z.is_npm_project()
-  local paths = vim.fs.find('package.json', { upward = true })
-  return #paths > 0
-end
-
-function Z.npm_installed(package)
-  local paths = vim.fs.find('package.json', { upward = true })
-  if #paths == 0 then
-    return false
-  end
-
-  local package_file = paths[1]
-  local package_json = vim.fn.json_decode(vim.fn.readfile(package_file))
-
-  if package_json.dependencies and package_json.dependencies[package] then
-    return true
-  end
-  if package_json.devDependencies and package_json.devDependencies[package] then
-    return true
-  end
-
-  return false
-end
