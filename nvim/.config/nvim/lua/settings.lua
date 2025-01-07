@@ -11,7 +11,7 @@ opt.undofile    = true
 opt.undodir     = '/tmp/.undodir'
 opt.updatetime  = 250
 opt.timeoutlen  = 300
-opt.jumpoptions = 'stack'
+-- opt.jumpoptions = 'stack'
 
 -- UI
 opt.wrap           = true
