@@ -76,34 +76,6 @@ return {
         -- Window Pick
         local open_in_window_picker = function()
           local fs_entry = MiniFiles.get_fs_entry()
-          local picker_conf = {
-            highlights = {
-              statusline = {
-                focused = {
-                  fg = '#ededed',
-                  bg = '#e35e4f',
-                  bold = true,
-                },
-                unfocused = {
-                  fg = '#ededed',
-                  bg = '#44cc41',
-                  bold = true,
-                },
-              },
-              winbar = {
-                focused = {
-                  fg = '#ededed',
-                  bg = '#e35e4f',
-                  bold = true,
-                },
-                unfocused = {
-                  fg = '#ededed',
-                  bg = '#44cc41',
-                  bold = true,
-                },
-              },
-            },
-          }
           if fs_entry ~= nil and fs_entry.fs_type == 'file' then
             local picked_window_id = require('window-picker').pick_window()
             if picked_window_id == nil then
