@@ -56,9 +56,14 @@ return {
       },
       completion = {
         list = {
-          selection = function(ctx)
-            return ctx.mode == 'cmdline' and 'auto_insert' or 'preselect'
-          end,
+          selection = {
+            preselect = function(ctx)
+              return ctx.mode ~= 'cmdline' and not require('blink.cmp').snippet_active({ direction = 1 })
+            end,
+            auto_insert = function(ctx)
+              return ctx.mode ~= 'cmdline'
+            end,
+          },
         },
         menu = {
           draw = {
@@ -68,32 +73,13 @@ return {
             },
           },
         },
-        -- trigger = {
-        --   show_in_snippet = false,
-        -- },
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
       },
       signature = { enabled = true },
 
-      snippets = {
-        expand = function(snippet)
-          require('luasnip').lsp_expand(snippet)
-        end,
-        active = function(filter)
-          if filter and filter.direction then
-            return require('luasnip').jumpable(filter.direction)
-          end
-          return require('luasnip').in_snippet()
-        end,
-        jump = function(direction)
-          require('luasnip').jump(direction)
-        end,
-      },
+      snippets = { preset = 'luasnip' },
       sources = {
         default = { 'lsp', 'path', 'luasnip', 'buffer' },
-        -- cmdline = {
-        --   min_keyword_length = 2,
-        -- },
       },
     })
   end,
