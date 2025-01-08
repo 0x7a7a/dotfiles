@@ -17,16 +17,14 @@ return {
       },
     },
   },
-  keys = {
-    { '<Space>f', '<Cmd>lua require("mini.files").open()<CR>', desc = 'Open MiniFiles' },
-  },
   config = function()
     local MiniFiles = require('mini.files')
     MiniFiles.setup()
 
-    local minifiles_toggle = function(...)
+    local minifiles_toggle = function()
       if not MiniFiles.close() then
-        MiniFiles.open(...)
+        MiniFiles.open(vim.api.nvim_buf_get_name(0))
+        MiniFiles.reveal_cwd()
       end
     end
 
@@ -64,13 +62,13 @@ return {
       vim.keymap.set('n', lhs, rhs, { buffer = buf_id, desc = desc })
     end
 
+    vim.keymap.set('n', '<Space>f', minifiles_toggle)
     vim.api.nvim_create_autocmd('User', {
       pattern = 'MiniFilesBufferCreate',
       callback = function(args)
         local buf_id = args.data.buf_id
         -- Tweak left-hand side of mapping to your liking
         vim.keymap.set('n', 'g.', toggle_dotfiles, { buffer = buf_id, desc = 'toggle dotfiles' })
-        vim.keymap.set('n', '<Space>f', minifiles_toggle, { buffer = buf_id })
         map_split(buf_id, '<C-s>', 'belowright horizontal')
         map_split(buf_id, '<C-v>', 'belowright vertical')
 
