@@ -21,6 +21,7 @@ return {
       keymap = {
         preset = 'super-tab',
         ['<CR>'] = { 'accept', 'fallback' },
+        ['<C-c>'] = { 'hide', 'fallback' },
       },
       appearance = {
         use_nvim_cmp_as_default = true,
@@ -60,9 +61,7 @@ return {
             preselect = function(ctx)
               return ctx.mode ~= 'cmdline' and not require('blink.cmp').snippet_active({ direction = 1 })
             end,
-            auto_insert = function(ctx)
-              return ctx.mode ~= 'cmdline'
-            end,
+            auto_insert = true,
           },
         },
         menu = {
