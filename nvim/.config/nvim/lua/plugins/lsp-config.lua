@@ -165,6 +165,7 @@ return {
         },
       },
       zls = {},
+      intelephense = {},
     }
 
     for server, config in pairs(servers) do
