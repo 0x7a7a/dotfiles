@@ -1,4 +1,4 @@
 return {
   'neanias/everforest-nvim',
-  enalbed = false,
+  enabled = false,
 }

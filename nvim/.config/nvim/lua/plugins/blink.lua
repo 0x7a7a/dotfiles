@@ -1,6 +1,5 @@
 return {
   'Saghen/blink.cmp',
-  lazy = false, -- lazy loading handled internally
   version = '*',
   dependencies = {
     {
@@ -79,6 +78,13 @@ return {
       snippets = { preset = 'luasnip' },
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
+        min_keyword_length = function(ctx)
+          -- only applies when typing a command, doesn't apply to arguments
+          if ctx.mode == 'cmdline' and string.find(ctx.line, ' ') == nil then
+            return 3
+          end
+          return 0
+        end,
       },
     })
   end,
