@@ -14,6 +14,7 @@ return {
         source = true,
         prefix = ' ',
       },
+      -- virtual_lines = true,
       virtual_text = true,
       signs = {
         text = {
@@ -45,13 +46,6 @@ return {
         opts = vim.tbl_extend('keep', opts, { silent = true, buffer = bufnr })
         vim.keymap.set(mode, keys, func, opts)
       end
-
-      local fzflua = require('fzf-lua')
-      map('gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
-      map('gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
-      map('gri', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
-      map('gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
-      map('grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
 
       map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
       map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })

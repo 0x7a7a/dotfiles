@@ -1,6 +1,5 @@
 return {
   'ibhagwan/fzf-lua',
-  enabled = true,
   config = function()
     local fzflua = require('fzf-lua')
     fzflua.setup({
@@ -33,5 +32,11 @@ return {
     vim.keymap.set('n', '<Space>sw', fzflua.grep_cword, { desc = '[S]earch current [W]ord' })
     vim.keymap.set('n', '<Space>sc', fzflua.commands, { desc = '[S]earch [C]ommands' })
     vim.keymap.set('n', '<Space>sr', fzflua.registers, { desc = '[S]earch [R]egisters' })
+
+    vim.keymap.set('n', 'gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
+    vim.keymap.set('n', 'gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
+    vim.keymap.set('n', 'gri', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
+    vim.keymap.set('n', 'gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
+    vim.keymap.set('n', 'grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
   end,
 }

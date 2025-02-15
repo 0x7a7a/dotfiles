@@ -29,6 +29,7 @@ opt.termguicolors  = true
 opt.cursorline     = true
 opt.cursorlineopt  = 'number'
 opt.wildmode       = 'longest:full,full'
+opt.numberwidth    = 3
 
 vim.o.fillchars = table.concat({
   horiz = '━',
