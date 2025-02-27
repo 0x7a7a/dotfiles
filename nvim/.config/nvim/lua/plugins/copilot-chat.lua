@@ -15,7 +15,7 @@ return {
         proxy = '127.0.0.1:7890',
         allow_insecure = true,
         -- model = 'o1-preview-2024-09-12',
-        model = 'claude-3.5-sonnet',
+        model = 'claude-3.7-sonnet',
 
         mappings = {
           complete = {
