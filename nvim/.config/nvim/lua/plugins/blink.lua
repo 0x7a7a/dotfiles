@@ -81,10 +81,22 @@ return {
 
       cmdline = {
         keymap = {
+          preset = 'enter',
           -- recommended, as the default keymap will only show and select the next item
           ['<Tab>'] = { 'show', 'accept' },
         },
-        completion = { menu = { auto_show = true } },
+        completion = {
+          list = {
+            selection = {
+              auto_insert = true,
+            },
+          },
+          menu = {
+            auto_show = function(ctx)
+              return ctx.bounds.length > 2
+            end,
+          },
+        },
       },
     })
   end,

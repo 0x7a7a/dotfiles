@@ -1,12 +1,28 @@
+local function toggle_diffview(cmd)
+  if next(require('diffview.lib').views) == nil then
+    vim.cmd(cmd)
+  else
+    vim.cmd('DiffviewClose')
+  end
+end
+
 -- Cookbook: https://www.naseraleisa.com/posts/diff
 return {
   'sindrets/diffview.nvim',
   evet = 'VeryLazy',
-  config = function()
-    vim.keymap.set('n', '<Space>dh', '<Cmd>DiffviewFileHistory<cr>', { desc = 'Diffview repo history' })
-    vim.keymap.set('n', '<Space>df', '<Cmd>DiffviewFileHistory --follow %<cr>', { desc = 'Diffview file history' })
-    vim.keymap.set('n', '<Space>dl', '<Cmd>DiffviewFileHistory --follow<cr>', { desc = 'Diffview line history' })
-    vim.keymap.set('n', '<Space>dc', '<Cmd>DiffviewClose<cr>', { desc = 'Diffview Close' })
-    vim.keymap.set('n', '<Space>dg', require('gitsigns').preview_hunk, { desc = 'Preview hunk' })
-  end,
+  keys = {
+    {
+      '<Space>dh',
+      function()
+        toggle_diffview('DiffviewFileHistory %')
+      end,
+      { desc = 'Diffview repo history' },
+    },
+    {
+      '<Space>dv',
+      function()
+        toggle_diffview('DiffviewOpen')
+      end,
+    },
+  },
 }

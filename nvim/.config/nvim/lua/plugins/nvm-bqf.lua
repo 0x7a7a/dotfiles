@@ -2,7 +2,7 @@ return {
   'kevinhwang91/nvim-bqf',
   ft = { 'qf' },
   keys = { {
-    '<Space>q',
+    'qf',
     Z.toggle_quickfix,
     'Toggle quickfix',
   } },
