@@ -6,7 +6,7 @@ return {
       { 'nvim-lua/plenary.nvim' },
     },
     -- use 'luarocks install --lua-version 5.1 tiktoken_core' instead
-    -- build = 'make tiktoken',
+    build = 'make tiktoken',
     config = function()
       local chat = require('CopilotChat')
 
@@ -14,52 +14,17 @@ return {
         debug = false,
         proxy = '127.0.0.1:7890',
         allow_insecure = true,
-        -- model = 'o1-preview-2024-09-12',
         model = 'claude-3.7-sonnet',
 
-        mappings = {
-          complete = {
-            insert = '',
-          },
-        },
-
         prompts = {
-          Explain = {
-            prompt = '/COPILOT_EXPLAIN Write an explanation for the active selection as paragraphs of text in Chinease.',
-          },
-          Optimize = {
-            prompt = '/COPILOT_GENERATE Optimize the selected code to improve performance and readability.Simple explanation in Chinese',
+          COPILOT_INSTRUCTIONS = {
+            system_prompt = 'You are now a senior software engineer who is familiar with multiple programming languages and development frameworks, and has an in-depth understanding of the software development life cycle. You are good at solving technical problems and have excellent logical thinking skills. Please answer the following questions for me in this role and respond in Chinese',
           },
         },
-
         chat_autocomplete = false,
       })
 
       vim.keymap.set('n', '<Space>c', '<Cmd>CopilotChatToggle<CR>')
-      vim.keymap.set(
-        'n',
-        '<leader>cr',
-        '<Cmd>CopilotChatReview<CR>',
-        { desc = 'CopilotChat: Review the selected code' }
-      )
-      vim.keymap.set(
-        'n',
-        '<leader>ce',
-        '<Cmd>CopilotChatExplain<CR>',
-        { desc = 'CopilotChat: Explain for the active selection' }
-      )
-      vim.keymap.set(
-        'n',
-        '<leader>cp',
-        '<Cmd>CopilotChatOptimize<CR>',
-        { desc = 'CopilotChat: Optimize the selected code' }
-      )
-      vim.keymap.set(
-        'n',
-        '<leader>cd',
-        '<Cmd>CopilotChatDocs<CR>',
-        { desc = 'CopilotChat: Add documentation comment for the selection' }
-      )
 
       Z.autocmd('BufEnter', 'copilot-*', function()
         vim.o.number = false
