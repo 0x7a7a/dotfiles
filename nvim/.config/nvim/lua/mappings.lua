@@ -66,3 +66,14 @@ map('c', '<C-e>', '<End>')
 
 -- Lazy
 map('n', '<Leader>ps', '<Cmd>Lazy sync<CR>', { desc = 'Update plugins' })
+
+-- LSP
+map('n', '<leader>d', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
+map('n', '<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
+map('n', '<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })
+map('n', '[e', function()
+  vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
+end, { desc = 'Previous error diagnostic' })
+map('n', ']e', function()
+  vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
+end, { desc = 'Next error diagnostic' })

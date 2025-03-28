@@ -4,6 +4,7 @@ return {
   'neovim/nvim-lspconfig',
   event = 'BufEnter',
   dependencies = { 'saghen/blink.cmp' },
+  enabled = false,
   config = function()
     local ERROR = vim.diagnostic.severity.ERROR
     local WARN = vim.diagnostic.severity.WARN
