@@ -15,15 +15,13 @@ return {
 
     wk.add({
       { '<leader>b', group = 'Prefix for bdelete' },
-      { '<leader>c', group = 'Copilot Chat' },
       { '<leader>g', group = 'Prefix for git/fugtive' },
       { '<leader>p', group = 'Prefix for lazy' },
-      { '<leader>q', group = 'Prefix for quickfix and quit' },
 
       { '<Space>d', group = 'Preifx for diffview' },
       { '<Space>l', group = 'Open the tui application' },
       { '<Space>s', group = 'Fuzzy Search' },
-      { '<Space>q', group = 'Quickfix window' },
+      { '<Space>c', group = 'Copilot Chat' },
 
       { 'gJ', desc = 'Joining the block of codes' },
       { 'gS', desc = 'Splitting the block of codes' },

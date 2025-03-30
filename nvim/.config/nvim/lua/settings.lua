@@ -56,11 +56,8 @@ opt.tabstop       = 2
 opt.virtualedit   = 'block'
 opt.iskeyword:append('-')
 
--- Fold(nvim-ufo)
-vim.o.foldcolumn = '0'
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+-- Fold
+vim.opt.fillchars:append({fold = " "})
 
 -- Automatic switching of relative and absolute line numbers
 local autocmd = Z.autocmd
