@@ -3,7 +3,8 @@ _G.Z = {}
 require('functions')
 require('settings')
 require('mappings')
-require('lsp')
+-- Temporarily still using lsp-config
+-- require('lsp')
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then

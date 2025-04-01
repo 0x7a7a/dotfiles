@@ -26,11 +26,6 @@ return {
 
       vim.keymap.set('n', ']c', next_hunk, { expr = true, desc = 'Next git hunk' })
       vim.keymap.set('n', '[c', prev_hunk, { expr = true, desc = 'Prev git hunk' })
-      vim.keymap.set('n', '<leader>gp', gs.preview_hunk, { desc = 'Gitsigns: preview diff hunk' })
-      vim.keymap.set('n', '<leader>grh', gs.reset_hunk, { desc = 'Gitsigns: reset diff hunk over cursor' })
-      vim.keymap.set('n', '<leader>grb', gs.reset_buffer, { desc = 'Gitsigns: reset diff for entire buffer' })
-      vim.keymap.set('n', '<leader>gb', gs.blame_line, { desc = 'Gitsigns: blame line' })
-      vim.keymap.set('n', '<leader>gB', gs.toggle_current_line_blame, { desc = 'Gitsigns: toggle blame line' })
     end,
 
     -- current_line_blame = true,

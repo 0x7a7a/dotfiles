@@ -4,7 +4,6 @@ return {
   'neovim/nvim-lspconfig',
   event = 'BufEnter',
   dependencies = { 'saghen/blink.cmp' },
-  enabled = false,
   config = function()
     local ERROR = vim.diagnostic.severity.ERROR
     local WARN = vim.diagnostic.severity.WARN
@@ -30,51 +29,48 @@ return {
     local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
 
-    -- Refrences/rename/code action is built-in by default
-    -- https://github.com/neovim/neovim/pull/28500
-    -- vim.keymap.del('n', 'grn')
-    -- vim.keymap.del('n', 'grr')
-    -- vim.keymap.del({ 'n', 'v' }, 'gra')
-
-    local lsp_keymap = function(bufnr)
-      local map = function(...)
-        local args = { ... }
-        if #args == 3 then
-          table.insert(args, 1, { 'n' })
-        end
-
-        local mode, keys, func, opts = args[1], args[2], args[3], args[4] or {}
-        opts = vim.tbl_extend('keep', opts, { silent = true, buffer = bufnr })
-        vim.keymap.set(mode, keys, func, opts)
-      end
-
-      map('grn', vim.lsp.buf.rename, { desc = 'Rename' })
-      map('gh', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
-      map('<leader>d', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
-
-      map('<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
-      map('<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })
-
-      map('[e', function()
-        vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
-      end, { desc = 'Previous error diagnostic' })
-      map(']e', function()
-        vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
-      end, { desc = 'Next error diagnostic' })
-    end
-
     -- automatically sign up lsp
     vim.api.nvim_create_autocmd('LspAttach', {
-      desc = 'General LSP Attach',
       callback = function(args)
-        -- buf keymap
-        lsp_keymap(args.buf)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client == nil then
+          return
+        end
 
-        -- inlay hints
-        -- local client = vim.lsp.get_client_by_id(args.data.client_id)
-        -- if client and client.server_capabilities.inlayHintProvider then
-        --   vim.lsp.inlay_hint.enable(true)
-        -- end
+        -- repurpose default nvim lsp bindings to use fzf-lua
+        if client:supports_method('textDocument/codeAction') then
+          vim.keymap.set('n', 'gra', '<Cmd>FzfLua lsp_code_actions previewer=false<CR>', { buffer = true })
+        end
+
+        if client:supports_method('textDocument/definition') then
+          vim.keymap.set('n', 'gd', '<Cmd>FzfLua lsp_definitions<CR>', { buffer = true })
+        end
+
+        if client:supports_method('textDocument/declaration') then
+          vim.keymap.set('n', 'gD', '<Cmd>FzfLua lsp_declarations<CR>', { buffer = true })
+        end
+
+        if client:supports_method('textDocument/implementation') then
+          vim.keymap.set('n', 'gri', '<Cmd>FzfLua lsp_implementations<CR>', { buffer = true })
+        end
+
+        if client:supports_method('textDocument/typeDefinition') then
+          vim.keymap.set('n', 'gy', '<Cmd>FzfLua lsp_typedefs<CR>', { buffer = true })
+        end
+
+        if client:supports_method('callHierarchy/incomingCalls') then
+          vim.keymap.set('n', 'g(', '<Cmd>FzfLua lsp_incoming_calls<CR>', { buffer = true })
+        end
+
+        if client:supports_method('callHierarchy/outgoingCalls') then
+          vim.keymap.set('n', 'g)', '<Cmd>FzfLua lsp_outgoing_calls<CR>', { buffer = true })
+        end
+
+        if client:supports_method('textDocument/hover') then
+          vim.keymap.set('n', 'K', function()
+            vim.lsp.buf.hover({ border = 'rounded', max_height = 10 })
+          end, { buffer = true })
+        end
       end,
     })
 

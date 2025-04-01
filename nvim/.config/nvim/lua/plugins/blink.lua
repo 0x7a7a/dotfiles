@@ -1,5 +1,5 @@
 return {
-  'Saghen/blink.cmp',
+  'saghen/blink.cmp',
   version = '*',
   dependencies = {
     {
@@ -95,13 +95,12 @@ return {
         completion = {
           list = {
             selection = {
+              preselect = false,
               auto_insert = true,
             },
           },
           menu = {
-            auto_show = function(ctx)
-              return ctx.bounds.length > 2
-            end,
+            auto_show = true,
           },
         },
       },
