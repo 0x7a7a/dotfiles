@@ -1,6 +1,6 @@
 return {
   'chrishrb/gx.nvim',
-  keys = { { 'gx', '<Cmd>Browse<CR>', mode = { 'n', 'x' } } },
+  keys = { { 'gx', '<cmd>Browse<CR>', mode = { 'n', 'x' } } },
   cmd = { 'Browse' },
   init = function()
     vim.g.netrw_nogx = 1 -- disable netrw gx

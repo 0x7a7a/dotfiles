@@ -24,7 +24,7 @@ return {
         chat_autocomplete = false,
       })
 
-      vim.keymap.set('n', '<Space>c', '<Cmd>CopilotChatToggle<CR>')
+      vim.keymap.set('n', '<Space>c', '<cmd>CopilotChatToggle<CR>')
 
       Z.autocmd('BufEnter', 'copilot-*', function()
         vim.o.number = false

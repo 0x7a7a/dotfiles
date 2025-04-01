@@ -1,9 +1,9 @@
 return {
   'stevearc/aerial.nvim',
   keys = {
-    { '<Space>a', '<Cmd>AerialToggle!<CR>', desc = 'Toggle Aerial' },
-    { '[f', '<Cmd>AerialPrev<CR>', desc = 'Prev Function' },
-    { ']f', '<Cmd>AerialNext<CR>', desc = 'Next Fcuntion' },
+    { '<Space>a', '<cmd>AerialToggle!<CR>', desc = 'Toggle Aerial' },
+    { '[f', '<cmd>AerialPrev<CR>', desc = 'Prev Function' },
+    { ']f', '<cmd>AerialNext<CR>', desc = 'Next Fcuntion' },
   },
   config = function()
     require('aerial').setup({

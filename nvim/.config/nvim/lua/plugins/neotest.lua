@@ -18,8 +18,8 @@ return {
       },
     })
 
-    vim.keymap.set('n', '<leader>r', '<Cmd>Neotest run<CR>', { desc = 'Run tests' })
-    -- vim.keymap.set('n', '<leader>to', '<Cmd>Neotest output<CR>', { desc = 'Run tests' })
-    -- vim.keymap.set('n', '<leader>tp', '<Cmd>Neotest output-panel<CR>', { desc = 'Run tests' })
+    vim.keymap.set('n', '<leader>r', '<cmd>Neotest run<CR>', { desc = 'Run tests' })
+    -- vim.keymap.set('n', '<leader>to', '<cmd>Neotest output<CR>', { desc = 'Run tests' })
+    -- vim.keymap.set('n', '<leader>tp', '<cmd>Neotest output-panel<CR>', { desc = 'Run tests' })
   end,
 }

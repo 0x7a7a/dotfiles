@@ -39,31 +39,31 @@ return {
 
         -- repurpose default nvim lsp bindings to use fzf-lua
         if client:supports_method('textDocument/codeAction') then
-          vim.keymap.set('n', 'gra', '<Cmd>FzfLua lsp_code_actions previewer=false<CR>', { buffer = true })
+          vim.keymap.set('n', 'gra', '<cmd>FzfLua lsp_code_actions previewer=false<CR>', { buffer = true })
         end
 
         if client:supports_method('textDocument/definition') then
-          vim.keymap.set('n', 'gd', '<Cmd>FzfLua lsp_definitions<CR>', { buffer = true })
+          vim.keymap.set('n', 'gd', '<cmd>FzfLua lsp_definitions<CR>', { buffer = true })
         end
 
         if client:supports_method('textDocument/declaration') then
-          vim.keymap.set('n', 'gD', '<Cmd>FzfLua lsp_declarations<CR>', { buffer = true })
+          vim.keymap.set('n', 'gD', '<cmd>FzfLua lsp_declarations<CR>', { buffer = true })
         end
 
         if client:supports_method('textDocument/implementation') then
-          vim.keymap.set('n', 'gri', '<Cmd>FzfLua lsp_implementations<CR>', { buffer = true })
+          vim.keymap.set('n', 'gri', '<cmd>FzfLua lsp_implementations<CR>', { buffer = true })
         end
 
         if client:supports_method('textDocument/typeDefinition') then
-          vim.keymap.set('n', 'gy', '<Cmd>FzfLua lsp_typedefs<CR>', { buffer = true })
+          vim.keymap.set('n', 'gy', '<cmd>FzfLua lsp_typedefs<CR>', { buffer = true })
         end
 
         if client:supports_method('callHierarchy/incomingCalls') then
-          vim.keymap.set('n', 'g(', '<Cmd>FzfLua lsp_incoming_calls<CR>', { buffer = true })
+          vim.keymap.set('n', 'g(', '<cmd>FzfLua lsp_incoming_calls<CR>', { buffer = true })
         end
 
         if client:supports_method('callHierarchy/outgoingCalls') then
-          vim.keymap.set('n', 'g)', '<Cmd>FzfLua lsp_outgoing_calls<CR>', { buffer = true })
+          vim.keymap.set('n', 'g)', '<cmd>FzfLua lsp_outgoing_calls<CR>', { buffer = true })
         end
 
         if client:supports_method('textDocument/hover') then
