@@ -12,7 +12,7 @@ return {
   evet = 'VeryLazy',
   keys = {
     {
-      '<Space>dh',
+      '<leader>gd',
       function()
         toggle_diffview('DiffviewFileHistory %')
       end,
