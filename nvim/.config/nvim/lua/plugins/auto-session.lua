@@ -1,7 +1,7 @@
 return {
   'rmagatti/auto-session',
   config = function()
-    vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+    vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
 
     local function close_bufpin()
       if Z.has('bufpin') then

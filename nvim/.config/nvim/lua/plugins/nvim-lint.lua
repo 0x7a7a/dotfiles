@@ -8,8 +8,10 @@ return {
       go = { 'golangcilint' },
     }
 
-    vim.keymap.set('n', '<leader>lt', function()
-      lint.try_lint()
-    end, { desc = 'Trigger linting for current file' })
+    vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+      callback = function()
+        require('lint').try_lint()
+      end,
+    })
   end,
 }

@@ -16,6 +16,7 @@ return {
       float = {
         source = true,
         prefix = ' ',
+        border = 'rounded',
       },
       -- virtual_lines = true,
       virtual_text = true,

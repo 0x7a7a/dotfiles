@@ -20,7 +20,6 @@ return {
       keymap = {
         preset = 'super-tab',
         ['<CR>'] = { 'accept', 'fallback' },
-        ['<C-c>'] = { 'hide', 'fallback' },
       },
       appearance = {
         use_nvim_cmp_as_default = true,
@@ -57,11 +56,12 @@ return {
       completion = {
         list = {
           selection = {
-            preselect = function(ctx)
-              return ctx.mode ~= 'cmdline'
-            end,
+            preselect = true,
             auto_insert = true,
           },
+        },
+        trigger = {
+          show_in_snippet = false,
         },
         menu = {
           draw = {
