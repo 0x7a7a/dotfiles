@@ -16,6 +16,9 @@ local WARN = vim.diagnostic.severity.WARN
 local HINT = vim.diagnostic.severity.HINT
 local INFO = vim.diagnostic.severity.INFO
 vim.diagnostic.config({
+  jump = {
+    float = true,
+  },
   float = {
     source = true,
     prefix = ' ',
