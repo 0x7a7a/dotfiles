@@ -60,9 +60,6 @@ return {
             auto_insert = true,
           },
         },
-        trigger = {
-          show_in_snippet = false,
-        },
         menu = {
           draw = {
             columns = {
