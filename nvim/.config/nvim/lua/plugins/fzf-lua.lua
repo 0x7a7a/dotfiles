@@ -32,6 +32,7 @@ return {
     vim.keymap.set('n', '<Space>sw', fzflua.grep_cword, { desc = '[S]earch current [W]ord' })
     vim.keymap.set('n', '<Space>sC', fzflua.commands, { desc = '[S]earch [C]ommands' })
     vim.keymap.set('n', '<Space>sr', fzflua.registers, { desc = '[S]earch [R]egisters' })
+    vim.keymap.set('n', '<Space>sk', fzflua.keymaps, { desc = '[S]earch [K]eymaps' })
 
     vim.keymap.set('n', 'gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
     vim.keymap.set('n', 'gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })

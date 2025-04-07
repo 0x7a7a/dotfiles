@@ -6,12 +6,6 @@ map('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']], {
 map({ '', '!' }, '<C-c>', '<Esc>')
 map('i', '<S-CR>', '<Esc>o')
 
-map('i', '<C-h>', '<left>')
--- Mapping to copolot chat
--- map('i', '<C-j>', '<down>')
-map('i', '<C-k>', '<up>')
-map('i', '<C-l>', '<right>')
-
 map('v', '<leader>y', '"+y', { desc = 'Copy to system clipboard' })
 map('x', '<leader>p', '"_dP', { desc = 'Paste but do not replace register' })
 map('n', 'c', '"_c', { desc = 'Pure key c' })
@@ -33,8 +27,27 @@ map('n', ']t', '<cmd>tabnext<CR>')
 map('n', '[q', '<cmd>cprevious<CR>zz')
 map('n', ']q', '<cmd>cnext<CR>zz')
 
-map('i', '<C-a>', '<Esc>^i')
-map('i', '<C-e>', '<Esc>$a')
+-- Extend the default behavior
+map('i', '<C-h>', '<BS>')
+map('i', '<C-d>', '<Del>')
+map('i', '<C-b>', '<Left>')
+map('i', '<C-f>', '<Right>')
+map('i', '<C-n>', [[pumvisible() ? '<C-n>' : '<down>']], {
+  desc = 'Go to next line',
+  noremap = true,
+  expr = true,
+})
+map('i', '<C-p>', [[pumvisible() ? '<C-p>' : '<up>']], {
+  desc = 'Go to previous line',
+  noremap = true,
+  expr = true,
+})
+map({ 'i', 'c' }, '<C-a>', '<home>')
+map('i', '<C-e>', [[pumvisible() ? '<C-e>' : '<end>']], {
+  desc = 'go to line end or abort completion when pum is visible',
+  noremap = true,
+  expr = true,
+})
 map('n', 'H', '^')
 map('n', 'L', 'g_')
 
@@ -60,10 +73,6 @@ map('n', '<A-left>', '<cmd>vertical resize-5<CR>')
 map('n', '<A-up>', '<cmd>resize+5<CR>')
 map('n', '<A-down>', '<cmd>resize-5<CR>')
 
--- Cmdline shortcuts
-map('c', '<C-a>', '<Home>')
-map('c', '<C-e>', '<End>')
-
 -- Lazy
 map('n', '<Leader>ps', '<cmd>Lazy sync<CR>', { desc = 'Update plugins' })
 
@@ -77,3 +86,14 @@ end, { desc = 'Previous error diagnostic' })
 map('n', ']e', function()
   vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
 end, { desc = 'Next error diagnostic' })
+
+-- Command
+map('c', '<C-b>', '<Left>', { noremap = true })
+map('c', '<C-f>', '<Right>', { noremap = true })
+map('c', '<C-a>', '<Home>', { noremap = true })
+map('c', '<C-e>', '<End>', { noremap = true })
+map('c', '<C-h>', '<BS>', { noremap = true })
+map('c', '<C-d>', '<Del>', { noremap = true })
+map('c', '<C-k>', [[<C-\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>]], { noremap = true })
+map('c', '<A-b>', '<S-Left>', { noremap = true })
+map('c', '<A-f>', '<S-Right>', { noremap = true })
