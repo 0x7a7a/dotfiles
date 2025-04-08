@@ -57,6 +57,13 @@ opt.virtualedit   = 'block'
 opt.iskeyword:append('-')
 
 -- Fold
+vim.o.foldenable               = true
+vim.o.foldlevel                = 99
+vim.o.foldlevelstart           = 99
+vim.o.foldmethod               = "expr"
+vim.o.foldexpr                 = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldtext                 = ""
+vim.opt.foldcolumn             = "0"
 vim.opt.fillchars:append({fold = " "})
 
 -- Automatic switching of relative and absolute line numbers
