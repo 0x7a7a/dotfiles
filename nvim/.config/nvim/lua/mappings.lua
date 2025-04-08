@@ -3,7 +3,7 @@ local map = vim.keymap.set
 map('n', 'j', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
 map('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
 
-map({ '', '!' }, '<C-c>', '<Esc>')
+map({ 'n', '!' }, '<C-c>', '<Esc>')
 map('i', '<S-CR>', '<Esc>o')
 
 map('v', '<leader>y', '"+y', { desc = 'Copy to system clipboard' })
@@ -61,12 +61,6 @@ map('v', '<A-k>', "<Esc><cmd>'<,'>move'<-2<CR>gv=gv")
 
 map('n', ']<Space>', 'o<Esc>k', { desc = 'Add a blank line above' })
 map('n', '[<Space>', 'O<Esc>j', { desc = 'Add a blank line below' })
-
--- Smart-splites plugin replaced
--- map('n', '<C-h>', '<C-w>h')
--- map('n', '<C-j>', '<C-w>j')
--- map('n', '<C-k>', '<C-w>k')
--- map('n', '<C-l>', '<C-w>l')
 
 map('n', '<A-right>', '<cmd>vertical resize+5<CR>')
 map('n', '<A-left>', '<cmd>vertical resize-5<CR>')

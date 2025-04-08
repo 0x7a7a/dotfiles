@@ -1,66 +1,88 @@
-vim.keymap.set('n', '<leader>r', ":lua require('kulala').run()<CR>", {
+vim.keymap.set('n', '<leader>r', function()
+  require('kulala').run()
+end, {
   noremap = true,
   silent = true,
-  desc = 'runs the current request',
+  desc = 'Run current request',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>R', ":lua require('kulala').replay()<CR>", {
+vim.keymap.set('n', '<leader>R', function()
+  require('kulala').replay()
+end, {
   noremap = true,
   silent = true,
-  desc = 'replays the last run request',
+  desc = 'Replay last request',
   buffer = true,
 })
-vim.keymap.set('n', '[[', ":lua require('kulala').jump_prev()<CR>", {
+vim.keymap.set('n', '[[', function()
+  require('kulala').jump_prev()
+end, {
   noremap = true,
   silent = true,
-  desc = 'jumps to the previous request',
+  desc = 'Jump to previous request',
   buffer = true,
 })
-vim.keymap.set('n', ']]', ":lua require('kulala').jump_next()<CR>", {
+vim.keymap.set('n', ']]', function()
+  require('kulala').jump_next()
+end, {
   noremap = true,
   silent = true,
-  desc = 'jumps to the next request',
+  desc = 'Jump to next request',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>hi', ":lua require('kulala').inspect()<CR>", {
+vim.keymap.set('n', '<leader>hi', function()
+  require('kulala').inspect()
+end, {
   noremap = true,
   silent = true,
-  desc = 'inspects the current request',
+  desc = 'Inspect current request',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>hs', ":lua require('kulala').show_stats()<CR>", {
+vim.keymap.set('n', '<leader>hs', function()
+  require('kulala').show_stats()
+end, {
   noremap = true,
   silent = true,
-  desc = 'shows the statistics of the last run request',
+  desc = 'Show last request statistics',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>ht', ":lua require('kulala').scratchpad()<CR>", {
+vim.keymap.set('n', '<leader>ht', function()
+  require('kulala').scratchpad()
+end, {
   noremap = true,
   silent = true,
-  desc = 'opens the scratchpad',
+  desc = 'Open scratchpad',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>he', ":lua require('kulala').copy()<CR>", {
+vim.keymap.set('n', '<leader>he', function()
+  require('kulala').copy()
+end, {
   noremap = true,
   silent = true,
-  desc = 'copies the current request (as cURL command) to the clipboard',
+  desc = 'Copy request as cURL command',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>hd', ":lua require('kulala').from_curl()<CR>", {
+vim.keymap.set('n', '<leader>hd', function()
+  require('kulala').from_curl()
+end, {
   noremap = true,
   silent = true,
-  desc = 'parse the cURL command from the clipboard',
+  desc = 'Parse cURL command from clipboard',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>hc', ":lua require('kulala').close()<CR>", {
+vim.keymap.set('n', '<leader>hc', function()
+  require('kulala').close()
+end, {
   noremap = true,
   silent = true,
-  desc = 'closes the kulala window and also the current buffer',
+  desc = 'Close kulala window and buffer',
   buffer = true,
 })
-vim.keymap.set('n', '<leader>hh', ":lua require('kulala').toggle_view()<CR>", {
+vim.keymap.set('n', '<leader>hh', function()
+  require('kulala').toggle_view()
+end, {
   noremap = true,
   silent = true,
-  desc = 'toggles between the body and headers view of the last run request',
+  desc = 'Toggle between body and headers view',
   buffer = true,
 })

@@ -12,6 +12,7 @@ return {
         'zls',
         'gopls',
         'gotests',
+        'gotestsum',
         'gofumpt',
         'goimports',
         'goimports-reviser',
