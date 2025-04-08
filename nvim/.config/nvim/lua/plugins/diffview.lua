@@ -12,17 +12,18 @@ return {
   evet = 'VeryLazy',
   keys = {
     {
-      '<leader>gd',
+      '<Space>dh',
       function()
         toggle_diffview('DiffviewFileHistory %')
       end,
-      { desc = 'Diffview repo history' },
+      desc = 'Diffview repo history',
     },
     {
       '<Space>dv',
       function()
         toggle_diffview('DiffviewOpen')
       end,
+      desc = 'Diffview open',
     },
   },
 }
