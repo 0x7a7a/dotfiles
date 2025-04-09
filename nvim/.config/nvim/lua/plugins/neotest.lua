@@ -11,9 +11,16 @@ return {
     {
       'fredrikaverpil/neotest-golang',
       dependencies = {
-        { 'andythigpen/nvim-coverage', opts = {
-          auto_reload = true,
-        } },
+        {
+          'andythigpen/nvim-coverage',
+          opts = {
+            auto_reload = true,
+            signs = {
+              covered = { priority = 100 },
+              uncovered = { priority = 100 },
+            },
+          },
+        },
       },
     },
   },
