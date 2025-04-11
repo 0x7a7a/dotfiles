@@ -53,7 +53,7 @@
   "nvim-ts-autotag": { "branch": "main", "commit": "a1d526af391f6aebb25a8795cbc05351ed3620b5" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "render-markdown.nvim": { "branch": "main", "commit": "05e6a6d119f90b99829ecb7eb85428a226c0c05f" },
-  "smart-splits.nvim": { "branch": "master", "commit": "594cb1b90937c4d38d06664ce5a68e5e02ff9cc0" },
+  "smart-splits.nvim": { "branch": "master", "commit": "d3011454da78dd72883e131d4b1e7239a29d086e" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "d10c9fda7b8b7b81b2c6eb4c3909adfe9812c6bf" },
   "toggleterm.nvim": { "branch": "main", "commit": "137d06fb103952a0fb567882bb8527e2f92d327d" },
   "treesj": { "branch": "main", "commit": "f4049f8ba2177e7c5c03fb9e34d4e039c685d744" },
