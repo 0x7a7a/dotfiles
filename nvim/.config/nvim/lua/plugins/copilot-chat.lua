@@ -14,7 +14,7 @@ return {
         debug = false,
         proxy = '127.0.0.1:7890',
         allow_insecure = true,
-        model = 'claude-3.5-sonnet',
+        model = 'claude-3.7-sonnet',
 
         prompts = {
           COPILOT_INSTRUCTIONS = {

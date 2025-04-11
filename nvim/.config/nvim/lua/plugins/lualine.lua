@@ -41,10 +41,6 @@ return {
             warn = ' ',
             info = ' ',
             hint = ' ',
-            -- error = ' ',
-            -- warn = ' ',
-            -- info = ' ',
-            -- hint = '󰝶 ',
           },
         },
       },
@@ -65,16 +61,6 @@ return {
       },
       lualine_z = { 'progress', 'location' },
     },
-    inactive_sections = {
-      lualine_a = {},
-      lualine_b = {},
-      lualine_c = { 'filename' },
-      lualine_x = { 'location' },
-      lualine_y = {},
-      lualine_z = {},
-    },
-    tabline = {},
-    -- extensions = {"quickfix", "nvim-tree", "toggleterm", "fugitive", symbols_outline}
-    extensions = { 'nvim-tree', 'toggleterm', 'fugitive' },
+    extensions = { 'quickfix', 'toggleterm', 'fugitive' },
   },
 }

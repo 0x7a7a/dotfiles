@@ -25,7 +25,7 @@ return {
     vim.keymap.set('n', '<Space>sc', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
     vim.keymap.set('n', '<Space>sa', fzflua.lsp_document_symbols, { desc = 'Search document symbols' })
     vim.keymap.set('n', '<Space>sg', fzflua.live_grep_native, { desc = '[S]earch by [G]rep' })
-    vim.keymap.set('n', '<Space>ss', fzflua.live_grep_resume, { desc = '[S]earch by [G]rep' })
+    vim.keymap.set('n', '<Space>ss', fzflua.live_grep_resume, { desc = '[S]earch re[S]ume' })
     vim.keymap.set('n', '<Space>sh', fzflua.help_tags, { desc = '[S]earch [H]elp' })
     vim.keymap.set('n', '<Space>so', fzflua.oldfiles, { desc = '[S]earch [O]ldfiles' })
     vim.keymap.set('n', '<Space>sd', fzflua.diagnostics_workspace, { desc = '[S]earch [D]iagnostics' })
