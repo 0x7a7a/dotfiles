@@ -19,6 +19,7 @@ return {
       auto_session_root_dir = vim.fn.stdpath('data') .. '/sessions/',
       auto_session_suppress_dirs = { '~/', '/' },
       auto_session_use_git_branch = nil,
+      purge_after_minutes = 14400,
       pre_save_cmds = { clean_buffers },
     })
   end,
