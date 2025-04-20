@@ -29,6 +29,7 @@ return {
         },
       },
     })
+    vim.lsp.inlay_hint.enable()
 
     local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
@@ -126,10 +127,11 @@ return {
         flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
         settings = {
           gopls = {
-            analyses = { unusedparams = true, unreachable = false },
-            usePlaceholders = false,
+            hints = {
+              constantValues = true,
+              functionTypeParameters = true,
+            },
             staticcheck = true,
-            diagnosticsDelay = '500ms',
           },
         },
       },
