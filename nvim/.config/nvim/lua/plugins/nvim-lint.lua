@@ -3,6 +3,8 @@ return {
   event = 'VeryLazy',
   config = function()
     local lint = require('lint')
+    local golint = lint.linters.golangcilint
+    table.insert(golint.args, '--disable=errcheck')
 
     lint.linters_by_ft = {
       go = { 'golangcilint' },
