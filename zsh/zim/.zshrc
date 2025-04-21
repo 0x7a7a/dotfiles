@@ -42,6 +42,7 @@ ZVM_VI_EDITOR=nvim
 
 ## Lf default editor
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
 
 ## fz setting
 FZ_HISTORY_CD_CMD=_zlua
