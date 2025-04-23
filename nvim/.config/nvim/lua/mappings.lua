@@ -91,3 +91,11 @@ map('c', '<C-d>', '<Del>', { noremap = true })
 map('c', '<C-k>', [[<C-\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>]], { noremap = true })
 map('c', '<A-b>', '<S-Left>', { noremap = true })
 map('c', '<A-f>', '<S-Right>', { noremap = true })
+
+-- Block insert in line visual mode
+vim.keymap.set('x', 'I', function()
+  return vim.fn.mode() == 'V' and '^<C-v>I' or 'I'
+end, { expr = true })
+vim.keymap.set('x', 'A', function()
+  return vim.fn.mode() == 'V' and '$<C-v>A' or 'A'
+end, { expr = true })
