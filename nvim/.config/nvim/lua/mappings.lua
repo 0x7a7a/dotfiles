@@ -1,7 +1,11 @@
 local map = vim.keymap.set
 
-map('n', 'j', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
-map('n', 'k', [[v:count ? (v:count >= 3 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
+map('n', 'j', function()
+  return vim.v.count > 0 and "m'" .. vim.v.count .. 'j' or 'gj'
+end, { noremap = true, expr = true })
+map('n', 'k', function()
+  return vim.v.count > 0 and "m'" .. vim.v.count .. 'k' or 'gk'
+end, { noremap = true, expr = true })
 
 map({ 'n', '!' }, '<C-c>', '<Esc>')
 map('i', '<S-CR>', '<Esc>o')
@@ -21,8 +25,16 @@ map('n', '<leader>w', '<cmd>w<CR>', { desc = ':write' })
 
 map('n', '[b', '<cmd>bprevious<CR>')
 map('n', ']b', '<cmd>bnext<CR>')
-map('n', '[t', '<cmd>tabprevious<CR>')
-map('n', ']t', '<cmd>tabnext<CR>')
+
+-- Tab
+map('n', '<leader><tab>n', '<cmd>$tabnew<CR>', { noremap = true })
+map('n', '<leader><tab>c', '<cmd>tabclose<CR>', { noremap = true })
+map('n', '<leader><tab>o', '<cmd>tabonley<CR>', { noremap = true })
+map('n', '[t', '<cmd>tabp<CR>', { noremap = true })
+map('n', ']t', '<cmd>tabn<CR>', { noremap = true })
+map('n', '<leader><tab>mp', '<cmd>-tabmove<CR>', { noremap = true })
+map('n', '<leader><tab>mn', '<cmd>+tabmove<CR>', { noremap = true })
+
 -- Quickfix
 map('n', '[q', '<cmd>cprevious<CR>zz')
 map('n', ']q', '<cmd>cnext<CR>zz')
