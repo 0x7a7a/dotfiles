@@ -2,6 +2,7 @@ return {
   {
     'CopilotC-Nvim/CopilotChat.nvim',
     event = 'VeryLazy',
+    enabled = false,
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
     },

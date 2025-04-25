@@ -74,7 +74,7 @@ autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
     return
   end
 
-  if ft == 'qf' then
+  if ft == 'qf' or ft == 'codecompanion' then
     vim.opt.relativenumber = false
     return
   end
