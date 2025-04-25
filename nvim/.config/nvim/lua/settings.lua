@@ -31,15 +31,16 @@ opt.cursorlineopt  = 'number'
 opt.wildmode       = 'longest:full,full'
 opt.numberwidth    = 3
 
-vim.o.fillchars = table.concat({
-  horiz = '━',
-  horizup = '┻',
+opt.fillchars = {
+  horiz     = '━',
+  horizup   = '┻',
   horizdown = '┳',
-  vert = '┃',
-  vertleft = '┨',
+  vert      = '┃',
+  vertleft  = '┨',
   vertright = '┣',
   verthoriz = '╋',
-})
+  fold      = " ",
+}
 opt.list = false
 opt.listchars = table.concat({ 'extends:…', 'nbsp:+', 'precedes:…', 'tab:> ' }, ',')
 
@@ -64,7 +65,6 @@ vim.o.foldmethod               = "expr"
 vim.o.foldexpr                 = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldtext                 = ""
 vim.opt.foldcolumn             = "0"
-vim.opt.fillchars:append({fold = " "})
 
 -- Automatic switching of relative and absolute line numbers
 local autocmd = Z.autocmd
@@ -102,16 +102,13 @@ end)
 --   os.execute('kitty @ set-spacing padding=10 margin=0')
 -- end)
 
--- User command
-local usercmd = vim.api.nvim_create_user_command
-usercmd('CopyRelPath', function()
-  local path = vim.fn.expand('%')
-  vim.fn.setreg('+', path)
-  vim.notify('Copied "' .. path .. '" to the clipboard!')
-end, {})
-
-usercmd('CopyPath', function()
-  local path = vim.fn.expand('%:p')
-  vim.fn.setreg('+', path)
-  vim.notify('Copied "' .. path .. '" to the clipboard!')
-end, {})
+   local function copy_path(opts)
+     local type = opts.fargs[1] or 'rel'
+     local format = type == 'rel' and '%' or '%:p'
+     local path = vim.fn.expand(format)
+     vim.fn.setreg('+', path)
+     vim.notify('copied "' .. path .. '" to the clipboard!')
+   end
+   vim.api.nvim_create_user_command('CopyPath', copy_path, { nargs = '?', complete = function()
+     return {'rel', 'abs'}
+   end })
