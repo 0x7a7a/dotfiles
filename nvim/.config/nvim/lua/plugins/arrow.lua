@@ -6,7 +6,7 @@ return {
   opts = {
     show_icons = true,
     leader_key = '<C-a>',
-    buffer_leader_key = nil,
+    buffer_leader_key = 'm',
     index_keys = 'hjkl1234',
   },
 }
