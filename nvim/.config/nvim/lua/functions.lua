@@ -47,3 +47,7 @@ function Z.toggle_quickfix()
   local cmd = #qf_windows == 0 and 'copen' or 'cclose'
   vim.cmd(cmd)
 end
+
+function Z.is_mac()
+  return vim.fn.has('mac') == 1
+end

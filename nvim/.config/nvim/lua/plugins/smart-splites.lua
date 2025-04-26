@@ -1,6 +1,7 @@
 return {
   'mrjones2014/smart-splits.nvim',
   build = './kitty/install-kittens.bash',
+  cond = Z.is_mac(),
   config = function()
     local smart = require('smart-splits')
     smart.setup({})
