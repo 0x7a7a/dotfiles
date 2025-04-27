@@ -1,15 +1,16 @@
-vim.lsp.enable({
-  'zls',
-  'gopls',
-  'luals',
-  'tailwindcss',
-  'eslint',
-  'html',
-  'css',
-  'volar',
-  'vtsls',
-  'intelephense',
-})
+-- TODO: Change to automatically match the file names in the directory.
+-- vim.lsp.enable({
+--   'zls',
+--   'gopls',
+--   'luals',
+--   'tailwindcss',
+--   'eslint',
+--   'html',
+--   'css',
+--   'volar',
+--   'vtsls',
+--   'intelephense',
+-- })
 
 local ERROR = vim.diagnostic.severity.ERROR
 local WARN = vim.diagnostic.severity.WARN
@@ -82,6 +83,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     if client:supports_method('textDocument/foldingRange') then
       local win = vim.api.nvim_get_current_win()
       vim.wo[win][0].foldexpr = 'v:lua.vim.lsp.foldexpr()'
+    end
+
+    if client:supports_method('textDocument/documentColor') then
+      vim.lsp.document_color.enable(true, args.buf)
     end
   end,
 })
