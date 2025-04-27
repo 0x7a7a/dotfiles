@@ -22,7 +22,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Must be loaded before the fzf plugin
 # https://github.com/jeffreytse/zsh-vi-mode/issues/24
 zvm_after_init(){
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  which fzf &>/dev/null && source <(fzf --zsh)
 }
 
 # Emacs-style keybinding
