@@ -91,3 +91,6 @@ alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
 PROXY='http://127.0.0.1:7890'
 alias proxy='export http_proxy=$PROXY https_proxy=$PROXY'
 alias noproxy='unset http_proxy https_proxy'
+
+## override omz/git aliases
+alias gf=gf
