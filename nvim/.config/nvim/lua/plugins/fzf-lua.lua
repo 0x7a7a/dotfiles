@@ -3,25 +3,24 @@ return {
   config = function()
     local fzflua = require('fzf-lua')
     fzflua.setup({
+      'default-prompt',
       files = {
-        file_icons = 'mini',
+        previewer = false,
+        cwd_prompt = false,
+        winopts = {
+          height = 0.5,
+          width = 0.5,
+        },
       },
     })
 
-    local files_opts = {
-      previewer = false,
-      cwd_prompt = false,
-      winopts = {
-        height = 0.5,
-        width = 0.5,
-      },
-    }
-
     -- stylua: ignore start
-    vim.keymap.set('n', '<C-p>', function() fzflua.files(files_opts) end, { desc = '[S]earch [F]iles' })
+    vim.keymap.set('i', '<C-x><C-f>', fzflua.complete_path , { desc = 'Fuzzy complete path' })
+    vim.keymap.set('n', '<C-p>', fzflua.files, { desc = '[S]earch [F]iles' })
     vim.keymap.set('n', '<C-\\>', fzflua.buffers, { desc = 'Search buffers' })
     vim.keymap.set('n', '<C-g>', fzflua.live_grep_native, { desc = '[S]earch by grep native' })
-    vim.keymap.set('n', '<Space>ss', fzflua.live_grep_resume, { desc = '[S]earch re[S]ume' })
+    vim.keymap.set('n', '<C-\'>', fzflua.resume, { desc = '[S]earch re[S]ume' })
+
     vim.keymap.set('n', '<Space>sc', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
     vim.keymap.set('n', '<Space>sa', fzflua.lsp_document_symbols, { desc = 'Search document symbols' })
     vim.keymap.set('n', '<Space>sh', fzflua.help_tags, { desc = '[S]earch [H]elp' })
