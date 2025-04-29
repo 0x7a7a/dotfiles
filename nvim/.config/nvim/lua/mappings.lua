@@ -54,7 +54,7 @@ map('i', '<C-p>', [[pumvisible() ? '<C-p>' : '<up>']], {
   noremap = true,
   expr = true,
 })
-map({ 'i', 'c' }, '<C-a>', '<home>')
+map({ 'i' }, '<C-a>', '<Esc>^i')
 map('i', '<C-e>', [[pumvisible() ? '<C-e>' : '<end>']], {
   desc = 'go to line end or abort completion when pum is visible',
   noremap = true,

@@ -14,7 +14,7 @@ return {
         require('luasnip.loaders.from_lua').lazy_load({ paths = './lua/snippets' })
       end,
     },
-    { 'fang2hou/blink-copilot' },
+    -- { 'fang2hou/blink-copilot' },
   },
   config = function()
     require('blink.cmp').setup({
@@ -74,7 +74,7 @@ return {
       signature = { enabled = true },
       snippets = { preset = 'luasnip' },
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown', 'copilot' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown' },
         providers = {
           copilot = {
             name = 'copilot',

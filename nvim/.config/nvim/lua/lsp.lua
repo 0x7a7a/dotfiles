@@ -36,7 +36,6 @@ vim.diagnostic.config({
     },
   },
 })
-vim.lsp.inlay_hint.enable()
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)

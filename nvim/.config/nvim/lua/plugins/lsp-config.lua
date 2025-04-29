@@ -51,10 +51,6 @@ return {
         flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
         settings = {
           gopls = {
-            hints = {
-              constantValues = true,
-              functionTypeParameters = true,
-            },
             staticcheck = true,
           },
         },

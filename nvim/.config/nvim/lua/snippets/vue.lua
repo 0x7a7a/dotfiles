@@ -7,30 +7,22 @@ ls.filetype_extend('vue', { 'javascript' })
 
 return {
   s(
-    'tpl',
+    'vue3',
     fmt(
       [[
-  <script setup lang="ts">
-  {}
-  </script>
+<script setup lang="ts">
+{}
+</script>
 
-  <template></template>
-  
-  <style scoped></style>
-  ]],
-      { i(1) }
-    )
-  ),
+<template>
+</template>
 
-  s(
-    'style',
-    fmt(
-      [[
-  <style scoped>
-  {}
-  </style>
-  ]],
-      { i(1) }
+<style scoped>
+</style>
+]],
+      {
+        i(1, ''),
+      }
     )
   ),
 }
