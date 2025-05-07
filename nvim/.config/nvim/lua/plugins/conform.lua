@@ -3,11 +3,10 @@ return {
   event = 'BufWritePre',
   config = function()
     local conform = require('conform')
-
     conform.setup({
       formatters_by_ft = {
         lua = { 'stylua' },
-        go = { 'goimports', 'gofumpt' },
+        go = { 'goimports-reviser', 'gofumpt' },
         typescript = { 'prettier' },
         javascript = { 'prettier' },
         vue = { 'prettier' },
@@ -16,12 +15,15 @@ return {
         jsonc = { 'prettier' },
         svelte = { 'prettier' },
       },
+      formatters = {
+        ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
+      },
+
       format_on_save = function(bufnr)
         -- Disable with a global or buffer-local variable
         if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
           return
         end
-        -- I recommend these options. See :help conform.format for details.
         return { timeout_ms = 500, lsp_format = 'fallback' }
       end,
     })

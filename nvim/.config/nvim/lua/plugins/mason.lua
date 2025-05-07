@@ -14,6 +14,7 @@ return {
         'gotests',
         'gotestsum',
         'gofumpt',
+        'goimports-reviser',
         'golangci-lint',
         'stylua',
         'css-lsp',
