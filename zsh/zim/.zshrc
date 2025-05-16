@@ -50,7 +50,6 @@ FZ_CASE_INSENSITIVE=0
 
 path=(
   $HOME/go/bin
-  $HOME/.cargo/bin
   $HOME/.zvm/bin
   $HOME/.krew/bin
   $HOME/.zvm/self
