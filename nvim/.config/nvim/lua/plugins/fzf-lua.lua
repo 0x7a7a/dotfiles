@@ -2,16 +2,20 @@ return {
   'ibhagwan/fzf-lua',
   config = function()
     local fzflua = require('fzf-lua')
+
+    local winopts = {
+      previewer = false,
+      cwd_prompt = false,
+      winopts = {
+        height = 0.5,
+        width = 0.5,
+      },
+    }
+
     fzflua.setup({
       'default-prompt',
-      files = {
-        previewer = false,
-        cwd_prompt = false,
-        winopts = {
-          height = 0.5,
-          width = 0.5,
-        },
-      },
+      files = winopts,
+      buffers = winopts,
     })
 
     -- stylua: ignore start

@@ -18,7 +18,6 @@ return {
         'lua',
         'http',
         'json',
-        'rust',
         'vimdoc',
       },
       sync_install = true,
