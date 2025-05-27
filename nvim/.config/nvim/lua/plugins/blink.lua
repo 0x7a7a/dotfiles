@@ -75,6 +75,7 @@ return {
       snippets = { preset = 'luasnip' },
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown' },
+        min_keyword_length = 1,
         providers = {
           copilot = {
             name = 'copilot',
