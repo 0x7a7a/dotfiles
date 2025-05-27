@@ -6,7 +6,8 @@ return {
     conform.setup({
       formatters_by_ft = {
         lua = { 'stylua' },
-        go = { 'goimports-reviser', 'gofumpt' },
+        -- go = { 'goimports-reviser', 'gofumpt' },
+        go = { 'goimports', 'goimports-reviser', 'gofumpt' },
         typescript = { 'prettier' },
         javascript = { 'prettier' },
         vue = { 'prettier' },
