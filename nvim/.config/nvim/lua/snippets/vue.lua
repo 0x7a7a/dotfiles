@@ -3,7 +3,7 @@ local i = ls.insert_node
 local s = ls.snippet
 local fmt = require('luasnip.extras.fmt').fmt
 
-ls.filetype_extend('vue', { 'javascript' })
+ls.filetype_extend('vue', { 'javascript', 'typescript' })
 
 return {
   s(

@@ -1,3 +1,0 @@
-return {
-  'neanias/everforest-nvim',
-}

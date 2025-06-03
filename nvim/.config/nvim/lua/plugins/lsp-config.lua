@@ -68,7 +68,7 @@ return {
         filetypes = { 'html', 'templ', 'svelte' },
       },
       cssls = {},
-      volar = {},
+      vue_ls = {},
       svelte = {},
       rust_analyzer = {
         settings = {
