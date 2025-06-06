@@ -18,6 +18,9 @@ return {
   },
   config = function()
     require('blink.cmp').setup({
+      enabled = function()
+        return not vim.tbl_contains({ 'minifiles' }, vim.bo.filetype)
+      end,
       keymap = {
         preset = 'super-tab',
         ['<CR>'] = { 'accept', 'fallback' },
