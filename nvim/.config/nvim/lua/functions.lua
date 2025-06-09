@@ -32,7 +32,9 @@ function Z.close_other_bufs()
   for _, buf in ipairs(bufs) do
     if buf ~= cur_buf then
       local filetype = vim.api.nvim_get_option_value('filetype', { buf = buf })
-      if filetype ~= 'floaterm' then
+      local exclude = { 'floaterm', 'codecompanion' }
+
+      if not vim.tbl_contains(exclude, filetype) then
         vim.api.nvim_buf_delete(buf, { force = false })
       end
     end

@@ -31,6 +31,9 @@ return {
       opts = {
         language = 'Chinease',
       },
+      windows = {
+        layout = 'buffer',
+      },
     })
 
     vim.keymap.set({ 'n', 'v' }, '<Space>c', '<cmd>CodeCompanionChat Toggle<cr>', { noremap = true, silent = true })
