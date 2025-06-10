@@ -28,6 +28,6 @@ return {
       vim.keymap.set('n', '[c', prev_hunk, { expr = true, desc = 'Prev git hunk' })
     end,
 
-    -- current_line_blame = true,
+    current_line_blame = true,
   },
 }

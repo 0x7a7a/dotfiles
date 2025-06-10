@@ -80,12 +80,12 @@ return {
         default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown' },
         min_keyword_length = 1,
         providers = {
-          copilot = {
-            name = 'copilot',
-            module = 'blink-copilot',
-            score_offset = 100,
-            async = true,
-          },
+          -- copilot = {
+          --   name = 'copilot',
+          --   module = 'blink-copilot',
+          --   score_offset = 100,
+          --   async = true,
+          -- },
           markdown = {
             name = 'RenderMarkdown',
             module = 'render-markdown.integ.blink',
