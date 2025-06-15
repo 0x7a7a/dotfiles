@@ -84,6 +84,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.wo[win][0].foldexpr = 'v:lua.vim.lsp.foldexpr()'
     end
 
+    if client:supports_method('textDocument/selectionRange') then
+      vim.keymap.set({ 'n', 'x' }, 'grs', "<cmd>vim.lsp.buf.selection_range('outer')<CR>", { buffer = true })
+      vim.keymap.set({ 'n', 'x' }, 'grS', "<cmd>vim.lsp.buf.selection_range('inner')<CR>", { buffer = true })
+    end
+
     local isV12 = vim.fn.has('nvim-0.12') == 1
     if isV12 and client:supports_method('textDocument/documentColor') then
       vim.lsp.document_color.enable(true, args.buf)
