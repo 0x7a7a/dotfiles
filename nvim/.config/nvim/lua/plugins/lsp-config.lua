@@ -50,7 +50,11 @@ return {
         root_dir = util.root_pattern('go.work', 'go.mod', '.git'),
         flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
         settings = {
+          -- https://github.com/golang/tools/blob/master/gopls/doc/settings.md#analyses-mapstringbool
           gopls = {
+            analyses = {
+              ST1003 = false,
+            },
             staticcheck = true,
           },
         },
