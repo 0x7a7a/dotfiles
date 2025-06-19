@@ -53,6 +53,7 @@ return {
           -- https://github.com/golang/tools/blob/master/gopls/doc/settings.md#analyses-mapstringbool
           gopls = {
             analyses = {
+              ST1000 = false,
               ST1003 = false,
             },
             staticcheck = true,
