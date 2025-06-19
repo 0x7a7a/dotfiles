@@ -9,6 +9,7 @@ return {
         -- go = { 'goimports-reviser', 'gofumpt' },
         go = { 'goimports', 'gofumpt' },
         typescript = { 'prettier' },
+        typescriptreact = { 'prettier' },
         javascript = { 'prettier' },
         vue = { 'prettier' },
         css = { 'prettier' },
@@ -18,6 +19,19 @@ return {
       },
       formatters = {
         ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
+        prettier = {
+          prepend_args = function()
+            return {
+              '--no-semi',
+              '--single-quote',
+              '--no-bracket-spacing',
+              '--print-width',
+              '80',
+              '--config-precedence',
+              'prefer-file',
+            }
+          end,
+        },
       },
 
       format_on_save = function(bufnr)
