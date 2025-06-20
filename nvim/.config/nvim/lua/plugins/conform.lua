@@ -23,7 +23,6 @@ return {
         goctl = {
           command = 'goctl',
           args = { 'api', 'format', '--stdin' },
-          stdin = true,
         },
       },
       formatters_by_ft = {
