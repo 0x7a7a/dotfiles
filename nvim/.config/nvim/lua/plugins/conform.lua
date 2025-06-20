@@ -4,19 +4,7 @@ return {
   config = function()
     local conform = require('conform')
     conform.setup({
-      formatters_by_ft = {
-        lua = { 'stylua' },
-        -- go = { 'goimports-reviser', 'gofumpt' },
-        go = { 'goimports', 'gofumpt' },
-        typescript = { 'prettier' },
-        typescriptreact = { 'prettier' },
-        javascript = { 'prettier' },
-        vue = { 'prettier' },
-        css = { 'prettier' },
-        json = { 'prettier' },
-        jsonc = { 'prettier' },
-        svelte = { 'prettier' },
-      },
+      log_level = vim.log.levels.DEBUG,
       formatters = {
         ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
         prettier = {
@@ -32,6 +20,25 @@ return {
             }
           end,
         },
+        goctl = {
+          command = 'goctl',
+          args = { 'api', 'format', '--stdin' },
+          stdin = true,
+        },
+      },
+      formatters_by_ft = {
+        lua = { 'stylua' },
+        -- go = { 'goimports-reviser', 'gofumpt' },
+        go = { 'goimports', 'gofumpt' },
+        typescript = { 'prettier' },
+        typescriptreact = { 'prettier' },
+        javascript = { 'prettier' },
+        vue = { 'prettier' },
+        css = { 'prettier' },
+        json = { 'prettier' },
+        jsonc = { 'prettier' },
+        svelte = { 'prettier' },
+        api = { 'goctl' },
       },
 
       format_on_save = function(bufnr)

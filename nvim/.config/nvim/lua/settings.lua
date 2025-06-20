@@ -66,6 +66,14 @@ vim.o.foldexpr                 = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldtext                 = ""
 vim.opt.foldcolumn             = "0"
 
+-- Customer filetype
+vim.filetype.add({
+  extension = {
+    http = 'http',
+    api  = 'api',
+  },
+})
+
 -- Automatic switching of relative and absolute line numbers
 local autocmd = Z.autocmd
 autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
