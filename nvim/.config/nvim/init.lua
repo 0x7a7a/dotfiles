@@ -30,9 +30,12 @@ require('lazy').setup({
   },
 })
 
-vim.cmd.colorscheme('gruvbox-material')
--- vim.cmd.colorscheme('nordfox')
+local hour = tonumber(os.date('%H'))
 
--- vim.opt.background = 'light'
--- vim.cmd.colorscheme('rose-pine-dawn')
--- vim.cmd.colorscheme('edge')
+if hour >= 18 or hour < 9 then
+  vim.opt.background = 'dark'
+  vim.cmd.colorscheme('gruvbox-material')
+else
+  vim.opt.background = 'light'
+  vim.cmd.colorscheme('rose-pine-dawn')
+end
