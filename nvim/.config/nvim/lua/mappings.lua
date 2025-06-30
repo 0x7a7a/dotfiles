@@ -29,7 +29,7 @@ map('n', ']b', '<cmd>bnext<CR>')
 -- Tab
 map('n', '<leader><tab>n', '<cmd>$tabnew<CR>', { noremap = true })
 map('n', '<leader><tab>c', '<cmd>tabclose<CR>', { noremap = true })
-map('n', '<leader><tab>o', '<cmd>tabonley<CR>', { noremap = true })
+map('n', '<leader><tab>o', '<cmd>tabonly<CR>', { noremap = true })
 map('n', '[t', '<cmd>tabp<CR>', { noremap = true })
 map('n', ']t', '<cmd>tabn<CR>', { noremap = true })
 map('n', '<leader><tab>mp', '<cmd>-tabmove<CR>', { noremap = true })

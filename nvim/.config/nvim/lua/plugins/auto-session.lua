@@ -1,7 +1,7 @@
 return {
   'rmagatti/auto-session',
   config = function()
-    vim.o.sessionoptions = 'buffers,curdir,folds,help,tabpages,winsize,winpos'
+    vim.o.sessionoptions = 'curdir,folds,globals,help,tabpages,winsize,winpos'
 
     local function clean_buffers()
       local bufs = vim.api.nvim_list_bufs()
