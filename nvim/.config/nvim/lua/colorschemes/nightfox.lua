@@ -1,6 +1,7 @@
 return {
   'EdenEast/nightfox.nvim',
   lazy = true,
+  enabled = false,
   opts = {
     options = {
       -- Compiled file's destination location

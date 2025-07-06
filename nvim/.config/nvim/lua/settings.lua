@@ -71,6 +71,8 @@ vim.filetype.add({
   extension = {
     http = 'http',
     api  = 'api',
+    wxss = 'css',
+    wxml = 'html',
   },
 })
 
