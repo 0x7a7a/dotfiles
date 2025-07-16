@@ -8,8 +8,6 @@ local fmt = require('luasnip.extras.fmt').fmt
 local postfix = require('luasnip.extras.postfix').postfix
 
 return {
-  -- Time formatting template
-  s({ trig = 'timef', desc = 'Time formatting template' }, { t('"2006-01-02 15:04:05"') }),
   -- Check err
   s(
     { trig = 'ifer', dscr = 'Check err' },
