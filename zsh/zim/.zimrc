@@ -10,6 +10,7 @@ zmodule zsh-users/zsh-autosuggestions
 zmodule zdharma-continuum/fast-syntax-highlighting
 zmodule ohmyzsh/ohmyzsh --root plugins/extract
 zmodule ohmyzsh/ohmyzsh --root plugins/git
+zmodule ohmyzsh/ohmyzsh --root plugins/direnv
 zmodule jeffreytse/zsh-vi-mode
 zmodule MichaelAquilina/zsh-you-should-use
 zmodule skywind3000/z.lua -c 'eval "$(lua {}/z.lua --init zsh enhanced once)"'
