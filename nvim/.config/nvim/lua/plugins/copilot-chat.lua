@@ -13,7 +13,7 @@ return {
 
       chat.setup({
         debug = false,
-        proxy = '127.0.0.1:7890',
+        -- proxy = '127.0.0.1:7890',
         allow_insecure = true,
         model = 'claude-3.7-sonnet',
 

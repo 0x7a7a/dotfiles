@@ -37,6 +37,7 @@ if hour >= 18 or hour < 8 then
   vim.cmd.colorscheme('gruvbox-material')
 else
   vim.opt.background = 'light'
-  -- vim.cmd.colorscheme('rose-pine-dawn')
-  vim.cmd.colorscheme('edge')
+  vim.cmd.colorscheme('rose-pine-dawn')
+  Z.set_auto_cursorline_highlight()
+  -- vim.cmd.colorscheme('edge')
 end

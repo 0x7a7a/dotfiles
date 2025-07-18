@@ -58,3 +58,13 @@ end
 function Z.is_mac()
   return vim.fn.has('mac') == 1
 end
+
+function Z.set_auto_cursorline_highlight()
+  Z.autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
+    if arg.event == 'InsertEnter' then
+      vim.opt.cursorlineopt = 'number'
+    else
+      vim.opt.cursorlineopt = 'both'
+    end
+  end)
+end

@@ -27,7 +27,7 @@ opt.splitbelow     = true
 opt.splitright     = true
 opt.termguicolors  = true
 opt.cursorline     = true
-opt.cursorlineopt  = 'number'
+opt.cursorlineopt  = 'both'
 opt.wildmode       = 'longest:full,full'
 opt.numberwidth    = 3
 
@@ -102,23 +102,17 @@ end)
 
 autocmd({ 'BufEnter', 'WinEnter' }, function()
   vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange' })
+
 end)
 
--- Kitty auto padding
--- autocmd({'VimEnter'},function ()
---   os.execute('kitty @ set-spacing padding=0 margin=0')
--- end)
--- autocmd({'VimLeave'},function ()
---   os.execute('kitty @ set-spacing padding=10 margin=0')
--- end)
 
-   local function copy_path(opts)
-     local type = opts.fargs[1] or 'rel'
-     local format = type == 'rel' and '%' or '%:p'
-     local path = vim.fn.expand(format)
-     vim.fn.setreg('+', path)
-     vim.notify('copied "' .. path .. '" to the clipboard!')
-   end
-   vim.api.nvim_create_user_command('CopyPath', copy_path, { nargs = '?', complete = function()
-     return {'rel', 'abs'}
-   end })
+local function copy_path(opts)
+ local type = opts.fargs[1] or 'rel'
+ local format = type == 'rel' and '%' or '%:p'
+ local path = vim.fn.expand(format)
+ vim.fn.setreg('+', path)
+ vim.notify('copied "' .. path .. '" to the clipboard!')
+end
+vim.api.nvim_create_user_command('CopyPath', copy_path, { nargs = '?', complete = function()
+ return {'rel', 'abs'}
+end })
