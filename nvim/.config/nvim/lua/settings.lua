@@ -116,3 +116,5 @@ end
 vim.api.nvim_create_user_command('CopyPath', copy_path, { nargs = '?', complete = function()
  return {'rel', 'abs'}
 end })
+
+vim.api.nvim_create_user_command('RestartAllLSP', Z.restart_all_lsp,{})
