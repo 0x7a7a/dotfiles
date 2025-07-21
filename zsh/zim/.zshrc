@@ -40,6 +40,9 @@ source ~/.p10k.zsh
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 ZVM_VI_EDITOR=nvim
 
+#zsh-autosuggestions
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+
 ## Lf default editor
 export EDITOR=nvim
 export MANPAGER='nvim +Man!'
