@@ -1,6 +1,7 @@
 return {
   {
     'miroshQa/debugmaster.nvim',
+    enabled = false,
     -- osv is needed if you want to debug neovim lua code. Also can be used
     -- as a way to quickly test-drive the plugin without configuring debug adapters
     dependencies = {

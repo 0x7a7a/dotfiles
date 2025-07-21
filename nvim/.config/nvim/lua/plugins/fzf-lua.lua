@@ -13,6 +13,7 @@ return {
     }
 
     fzflua.setup({
+      'hide',
       'default-prompt',
       files = winopts,
       buffers = winopts,
@@ -25,6 +26,7 @@ return {
     vim.keymap.set('n', '<C-g>', fzflua.live_grep_native, { desc = '[S]earch by grep native' })
     vim.keymap.set('n', '<C-\'>', fzflua.resume, { desc = '[S]earch re[S]ume' })
 
+    vim.keymap.set('n', '<Space>sg', fzflua.global, { desc = '[S]earch [G]lobal' })
     vim.keymap.set('n', '<Space>sc', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
     vim.keymap.set('n', '<Space>sa', fzflua.lsp_document_symbols, { desc = 'Search document symbols' })
     vim.keymap.set('n', '<Space>sh', fzflua.help_tags, { desc = '[S]earch [H]elp' })
