@@ -92,13 +92,14 @@ autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
   vim.opt.relativenumber = arg.event == 'InsertLeave'
 end)
 
+-- Use yanky.nvim instand of this
 -- Flash yanked lines
-autocmd('TextYankPost', function()
-  vim.highlight.on_yank({
-    higroup = 'IncSearch',
-    timeout = 150,
-  })
-end)
+-- autocmd('TextYankPost', function()
+--   vim.highlight.on_yank({
+--     higroup = 'IncSearch',
+--     timeout = 150,
+--   })
+-- end)
 
 autocmd({ 'BufEnter', 'WinEnter' }, function()
   vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange' })
@@ -106,6 +107,7 @@ autocmd({ 'BufEnter', 'WinEnter' }, function()
 end)
 
 
+-- Add a custom command to copy the current file path to the clipboard
 local function copy_path(opts)
  local type = opts.fargs[1] or 'rel'
  local format = type == 'rel' and '%' or '%:p'
@@ -117,4 +119,5 @@ vim.api.nvim_create_user_command('CopyPath', copy_path, { nargs = '?', complete 
  return {'rel', 'abs'}
 end })
 
+-- Restart all LSP servers
 vim.api.nvim_create_user_command('RestartAllLSP', Z.restart_all_lsp,{})
