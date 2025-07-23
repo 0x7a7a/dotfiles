@@ -17,6 +17,8 @@ return {
       'default-prompt',
       files = winopts,
       buffers = winopts,
+
+      fzf_colors = true,
     })
 
     -- stylua: ignore start

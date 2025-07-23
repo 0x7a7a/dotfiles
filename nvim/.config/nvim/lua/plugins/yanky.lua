@@ -2,6 +2,11 @@ return {
   'gbprod/yanky.nvim',
   opts = {
     ring = { storage = 'memory' },
+    highlight = {
+      on_put = true,
+      on_yank = true,
+      timer = 200,
+    },
   },
   keys = {
     -- { '<leader>P', '<cmd>YankyRingHistory<cr>', mode = { 'n', 'x' }, desc = 'Open Yank History' },

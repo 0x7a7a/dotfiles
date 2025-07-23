@@ -69,7 +69,6 @@ function Z.set_auto_cursorline_highlight()
   end)
 end
 
--- TODO: Implement this function to restart all LSP servers.
 -- https://github.com/neovim/nvim-lspconfig/blob/03bc581e05e81d33808b42b2d7e76d70adb3b595/plugin/lspconfig.lua#L106C1-L127C5
 function Z.restart_all_lsp()
   local bufnr = vim.api.nvim_get_current_buf()
@@ -93,3 +92,50 @@ function Z.restart_all_lsp()
     end, 600)
   end
 end
+
+-- Automatic switching of relative and absolute line numbers
+local autocmd = Z.autocmd
+autocmd({ 'InsertEnter', 'InsertLeave' }, function(arg)
+  local ft = vim.bo.filetype
+  if ft == 'help' or ft == 'copilot-chat' then
+    return
+  end
+
+  if ft == 'qf' or ft == 'codecompanion' then
+    vim.opt.relativenumber = false
+    return
+  end
+
+  vim.opt.relativenumber = arg.event == 'InsertLeave'
+end)
+
+autocmd({ 'BufEnter', 'WinEnter' }, function()
+  vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange' })
+end)
+
+-- Add a custom command to copy the current file path to the clipboard
+local function copy_path(opts)
+  local type = opts.fargs[1] or 'rel'
+  local format = type == 'rel' and '%' or '%:p'
+  local path = vim.fn.expand(format)
+  vim.fn.setreg('+', path)
+  vim.notify('copied "' .. path .. '" to the clipboard!')
+end
+vim.api.nvim_create_user_command('CopyPath', copy_path, {
+  nargs = '?',
+  complete = function()
+    return { 'rel', 'abs' }
+  end,
+})
+
+-- Restart all LSP servers
+vim.api.nvim_create_user_command('LSPRestartAll', Z.restart_all_lsp, {})
+
+-- Use yanky.nvim instand of this
+-- Flash yanked lines
+-- autocmd('TextYankPost', function()
+--   vim.highlight.on_yank({
+--     higroup = 'IncSearch',
+--     timeout = 150,
+--   })
+-- end)

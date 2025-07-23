@@ -5,7 +5,6 @@ return {
   event = 'BufEnter',
   dependencies = { 'saghen/blink.cmp' },
   config = function()
-    local lspconfig = require('lspconfig')
     local util = require('lspconfig.util')
 
     local servers = {
@@ -73,8 +72,6 @@ return {
         filetypes = { 'html', 'templ', 'svelte' },
       },
       cssls = {},
-      vue_ls = {},
-      svelte = {},
       rust_analyzer = {
         settings = {
           ['rust-analyzer'] = {
@@ -91,13 +88,13 @@ return {
           },
         },
       },
+      -- vue_ls = {},
       zls = {},
-      intelephense = {},
     }
 
     for server, config in pairs(servers) do
       config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-      lspconfig[server].setup(config)
+      vim.lsp.config(server, config)
     end
   end,
 }

@@ -36,9 +36,9 @@ if hour >= 18 or hour < 8 then
   vim.opt.background = 'dark'
   vim.cmd.colorscheme('gruvbox-material')
 else
-  vim.opt.background = 'light'
   vim.cmd.colorscheme('rose-pine-dawn')
 
+  -- because the highlight colors of rose-pine-dawn and illuminate are similar,the cursor color has been modified
   vim.opt.guicursor = {
     'n-v-c-sm:block-Cursor',
     'i-ci-ve:ver25-Cursor',
@@ -46,8 +46,6 @@ else
     't:block-blinkon500-blinkoff500-TermCursor',
   }
   vim.api.nvim_set_hl(0, 'Cursor', { fg = '#000000', bg = '#EAA041' })
-
-  -- vim.cmd.colorscheme('edge')
 end
 
 Z.set_auto_cursorline_highlight()

@@ -7,9 +7,8 @@
 --   'eslint',
 --   'html',
 --   'css',
---   'volar',
 --   'vtsls',
---   'intelephense',
+--   'vue_ls',
 -- })
 
 local ERROR = vim.diagnostic.severity.ERROR
