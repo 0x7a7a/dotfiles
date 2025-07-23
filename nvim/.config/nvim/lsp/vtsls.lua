@@ -12,6 +12,9 @@ local vue_plugin = {
 
 -- https://github.com/yioneko/vtsls
 return {
+  cmd = { 'vtsls', '--stdio' },
+  root_markers = { 'tsconfig.json', 'package.json', 'jsconfig.json', '.git' },
+
   settings = {
     vtsls = {
       tsserver = {
@@ -25,8 +28,10 @@ return {
   filetypes = {
     'javascript',
     'javascriptreact',
+    'javascript.jsx',
     'typescript',
     'typescriptreact',
+    'typescript.tsx',
     'vue',
   },
 }

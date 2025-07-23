@@ -1,15 +1,16 @@
 -- TODO: Change to automatically match the file names in the directory.
--- vim.lsp.enable({
---   'zls',
---   'gopls',
---   'luals',
---   'tailwindcss',
---   'eslint',
---   'html',
---   'css',
---   'vtsls',
---   'vue_ls',
--- })
+vim.lsp.enable({
+  'zls',
+  'gopls',
+  'luals',
+  'tailwindcss',
+  'eslint',
+  'html',
+  'cssls',
+  'vtsls',
+  'vue_ls',
+  'emmet_language_server',
+})
 
 local ERROR = vim.diagnostic.severity.ERROR
 local WARN = vim.diagnostic.severity.WARN
@@ -88,9 +89,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set({ 'n', 'x' }, 'grS', "<cmd>vim.lsp.buf.selection_range('inner')<CR>", { buffer = true })
     end
 
-    local isV12 = vim.fn.has('nvim-0.12') == 1
-    if isV12 and client:supports_method('textDocument/documentColor') then
-      vim.lsp.document_color.enable(true, args.buf)
-    end
+    -- local isV12 = vim.fn.has('nvim-0.12') == 1
+    -- if isV12 and client:supports_method('textDocument/documentColor') then
+    --   vim.lsp.document_color.enable(true, args.buf)
+    -- end
   end,
 })

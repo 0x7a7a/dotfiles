@@ -1,8 +1,8 @@
--- https://github.com/hrsh7th/vscode-langservers-extracted
 return {
   cmd = { 'vscode-html-language-server', '--stdio' },
+  filetypes = { 'html', 'templ' },
   root_markers = { 'package.json', '.git' },
-  filetypes = { 'html', 'templ', 'vue' },
+  settings = {},
   init_options = {
     provideFormatter = true,
     embeddedLanguages = { css = true, javascript = true },
