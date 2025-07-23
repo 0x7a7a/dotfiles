@@ -25,7 +25,7 @@ return {
     vim.keymap.set('i', '<C-x><C-f>', fzflua.complete_path , { desc = 'Fuzzy complete path' })
     vim.keymap.set('n', '<C-p>', fzflua.files, { desc = '[S]earch [F]iles' })
     vim.keymap.set('n', '<C-\\>', fzflua.buffers, { desc = 'Search buffers' })
-    vim.keymap.set('n', '<C-g>', fzflua.live_grep_native, { desc = '[S]earch by grep native' })
+    vim.keymap.set('n', '<C-g>', fzflua.live_grep, { desc = '[S]earch by grep native' })
     vim.keymap.set('n', '<C-\'>', fzflua.resume, { desc = '[S]earch re[S]ume' })
 
     vim.keymap.set('n', '<Space>sg', fzflua.global, { desc = '[S]earch [G]lobal' })

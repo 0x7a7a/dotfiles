@@ -22,6 +22,7 @@ return {
         'http',
         'json',
         'vimdoc',
+        'make',
       },
 
       highlight = {

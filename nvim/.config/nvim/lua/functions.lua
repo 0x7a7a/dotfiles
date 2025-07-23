@@ -128,8 +128,11 @@ vim.api.nvim_create_user_command('CopyPath', copy_path, {
   end,
 })
 
--- Restart all LSP servers
-vim.api.nvim_create_user_command('LSPRestartAll', Z.restart_all_lsp, {})
+-- LSP commands
+vim.api.nvim_create_user_command('LspRestartAll', Z.restart_all_lsp, {})
+vim.api.nvim_create_user_command('LspInfo', function()
+  vim.cmd('checkhealth vim.lsp')
+end, {})
 
 -- Use yanky.nvim instand of this
 -- Flash yanked lines
