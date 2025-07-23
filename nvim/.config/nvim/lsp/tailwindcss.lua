@@ -4,7 +4,10 @@
 --- Tailwind CSS Language Server can be installed via npm:
 ---
 --- npm install -g @tailwindcss/language-server
-local util = require('lspconfig.util')
+
+-- https://github.com/neovim/nvim-lspconfig/blob/f47cd681d7cb6048876a2e908b6d8ba1e530d152/lua/lspconfig/util.lua#L59C1-L78C4
+
+local util = require('utils')
 
 return {
   cmd = { 'tailwindcss-language-server', '--stdio' },
