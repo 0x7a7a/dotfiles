@@ -6,7 +6,7 @@ return {
     conform.setup({
       log_level = vim.log.levels.DEBUG,
       formatters = {
-        ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
+        -- ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
         prettier = {
           prepend_args = function()
             return {
@@ -27,8 +27,7 @@ return {
       },
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- go = { 'goimports-reviser', 'gofumpt' },
-        go = { 'goimports-reviser', 'goimports', 'gofumpt' },
+        go = {  'goimports','goimports-reviser', 'gofumpt' },
         typescript = { 'prettier' },
         typescriptreact = { 'prettier' },
         javascript = { 'prettier' },
