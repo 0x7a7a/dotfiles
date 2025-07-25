@@ -9,6 +9,7 @@ return {
       strategies = {
         chat = {
           adapter = 'copilot',
+          -- adapter = 'anthropic',
         },
         inline = {
           adapter = 'copilot',
@@ -22,8 +23,19 @@ return {
           return require('codecompanion.adapters').extend('copilot', {
             schema = {
               model = {
-                default = 'claude-3.7-sonnet',
+                -- default = 'claude-3.7-sonnet',
+                default = 'gpt-4.1',
               },
+            },
+          })
+        end,
+        anthropic = function()
+          return require('codecompanion.adapters').extend('anthropic', {
+            env = {
+              -- api_key = 'MY_OTHER_ANTHROPIC_KEY',
+            },
+            model = {
+              default = 'Claude Opus 4',
             },
           })
         end,

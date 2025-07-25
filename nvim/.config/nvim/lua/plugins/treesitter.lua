@@ -8,6 +8,7 @@ return {
   config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = {
+        'sql',
         'zig',
         'html',
         'xml',
@@ -17,7 +18,6 @@ return {
         'tsx',
         'go',
         'vue',
-        'svelte',
         'lua',
         'http',
         'json',
