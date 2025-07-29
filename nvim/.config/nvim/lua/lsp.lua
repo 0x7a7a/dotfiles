@@ -2,14 +2,13 @@
 vim.lsp.enable({
   'zls',
   'gopls',
-  'luals',
+  'emmylua_ls',
   'tailwindcss',
   'eslint',
   'html',
   'cssls',
   'vtsls',
   'vue_ls',
-  -- 'emmet_language_server',
 })
 
 local ERROR = vim.diagnostic.severity.ERROR

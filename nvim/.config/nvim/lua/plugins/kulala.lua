@@ -2,7 +2,13 @@ return {
   'mistweaverco/kulala.nvim',
   ft = { 'http' },
   config = function()
-    -- Setup is required, even if you don't pass any options
-    require('kulala').setup({})
+    require('kulala').setup({
+      ui = {
+        -- split or float
+        display_mode = 'split',
+        -- vertical or horizontal
+        split_direction = 'horizontal',
+      },
+    })
   end,
 }

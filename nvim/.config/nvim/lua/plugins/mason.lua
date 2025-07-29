@@ -21,7 +21,7 @@ return {
         'html-lsp',
         'eslint-lsp',
         'prettier',
-        'lua-language-server',
+        'emmylua_ls',
         'vue-language-server',
         'typescript-language-server',
         'tailwindcss-language-server',

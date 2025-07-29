@@ -103,6 +103,7 @@ return {
         ST1003 = false,
       },
       staticcheck = true,
+      -- hints = { ignoredError = true },
     },
   },
 }
