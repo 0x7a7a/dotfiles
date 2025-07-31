@@ -48,11 +48,29 @@ end
 
 function Z.toggle_quickfix()
   local qf_windows = vim.tbl_filter(function(winid)
-    return vim.fn.getwininfo(winid)[1].quickfix == 1
+    local ok, bufnr = pcall(vim.api.nvim_win_get_buf, winid)
+    if ok then
+      local buftype = vim.bo[bufnr].buftype
+      if buftype == 'quickfix' then
+        local wininfo = vim.fn.getwininfo(winid)
+        if wininfo and #wininfo > 0 and wininfo[1] then
+          return wininfo[1].loclist == 0
+        end
+      end
+    end
+    return false
   end, vim.api.nvim_tabpage_list_wins(0))
 
-  local cmd = #qf_windows == 0 and 'copen' or 'cclose'
-  vim.cmd(cmd)
+  if #qf_windows == 0 then
+    local qf_list = vim.fn.getqflist()
+    if #qf_list > 0 then
+      vim.cmd('copen')
+    else
+      vim.notify('Quickfix list is empty', vim.log.levels.INFO)
+    end
+  else
+    vim.cmd('cclose')
+  end
 end
 
 function Z.is_mac()
@@ -142,3 +160,40 @@ end, {})
 --     timeout = 150,
 --   })
 -- end)
+
+-- Color scheme toggle
+function Z.set_light_colorscheme()
+  vim.opt.background = 'light'
+  vim.cmd.colorscheme('rose-pine-dawn')
+
+  -- because the highlight colors of rose-pine-dawn and illuminate are similar
+  -- the cursor color has been modified
+  vim.opt.guicursor = {
+    'n-v-c-sm:block-Cursor',
+    'i-ci-ve:ver25-Cursor',
+    'r-cr-o:hor20',
+    't:block-blinkon500-blinkoff500-TermCursor',
+  }
+  vim.api.nvim_set_hl(0, 'Cursor', { fg = '#000000', bg = '#EAA041' })
+end
+
+function Z.set_dark_colorscheme()
+  vim.opt.background = 'dark'
+  vim.cmd.colorscheme('gruvbox-material')
+
+  vim.opt.guicursor = {
+    'n-v-c-sm:block',
+    'i-ci-ve:ver25',
+    'r-cr-o:hor20',
+    't:block-blinkon500-blinkoff500-TermCursor',
+  }
+  vim.api.nvim_set_hl(0, 'Cursor', {})
+end
+
+vim.api.nvim_create_user_command('ToggleColorscheme', function()
+  if vim.o.background == 'dark' then
+    Z.set_light_colorscheme()
+  else
+    Z.set_dark_colorscheme()
+  end
+end, {})
