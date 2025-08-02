@@ -3,6 +3,7 @@ _G.Z = {}
 require('functions')
 require('settings')
 require('mappings')
+require('autocmds')
 require('lsp')
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
