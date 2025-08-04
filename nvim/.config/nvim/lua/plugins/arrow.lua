@@ -1,5 +1,6 @@
 return {
   'otavioschwanck/arrow.nvim',
+  enabled = false,
   dependencies = {
     { 'echasnovski/mini.icons' },
   },
@@ -8,5 +9,6 @@ return {
     leader_key = '<C-a>',
     buffer_leader_key = 'm',
     index_keys = 'hjkl1234',
+    global_bookmarks = true,
   },
 }
