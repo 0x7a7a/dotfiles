@@ -12,16 +12,17 @@ vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
   group = AUGROUP,
 })
 
+-- Autocommand to toggle line numbers based on filetype
+vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
+  callback = function(arg)
+    vim.opt.relativenumber = arg.event == 'InsertEnter'
+  end,
+  group = AUGROUP,
+})
+
 -- Autocommand to toggle relative numbers based on insert mode
 vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
   callback = function(arg)
-    local filetypes = { 'help', 'copilot-chat', 'qf', 'codecompanion' }
-    local ft = vim.bo.filetype
-    if vim.tbl_contains(filetypes, ft) then
-      vim.opt.relativenumber = false
-      return
-    end
-
     vim.opt.relativenumber = arg.event == 'InsertLeave'
   end,
   group = AUGROUP,

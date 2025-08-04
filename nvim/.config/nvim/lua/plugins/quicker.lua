@@ -1,14 +1,23 @@
 return {
   'stevearc/quicker.nvim',
   ft = { 'qf' },
+  keys = {
+    {
+      'qf',
+      function()
+        require('quicker').toggle()
+      end,
+      desc = 'Toggle quickfix',
+    },
+    {
+      'ql',
+      function()
+        require('quicker').toggle({ locallist = true })
+      end,
+      desc = 'Toggle loclist',
+    },
+  },
   config = function()
-    vim.keymap.set('n', 'qf', function()
-      require('quicker').toggle()
-    end, { desc = 'Toggle quickfix' })
-    vim.keymap.set('n', 'ql', function()
-      require('quicker').toggle({ loclist = true })
-    end, { desc = 'Toggle loclist' })
-
     require('quicker').setup({
       keys = {
         {
