@@ -13,7 +13,7 @@ function Z.close_other_bufs()
       local is_dap_filetype = filetype:match('^dap') ~= nil
 
       if not (vim.tbl_contains(exclude, filetype) or is_dap_filetype) then
-        vim.api.nvim_buf_delete(buf, { force = false })
+        vim.api.nvim_buf_delete(buf, { force = true })
       end
     end
   end
