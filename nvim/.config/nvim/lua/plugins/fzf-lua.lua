@@ -13,8 +13,7 @@ return {
     }
 
     fzflua.setup({
-      'hide',
-      'default-prompt',
+      { 'hide', 'default-prompt' },
       files = winopts,
       buffers = winopts,
 

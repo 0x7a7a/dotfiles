@@ -45,7 +45,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- repurpose default nvim lsp bindings to use fzf-lua
     if client:supports_method('textDocument/codeAction') then
-      vim.keymap.set('n', 'gra', '<cmd>FzfLua lsp_code_actions previewer=false<CR>', { buffer = true })
+      vim.keymap.set('n', 'gra', '<cmd>FzfLua lsp_code_actions<CR>', { buffer = true })
     end
 
     if client:supports_method('textDocument/definition') then

@@ -1,6 +1,7 @@
 return {
   'saghen/blink.pairs',
   version = '*',
+  enabled = false,
   -- download prebuilt binaries from github releases
   dependencies = 'saghen/blink.download',
   -- OR build from source, requires nightly:
