@@ -8,6 +8,7 @@ return {
   config = function()
     require('mason').setup()
     require('mason-tool-installer').setup({
+      -- python-lsp: npm install -g @delance/runtime
       ensure_installed = {
         'zls',
         'gopls',

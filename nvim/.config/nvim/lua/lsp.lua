@@ -9,6 +9,8 @@ vim.lsp.enable({
   'cssls',
   'vtsls',
   'vue_ls',
+  'pyright',
+  'ruff',
 })
 
 local ERROR = vim.diagnostic.severity.ERROR

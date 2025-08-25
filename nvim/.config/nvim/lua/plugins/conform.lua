@@ -26,6 +26,7 @@ return {
         },
       },
       formatters_by_ft = {
+        python = { 'ruff_format' },
         lua = { 'stylua' },
         go = { 'goimports', 'goimports-reviser', 'gofumpt' },
         typescript = { 'prettier' },
