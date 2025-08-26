@@ -34,10 +34,6 @@ map('n', ']t', '<cmd>tabn<CR>', { noremap = true })
 map('n', '<leader><tab>mp', '<cmd>-tabmove<CR>', { noremap = true })
 map('n', '<leader><tab>mn', '<cmd>+tabmove<CR>', { noremap = true })
 
--- Quickfix
-map('n', '[q', '<cmd>cprevious<CR>zz')
-map('n', ']q', '<cmd>cnext<CR>zz')
-
 -- Extend the default behavior
 map('i', '<C-h>', '<BS>')
 map('i', '<C-d>', '<Del>')
@@ -104,10 +100,10 @@ map('c', '<A-b>', '<S-Left>', { noremap = true })
 map('c', '<A-f>', '<S-Right>', { noremap = true })
 
 -- Block insert in line visual mode
-vim.keymap.set('x', 'I', function()
+map('x', 'I', function()
   return vim.fn.mode() == 'V' and '^<C-v>I' or 'I'
 end, { expr = true })
-vim.keymap.set('x', 'A', function()
+map('x', 'A', function()
   return vim.fn.mode() == 'V' and '$<C-v>A' or 'A'
 end, { expr = true })
 

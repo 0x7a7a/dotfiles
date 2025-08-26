@@ -12,7 +12,7 @@ return {
     {
       'ql',
       function()
-        require('quicker').toggle({ locallist = true })
+        require('quicker').toggle({ loclist = true })
       end,
       desc = 'Toggle loclist',
     },
