@@ -1,5 +1,5 @@
 return {
-  'echasnovski/mini.indentscope',
+  'nvim-mini/mini.indentscope',
   event = 'VeryLazy',
   config = function()
     require('mini.indentscope').setup({
