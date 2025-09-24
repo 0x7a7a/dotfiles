@@ -1,3 +1,4 @@
+local treesitter = require('vim.treesitter')
 local AUGROUP = vim.api.nvim_create_augroup('_AUGROUP', {})
 
 -- Autocommand to set the cursorlineopt based on insert mode
@@ -34,4 +35,15 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'WinEnter' }, {
     vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange' })
   end,
   group = AUGROUP,
+})
+
+-- Autocommand start treesitter
+vim.api.nvim_create_autocmd('BufEnter', {
+  callback = function(args)
+    local ft = vim.bo.filetype
+    local lang = vim.treesitter.language.get_lang(ft)
+    if ft and lang then
+      vim.treesitter.start(args.buf, lang)
+    end
+  end,
 })

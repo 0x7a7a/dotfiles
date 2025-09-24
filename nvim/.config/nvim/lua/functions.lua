@@ -109,26 +109,3 @@ vim.api.nvim_create_user_command('ToggleColorscheme', function()
   vim.api.nvim_set_hl(0, 'WindowPickerStatusLine', { fg = '#ededed', bg = '#44cc41', bold = true })
   vim.api.nvim_set_hl(0, 'WindowPickerStatusLineNC', { fg = '#ededed', bg = '#44cc41', bold = true })
 end, {})
-
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = {
-    'sql',
-    'zig',
-    'html',
-    'xml',
-    'css',
-    'javascript',
-    'typescript',
-    'tsx',
-    'go',
-    'vue',
-    'lua',
-    'http',
-    'json',
-    'vimdoc',
-    'make',
-  },
-  callback = function()
-    vim.treesitter.start()
-  end,
-})
