@@ -43,7 +43,7 @@ vim.api.nvim_create_autocmd('BufEnter', {
     local ft = vim.bo.filetype
     local lang = vim.treesitter.language.get_lang(ft)
     if ft and lang then
-      vim.treesitter.start(args.buf, lang)
+      pcall(vim.treesitter.start, args.buf, lang)
     end
   end,
 })
