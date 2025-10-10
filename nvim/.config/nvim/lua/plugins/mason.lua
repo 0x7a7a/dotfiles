@@ -11,10 +11,12 @@ return {
       -- python-lsp: npm install -g @delance/runtime
       ensure_installed = {
         'zls',
+        'ruff',
         'gopls',
         'gotests',
         'gotestsum',
         'gofumpt',
+        'goimports',
         'goimports-reviser',
         'golangci-lint',
         'stylua',
@@ -23,6 +25,7 @@ return {
         'eslint-lsp',
         'prettier',
         'emmylua_ls',
+        'vtsls',
         'vue-language-server',
         'typescript-language-server',
         'tailwindcss-language-server',

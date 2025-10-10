@@ -10,6 +10,7 @@ return {
     'lawrence-laz/neotest-zig',
     {
       'fredrikaverpil/neotest-golang',
+      version = '*',
       dependencies = {
         {
           'andythigpen/nvim-coverage',
