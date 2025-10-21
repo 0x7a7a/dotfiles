@@ -7,7 +7,3 @@ return {
     },
   },
 }
-
--- return {
---   'crispgm/nvim-go'
--- }

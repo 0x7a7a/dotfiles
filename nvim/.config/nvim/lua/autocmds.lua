@@ -36,25 +36,3 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'WinEnter' }, {
   end,
   group = AUGROUP,
 })
-
--- Autocommand start treesitter
-vim.api.nvim_create_autocmd('FileType', {
-  callback = function(args)
-    local buf = args.buf
-    local ft = vim.bo[buf].filetype
-    local lang = treesitter.language.get_lang(ft)
-
-    if lang and lang ~= '' then
-      local parsed, _ = pcall(vim.treesitter.get_parser, buf, lang)
-      if parsed then
-        local success, res = pcall(vim.treesitter.start, buf, lang)
-        if not success then
-          vim.notify('Treesitter error: ' .. res, vim.log.levels.ERROR)
-          return
-        end
-
-        vim.bo.syntax = 'on'
-      end
-    end
-  end,
-})
