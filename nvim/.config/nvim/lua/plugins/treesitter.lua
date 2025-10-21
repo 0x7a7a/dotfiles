@@ -1,8 +1,13 @@
+-- https://github.com/MeanderingProgrammer/treesitter-modules.nvim
+-- https://github.com/nvim-treesitter/nvim-treesitter/tree/main?tab=readme-ov-file
+-- Must install `tree-sitter-cli` first!!!
 return {
-  'MeanderingProgrammer/treesitter-modules.nvim',
-  dependencies = { 'nvim-treesitter/nvim-treesitter', branch = 'main', lazy = false },
-  opts = {
-    ensure_installed = {
+  'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
+  lazy = false,
+  build = ':TSUpdate',
+  config = function()
+    local ensure_installed = {
       'sql',
       'zig',
       'html',
@@ -18,32 +23,32 @@ return {
       'json',
       'vimdoc',
       'make',
-    },
-    ignore_install = {},
-    sync_install = false,
-    -- automatically install missing parsers when entering buffer
-    auto_install = false,
-    fold = {
-      enable = false,
-      disable = false,
-    },
-    highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = { 'vue' },
-    },
-    incremental_selection = {
-      enable = true,
-      -- set value to `false` to disable individual mapping
-      keymaps = {
-        init_selection = '<M-o>',
-        node_incremental = '<M-o>',
-        node_decremental = '<M-i>',
-        -- scope_incremental = '<M-o>',
-      },
-    },
-    indent = {
-      enable = false,
-      disable = false,
-    },
-  },
+    }
+    local already_installed = require('nvim-treesitter.config').get_installed()
+    local uninstalled = vim
+      .iter(ensure_installed)
+      :filter(function(parser)
+        return not vim.tbl_contains(already_installed, parser)
+      end)
+      :totable()
+
+    if #uninstalled > 0 then
+      require('nvim-treesitter').install(uninstalled)
+    end
+
+    vim.api.nvim_create_autocmd('FileType', {
+      group = vim.api.nvim_create_augroup('treesitter.setup', {}),
+      callback = function(args)
+        local buf = args.buf
+        local filetype = args.match
+
+        local language = vim.treesitter.language.get_lang(filetype) or filetype
+        if not vim.treesitter.language.add(language) then
+          return
+        end
+
+        vim.treesitter.start(buf, language)
+      end,
+    })
+  end,
 }
