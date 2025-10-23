@@ -7,7 +7,7 @@ ls.filetype_extend('vue', { 'javascript', 'typescript' })
 
 return {
   s(
-    'vue3',
+    'vbase',
     fmt(
       [[
 <script setup lang="ts">
