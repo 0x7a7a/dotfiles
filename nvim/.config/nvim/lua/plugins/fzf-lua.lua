@@ -26,7 +26,6 @@ return {
     vim.keymap.set('n', '<C-\\>', fzflua.buffers, { desc = 'Search buffers' })
     vim.keymap.set('n', '<C-g>', fzflua.live_grep, { desc = '[S]earch by grep native' })
     vim.keymap.set('n', '<C-\'>', fzflua.resume, { desc = '[S]earch re[S]ume' })
-    vim.keymap.set('n', '<C-m>', fzflua.marks, { desc = '[S]earch [M]marks' })
 
     vim.keymap.set('n', '<Space>sg', fzflua.global, { desc = '[S]earch [G]lobal' })
     vim.keymap.set('n', '<Space>sc', fzflua.grep_curbuf, { desc = '[/] Fuzzily search in current buffer' })
@@ -38,6 +37,7 @@ return {
     vim.keymap.set('n', '<Space>sC', fzflua.commands, { desc = '[S]earch [C]ommands' })
     vim.keymap.set('n', '<Space>sr', fzflua.registers, { desc = '[S]earch [R]egisters' })
     vim.keymap.set('n', '<Space>sk', fzflua.keymaps, { desc = '[S]earch [K]eymaps' })
+    vim.keymap.set('n', '<Space>sm', fzflua.marks, { desc = '[S]earch [M]marks' })
 
     vim.keymap.set('n', 'gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
     vim.keymap.set('n', 'gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
