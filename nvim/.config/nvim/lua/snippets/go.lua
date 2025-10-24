@@ -10,7 +10,7 @@ local postfix = require('luasnip.extras.postfix').postfix
 return {
   -- Check err
   s(
-    { trig = 'ifer', dscr = 'Check err' },
+    { trig = 'ir', desc = 'Check err' },
     fmt(
       [[
     if err != nil {{
@@ -60,5 +60,129 @@ return {
       i(3, 'get'),
       i(4),
     })
+  ),
+  -- Var block
+  s(
+    { trig = 'vars', desc = 'var block' },
+    fmt(
+      [[
+      var (
+        {}
+      )
+    ]],
+      { i(1) }
+    )
+  ),
+  -- Const block
+  s(
+    { trig = 'consts', desc = 'const block' },
+    fmt(
+      [[
+      const (
+        {}
+      )
+    ]],
+      { i(1) }
+    )
+  ),
+  -- Select statement
+  s(
+    { trig = 'select', desc = 'select statement' },
+    fmt(
+      [[
+      	select {{
+	      case {}:
+          {}
+	      default:
+          {}
+	      }}
+    ]],
+      {
+        i(1),
+        i(2),
+        i(3),
+      }
+    )
+  ),
+  -- Struct definition
+  s(
+    { trig = 'types', desc = 'struct definition' },
+    fmt(
+      [[
+      type {} struct {{
+        {}
+      }}
+    ]],
+      {
+        i(1, 'StructName'),
+        i(2),
+      }
+    )
+  ),
+  -- Interface definition
+  s(
+    { trig = 'typei', desc = 'interface definition' },
+    fmt(
+      [[
+      type {} interface {{
+        {}
+      }}
+    ]],
+      {
+        i(1, 'StructName'),
+        i(2),
+      }
+    )
+  ),
+  -- For range loop
+  s(
+    { trig = 'forr', desc = 'for range' },
+    fmt(
+      [[
+      for {}, {} := range {} {{
+        {}
+      }}
+    ]],
+      {
+        i(1, 'index'),
+        i(2, 'value'),
+        i(3, 'collection'),
+        i(4),
+      }
+    )
+  ),
+  -- For index loop
+  s(
+    { trig = 'fori', desc = 'for index range' },
+    fmt(
+      [[
+      for {} {{
+        {}
+      }}
+    ]],
+      {
+        i(1, 'condition'),
+        i(2),
+      }
+    )
+  ),
+  -- Method
+  s(
+    { trig = 'method', desc = 'method definition' },
+    fmt(
+      [[
+      func ({} {}) {}({}) {}{{
+        {}
+      }}
+    ]],
+      {
+        i(1, 'receiver'),
+        i(2, 'Type'),
+        i(3, 'MethodName'),
+        i(4),
+        i(5),
+        i(6),
+      }
+    )
   ),
 }
