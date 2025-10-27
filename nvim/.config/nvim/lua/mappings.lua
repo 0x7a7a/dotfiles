@@ -111,3 +111,31 @@ if not Z.is_mac() then
   map('n', '<C-k>', '<C-w>k')
   map('n', '<C-l>', '<C-w>l')
 end
+
+-- https://www.reddit.com/r/neovim/comments/1og2pg9/mom_can_i_have_harpoon_we_have_harpoon_at_home/
+map('n', '<leader>H', '<CMD>$arga<CR>', { silent = true, desc = 'Add current file to arg list' })
+for i = 1, 9 do
+  map('n', '<leader>' .. i, '<CMD>argu ' .. i .. '<CR>', { silent = true, desc = 'Go to arg ' .. i })
+  map('n', '<leader>h' .. i, '<CMD>' .. i - 1 .. 'arga<CR>', { silent = true, desc = 'Add current to arg ' .. i })
+  map('n', '<leader>D' .. i, '<CMD>' .. i .. 'argd<CR>', { silent = true, desc = 'Delete current arg' })
+end
+
+map('n', '<leader>hq', function()
+  local list = vim.fn.argv()
+  if type(list) == 'string' then
+    list = { list }
+  end
+
+  if #list > 0 then
+    local qf_items = {}
+    for _, filename in ipairs(list) do
+      table.insert(qf_items, {
+        filename = filename,
+        lnum = 1,
+        text = filename,
+      })
+    end
+    vim.fn.setqflist(qf_items, 'r')
+    vim.cmd.copen()
+  end
+end, { silent = true, desc = 'Show args in qf' })
