@@ -66,9 +66,6 @@ map('i', '<A-k>', '<Esc><cmd>move-2<CR>==gi')
 map('v', '<A-j>', "<Esc><cmd>'<,'>move'>+1<CR>gv=gv")
 map('v', '<A-k>', "<Esc><cmd>'<,'>move'<-2<CR>gv=gv")
 
-map('n', ']<Space>', 'o<Esc>k', { desc = 'Add a blank line above' })
-map('n', '[<Space>', 'O<Esc>j', { desc = 'Add a blank line below' })
-
 map('n', '<A-right>', '<cmd>vertical resize+5<CR>')
 map('n', '<A-left>', '<cmd>vertical resize-5<CR>')
 map('n', '<A-up>', '<cmd>resize+5<CR>')
