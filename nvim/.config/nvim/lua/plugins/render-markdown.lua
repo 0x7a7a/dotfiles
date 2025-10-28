@@ -1,3 +1,5 @@
+-- Another Markdown Plugin:
+-- https://github.com/YousefHadder/markdown-plus.nvim
 return {
   'MeanderingProgrammer/render-markdown.nvim',
   dependencies = {
