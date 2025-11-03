@@ -10,7 +10,7 @@ opt.mouse       = 'a'
 opt.undofile    = true
 opt.undodir     = '/tmp/.undodir'
 opt.updatetime  = 250
-opt.timeoutlen  = 300
+opt.timeoutlen  = 500
 opt.jumpoptions = 'stack'
 
 -- UI
