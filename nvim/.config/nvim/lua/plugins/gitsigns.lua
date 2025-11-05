@@ -1,31 +1,12 @@
 return {
   'lewis6991/gitsigns.nvim',
   opts = {
-    on_attach = function(_bufnr)
-      local gs = package.loaded.gitsigns
-
-      local function next_hunk()
-        if vim.wo.diff then
-          return ']c'
-        end
-        vim.schedule(function()
-          gs.next_hunk()
-        end)
-        return '<Ignore>'
-      end
-
-      local function prev_hunk()
-        if vim.wo.diff then
-          return '[c'
-        end
-        vim.schedule(function()
-          gs.prev_hunk()
-        end)
-        return '<Ignore>'
-      end
-
-      vim.keymap.set('n', ']c', next_hunk, { expr = true, desc = 'Next git hunk' })
-      vim.keymap.set('n', '[c', prev_hunk, { expr = true, desc = 'Prev git hunk' })
+    on_attach = function(bufnr)
+      local gitsigns = require('gitsigns')
+      -- stylua: ignore start
+      vim.keymap.set('n', ']c', function() gitsigns.nav_hunk('next') end, { buffer = bufnr, desc = 'Gitsigns: Next Hunk' })
+      vim.keymap.set('n', '[c', function() gitsigns.nav_hunk('prev') end, { buffer = bufnr, desc = 'Gitsigns: Previous Hunk' })
+      -- stylua: ignore end
     end,
 
     current_line_blame = true,
