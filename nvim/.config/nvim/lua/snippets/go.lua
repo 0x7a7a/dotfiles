@@ -20,6 +20,13 @@ return {
       { i(1) }
     )
   ),
+
+  -- Get length of a variable
+  postfix('.len', {
+    d(1, function(_, parent)
+      return sn(nil, { t('len(' .. parent.env.POSTFIX_MATCH .. ')') })
+    end),
+  }),
   -- Check if the variable is nil
   postfix('.nn', {
     d(1, function(_, parent)
