@@ -4,6 +4,5 @@ font-thicken
 font-thicken = true
 macos-option-as-alt = true
 
-theme = gruvbox-material
 macos-titlebar-style = hidden
 background-opacity = 0.95

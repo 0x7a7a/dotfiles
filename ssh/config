@@ -1,5 +1,6 @@
 TCPKeepAlive yes
-ServerAliveInterval 120
+ServerAliveInterval 30
+ServerAliveCountMax 5
 HostKeyAlgorithms +ssh-rsa
 PubkeyAcceptedKeyTypes +ssh-rsa
 # 禁用GSSAPI认证
