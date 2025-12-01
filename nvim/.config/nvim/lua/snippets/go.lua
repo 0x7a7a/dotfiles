@@ -10,7 +10,7 @@ local postfix = require('luasnip.extras.postfix').postfix
 return {
   -- Check err
   s(
-    { trig = 'ife', desc = 'Check err' },
+    { trig = 'ifer', desc = 'Check err' },
     fmt(
       [[
     if err != nil {{
