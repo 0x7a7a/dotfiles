@@ -1,7 +1,5 @@
 return {
-  -- 'stevearc/conform.nvim',
-  'sfrieds3/conform.nvim',
-  branch = 'fix/vim-wait',
+  'stevearc/conform.nvim',
   event = 'BufWritePre',
   config = function()
     local conform = require('conform')
