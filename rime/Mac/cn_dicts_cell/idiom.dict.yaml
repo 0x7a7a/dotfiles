@@ -25214,7 +25214,6 @@ use_preset_vocabulary: false
 虎毒不食儿	hu du bu shi er	0
 户对门当	hu dui men dang	0
 怙恶不改	hu e bu gai	0
-怙恶不逡	hu e bu qun	0
 怙恩恃宠	hu en shi chong	0
 虎而冠者	hu er guan zhe	0
 胡肥锺瘦	hu fei zhong shou	0
@@ -31571,7 +31570,7 @@ use_preset_vocabulary: false
 梦中占梦	meng zhong zhan meng	0
 觅爱追欢	mi ai zhui huan	0
 迷不知归	mi bu zhi gui	0
-秘传金匮	mi chuan jin kui	0
+秘传金匮	mi chuan jin gui	0
 弭盗民安	mi dao min an	0
 迷而不返	mi er bu fan	0
 秘而不露	mi er bu lu	2
@@ -34938,7 +34937,7 @@ use_preset_vocabulary: false
 轻怜痛惜	qing lian tong xi	0
 轻怜重惜	qing lian zhong xi	0
 清洌可鉴	qing lie ke jian	0
-青龙金匮	qing long jin kui	0
+青龙金匮	qing long jin gui	0
 轻禄傲贵	qing lu ao gui	0
 轻虑浅谋	qing lv qian mou	0
 情面难却	qing mian nan que	0
@@ -37704,7 +37703,7 @@ use_preset_vocabulary: false
 嗜痂成癖	shi jia cheng pi	0
 嗜痂之癖	shi jia zhi pi	0
 世间好语书说尽	shi jian hao yu shu shuo jin	1
-石缄金匮	shi jian jin kui	0
+石缄金匮	shi jian jin gui	0
 世间深渊莫比心	shi jian shen yuan mo bi xin	0
 世间无水不朝东	shi jian wu shui bu chao dong	1
 世间最难得者兄弟	shi jian zui nan de zhe xiong di	0
@@ -44473,6 +44472,7 @@ use_preset_vocabulary: false
 瞻云就日	zhan yun jiu ri	0
 战云弥漫	zhan yun mi man	0
 战云浓密	zhan yun nong mi	0
+斩于马下	zhan yu ma xia	0
 詹詹炎炎	zhan zhan yan yan	0
 战战摇摇	zhan zhan yao yao	0
 战战业业	zhan zhan ye ye	0
@@ -48240,6 +48240,7 @@ use_preset_vocabulary: false
 三个鼻孔眼儿	san ge bi kong yan er	0
 三个醉汉撒酒疯	san ge zui han sa jiu feng	0
 三根缆绳拴两边	san gen lan sheng shuan liang bian	0
+散功重修	san gong chong xiu	0
 三合板上雕花	san he ban shang diao hua	0
 三间瓦房不开门	san jian wa fang bu kai men	0
 三角挫刀	san jiao cuo dao	0
@@ -48720,3 +48721,5 @@ use_preset_vocabulary: false
 余能可贾	yu neng ke gu	0
 越俎代疱	yue zu dai pao	1
 功不唐捐	gong bu tang juan	64
+不致于人	bu zhi yu ren	0
+归根究底	gui gen jiu di	117

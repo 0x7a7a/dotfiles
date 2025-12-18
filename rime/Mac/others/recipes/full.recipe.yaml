@@ -8,25 +8,25 @@ recipe:
 install_files: >-
   cn_dicts/*.*
   en_dicts/*.*
+  cn_dicts_cell/*.*
   opencc/*.*
-  rime.lua
   lua/*.*
+  lua/aux_code/*.*
   lua/cold_word_drop/*.*
   default.yaml
-  squirrel.yaml
-  weasel_style.yaml
-  rime_ice.schema.yaml
-  rime_ice.dict.yaml
-  double_pinyin.schema.yaml
-  double_pinyin_abc.schema.yaml
-  double_pinyin_mspy.schema.yaml
-  double_pinyin_flypy.schema.yaml
-  double_pinyin_ziguang.schema.yaml
+  weasel.yaml
+  rime_frost.schema.yaml
+  rime_frost.dict.yaml
+  t9.schema.yaml
+  rime_frost_double_pinyin.schema.yaml
+  rime_frost_double_pinyin_abc.schema.yaml
+  rime_frost_double_pinyin_mspy.schema.yaml
+  rime_frost_double_pinyin_sogou.schema.yaml
+  rime_frost_double_pinyin_flypy.schema.yaml
+  rime_frost_double_pinyin_ziguang.schema.yaml
   symbols_v.yaml
-  symbols_caps_v.yaml
-  liangfen.schema.yaml
-  liangfen.dict.yaml
+  radical_pinyin.schema.yaml
+  radical_pinyin.dict.yaml
   melt_eng.schema.yaml
   melt_eng.dict.yaml
   custom_phrase.txt
-  zh-hans-t-essay-bgw.gram

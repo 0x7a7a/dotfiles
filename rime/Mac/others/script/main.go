@@ -11,18 +11,19 @@ import (
 
 func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
+
 	if len(os.Args) > 1 {
-		if os.Args[1] == "sort" {
+		switch os.Args[1] {
+		case "s":
 			goto SORT
-		}
-		if os.Args[1] == "temp" {
-			rime.Pinyin(filepath.Join(rime.RimeDir, "cn_dicts/temp"))
+		case "t":
+			rime.Temp()
+			return
+		case "tp":
+			rime.Pinyin(filepath.Join(rime.RimeDir, "cn_dicts/temp.txt"))
 			return
 		}
 	}
-
-	// 临时
-	rime.Temp()
 
 	// Emoji 检查和更新
 	rime.CheckAndGenerateEmoji()
@@ -49,22 +50,29 @@ func main() {
 	rime.Check(rime.TencentPath, 4)
 	fmt.Println("--------------------------------------------------")
 
+	// 检查同义多音字
+	rime.CheckPolyphone(rime.BasePath)
+	rime.CheckPolyphone(rime.ExtPath)
+	fmt.Println("--------------------------------------------------")
+
 	areYouOK()
 
 SORT:
 	// 排序，顺便去重
 	rime.Sort(rime.HanziPath, 3)
-	rime.Sort("/Users/dvel/Library/Rime/cn_dicts/41448.dict.yaml", 2)
+	rime.Sort(filepath.Join(rime.RimeDir, "cn_dicts/41448.dict.yaml"), 2)
 	rime.Sort(rime.BasePath, 3)
 	rime.Sort(rime.ExtPath, 3)
 	rime.Sort(rime.TencentPath, 4)
+	rime.Sort(filepath.Join(rime.RimeDir, "en_dicts/en.dict.yaml"), 2)
 }
 
 func areYouOK() {
 	fmt.Println("Are you OK:")
 	var isOK string
 	_, _ = fmt.Scanf("%s", &isOK)
-	if strings.ToLower(isOK) != "ok" {
+	isOK = strings.ToLower(isOK)
+	if isOK != "ok" && isOK != "y" && isOK != "yes" {
 		os.Exit(123)
 	}
 }
