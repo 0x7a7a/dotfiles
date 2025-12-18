@@ -10,6 +10,7 @@ end
 return {
   'sindrets/diffview.nvim',
   evet = 'VeryLazy',
+  enabled = false,
   keys = {
     {
       '<Space>dh',
