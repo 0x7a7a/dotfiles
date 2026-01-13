@@ -4,10 +4,10 @@ return {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
   },
-  tag = 'v17.33.0',
+  version = '^18.0.0',
   config = function()
     require('codecompanion').setup({
-      strategies = {
+      interactions = {
         chat = {
           adapter = {
             name = 'copilot',
