@@ -57,6 +57,7 @@ path=(
   $HOME/.zvm/bin
   $HOME/.krew/bin
   $HOME/.zvm/self
+  $HOME/.local/bin
   $HOME/.local/share/bob/nvim-bin
   $HOME/.local/share/nvim/mason/bin
   /usr/local/opt/mysql-client/bin
