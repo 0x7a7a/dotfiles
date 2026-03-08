@@ -8,8 +8,10 @@ return {
     },
     pauseFoldsOnSearch = true,
     foldtext = {
+      padding = {
+        with = 3,
+      },
       enabled = true,
-      padding = 3,
       lineCount = {
         template = '%d lines', -- `%d` is replaced with the number of folded lines
         hlgroup = 'Comment',
