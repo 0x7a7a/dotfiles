@@ -1,8 +1,17 @@
+#font
 font-family = Hack
 font-size = 13
-font-thicken
 font-thicken = true
-macos-option-as-alt = true
+font-thicken-strength = 0
 
-macos-titlebar-style = hidden
+#ui
 background-opacity = 0.95
+
+# option
+macos-option-as-alt = true
+macos-titlebar-style = tabs 
+
+#keybind
+keybind = super+t=new_tab
+keybind = super+enter=new_split:down
+keybind = super+shift+enter=new_split:right
