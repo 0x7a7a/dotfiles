@@ -31,5 +31,5 @@ require('lazy').setup({
   },
 })
 
-Z.set_light_colorscheme()
--- Z.set_dark_colorscheme()
+-- Z.set_light_colorscheme()
+Z.set_dark_colorscheme()
