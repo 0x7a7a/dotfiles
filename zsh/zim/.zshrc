@@ -91,6 +91,7 @@ alias mkdir='mkdir -pv'
 alias genv='printenv | rg -i'
 
 alias up='brew update && brew upgrade && zimfw update -v && bob update nightly'
+alias wireshark='open -n /Applications/Wireshark.app'
 
 PROXY='http://127.0.0.1:7890'
 alias proxy='export all_proxy=$PROXY'
