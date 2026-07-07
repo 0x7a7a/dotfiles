@@ -12,6 +12,9 @@ return {
       },
     }
 
+    -- Register the UI select function
+    fzflua.register_ui_select()
+
     fzflua.setup({
       { 'hide', 'default-prompt' },
       files = winopts,

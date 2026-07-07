@@ -45,35 +45,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
       return
     end
 
-    -- repurpose default nvim lsp bindings to use fzf-lua
-    if client:supports_method('textDocument/codeAction') then
-      vim.keymap.set('n', 'gra', '<cmd>FzfLua lsp_code_actions<CR>', { buffer = true })
-    end
-
-    if client:supports_method('textDocument/definition') then
-      vim.keymap.set('n', 'gd', '<cmd>FzfLua lsp_definitions<CR>', { buffer = true })
-    end
-
-    if client:supports_method('textDocument/declaration') then
-      vim.keymap.set('n', 'gD', '<cmd>FzfLua lsp_declarations<CR>', { buffer = true })
-    end
-
-    if client:supports_method('textDocument/implementation') then
-      vim.keymap.set('n', 'gri', '<cmd>FzfLua lsp_implementations<CR>', { buffer = true })
-    end
-
-    if client:supports_method('textDocument/typeDefinition') then
-      vim.keymap.set('n', 'gy', '<cmd>FzfLua lsp_typedefs<CR>', { buffer = true })
-    end
-
-    if client:supports_method('callHierarchy/incomingCalls') then
-      vim.keymap.set('n', 'g(', '<cmd>FzfLua lsp_incoming_calls<CR>', { buffer = true })
-    end
-
-    if client:supports_method('callHierarchy/outgoingCalls') then
-      vim.keymap.set('n', 'g)', '<cmd>FzfLua lsp_outgoing_calls<CR>', { buffer = true })
-    end
-
     if client:supports_method('textDocument/hover') then
       vim.keymap.set('n', 'K', function()
         vim.lsp.buf.hover({ border = 'rounded', max_height = 10 })
