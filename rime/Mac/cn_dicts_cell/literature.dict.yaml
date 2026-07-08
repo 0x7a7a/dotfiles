@@ -20,10 +20,10 @@ use_preset_vocabulary: false
 蛣蟟	ji liao	0
 鸂鶒	xi chi	5
 鞦韆	qiu qian	2
-断舍离	duan she li	454
+断舍离	duan she li	393
 老爷儿	lao ye er	0
-猫毛	mao mao	115
-平台化	ping tai hua	285
+猫毛	mao mao	102
+平台化	ping tai hua	262
 五六排	wu liu pai	2
 想个辙	xiang ge zhe	4
 尔雅义疏	er ya yi shu	0
@@ -597,8 +597,8 @@ use_preset_vocabulary: false
 沉恨细思	chen hen xi si	0
 陈迹危亭独倚	chen ji wei ting du yi	0
 趁娇尘软雾	chen jiao chen ruan wu	0
-陈克	chen ke	40
-陈亮	chen liang	107
+陈克	chen ke	35
+陈亮	chen liang	106
 尘满哀弦危柱	chen man ai xian wei zhu	0
 尘清虎落	chen qing hu luo	0
 沉水倦熏	chen shui juan xun	0
@@ -826,7 +826,7 @@ use_preset_vocabulary: false
 从今又添	cong jin you tian	1
 从前欢会	cong qian huan hui	0
 从渠床下	cong qu chuang xia	0
-从头读	cong tou du	76
+从头读	cong tou du	7
 从头说	cong tou shuo	26
 从舞休歌罢	cong wu xiu ge ba	0
 促破晓机心	cu po xiao ji xin	0
@@ -1320,7 +1320,7 @@ use_preset_vocabulary: false
 非零非烟深处	fei ling fei yan shen chu	0
 飞梅弄晚	fei mei nong wan	0
 飞鸟却应人	fei niao que ying ren	0
-非人力	fei ren li	56
+非人力	fei ren li	53
 飞入槐府	fei ru huai fu	0
 飞入西城	fei ru xi cheng	0
 飞上银霄	fei shang yin xiao	0
@@ -1626,7 +1626,7 @@ use_preset_vocabulary: false
 官柳低金缕	guan liu di jin lv	1
 关塞莽然平	guan sai mang ran ping	0
 关山魂梦长	guan shan hun meng chang	0
-关心事	guan xin shi	1
+关心事	guan xin shi	0
 管竹管山管水	guan zhu guan shan guan shui	1
 光阴虚掷	guang yin xu zhi	2
 光影东头	guang ying dong tou	3
@@ -1934,7 +1934,7 @@ use_preset_vocabulary: false
 画屏天畔	hua ping tian pan	0
 画屏闲展吴山翠	hua ping xian zhan wu shan cui	0
 画屏展	hua ping zhan	0
-画屏中	hua ping zhong	1
+画屏中	hua ping zhong	0
 花气动帘	hua qi dong lian	0
 画旗喧赛鼓	hua qi xuan sai gu	0
 花前对酒不忍触	hua qian dui jiu bu ren chu	2
@@ -2201,7 +2201,7 @@ use_preset_vocabulary: false
 江国	jiang guo	18
 绛河清浅	jiang he qing qian	0
 将恨与闲花俱谢	jiang hen yu xian hua ju xie	0
-蒋捷	jiang jie	168
+蒋捷	jiang jie	163
 将军百战声名裂	jiang jun bai zhan sheng ming lie	1
 江空不渡	jiang kong bu du	0
 江陵旧事	jiang ling jiu shi	0
@@ -2727,7 +2727,7 @@ use_preset_vocabulary: false
 丽谯吹罢小单于	li qiao chui ba xiao chan yu	0
 立秋后三日行	li qiu hou san ri xing	0
 离亭黯黯	li ting an an	0
-李玉	li yu	109
+李玉	li yu	80
 李元膺	li yuan ying	0
 李重元	li zhong yuan	3
 敛兵卫	lian bing wei	0
@@ -3049,7 +3049,7 @@ use_preset_vocabulary: false
 满庭清昼	man ting qing zhou	2
 漫细将	man xi jiang	0
 漫惜馀薰	man xi yu xun	0
-漫相思	man xiang si	1
+漫相思	man xiang si	0
 漫想熏风	man xiang xun feng	0
 谩写入	man xie ru	0
 满眼不堪三月暮	man yan bu kan san yue mu	1
@@ -3377,6 +3377,7 @@ use_preset_vocabulary: false
 拚一醉	pan yi zui	0
 抛家傍路	pao jia bang lu	8
 抛枕翠云光	pao zhen cui yun guang	0
+抛开名利锁	pao kai ming li suo	1
 佩兰香老	pei lan xiang lao	0
 陪履斋先生沧浪看梅	pei lv zhai xian sheng cang lang kan mei	0
 彭城夜宿燕子楼	peng cheng ye su yan zi lou	8
@@ -3649,12 +3650,12 @@ use_preset_vocabulary: false
 清明应制	qing ming ying zhi	0
 轻鸥聚别	qing ou ju bie	0
 轻颦浅笑娇无奈	qing pin qian xiao jiao wu nai	0
-清平乐	qing ping le	136
+清平乐	qing ping le	119
 青旗沽酒有人家	qing qi gu jiu you ren jia	1
 青旗卖酒	qing qi mai jiu	0
 青钱换酒日无何	qing qian huan jiu ri wu he	0
 清浅小溪如练	qing qian xiao xi ru lian	0
-情切	qing qie	12
+情切	qing qie	8
 轻轻细说与	qing qing xi shuo yu	0
 青裙缟袂谁家女	qing qun gao mei shui jia nv	0
 情人不见	qing ren bu jian	0
@@ -3671,7 +3672,7 @@ use_preset_vocabulary: false
 晴丝牵绪乱	qing si qian xu luan	0
 情似游丝	qing si you si	0
 轻松纤软	qing song xian ruan	0
-青苔上	qing tai shang	5
+青苔上	qing tai shang	6
 青天坠长星	qing tian zhui chang xing	1
 青未了	qing wei liao	0
 情味中年别	qing wei zhong nian bie	0
@@ -3741,7 +3742,7 @@ use_preset_vocabulary: false
 去却寒暄	qu que han xuan	0
 去天尺五君家别	qu tian chi wu jun jia bie	0
 区脱纵横	qu tuo zong heng	0
-去无迹	qu wu ji	2
+去无迹	qu wu ji	1
 去意徊徨	qu yi huai huang	0
 曲游春	qu you chun	0
 去悠悠	qu you you	5
@@ -3755,9 +3756,9 @@ use_preset_vocabulary: false
 劝君莫作独醒人	quan jun mo zuo du xing ren	2
 劝清光	quan qing guang	0
 犬子以田产未置止我	quan zi yi tian chan wei zhi zhi wo	1
-却不解	que bu jie	3
+却不解	que bu jie	2
 却不解带将愁去	que bu jie dai jiang chou qu	0
-却匆匆	que cong cong	5
+却匆匆	que cong cong	4
 却怪白鸥	que guai bai ou	0
 却几日阴沉	que ji ri yin chen	0
 却怕登楼	que pa deng lou	0
@@ -3801,7 +3802,7 @@ use_preset_vocabulary: false
 人渐老	ren jian lao	2
 人间离别	ren jian li bie	1
 人间万感幽单	ren jian wan gan you dan	0
-人间无数	ren jian wu shu	19
+人间无数	ren jian wu shu	6
 人间遥指是祥云	ren jian yao zhi shi xiang yun	0
 人间有	ren jian you	0
 人今千里	ren jin qian li	0
@@ -3819,10 +3820,10 @@ use_preset_vocabulary: false
 人面桃花在否	ren mian tao hua zai fou	0
 人面知何处	ren mian zhi he chu	0
 任陌头	ren mo tou	0
-人南渡	ren nan du	5
+人南渡	ren nan du	2
 忍凝眸	ren ning mou	0
 人强健	ren qiang jian	0
-人憔悴	ren qiao cui	7
+人憔悴	ren qiao cui	9
 人情恶	ren qing e	9
 忍轻孤	ren qing gu	0
 人情恨不如	ren qing hen bu ru	0
@@ -4000,7 +4001,7 @@ use_preset_vocabulary: false
 尚岩花	shang yan hua	0
 上有乘鸾女	shang you cheng luan nv	0
 尚有相思字	shang you xiang si zi	0
-上元	shang yuan	13
+上元	shang yuan	12
 上元有怀	shang yuan you huai	0
 少歌曰	shao ge yue	2
 韶光共追游	shao guang gong zhui you	0
@@ -4164,7 +4165,7 @@ use_preset_vocabulary: false
 书盈锦轴	shu ying jin zhou	0
 疏萤时度	shu ying shi du	0
 数幽期难准	shu you qi nan zhun	0
-树犹如此	shu you ru ci	24
+树犹如此	shu you ru ci	21
 疏雨暗池塘	shu yu an chi tang	0
 疏雨过	shu yu guo	4
 梳匀又懒	shu yun you lan	0
@@ -4198,7 +4199,7 @@ use_preset_vocabulary: false
 谁把钿筝移玉柱	shui ba dian zheng yi yu zhu	1
 谁把多情恼乱他	shui ba duo qing nao luan ta	1
 谁伴婵娟	shui ban chan juan	0
-谁伴我	shui ban wo	17
+谁伴我	shui ban wo	2
 水边归鸟	shui bian gui niao	0
 水边红袂公时	shui bian hong mei gong shi	0
 水边幽影	shui bian you ying	0
@@ -4404,7 +4405,7 @@ use_preset_vocabulary: false
 檀樱倚扇	tan ying yi shan	0
 汤沐烟江万顷	tang mu yan jiang wan qing	0
 堂深昼永	tang shen zhou yong	0
-唐婉	tang wan	137
+唐婉	tang wan	131
 饧香更	tang xiang geng	0
 桃花结子	tao hua jie zi	0
 桃花落尽着无所	tao hua luo jin zhe wu suo	0
@@ -4748,7 +4749,7 @@ use_preset_vocabulary: false
 问因循过了青春	wen yin xun guo le qing chun	0
 问玉堂何似	wen yu tang he si	0
 问院落凄凉	wen yuan luo qi liang	0
-问云何	wen yun he	6
+问云何	wen yun he	5
 我病君来高歌饮	wo bing jun lai gao ge yin	4
 我觉其间	wo jue qi jian	1
 我觉山高	wo jue shan gao	1
@@ -4785,7 +4786,7 @@ use_preset_vocabulary: false
 无计相回避	wu ji xiang hui bi	1
 吴笺银粉砑	wu jian yin fen ya	1
 午镜澡兰帘幕	wu jing zao lan lian mu	0
-无据	wu ju	57
+无据	wu ju	49
 舞困榆钱自落	wu kun yu qian zi luo	0
 误了乍来双燕	wu le zha lai shuang yan	0
 吾力犹能肆汝杯	wu li you neng si ru bei	1
@@ -4794,7 +4795,7 @@ use_preset_vocabulary: false
 吾庐小	wu lu xiao	3
 午梦扶头	wu meng fu tou	0
 午梦千山	wu meng qian shan	0
-无那	wu na	12
+无那	wu na	0
 无奈被他情担阁	wu nai bei ta qing dan ge	0
 无奈朝来寒雨晚来风	wu nai chao lai han yu wan lai feng	8
 无奈归心	wu nai gui xin	0
@@ -4861,7 +4862,7 @@ use_preset_vocabulary: false
 午醉醒时	wu zui xing shi	3
 细把君诗说	xi ba jun shi shuo	1
 西北是长安	xi bei shi chang an	0
-西北望	xi bei wang	66
+西北望	xi bei wang	51
 溪边流水	xi bian liu shui	0
 溪边照影行	xi bian zhao ying xing	3
 西窗过雨	xi chuang guo yu	0
@@ -4935,7 +4936,7 @@ use_preset_vocabulary: false
 细帙离离	xi zhi li li	0
 西州更点	xi zhou geng dian	0
 洗妆真态	xi zhuang zhen tai	0
-戏作	xi zuo	48
+戏作	xi zuo	29
 戏作小词以送之	xi zuo xiao ci yi song zhi	0
 下了珠帘	xia le zhu lian	0
 下马还寻	xia ma hai xun	0
@@ -5147,6 +5148,7 @@ use_preset_vocabulary: false
 笑山中	xiao shan zhong	0
 箫声断	xiao sheng duan	7
 笑声转新年莺语	xiao sheng zhuan xin nian ying yu	0
+笑中岁月长	xiao zhong sui yue chang	1
 小试去征西	xiao shi qu zheng xi	0
 消瘦损	xiao shou sun	0
 消瘦影	xiao shou ying	0
@@ -5611,7 +5613,7 @@ use_preset_vocabulary: false
 一片芳心千万绪	yi pian fang xin qian wan xu	4
 一片彀纹愁	yi pian gou wen chou	0
 一片归心拟乱云	yi pian gui xin ni luan yun	0
-一片江山	yi pian jiang shan	21
+一片江山	yi pian jiang shan	12
 一片伤心月	yi pian shang xin yue	0
 一片笙箫	yi pian sheng xiao	1
 一片宋玉情怀	yi pian song yu qing huai	0
@@ -5779,7 +5781,7 @@ use_preset_vocabulary: false
 应忘却明月	ying wang que ming yue	0
 莹无尘	ying wu chen	0
 英雄陈迹	ying xiong chen ji	0
-英雄事	ying xiong shi	1
+英雄事	ying xiong shi	0
 英雄无觅	ying xiong wu mi	10
 应也几番凝伫	ying ye ji fan ning zhu	0
 莺吟燕舞	ying yin yan wu	0
@@ -5992,7 +5994,7 @@ use_preset_vocabulary: false
 渔市樵村	yu shi qiao cun	0
 玉手亲折	yu shou qin zhe	0
 玉树琼枝作烟萝	yu shu qiong zhi zuo yan luo	6
-与谁听	yu shui ting	1
+与谁听	yu shui ting	2
 欲说还休梦已阑	yu shuo huan xiu meng yi lan	0
 欲说又休	yu shuo you xiu	0
 玉台挂秋月	yu tai gua qiu yue	0
@@ -6305,7 +6307,7 @@ use_preset_vocabulary: false
 知他故宫何处	zhi ta gu gong he chu	0
 枝头香絮	zhi tou xiang xu	0
 只为相思老	zhi wei xiang si lao	0
-知我意	zhi wo yi	44
+知我意	zhi wo yi	5
 直下山河	zhi xia shan he	0
 只消几个黄昏	zhi xiao ji ge huang hun	0
 只消山水光中	zhi xiao shan shui guang zhong	3
@@ -6526,6 +6528,7 @@ use_preset_vocabulary: false
 醉了还醒却	zui le hai xing que	0
 醉里不知谁是我	zui li bu zhi shui shi wo	0
 醉里秋波	zui li qiu bo	0
+醉里乾坤大	zui li qian kun da	1
 醉里簪花倒著冠	zui li zan hua dao zhu guan	2
 醉连春夕	zui lian chun xi	1
 醉梦里	zui meng li	1
@@ -6745,7 +6748,7 @@ use_preset_vocabulary: false
 白玉不毁	bai yu bu hui	0
 白玉谁家郎	bai yu shui jia lang	0
 白玉堂前一树梅	bai yu tang qian yi shu mei	0
-百越之君	bai yue zhi jun	4
+百越之君	bai yue zhi jun	3
 白云长在天	bai yun chang zai tian	0
 白云处处长随君	bai yun chu chu chang sui jun	0
 白云还自散	bai yun hai zi san	0
@@ -6887,7 +6890,7 @@ use_preset_vocabulary: false
 鄙陋没世	bi lou mo shi	2
 彼路斯何	bi lu si he	2
 鄙嫚不能萌	bi man bu neng meng	0
-比梅	bi mei	13
+比梅	bi mei	9
 彼美孟姜	bi mei meng jiang	20
 彼美人兮	bi mei ren xi	7
 闭门春尽杨花落	bi men chun jin yang hua luo	0
@@ -6972,7 +6975,7 @@ use_preset_vocabulary: false
 别徐州	bie xu zhou	1
 别样清幽	bie yang qing you	0
 别有根芽	bie you gen ya	0
-别怨	bie yuan	36
+别怨	bie yuan	35
 鬓边华	bin bian hua	1
 宾不顾矣	bin bu gu yi	0
 鬓丝生几缕	bin si sheng ji lv	0
@@ -7062,7 +7065,7 @@ use_preset_vocabulary: false
 不二法门无别路	bu er fa men wu bie lu	0
 不犯此	bu fan ci	2
 不妨长作岭南人	bu fang chang zuo ling nan ren	2
-不分贫富	bu fen pin fu	10
+不分贫富	bu fen pin fu	9
 不复东西征	bu fu dong xi zheng	0
 不复理残机	bu fu li can ji	0
 不复挺者	bu fu ting zhe	2
@@ -7149,7 +7152,7 @@ use_preset_vocabulary: false
 不可休息	bu ke xiu xi	5
 不可选也	bu ke xuan ye	3
 不可以据	bu ke yi ju	5
-不可以请	bu ke yi qing	1
+不可以请	bu ke yi qing	2
 不可以茹	bu ke yi ru	4
 不可以物	bu ke yi wu	1
 不可泳思	bu ke yong si	19
@@ -7273,7 +7276,7 @@ use_preset_vocabulary: false
 不须放屁	bu xu fang pi	3
 不须怀抱重凄凄	bu xu huai bao zhong qi qi	0
 步虚声	bu xu sheng	0
-不虚心	bu xu xin	12
+不虚心	bu xu xin	14
 不学燕丹客	bu xue yan dan ke	0
 不要这高	bu yao zhe gao	2
 不夜月临关	bu ye yue lin guan	0
@@ -7322,7 +7325,7 @@ use_preset_vocabulary: false
 不知其期	bu zhi qi qi	0
 不知其仁	bu zhi qi ren	0
 不知其仁也	bu zhi qi ren ye	1
-不知其所	bu zhi qi suo	40
+不知其所	bu zhi qi suo	39
 不知墙外是谁家	bu zhi qiang wai shi shui jia	0
 不知秋思在谁家	bu zhi qiu si zai shui jia	0
 不知身世自悠悠	bu zhi shen shi zi you you	1
@@ -7391,7 +7394,7 @@ use_preset_vocabulary: false
 残宵犹得梦依稀	can xiao you de meng yi xi	0
 残星拂大旗	can xing fu da qi	0
 残雪乱山中	can xue luan shan zhong	0
-残阳如血	can yang ru xue	42
+残阳如血	can yang ru xue	38
 残阳西入崦	can yang xi ru yan	1
 残夜水明楼	can ye shui ming lou	1
 残莺何事不知秋	can ying he shi bu zhi qiu	0
@@ -7430,7 +7433,7 @@ use_preset_vocabulary: false
 草木畅茂	cao mu chang mao	2
 草木茂萌芽	cao mu mao meng ya	0
 草铺横野六七里	cao pu heng ye liu qi li	0
-草如茵	cao ru yin	4
+草如茵	cao ru yin	5
 草色新雨中	cao se xin yu zhong	0
 草上之风	cao shang zhi feng	1
 草尚之风必偃	cao shang zhi feng bi yan	0
@@ -7595,7 +7598,7 @@ use_preset_vocabulary: false
 朝同一源出	chao tong yi yuan chu	0
 朝闻游子唱骊歌	chao wen you zi chang li ge	0
 巢在三珠树	chao zai san zhu shu	0
-车迟迟	che chi chi	3
+车迟迟	che chi chi	2
 车攻	che gong	0
 车邻	che lin	1
 车马去闲闲	che ma qu xian xian	0
@@ -7642,7 +7645,7 @@ use_preset_vocabulary: false
 臣弑其君者有之	chen shi qi jun zhe you zhi	0
 臣虽下愚	chen sui xia yu	1
 陈孙	chen sun	0
-陈陶	chen tao	26
+陈陶	chen tao	25
 陈韡	chen wei	2
 臣未之闻也	chen wei zhi wen ye	0
 臣闻求木之长者	chen wen qiu mu zhi zhang zhe	2
@@ -7699,7 +7702,7 @@ use_preset_vocabulary: false
 城头铁鼓声犹振	cheng tou tie gu sheng you zhen	0
 城头铁鼓声犹震	cheng tou tie gu sheng you zhen	2
 城头月	cheng tou yue	1
-程武	cheng wu	18
+程武	cheng wu	13
 程先	cheng xian	0
 乘兴南游不戒严	cheng xing nan you bu jie yan	0
 成彦雄	cheng yan xiong	0
@@ -8022,7 +8025,7 @@ use_preset_vocabulary: false
 赐之墙也及肩	ci zhi qiang ye ji jian	0
 此之谓物化	ci zhi wei wu hua	1
 此之谓也	ci zhi wei ye	22
-赐之彘肩	ci zhi zhi jian	25
+赐之彘肩	ci zhi zhi jian	10
 辞尊居卑	ci zun ju bei	0
 从臣才艺咸第一	cong chen cai yi xian di yi	0
 从此各东西	cong ci ge dong xi	0
@@ -8226,8 +8229,8 @@ use_preset_vocabulary: false
 丹阳湖	dan yang hu	3
 但以刘日薄西山	dan yi liu ri bo xi shan	2
 但用东山谢安石	dan yong dong shan xie an shi	7
-但远山长	dan yuan shan chang	30
-但愿天下人	dan yuan tian xia ren	0
+但远山长	dan yuan shan chang	25
+但愿天下人	dan yuan tian xia ren	1
 丹灶初开火	dan zao chu kai huo	0
 当待东宫	dang dai dong gong	0
 当花侧帽	dang hua ce mao	0
@@ -8402,7 +8405,7 @@ use_preset_vocabulary: false
 丁丁漏水夜何长	ding ding lou shui ye he chang	0
 定定住天涯	ding ding zhu tian ya	0
 丁督护歌	ding du hu ge	0
-丁儿	ding er	22
+丁儿	ding er	19
 定风流	ding feng liu	0
 丁亥岁云暮	ding hai sui yun mu	0
 鼎湖流水清且闲	ding hu liu shui qing qie xian	0
@@ -8410,7 +8413,7 @@ use_preset_vocabulary: false
 丁居晦	ding ju hui	0
 订了三家条约	ding le san jia tiao yue	0
 丁棱	ding leng	0
-丁默	ding mo	18
+丁默	ding mo	7
 定如拱北极	ding ru gong bei ji	0
 定僧	ding seng	0
 定是风光牵宿醉	ding shi feng guang qian su zui	0
@@ -8419,7 +8422,7 @@ use_preset_vocabulary: false
 丁谓	ding wei	22
 定西番	ding xi fan	0
 丁仙芝	ding xian zhi	0
-丁香结	ding xiang jie	5
+丁香结	ding xiang jie	4
 丁泽	ding ze	3
 定之方中	ding zhi fang zhong	8
 丁注	ding zhu	0
@@ -8603,7 +8606,7 @@ use_preset_vocabulary: false
 断肠春色在江南	duan chang chun se zai jiang nan	0
 段丞	duan cheng	0
 短服改胡衣	duan fu gai hu yi	0
-段谷	duan gu	15
+段谷	duan gu	11
 断碣残碑	duan jie can bei	5
 断绝胡儿恋母声	duan jue hu er lian mu sheng	0
 端午临中夏	duan wu lin zhong xia	0
@@ -8708,7 +8711,7 @@ use_preset_vocabulary: false
 而往来者	er wang lai zhe	0
 而王先生	er wang xian sheng	0
 而望幸焉	er wang xing yan	3
-而闻者彰	er wen zhe zhang	23
+而闻者彰	er wen zhe zhang	13
 而我独若遗	er wo du ruo yi	2
 而无不在也	er wu bu zai ye	6
 耳无所闻	er wu suo wen	0
@@ -8831,7 +8834,7 @@ use_preset_vocabulary: false
 房孺复	fang ru fu	2
 方如行义	fang ru xing yi	0
 放生鱼鳖逐人来	fang sheng yu bie zhu ren lai	0
-芳树	fang shu	69
+芳树	fang shu	16
 芳树笼秦栈	fang shu long qin zhan	0
 方死方生	fang si fang sheng	7
 芳心向春尽	fang xin xiang chun jin	0
@@ -8910,7 +8913,7 @@ use_preset_vocabulary: false
 非曰能之	fei yue neng zhi	1
 飞月向南端	fei yue xiang nan duan	1
 飞在白云端	fei zai bai yun duan	0
-妃之	fei zhi	2
+妃之	fei zhi	1
 非至强之人	fei zhi qiang zhi ren	1
 非助我者也	fei zhu wo zhe ye	1
 焚百家之言	fen bai jia zhi yan	6
@@ -8958,12 +8961,12 @@ use_preset_vocabulary: false
 风蝶令	feng die ling	1
 风多响易沉	feng duo xiang yi chen	0
 凤飞九千仞	feng fei jiu qian ren	0
-风赋	feng fu	11
+风赋	feng fu	10
 丰干	feng gan	1
 风高大夫树	feng gao dai fu shu	0
 风骨超常伦	feng gu chao chang lun	0
 凤孤飞	feng gu fei	3
-风归云	feng gui yun	0
+风归云	feng gui yun	1
 冯衮	feng gun	0
 风乎舞雩	feng hu wu yu	9
 凤凰池对青琐门	feng huang chi dui qing suo men	0
@@ -9094,7 +9097,7 @@ use_preset_vocabulary: false
 福莫长于无祸	fu mo chang yu wu huo	1
 父母生我	fu mu sheng wo	2
 父母之年	fu mu zhi nian	1
-父母之心	fu mu zhi xin	3
+父母之心	fu mu zhi xin	1
 负你残春泪几行	fu ni can chun lei ji hang	3
 拂霓裳	fu ni chang	1
 抚念益慈柔	fu nian yi ci rou	0
@@ -9254,7 +9257,7 @@ use_preset_vocabulary: false
 高乎视低	gao hu shi di	0
 高怀见物理	gao huai jian wu li	0
 高节人相重	gao jie ren xiang zhong	0
-高句骊	gao ju li	13
+高句骊	gao ju li	8
 高楼风雨感斯文	gao lou feng yu gan si wen	0
 高论怨诽	gao lun yuan fei	0
 高明逼神恶	gao ming bi shen e	0
@@ -9664,7 +9667,7 @@ use_preset_vocabulary: false
 桂影斑驳	gui ying ban bo	2
 归于其居	gui yu qi ju	6
 归于其室	gui yu qi shi	5
-闺怨	gui yuan	69
+闺怨	gui yuan	52
 归哉归哉	gui zai gui zai	0
 归棹洛阳人	gui zhao luo yang ren	0
 桂棹兮兰桨	gui zhao xi lan jiang	10
@@ -9694,7 +9697,7 @@ use_preset_vocabulary: false
 过骊山作	guo li shan zuo	0
 郭利贞	guo li zhen	0
 郭良骥	guo liang ji	0
-过龙门	guo long men	3
+过龙门	guo long men	2
 蜾蠃负之	guo luo fu zhi	0
 郭门临渡头	guo men lin du tou	0
 过蒙拔擢	guo meng ba zhuo	2
@@ -9747,7 +9750,7 @@ use_preset_vocabulary: false
 海神来过恶风回	hai shen lai guo e feng hui	0
 还似旧时游上苑	hai si jiu shi you shang yuan	11
 海棠不惜胭脂色	hai tang bu xi yan zhi se	0
-海棠春	hai tang chun	4
+海棠春	hai tang chun	1
 海天愁思正茫茫	hai tian chou si zheng mang mang	2
 海天阔处	hai tian kuo chu	0
 海外徒闻更九州	hai wai tu wen geng jiu zhou	2
@@ -10206,7 +10209,7 @@ use_preset_vocabulary: false
 花相容	hua xiang rong	0
 花心愁欲断	hua xin chou yu duan	0
 花心动	hua xin dong	1
-华胥引	hua xu yin	55
+华胥引	hua xu yin	54
 花隐掖垣暮	hua yin ye yuan mu	1
 花迎剑佩星初落	hua ying jian pei xing chu luo	0
 化育万物	hua yu wan wu	1
@@ -10343,14 +10346,14 @@ use_preset_vocabulary: false
 会遭此祸	hui zao ci huo	2
 惠则足以使人	hui ze zu yi shi ren	0
 晦之	hui zhi	0
-讳之	hui zhi	4
+讳之	hui zhi	5
 回舟不待月	hui zhou bu dai yue	4
 惠子吊之	hui zi diao zhi	0
 惠子相梁	hui zi xiang liang	1
 悔作商人妇	hui zuo shang ren fu	0
 魂返关塞黑	hun fan guan sai hei	3
 浑浑沌沌	hun hun dun dun	4
-混江龙	hun jiang long	15
+混江龙	hun jiang long	8
 魂来枫林青	hun lai feng lin qing	2
 魂梦任悠扬	hun meng ren you yang	2
 魂去尸长留	hun qu shi chang liu	0
@@ -10570,7 +10573,7 @@ use_preset_vocabulary: false
 加以订正	jia yi ding zheng	2
 贾谊上书忧汉室	jia yi shang shu you han shi	0
 驾一叶之扁舟	jia yi ye zhi pian zhou	10
-贾应	jia ying	1
+贾应	jia ying	0
 嘉佑进士	jia you jin shi	0
 家有老妪	jia you lao yu	1
 假舆马者	jia yu ma zhe	15
@@ -10602,8 +10605,8 @@ use_preset_vocabulary: false
 剑非万人敌	jian fei wan ren di	2
 剑歌易水湄	jian ge yi shui mei	1
 剑河风急雪片阔	jian he feng ji xue pian kuo	0
-简洁优美	jian jie you mei	27
-坚决抵抗	jian jue di kang	20
+简洁优美	jian jie you mei	26
+坚决抵抗	jian jue di kang	15
 渐觉伤春暮	jian jue shang chun mu	2
 见君绸缪思	jian jun chou mou si	0
 见君难	jian jun nan	1
@@ -10740,7 +10743,7 @@ use_preset_vocabulary: false
 将往复旋如有情	jiang wang fu xuan ru you qing	0
 江为	jiang wei	0
 江纬	jiang wei	0
-江无	jiang wu	2
+江无	jiang wu	1
 姜晞	jiang xi	0
 江夏行	jiang xia xing	1
 将心托明月	jiang xin tuo ming yue	1
@@ -10785,7 +10788,7 @@ use_preset_vocabulary: false
 教以慎于接物	jiao yi shen yu jie wu	2
 焦郁	jiao yu	1
 交语速装束	jiao yu su zhuang shu	0
-教育振兴	jiao yu zhen xing	4
+教育振兴	jiao yu zhen xing	3
 郊原血	jiao yuan xue	6
 教者必以正	jiao zhe bi yi zheng	0
 节彼南山	jie bi nan shan	0
@@ -11072,7 +11075,7 @@ use_preset_vocabulary: false
 旧令尹之政	jiu ling yin zhi zheng	0
 九龙呵护玉莲房	jiu long he hu yu lian fang	1
 九陌祥烟合	jiu mo xiang yan he	0
-樛木	jiu mu	19
+樛木	jiu mu	12
 旧南阁子也	jiu nan ge zi ye	1
 就其浅矣	jiu qi qian yi	1
 就其深矣	jiu qi shen yi	1
@@ -11082,12 +11085,12 @@ use_preset_vocabulary: false
 九人而已	jiu ren er yi	0
 九日登高望	jiu ri deng gao wang	0
 九日黄花酒	jiu ri huang hua jiu	0
-九日齐山登高	jiu ri qi shan deng gao	24
+九日齐山登高	jiu ri qi shan deng gao	4
 九山郁峥嵘	jiu shan yu zheng rong	0
 旧时栏楯	jiu shi lan dun	1
 九十五字	jiu shi wu zi	0
 九岁不行	jiu sui bu xing	2
-九泰	jiu tai	22
+九泰	jiu tai	2
 九天开出一成都	jiu tian kai chu yi cheng du	2
 酒徒历历坐洲岛	jiu tu li li zuo zhou dao	0
 九万八千	jiu wan ba qian	0
@@ -11172,7 +11175,7 @@ use_preset_vocabulary: false
 卷一百七十一	juan yi bai qi shi yi	0
 卷云山	juan yun shan	1
 狷者有所不为也	juan zhe you suo bu wei ye	0
-卷珠帘	juan zhu lian	82
+卷珠帘	juan zhu lian	63
 绝壁临巨川	jue bi lin ju chuan	0
 绝壁耸万仞	jue bi song wan ren	0
 觉道资无穷	jue dao zi wu qiong	1
@@ -11457,7 +11460,7 @@ use_preset_vocabulary: false
 口如含朱丹	kou ru han zhu dan	7
 扣舷而歌之	kou xian er ge zhi	7
 寇埴	kou zhi	0
-寇准	kou zhun	174
+寇准	kou zhun	159
 哭晁卿衡	ku chao qing heng	2
 苦含情	ku han qing	6
 枯木怪石图	ku mu guai shi tu	1
@@ -11572,7 +11575,7 @@ use_preset_vocabulary: false
 乐国乐国	le guo yue guo	2
 乐极哀来月东出	le ji ai lai yue dong chu	0
 乐郊乐郊	le jiao le jiao	2
-乐令	le ling	2
+乐令	le ling	1
 乐民之乐者	le min zhi le zhe	0
 乐其可知也	le qi ke zhi ye	0
 乐且有仪	le qie you yi	1
@@ -11616,7 +11619,7 @@ use_preset_vocabulary: false
 李渤	li bo	2
 李伯虎	li bo hu	0
 立不中门	li bu zhong men	1
-力不足也	li bu zu ye	2
+力不足也	li bu zu ye	1
 力不足者	li bu zu zhe	6
 李岑	li cen	0
 李曾伯	li ceng bo	9
@@ -11635,7 +11638,7 @@ use_preset_vocabulary: false
 李憕	li deng	1
 立登要路津	li deng yao lu jin	1
 李洞	li dong	6
-李端	li duan	14
+李端	li duan	13
 立而饮之	li er yin zhi	5
 黎逢	li feng	0
 李福业	li fu ye	0
@@ -11681,7 +11684,7 @@ use_preset_vocabulary: false
 李康成	li kang cheng	0
 李克恭	li ke gong	0
 吏课升斗积	li ke sheng dou ji	0
-离苦海	li ku hai	4
+离苦海	li ku hai	5
 李夔	li kui	0
 力困衰怠竭	li kun shuai dai jie	0
 李廓	li kuo	1
@@ -11697,7 +11700,7 @@ use_preset_vocabulary: false
 李梦符	li meng fu	0
 李秘	li mi	0
 李溟	li ming	0
-李明远	li ming yuan	41
+李明远	li ming yuan	24
 李鼐	li nai	0
 李南金	li nan jin	3
 力排南山三壮士	li pai nan shan san zhuang shi	1
@@ -11764,7 +11767,7 @@ use_preset_vocabulary: false
 李乂	li yi	1
 李亿	li yi	59
 李嶷	li yi	1
-李益	li yi	37
+李益	li yi	38
 礼以行之	li yi xing zhi	1
 李婴	li ying	0
 李郢	li ying	5
@@ -11852,7 +11855,7 @@ use_preset_vocabulary: false
 良相头上进贤冠	liang xiang tou shang jin xian guan	0
 良宵盛会喜空前	liang xiao sheng hui xi kong qian	0
 两心相照	liang xin xiang zhao	0
-梁铉	liang xuan	1
+梁铉	liang xuan	0
 梁园日暮乱飞鸦	liang yuan ri mu luan fei ya	1
 梁园吟	liang yuan yin	4
 两月共半边	liang yue gong ban bian	0
@@ -12213,7 +12216,7 @@ use_preset_vocabulary: false
 卢征	lu zheng	3
 露重飞难进	lu zhong fei nan jin	0
 卢注	lu zhu	0
-陆子	lu zi	7
+陆子	lu zi	6
 卢僎	lu zun	0
 乱定几年归	luan ding ji nian gui	0
 鸾镜鸳衾两断肠	luan jing yuan qin liang duan chang	2
@@ -12316,7 +12319,7 @@ use_preset_vocabulary: false
 旅雁向南飞	lv yan xiang nan fei	0
 绿杨结烟垂袅风	lv yang jie yan chui niao feng	0
 绿杨枝外尽汀洲	lv yang zhi wai jin ting zhou	0
-绿腰	lv yao	14
+绿腰	lv yao	7
 旅夜书怀	lv ye shu huai	9
 虑以下人	lv yi xia ren	0
 屡憎于人	lv zeng yu ren	1
@@ -12501,7 +12504,7 @@ use_preset_vocabulary: false
 眠时忆问醒时事	mian shi yi wen xing shi shi	0
 沔水	mian shui	30
 免于刑戮	mian yu xing lu	1
-苗发	miao fa	3
+苗发	miao fa	2
 藐姑射之山	miao gu ye zhi shan	1
 苗晋卿	miao jin qing	0
 渺渺没孤鸿	miao miao mei gu hong	1
@@ -12533,7 +12536,7 @@ use_preset_vocabulary: false
 民之从事	min zhi cong shi	8
 民之难治	min zhi nan zhi	9
 民之失德	min zhi shi de	0
-民族阵线	min zu zhen xian	2
+民族阵线	min zu zhen xian	1
 明白畅达	ming bai chang da	1
 明白四达	ming bai si da	9
 命不可变	ming bu ke bian	0
@@ -12563,7 +12566,7 @@ use_preset_vocabulary: false
 明年春色倍还人	ming nian chun se bei hai ren	0
 明年花开复谁在	ming nian hua kai fu shui zai	2
 明年花开时	ming nian hua kai shi	0
-明年秋	ming nian qiu	4
+明年秋	ming nian qiu	2
 明年谁此凭栏干	ming nian shui ci ping lan gan	0
 名岂文章著	ming qi wen zhang zhu	4
 明日巴陵道	ming ri ba ling dao	1
@@ -12869,7 +12872,7 @@ use_preset_vocabulary: false
 女心伤悲	nv xin shang bei	3
 女行无偏斜	nv xing wu pian xie	3
 女也不爽	nv ye bu shuang	9
-女曰鸡鸣	nv yue ji ming	32
+女曰鸡鸣	nv yue ji ming	22
 女之耽兮	nv zhi dan xi	24
 女子今有行	nv zi jin you xing	0
 女子善怀	nv zi shan huai	3
@@ -12904,7 +12907,7 @@ use_preset_vocabulary: false
 潘雍	pan yong	1
 潘佑	pan you	0
 潘岳悼亡犹费词	pan yue dao wang you fei ci	0
-庞籍	pang ji	33
+庞籍	pang ji	31
 庞蕴	pang yun	0
 庖丁释刀对曰	pao ding shi dao dui yue	1
 袍裤宫人扫御床	pao ku gong ren sao yu chuang	0
@@ -12997,7 +13000,7 @@ use_preset_vocabulary: false
 贫人见之	pin ren jian zhi	0
 贫也乐	pin ye le	0
 拼一醉	pin yi zui	3
-平曾	ping ceng	1
+平曾	ping ceng	0
 平陈与宋	ping chen yu song	6
 屏风九叠云锦张	ping feng jiu die yun jin zhang	1
 屏风绝句	ping feng jue ju	0
@@ -13443,7 +13446,7 @@ use_preset_vocabulary: false
 且以汝之有身也	qie yi ru zhi you shen ye	1
 且以喜乐	qie yi xi le	0
 妾有情	qie you qing	0
-且由他	qie you ta	7
+且由他	qie you ta	6
 妾有绣腰襦	qie you xiu yao ru	1
 且欲竟寻彭泽宰	qie yu jing xun peng ze zai	0
 且暂还家去	qie zan hai jia qu	0
@@ -13459,7 +13462,7 @@ use_preset_vocabulary: false
 琴歌	qin ge	13
 禽荒非所乐	qin huang fei suo le	0
 秦皇扫六合	qin huang sao lu he	2
-秦嘉	qin jia	38
+秦嘉	qin jia	31
 秦人开关延敌	qin ren kai guan yan di	5
 秦人视之	qin ren shi zhi	1
 琴瑟相思引	qin se xiang si yin	0
@@ -13537,7 +13540,7 @@ use_preset_vocabulary: false
 青冥浩荡不见底	qing ming hao dang bu jian di	6
 清明几处有新烟	qing ming ji chu you xin yan	0
 清明即事	qing ming ji shi	1
-清明日	qing ming ri	4
+清明日	qing ming ri	3
 青鸟不传云外信	qing niao bu chuan yun wai xin	8
 青鸟飞去衔红巾	qing niao fei qu xian hong jin	3
 青鸟明丹心	qing niao ming dan xin	1
@@ -13621,7 +13624,7 @@ use_preset_vocabulary: false
 穷兵黩武今如此	qiong bing du wu jin ru ci	0
 穷愁千万端	qiong chou qian wan duan	0
 穷发之北	qiong fa zhi bei	3
-琼台	qiong tai	19
+琼台	qiong tai	18
 穷巷牛羊归	qiong xiang niu yang gui	1
 琼珠碎却圆	qiong zhu sui que yuan	4
 秋边一雁声	qiu bian yi yan sheng	0
@@ -13667,7 +13670,7 @@ use_preset_vocabulary: false
 秋声万户竹	qiu sheng wan hu zhu	1
 秋水秋天生夕风	qiu shui qiu tian sheng xi feng	0
 秋水为神玉为骨	qiu shui wei shen yu wei gu	1
-丘说	qiu shuo	4
+丘说	qiu shuo	0
 秋思冬愁春恨望	qiu si dong chou chun hen wang	0
 秋思耗	qiu si hao	0
 秋思夜	qiu si ye	0
@@ -13819,7 +13822,7 @@ use_preset_vocabulary: false
 忍更思量	ren geng si liang	1
 人归暮雪时	ren gui mu xue shi	1
 人归山郭暗	ren gui shan guo an	0
-任华	ren hua	9
+任华	ren hua	7
 人间没个安排处	ren jian mei ge an pai chu	5
 人间万事出艰辛	ren jian wan shi chu jian xin	2
 人间亦自有丹丘	ren jian yi zi you dan qiu	0
@@ -13835,7 +13838,7 @@ use_preset_vocabulary: false
 人皆知有用之用	ren jie zhi you yong zhi yong	1
 人君当神器之重	ren jun dang shen qi zhi zhong	2
 人看隘若耶	ren kan ai ruo ye	3
-人来去	ren lai qu	1
+人来去	ren lai qu	7
 忍泪吟	ren lei yin	0
 人怜直节生来瘦	ren lian zhi jie sheng lai shou	0
 人六亿	ren liu yi	3
@@ -13900,12 +13903,12 @@ use_preset_vocabulary: false
 人以为谄也	ren yi wei chan ye	0
 人亦有言	ren yi you yan	4
 仁义之端	ren yi zhi duan	0
-人有病	ren you bing	10
+人有病	ren you bing	20
 人有恒言	ren you heng yan	0
 人游月边去	ren you yue bian qu	1
 仁远乎哉	ren yuan hu zai	2
 人月圆	ren yue yuan	40
-人在楼上	ren zai lou shang	18
+人在楼上	ren zai lou shang	1
 人在木兰舟	ren zai mu lan zhou	0
 仁在其中矣	ren zai qi zhong yi	0
 仁者安仁	ren zhe an ren	4
@@ -13930,7 +13933,7 @@ use_preset_vocabulary: false
 日迟迟	ri chi chi	4
 日初出	ri chu chu	10
 日出雾露馀	ri chu wu lu yu	0
-日出行	ri chu xing	0
+日出行	ri chu xing	3
 日出有曜	ri chu you yao	0
 日出云中鸡犬喧	ri chu yun zhong ji quan xuan	1
 日出在东方	ri chu zai dong fang	0
@@ -14115,7 +14118,7 @@ use_preset_vocabulary: false
 塞姑	sai gu	0
 塞马	sai ma	2
 塞马一声嘶	sai ma yi sheng si	0
-赛神	sai shen	18
+赛神	sai shen	1
 赛天香	sai tian xiang	0
 塞翁吟	sai weng yin	0
 塞下曲六首	sai xia qu liu shou	5
@@ -14140,7 +14143,7 @@ use_preset_vocabulary: false
 三军大呼阴山动	san jun da hu yin shan dong	0
 三里之城	san li zhi cheng	3
 三年奔走空皮骨	san nian ben zou kong pi gu	0
-三年不出	san nian bu chu	5
+三年不出	san nian bu chu	4
 三年不为乐	san nian bu wei le	1
 三年不言	san nian bu yan	2
 三年笛里关山月	san nian di li guan shan yue	1
@@ -14382,7 +14385,7 @@ use_preset_vocabulary: false
 上元夫人	shang yuan fu ren	6
 上圆下方	shang yuan xia fang	6
 上云乐	shang yun le	8
-商则	shang ze	4
+商则	shang ze	3
 上之回	shang zhi hui	0
 尚自露寒花未开	shang zi lu han hua wei kai	0
 哨遍	shao bian	13
@@ -14630,7 +14633,7 @@ use_preset_vocabulary: false
 视尔不臧	shi er bu zang	0
 十二红	shi er hong	0
 士而怀居	shi er huai ju	0
-十二郎	shi er lang	4
+十二郎	shi er lang	5
 十二楼五城	shi er lou wu cheng	13
 十二楼中尽晓妆	shi er lou zhong jin xiao zhuang	0
 士贰其行	shi er qi xing	7
@@ -14869,7 +14872,7 @@ use_preset_vocabulary: false
 侍轩辕	shi xuan yuan	1
 史延	shi yan	0
 十样花	shi yang hua	0
-十药	shi yao	0
+十药	shi yao	2
 事业不同	shi ye bu tong	0
 士也罔极	shi ye wang ji	14
 事业无穷年	shi ye wu qiong nian	0
@@ -14881,7 +14884,7 @@ use_preset_vocabulary: false
 十一队	shi yi dui	0
 是以后世无传焉	shi yi hou shi wu chuan yan	0
 十一陌	shi yi mo	0
-是以圣人	shi yi sheng ren	87
+是以圣人	shi yi sheng ren	83
 是以圣人欲上民	shi yi sheng ren yu shang min	1
 是刈是濩	shi yi shi hu	3
 是亦为政	shi yi wei zheng	0
@@ -15159,7 +15162,7 @@ use_preset_vocabulary: false
 谁知真患难	shui zhi zhen huan nan	0
 谁知之者	shui zhi zhi zhe	7
 谁知竹西路	shui zhi zhu xi lu	2
-谁主沉浮	shui zhu chen fu	43
+谁主沉浮	shui zhu chen fu	38
 水浊不可饮	shui zhuo bu ke yin	0
 舜功禹顾养	shun gong yu gu yang	0
 舜何人也	shun he ren ye	0
@@ -15171,7 +15174,7 @@ use_preset_vocabulary: false
 硕大且卷	shuo da qie juan	3
 说道风光在水西	shuo dao feng guang zai shui xi	0
 朔方健儿好身手	shuo fang jian er hao shen shou	0
-硕人	shuo ren	49
+硕人	shuo ren	46
 硕人之宽	shuo ren zhi kuan	1
 说甚龙争虎斗	shuo shen long zheng hu dou	0
 说怿女美	shuo yi nv mei	17
@@ -15275,7 +15278,7 @@ use_preset_vocabulary: false
 斯已而已矣	si yi er yi yi	0
 思依依	si yi yi	0
 似有人开	si you ren kai	0
-似与不似	si yu bu si	3
+似与不似	si yu bu si	0
 斯远暴慢矣	si yuan bao man yi	0
 四园竹	si yuan zhu	0
 四月南风大麦黄	si yue nan feng da mai huang	0
@@ -15449,7 +15452,7 @@ use_preset_vocabulary: false
 孙革	sun ge	3
 笋根稚子无人见	sun gen zhi zi wu ren jian	1
 孙顾	sun gu	2
-孙合	sun he	2
+孙合	sun he	0
 孙居敬	sun ju jing	0
 孙谋梁国珍	sun mou liang guo zhen	0
 孙佺	sun quan	3
@@ -15508,7 +15511,7 @@ use_preset_vocabulary: false
 台城游	tai cheng you	0
 泰初有无	tai chu you wu	0
 太和万物	tai he wan wu	0
-太湖水	tai hu shui	8
+太湖水	tai hu shui	7
 太平令	tai ping ling	0
 太平时	tai ping shi	0
 苔色连深竹	tai se lian shen zhu	0
@@ -15694,7 +15697,7 @@ use_preset_vocabulary: false
 天下将自正	tian xia jiang zi zheng	1
 天下皆谓我道大	tian xia jie wei wo dao da	4
 天下可运於掌	tian xia ke yun yu zhang	1
-天下乐	tian xia le	6
+天下乐	tian xia le	5
 天下莫强焉	tian xia mo qiang yan	0
 天下朋友皆胶漆	tian xia peng you jie jiao qi	1
 天下神器	tian xia shen qi	5
@@ -15843,7 +15846,7 @@ use_preset_vocabulary: false
 外连衡而斗诸侯	wai lian heng er dou zhu hou	3
 外无旷夫	wai wu kuang fu	1
 晚泊浔阳望庐山	wan bo xun yang wang lu shan	0
-万楚	wan chu	9
+万楚	wan chu	0
 万川归之	wan chuan gui zhi	1
 晚次鄂州	wan ci e zhou	1
 万代千秋仰圣君	wan dai qian qiu yang sheng jun	0
@@ -15950,13 +15953,13 @@ use_preset_vocabulary: false
 王安礼	wang an li	8
 王安中	wang an zhong	0
 王变乎色	wang bian hu se	0
-王表	wang biao	146
-王播	wang bo	7
+王表	wang biao	139
+王播	wang bo	6
 王粲春来更远游	wang can chun lai geng yuan you	0
 望残烟草低迷	wang can yan cao di mi	2
 王苍	wang cang	0
 望春回	wang chun hui	0
-王绰	wang chuo	1
+王绰	wang chuo	0
 王从叔	wang cong shu	0
 汪存	wang cun	0
 网打尽	wang da jin	1
@@ -15993,7 +15996,7 @@ use_preset_vocabulary: false
 王季文	wang ji wen	0
 王继勋	wang ji xun	0
 王季友	wang ji you	0
-王建	wang jian	135
+王建	wang jian	126
 望江东	wang jiang dong	2
 望江梅	wang jiang mei	3
 望江怨	wang jiang yuan	0
@@ -16050,7 +16053,7 @@ use_preset_vocabulary: false
 王赏	wang shang	2
 王邵	wang shao	1
 王绍宗	wang shao zong	0
-王沈	wang shen	32
+王沈	wang shen	31
 王诜	wang shen	48
 王谌	wang shen	1
 王识	wang shi	1
@@ -16058,7 +16061,7 @@ use_preset_vocabulary: false
 往世不可追也	wang shi bu ke zhui ye	0
 往时翰墨颇横流	wang shi han mo po heng liu	0
 王事靡盬	wang shi mi gu	8
-王氏女	wang shi nv	1
+王氏女	wang shi nv	0
 往事千端	wang shi qian duan	3
 王室如毁	wang shi ru hui	0
 往时越千年	wang shi yue qian nian	0
@@ -16105,7 +16108,7 @@ use_preset_vocabulary: false
 王欲行之	wang yu xing zhi	2
 望远海	wang yuan hai	1
 望远行	wang yuan xing	1
-王约	wang yue	8
+王约	wang yue	7
 王越宾	wang yue bin	0
 望月怀远	wang yue huai yuan	5
 王岳灵	wang yue ling	0
@@ -16127,13 +16130,13 @@ use_preset_vocabulary: false
 王仲甫	wang zhong fu	0
 望终南山	wang zhong nan shan	1
 王仲舒	wang zhong shu	0
-王胄	wang zhou	1
+王胄	wang zhou	0
 王祝	wang zhu	0
 汪晫	wang zhuo	0
 王濯	wang zhuo	0
 王子比干	wang zi bi gan	2
 王子皇孙	wang zi huang sun	1
-王子乔	wang zi qiao	4
+王子乔	wang zi qiao	3
 王子容	wang zi rong	0
 王自中	wang zi zhong	0
 汪遵	wang zun	3
@@ -16187,7 +16190,7 @@ use_preset_vocabulary: false
 维风及雨	wei feng ji yu	0
 微风惊暮坐	wei feng jing mu zuo	0
 为富不仁矣	wei fu bu ren yi	0
-为父为母	wei fu wei mu	3
+为父为母	wei fu wei mu	2
 为感君王辗转思	wei gan jun wang zhan zhuan si	3
 为公子裳	wei gong zi shang	2
 危冠广袖楚宫妆	wei guan guang xiu chu gong zhuang	0
@@ -16218,7 +16221,7 @@ use_preset_vocabulary: false
 为君之道	wei jun zhi dao	8
 微君之躬	wei jun zhi gong	2
 微君之故	wei jun zhi gu	2
-韦抗	wei kang	1
+韦抗	wei kang	0
 未可与立	wei ke yu li	0
 未可与权	wei ke yu quan	0
 未可与适道	wei ke yu shi dao	0
@@ -16318,7 +16321,7 @@ use_preset_vocabulary: false
 维扬忆旧游	wei yang yi jiu you	0
 为妖为孽	wei yao wei nie	0
 唯尧则之	wei yao ze zhi	3
-卫叶	wei ye	2
+卫叶	wei ye	0
 维叶莫莫	wei ye mo mo	2
 维叶萋萋	wei ye qi qi	4
 维以不永怀	wei yi bu yong huai	4
@@ -16368,14 +16371,14 @@ use_preset_vocabulary: false
 未之思也	wei zhi si ye	1
 谓之天子	wei zhi tian zi	0
 谓之心	wei zhi xin	0
-谓之学	wei zhi xue	1
+谓之学	wei zhi xue	0
 未之学也	wei zhi xue ye	0
 唯之与阿	wei zhi yu a	3
 谓之真人	wei zhi zhen ren	0
 韦执中	wei zhi zhong	0
 维舟绿杨岸	wei zhou lv yang an	0
 微注小窗明	wei zhu xiao chuang ming	0
-韦庄	wei zhuang	116
+韦庄	wei zhuang	113
 畏子不敢	wei zi bu gan	2
 微子第十八	wei zi di shi ba	1
 魏子敬	wei zi jing	0
@@ -16424,7 +16427,7 @@ use_preset_vocabulary: false
 温宪	wen xian	2
 文行忠信	wen xing zhong xin	0
 文偃	wen yan	0
-文益	wen yi	8
+文益	wen yi	7
 闻义不能徙	wen yi bu neng xi	2
 问一得三	wen yi de san	0
 揾英雄泪	wen ying xiong lei	10
@@ -16469,7 +16472,7 @@ use_preset_vocabulary: false
 我决起而飞	wo jue qi er fei	3
 我觉秋兴逸	wo jue qiu xing yi	1
 卧看满天云不动	wo kan man tian yun bu dong	2
-我来自东	wo lai zi dong	2
+我来自东	wo lai zi dong	1
 我马白	wo ma bai	0
 我马虺隤	wo ma hui tui	4
 我马瘏矣	wo ma tu yi	4
@@ -16741,7 +16744,7 @@ use_preset_vocabulary: false
 勿使燕然上	wu shi yan ran shang	0
 吴十一	wu shi yi	0
 吾是以忧	wu shi yi you	1
-五首	wu shou	248
+五首	wu shou	213
 吴叔	wu shu	42
 无数铃声遥过碛	wu shu ling sheng yao guo qi	0
 吴淑真	wu shu zhen	0
@@ -16824,11 +16827,11 @@ use_preset_vocabulary: false
 无须伤感	wu xu shang gan	1
 寤言不寐	wu yan bu mei	3
 五言乐府	wu yan yue fu	1
-无羊	wu yang	5
+无羊	wu yang	3
 舞杨花	wu yang hua	0
 舞腰	wu yao	3
 梧叶儿	wu ye er	0
-吴亿	wu yi	5
+吴亿	wu yi	0
 吴益	wu yi	3
 无意不可入	wu yi bu ke ru	1
 吾意独怜才	wu yi du lian cai	10
@@ -16916,7 +16919,7 @@ use_preset_vocabulary: false
 西地锦	xi di jin	0
 奚而不丧	xi er bu sang	0
 惜芳菲	xi fang fei	0
-西方学者	xi fang xue zhe	149
+西方学者	xi fang xue zhe	144
 西风吹老丹枫树	xi feng chui lao dan feng shu	0
 西风烈	xi feng lie	17
 西风漫卷孤城	xi feng man juan gu cheng	1
@@ -17231,7 +17234,7 @@ use_preset_vocabulary: false
 象喜亦喜	xiang xi yi xi	0
 乡心新岁切	xiang xin xin sui qie	0
 庠序之教	xiang xu zhi jiao	0
-襄阳道	xiang yang dao	1
+襄阳道	xiang yang dao	0
 襄阳歌	xiang yang ge	12
 襄阳好风日	xiang yang hao feng ri	0
 相邀归渡头	xiang yao gui du tou	0
@@ -17298,15 +17301,15 @@ use_preset_vocabulary: false
 小人之过也必文	xiao ren zhi guo ye bi wen	0
 小戎	xiao rong	11
 萧瑟动寒林	xiao se dong han lin	0
-晓山青	xiao shan qing	36
+晓山青	xiao shan qing	31
 小圣乐	xiao sheng yue	0
 萧疏鬓已斑	xiao shu bin yi ban	2
 孝思维则	xiao si wei ze	0
 效死勿去	xiao si wu qu	0
 小松初数尺	xiao song chu shu chi	0
-小碎	xiao sui	32
+小碎	xiao sui	20
 晓随天仗入	xiao sui tian zhang ru	0
-小桃花	xiao tao hua	1
+小桃花	xiao tao hua	0
 孝悌也者	xiao ti ye zhe	2
 小庭花	xiao ting hua	1
 小宛	xiao wan	6
@@ -17461,7 +17464,7 @@ use_preset_vocabulary: false
 行比一乡	xing bi yi xiang	2
 行不笃敬	xing bu du jing	1
 行不履阈	xing bu lv yu	1
-行藏在我	xing cang zai wo	13
+行藏在我	xing cang zai wo	14
 星躔牛斗北	xing chan niu dou bei	0
 幸此南夷谪	xing ci nan yi zhe	0
 性达形迹忘	xing da xing ji wang	0
@@ -17571,7 +17574,7 @@ use_preset_vocabulary: false
 徐珌	xu bi	0
 徐璧	xu bi	0
 徐敞	xu chang	0
-许大	xu da	13
+许大	xu da	12
 许鼎	xu ding	0
 虚而待物者也	xu er dai wu zhe ye	0
 虚而为盈	xu er wei ying	0
@@ -17583,7 +17586,7 @@ use_preset_vocabulary: false
 许浑	xu hun	34
 徐积	xu ji	20
 许坚	xu jian	2
-许将	xu jiang	0
+许将	xu jiang	2
 徐介	xu jie	0
 须尽丘壑美	xu jin qiu he mei	0
 徐经孙	xu jing sun	0
@@ -17739,7 +17742,7 @@ use_preset_vocabulary: false
 眼高四海空无人	yan gao si hai kong wu ren	0
 言告言归	yan gao yan gui	1
 颜公变法出新意	yan gong bian fa chu xin yi	1
-燕归来	yan gui lai	8
+燕归来	yan gui lai	7
 燕归梁	yan gui liang	0
 雁后归	yan hou gui	0
 沿洄安得住	yan hui an de zhu	0
@@ -17774,7 +17777,7 @@ use_preset_vocabulary: false
 颜如舜华	yan ru shun hua	15
 颜如舜英	yan ru shun ying	9
 颜如渥丹	yan ru wo dan	3
-颜色不变	yan se bu bian	8
+颜色不变	yan se bu bian	7
 艳色天下重	yan se tian xia zhong	1
 燕山亭	yan shan ting	0
 岩上无心云相逐	yan shang wu xin yun xiang zhu	1
@@ -17860,7 +17863,7 @@ use_preset_vocabulary: false
 杨敬述	yang jing shu	3
 杨敬之	yang jing zhi	0
 杨均	yang jun	0
-杨浚	yang jun	2
+杨浚	yang jun	0
 杨夔	yang kui	1
 仰聆金玉章	yang ling jin yu zhang	0
 杨柳东风树	yang liu dong feng shu	1
@@ -17896,7 +17899,7 @@ use_preset_vocabulary: false
 杨系	yang xi	0
 养形之人	yang xing zhi ren	0
 杨续	yang xu	1
-杨颜	yang yan	39
+杨颜	yang yan	34
 杨炎正	yang yan zheng	0
 漾漾泛菱荇	yang yang fan ling xing	0
 扬扬其香	yang yang qi xiang	0
@@ -17965,8 +17968,8 @@ use_preset_vocabulary: false
 要自拔其根	yao zi ba qi gen	0
 夜半真有力	ye ban zhen you li	2
 夜榜响溪石	ye bang xiang xi shi	0
-也被越来越多的	ye bei yue lai yue duo de	16
-叶采	ye cai	3
+也被越来越多的	ye bei yue lai yue duo de	8
+叶采	ye cai	1
 叶阊	ye chang	0
 夜池	ye chi	0
 夜鼎唯煎药	ye ding wei jian yao	0
@@ -17992,18 +17995,18 @@ use_preset_vocabulary: false
 夜阑风静欲归时	ye lan feng jing yu gui shi	7
 野老苍颜一笑温	ye lao cang yan yi xiao wen	0
 野老与人争席罢	ye lao yu ren zheng xi ba	0
-叶李	ye li	5
+叶李	ye li	3
 野鹿呦呦走堂下	ye lu you you zou tang xia	0
 野幕蔽琼筵	ye mu bi qiong yan	0
 叶清臣	ye qing chen	1
 夜如何其	ye ru he qi	4
 夜如何其夜未央	ye ru he qi ye wei yang	0
 夜如年	ye ru nian	0
-叶润	ye run	1
+叶润	ye run	0
 野色开烟后	ye se kai yan hou	0
 夜上受降城闻笛	ye shang shou xiang cheng wen di	1
 夜深静卧百虫绝	ye shen jing wo bai chong jue	1
-夜思	ye si	10
+夜思	ye si	6
 野寺人来少	ye si ren lai shao	0
 夜宿寒山寺	ye su han shan si	0
 野桃含笑竹篱短	ye tao han xiao zhu li duan	1
@@ -18024,7 +18027,7 @@ use_preset_vocabulary: false
 夜吟应讶玉绳低	ye yin ying ya yu sheng di	0
 野营万里无城郭	ye ying wan li wu cheng guo	0
 野有蔓草	ye you man cao	65
-野有死麕	ye you si qun	26
+野有死麕	ye you si qun	21
 夜雨翦春韭	ye yu jian chun jiu	1
 野语有之曰	ye yu you zhi yue	0
 叶元良	ye yuan liang	0
@@ -18037,9 +18040,9 @@ use_preset_vocabulary: false
 叶祖义	ye zu yi	0
 夜坐吟	ye zuo yin	0
 以敖以游	yi ao yi you	4
-一百四十年	yi bai si shi nian	6
-一百字	yi bai zi	35
-一般消受	yi ban xiao shou	1
+一百四十年	yi bai si shi nian	7
+一百字	yi bai zi	31
+一般消受	yi ban xiao shou	0
 一半子	yi ban zi	0
 以邦观邦	yi bang guan bang	6
 一杯春露冷如冰	yi bei chun lu leng ru bing	0
@@ -18168,9 +18171,9 @@ use_preset_vocabulary: false
 医门多疾	yi men duo ji	2
 遗民几度垂垂老	yi min ji du chui chui lao	2
 异名同实	yi ming tong shi	0
-意难忘	yi nan wang	25
+意难忘	yi nan wang	18
 以能问于不能	yi neng wen yu bu neng	0
-一年春	yi nian chun	3
+一年春	yi nian chun	2
 一捻红	yi nian hong	3
 一年能几团圆月	yi nian neng ji tuan yuan yue	0
 一年生意属流尘	yi nian sheng yi shu liu chen	0
@@ -18404,7 +18407,7 @@ use_preset_vocabulary: false
 亦足以发	yi zu yi fa	3
 忆醉	yi zui	0
 一醉累月轻王侯	yi zui lei yue qing wang hou	7
-一尊还酹江月	yi zun hai lei jiang yue	31
+一尊还酹江月	yi zun hai lei jiang yue	23
 以佐五谷	yi zuo wu gu	0
 因步其韵奉和	yin bu qi yun feng he	0
 因不失其亲	yin bu shi qi qin	4
@@ -18594,7 +18597,7 @@ use_preset_vocabulary: false
 又还被	you hai bei	0
 又何加焉	you he jia yan	0
 有恨头还白	you hen tou hai bai	0
-有狐	you hu	28
+有狐	you hu	23
 油葫芦	you hu lu	0
 有狐绥绥	you hu sui sui	15
 幽涧泉	you jian quan	2
@@ -18683,7 +18686,7 @@ use_preset_vocabulary: false
 由水之就下	you shui zhi jiu xia	0
 犹似霓裳羽衣舞	you si ni shang yu yi wu	3
 有所不行	you suo bu xing	0
-有所教	you suo jiao	4
+有所教	you suo jiao	2
 有所希冀	you suo xi ji	3
 犹沓沓也	you ta ta ye	0
 犹听侍女唱梅花	you ting shi nv chang mei hua	0
@@ -18848,7 +18851,7 @@ use_preset_vocabulary: false
 玉京谣	yu jing yao	0
 欲就麻姑买沧海	yu jiu ma gu mai cang hai	0
 余久卧病无聊	yu jiu wo bing wu liao	1
-雨具先去	yu ju xian qu	19
+雨具先去	yu ju xian qu	14
 欲卷珠帘春恨长	yu juan zhu lian chun hen chang	0
 与君白黑大分明	yu jun bai hei da fen ming	0
 与君发三愿	yu jun fa san yuan	2
@@ -18977,7 +18980,7 @@ use_preset_vocabulary: false
 庾信文章老更成	yu xin wen zhang lao geng cheng	3
 舆薪之不见	yu xin zhi bu jian	0
 欲行不行各尽觞	yu xing bu xing ge jin shang	2
-鱼玄机	yu xuan ji	190
+鱼玄机	yu xuan ji	181
 雨雪纷纷连大漠	yu xue fen fen lian da mo	0
 雨雪其雱	yu xue qi pang	2
 玉雪为骨冰为魂	yu xue wei gu bing wei hun	1
@@ -19066,7 +19069,7 @@ use_preset_vocabulary: false
 愿得燕弓射大将	yuan de yan gong she da jiang	1
 愿得斩马剑	yuan de zhan ma jian	0
 远放燕支山下	yuan fang yan zhi shan xia	0
-远方之人	yuan fang zhi ren	4
+远方之人	yuan fang zhi ren	3
 元孚	yuan fu	0
 愿夫子辅吾志	yuan fu zi fu wu zhi	0
 圆荷浮小叶	yuan he fu xiao ye	5
@@ -19141,13 +19144,13 @@ use_preset_vocabulary: false
 爰有树檀	yuan you shu tan	6
 园有桃	yuan you tao	2
 远于将之	yuan yu jiang zhi	1
-元载	yuan zai	54
+元载	yuan zai	46
 爰整其旅	yuan zheng qi lv	0
 远之事君	yuan zhi shi jun	8
 援之以道	yuan zhi yi dao	0
 远之则怨	yuan zhi ze yuan	2
 愿作深山木	yuan zuo shen shan mu	4
-月暗	yue an	11
+月暗	yue an	13
 月边娇	yue bian jiao	0
 月城春	yue cheng chun	0
 月出峨眉照沧海	yue chu e mei zhao cang hai	1
@@ -19214,7 +19217,7 @@ use_preset_vocabulary: false
 月中行	yue zhong hang	0
 越中览古	yue zhong lan gu	2
 云傍马头生	yun bang ma tou sheng	1
-云表	yun biao	30
+云表	yun biao	26
 云鬓半偏新睡觉	yun bin ban pian xin shui jiao	3
 云此最吉馀难同	yun ci zui ji yu nan tong	0
 云淡秋空	yun dan qiu kong	0
@@ -19241,7 +19244,7 @@ use_preset_vocabulary: false
 云容	yun rong	1
 云散月明谁点缀	yun san yue ming shui dian zhui	11
 云山况是客中过	yun shan kuang shi ke zhong guo	1
-云山乱	yun shan luan	36
+云山乱	yun shan luan	31
 云山万重	yun shan wan chong	0
 云谁之思	yun shui zhi si	16
 云外惊飞四散哀	yun wai jing fei si san ai	0
@@ -19249,7 +19252,6 @@ use_preset_vocabulary: false
 云雾敛	yun wu lian	0
 云溪友议	yun xi you yi	9
 云霞生薜帷	yun xia sheng bi wei	0
-云想衣裳花相容	yun xiang yi shang hua xiang rong	0
 云阳上征去	yun yang shang zheng qu	0
 云雨荒台岂梦思	yun yu huang tai qi meng si	2
 愠于群小	yun yu qun xiao	4
@@ -19419,7 +19421,7 @@ use_preset_vocabulary: false
 摘莲花	zhai lian hua	0
 战罢沙场月色寒	zhan ba sha chang yue se han	2
 湛贲	zhan ben	0
-瞻彼淇奥	zhan bi qi ao	17
+瞻彼淇奥	zhan bi qi ao	15
 瞻彼日月	zhan bi ri yue	2
 战必胜矣	zhan bi sheng yi	4
 战场白骨缠草根	zhan chang bai gu chan cao gen	0
@@ -19474,7 +19476,7 @@ use_preset_vocabulary: false
 张浑	zhang hun	0
 张垍	zhang ji	3
 张籍	zhang ji	71
-张继	zhang ji	77
+张继	zhang ji	63
 张贾	zhang jia	0
 张渐	zhang jian	1
 仗剑行千里	zhang jian xing qian li	0
@@ -19498,7 +19500,7 @@ use_preset_vocabulary: false
 张南史	zhang nan shi	0
 张蠙	zhang pin	0
 张绮	zhang qi	2
-张起	zhang qi	53
+张起	zhang qi	10
 张乔	zhang qiao	5
 张钦敬	zhang qin jing	0
 张仁宝	zhang ren bao	0
@@ -19516,7 +19518,7 @@ use_preset_vocabulary: false
 张署	zhang shu	0
 张叔良	zhang shu liang	0
 张叔卿	zhang shu qing	0
-张说	zhang shuo	142
+张说	zhang shuo	80
 章四句	zhang si ju	0
 张随	zhang sui	0
 张太华	zhang tai hua	0
@@ -19551,7 +19553,7 @@ use_preset_vocabulary: false
 张藻	zhang zao	0
 张轸	zhang zhen	1
 张正一	zhang zheng yi	0
-张正元	zhang zheng yuan	2
+张正元	zhang zheng yuan	0
 张直	zhang zhi	0
 张仲方	zhang zhong fang	1
 张仲谋	zhang zhong mou	0
@@ -19582,7 +19584,7 @@ use_preset_vocabulary: false
 赵令畤	zhao ling chou	8
 召门弟子曰	zhao men di zi yue	0
 赵孟谦	zhao meng qian	0
-召南	zhao nan	66
+召南	zhao nan	65
 赵企	zhao qi	0
 照日深红暖见鱼	zhao ri shen hong nuan jian yu	2
 赵汝钠	zhao ru na	0
@@ -19610,7 +19612,7 @@ use_preset_vocabulary: false
 赵壹	zhao yi	0
 照映里门非白屋	zhao ying li men fei bai wu	0
 赵有平原	zhao you ping yuan	3
-赵与	zhao yu	7
+赵与	zhao yu	34
 照在绿波中	zhao zai lv bo zhong	0
 朝朝空自归	zhao zhao kong zi gui	1
 朝朝马策与刀环	zhao zhao ma ce yu dao huan	0
@@ -19654,7 +19656,7 @@ use_preset_vocabulary: false
 真是英雄一丈夫	zhen shi ying xiong yi zhang fu	1
 振于无竟	zhen yu wu jing	0
 真源了无取	zhen yuan liao wu qu	0
-真丈夫	zhen zhang fu	12
+真丈夫	zhen zhang fu	7
 振振公姓	zhen zhen gong xing	1
 振振公子	zhen zhen gong zi	3
 振振公族	zhen zhen gong zu	1
@@ -19702,7 +19704,7 @@ use_preset_vocabulary: false
 峥嵘赤云西	zheng rong chi yun xi	0
 峥嵘如鬼工	zheng rong ru gui gong	0
 郑善玉	zheng shan yu	0
-郑绍	zheng shao	2
+郑绍	zheng shao	3
 郑少微	zheng shao wei	0
 郑审	zheng shen	0
 郑史	zheng shi	0
@@ -19973,14 +19975,14 @@ use_preset_vocabulary: false
 众中不敢分明语	zhong zhong bu gan fen ming yu	0
 冢中人	zhong zhong ren	12
 种种在其中	zhong zhong zai qi zhong	1
-种竹	zhong zhu	22
+种竹	zhong zhu	3
 仲子陵	zhong zi ling	0
 周伯阳	zhou bo yang	0
 洲长多暮归	zhou chang duo mu gui	0
 周彻	zhou che	0
 舟车之所通	zhou che zhi suo tong	0
 周墀	zhou chi	1
-周存	zhou cun	10
+周存	zhou cun	5
 周纲凌迟四海沸	zhou gang ling chi si hai fei	0
 周格非	zhou ge fei	0
 周公作	zhou gong zuo	1
@@ -19991,7 +19993,7 @@ use_preset_vocabulary: false
 昼锦堂	zhou jin tang	1
 周利用	zhou li yong	0
 周朴	zhou pu	8
-昼寝	zhou qin	28
+昼寝	zhou qin	23
 周秦行纪	zhou qin xing ji	2
 周任有言曰	zhou ren you yan yue	0
 舟人指点到今疑	zhou ren zhi dian dao jin yi	1
@@ -20021,7 +20023,7 @@ use_preset_vocabulary: false
 朱存	zhu cun	5
 竹簟	zhu dian	1
 朱敦复	zhu dun fu	0
-朱放	zhu fang	4
+朱放	zhu fang	3
 主歌悲顾鹤	zhu ge bei gu he	0
 诸葛孔明起陇中	zhu ge kong ming qi long zhong	1
 诸公碌碌皆余子	zhu gong lu lu jie yu zi	0
@@ -20477,7 +20479,7 @@ use_preset_vocabulary: false
 鄙夫可与事君也与哉	bi fu ke yu shi jun ye yu zai	0
 必复命曰	bi fu ming yue	0
 必趋	bi qu	3
-必杀之	bi sha zhi	8
+必杀之	bi sha zhi	7
 必失之	bi shi zhi	4
 必文	bi wen	0
 必偃	bi yan	1
@@ -20582,7 +20584,7 @@ use_preset_vocabulary: false
 称诸异	cheng zhu yi	0
 赤尔何如	chi er he ru	0
 耻躬之不逮也	chi gong zhi bu dai ye	0
-耻也	chi ye	12
+耻也	chi ye	8
 赤也惑	chi ye huo	1
 崇德也	chong de ye	0
 臭恶	chou e	9
@@ -20619,7 +20621,7 @@ use_preset_vocabulary: false
 得见君子者	de jian jun zi zhe	2
 得见有恒者	de jian you heng zhe	0
 得其门者或寡矣	de qi men zhe huo gua yi	0
-弟也	di ye	32
+弟也	di ye	23
 禘自既灌而往者	di zi ji guan er wang zhe	0
 点尔何如	dian er he ru	0
 定公问	ding gong wen	1
@@ -20744,7 +20746,7 @@ use_preset_vocabulary: false
 宫室而尽力乎沟洫	gong shi er jin li hu gou xu	0
 公叔文子之臣大夫僎	gong shu wen zi zhi chen dai fu zhuan	0
 公则说	gong ze shuo	1
-攻之	gong zhi	153
+攻之	gong zhi	154
 躬自厚而薄责于人	gong zi hou er bo ze yu ren	3
 苟合矣	gou he yi	0
 苟美矣	gou mei yi	0
@@ -20812,7 +20814,7 @@ use_preset_vocabulary: false
 回也	hui ye	0
 回也视予犹父也	hui ye shi yu you fu ye	1
 或问禘之说	huo wen di zhi shuo	0
-既得之	ji de zhi	1
+既得之	ji de zhi	2
 既而曰	ji er yue	1
 既富矣	ji fu yi	0
 疾固也	ji gu ye	0
@@ -20846,7 +20848,7 @@ use_preset_vocabulary: false
 将入门	jiang ru men	0
 降一等	jiang yi deng	3
 皦如也	jiao ru ye	0
-教之	jiao zhi	59
+教之	jiao zhi	56
 皆不及门也	jie bu ji men ye	1
 桀溺曰	jie ni yue	0
 借人乘之	jie ren cheng zhi	0
@@ -21062,14 +21064,14 @@ use_preset_vocabulary: false
 其可已矣	qi ke yi yi	0
 其门而入	qi men er ru	0
 其鸣也哀	qi ming ye ai	2
-其亲	qi qin	15
+其亲	qi qin	14
 其然	qi ran	25
 其然也	qi ran ye	1
 齐人归女乐	qi ren gui nv yue	0
 其如示诸斯乎	qi ru shi zhu si hu	0
 岂若从辟世之士哉	qi ruo cong pi shi zhi shi zai	0
 岂若匹夫匹妇之为谅也	qi ruo pi fu pi fu zhi wei liang ye	0
-其事也	qi shi ye	3
+其事也	qi shi ye	2
 其恕乎	qi shu hu	4
 欺天乎	qi tian hu	2
 其为仁	qi wei ren	0
@@ -21082,7 +21084,7 @@ use_preset_vocabulary: false
 启予手	qi yu shou	0
 其余则日月至焉而已矣	qi yu ze ri yue zhi yan er yi yi	0
 启予足	qi yu zu	0
-器之	qi zhi	18
+器之	qi zhi	22
 齐之以刑	qi zhi yi xing	3
 其诸异乎人之求之与	qi zhu yi hu ren zhi qiu zhi yu	0
 巧言乱德	qiao yan luan de	0
@@ -21118,7 +21120,7 @@ use_preset_vocabulary: false
 蘧伯玉使人于孔子	qu bo yu shi ren yu kong zi	0
 趋而辟之	qu er pi zhi	2
 趋进	qu jin	7
-去丧	qu sang	0
+去丧	qu sang	1
 去食	qu shi	0
 阙党童子将命	que dang tong zi jiang ming	0
 然非与	ran fei yu	0
@@ -21165,7 +21167,7 @@ use_preset_vocabulary: false
 如会同	ru hui tong	1
 如乐何	ru le he	1
 如礼何	ru li he	2
-如临	ru lin	20
+如临	ru lin	10
 如其仁	ru qi ren	1
 如其善而莫之违也	ru qi shan er mo zhi wei ye	0
 入太庙	ru tai miao	6
@@ -21231,7 +21233,7 @@ use_preset_vocabulary: false
 使乎	shi hu	0
 是惑也	shi huo ye	0
 士见危致命	shi jian wei zhi ming	0
-事君	shi jun	57
+事君	shi jun	58
 事君敬其事	shi jun jing qi shi	0
 事君数	shi jun shu	0
 是礼也	shi li ye	1
@@ -21240,7 +21242,7 @@ use_preset_vocabulary: false
 师冕见	shi mian jian	0
 是丘也	shi qiu ye	2
 失饪	shi ren	5
-失人	shi ren	41
+失人	shi ren	40
 是人之	shi ren zhi	0
 实若虚	shi ruo xu	1
 侍食于君	shi shi yu jun	0
@@ -21314,9 +21316,9 @@ use_preset_vocabulary: false
 所恶也	suo e ye	0
 所损益	suo sun yi	2
 所谓大臣者	suo wei da chen zhe	1
-所重	suo zhong	33
+所重	suo zhong	32
 他日又独立	ta ri you du li	0
-泰伯	tai bo	167
+泰伯	tai bo	112
 泰也	tai ye	0
 太宰问于子贡曰	tai zai wen yu zi gong yue	0
 唐虞之际	tang yu zhi ji	8
@@ -21327,14 +21329,14 @@ use_preset_vocabulary: false
 天下之无道也久矣	tian xia zhi wu dao ye jiu yi	1
 天厌之	tian yan zhi	7
 听思聪	ting si cong	3
-童子见	tong zi jian	2
+童子见	tong zi jian	1
 拖绅	tuo shen	0
 忘其身以及	wang qi shen yi ji	0
 王孙贾问曰	wang sun jia wen yue	0
 王孙贾治军旅	wang sun jia zhi jun lv	0
 往也	wang ye	0
 枉者直	wang zhe zhi	0
-亡之	wang zhi	33
+亡之	wang zhi	35
 罔之生也幸而免	wang zhi sheng ye xing er mian	0
 危邦不入	wei bang bu ru	8
 未尝至于偃之室也	wei chang zhi yu yan zhi shi ye	0
@@ -21390,7 +21392,7 @@ use_preset_vocabulary: false
 文犹质也	wen you zhi ye	0
 问于孔子	wen yu kong zi	3
 问于曾子	wen yu zeng zi	0
-问知	wen zhi	2
+问知	wen zhi	1
 文之以礼乐	wen zhi yi li yue	0
 问子西	wen zi xi	0
 我独亡	wo du wang	0
@@ -21419,7 +21421,7 @@ use_preset_vocabulary: false
 吾见其居于位也	wu jian qi ju yu wei ye	0
 吾将问之	wu jiang wen zhi	1
 恶居下流而讪	wu ju xia liu er shan	0
-无倦	wu juan	6
+无倦	wu juan	5
 吾老矣	wu lao yi	5
 吾力	wu li	1
 巫马期以告	wu ma qi yi gao	0
@@ -21438,19 +21440,19 @@ use_preset_vocabulary: false
 无所不佩	wu suo bu pei	0
 无所苟而已	wu suo gou er yi	0
 武王曰	wu wang yue	15
-无违	wu wei	88
+无违	wu wei	26
 吾未尝不得见也	wu wei chang bu de jian ye	0
 吾闻君子不党	wu wen jun zi bu dang	0
 毋我	wu wo	10
 吾无行而不与二三子者	wu wu xing er bu yu er san zi zhe	2
-无小大	wu xiao da	2
+无小大	wu xiao da	4
 毋意	wu yi	9
-无以立	wu yi li	11
+无以立	wu yi li	10
 吾以女为死矣	wu yi nv wei si yi	0
 无以尚之	wu yi shang zhi	0
 无以为君子也	wu yi wei jun zi ye	1
 吾亦为之	wu yi wei zhi	4
-无以言	wu yi yan	20
+无以言	wu yi yan	22
 无勇也	wu yong ye	1
 吾友尝从事于斯矣	wu you chang cong shi yu si yi	0
 吾犹及史之阙文也	wu you ji shi zhi que wen ye	1
@@ -21575,7 +21577,7 @@ use_preset_vocabulary: false
 衣敝缊袍	yi bi yun pao	1
 以别乎	yi bie hu	0
 亦不从也	yi bu cong ye	0
-以成	yi cheng	78
+以成	yi cheng	76
 衣夫锦	yi fu jin	2
 亦各言其志也已矣	yi ge yan qi zhi ye yi yi	0
 亦各言其子也	yi ge yan qi zi ye	0
@@ -21584,13 +21586,13 @@ use_preset_vocabulary: false
 亦可以胜残去杀矣	yi ke yi sheng can qu sha yi	0
 以莅之	yi li zhi	0
 抑末也	yi mo ye	0
-一瓢饮	yi piao yin	103
+一瓢饮	yi piao yin	41
 衣前后	yi qian hou	0
 衣轻裘	yi qing qiu	7
 绎如也	yi ru ye	0
 翼如也	yi ru ye	0
 羿善射	yi shan she	3
-以思	yi si	28
+以思	yi si	25
 疑思问	yi si wen	3
 以为谤己也	yi wei bang ji ye	0
 以吾从大夫之后	yi wu cong da fu zhi hou	0
@@ -21624,7 +21626,7 @@ use_preset_vocabulary: false
 雍也	yong ye	30
 友便辟	you bian pi	0
 友多闻	you duo wen	3
-有恶	you e	35
+有恶	you e	36
 耰而不辍	you er bu chuo	0
 幼而不孙弟	you er bu sun di	6
 有反坫	you fan dian	0
@@ -21726,7 +21728,7 @@ use_preset_vocabulary: false
 则礼乐不兴	ze li yue bu xing	1
 则礼乐征伐自天子出	ze li yue zheng fa zi tian zi chu	1
 则礼乐征伐自诸侯	ze li yue zheng fa zi zhu hou	0
-则民	ze min	35
+则民	ze min	34
 则民服	ze min fu	2
 则民无所错手足	ze min wu suo cuo shou zu	0
 则民兴于仁	ze min xing yu ren	0
@@ -21848,7 +21850,7 @@ use_preset_vocabulary: false
 子谓仲弓曰	zi wei zhong gong yue	0
 子问公叔文子于公明贾曰	zi wen gong shu wen zi yu gong ming jia yue	0
 子问之	zi wen zhi	0
-子闻之	zi wen zhi	3
+子闻之	zi wen zhi	2
 子夏为莒父宰	zi xia wei ju fu zai	0
 子夏闻之	zi xia wen zhi	0
 子夏曰	zi xia yue	2
@@ -23130,7 +23132,7 @@ use_preset_vocabulary: false
 此之谓大孝	ci zhi wei da xiao	0
 此之谓混溟	ci zhi wei hun ming	0
 寇雠	kou chou	2
-回㨃	hui dui	0
+回㨃	hui dui	304
 此之谓寇雠	ci zhi wei kou chou	0
 此之谓丘里之言	ci zhi wei qiu li zhi yan	0
 此之位三有礼焉	ci zhi wei san you li yan	0
@@ -27079,7 +27081,7 @@ use_preset_vocabulary: false
 莫动则平	mo dong ze ping	0
 漠而清乎	mo er qing hu	0
 莫非王臣	mo fei wang chen	28
-莫非王土	mo fei wang tu	69
+莫非王土	mo fei wang tu	32
 莫富于地	mo fu yu di	0
 谟盖都君	mo gai dou jun	0
 莫敢不哀	mo gan bu ai	0
@@ -30093,6 +30095,7 @@ use_preset_vocabulary: false
 滔滔者天下皆是也	tao tao zhe tian xia jie shi ye	0
 陶为己忧	tao wei ji you	0
 陶冶亦以其械器易粟者	tao ye yi yi qi xie qi yi su zhe	0
+逃出是非乡	tao chu shi fei xiang	1
 逃于大泽	tao yu da ze	0
 逃于深蓁	tao yu shen zhen	0
 特犯人之形而犹喜之	te fan ren zhi xing er you xi zhi	0
@@ -30214,7 +30217,7 @@ use_preset_vocabulary: false
 天下之言性也	tian xia zhi yan xing ye	0
 天下之欲疾其君者	tian xia zhi yu ji qi jun zhe	0
 天选子之形	tian xuan zi zhi xing	0
-天涯芳草	tian ya fang cao	1
+天涯芳草	tian ya fang cao	2
 田野不辟	tian ye bu pi	0
 天意怜幽草	tian yi lian you cao	3
 天有历数	tian you li shu	0
@@ -30301,7 +30304,7 @@ use_preset_vocabulary: false
 土山焦而不热	tu shan jiao er bu re	0
 土山焦而热	tu shan jiao er re	0
 徒使两地眼成穿而骨化石	tu shi liang di yan cheng chuan er gu hua shi	1
-涂有饿莩而不知发	tu you e piao er bu zhi fa	7
+涂有饿莩而不知发	tu you e piao er bu zhi fa	2
 途有饿殍而不知发	tu you e piao er bu zhi fa	1
 徒友益散	tu you yi san	0
 抟扶摇羊角而上者九万里	tuan fu yao yang jiao er shang zhe jiu wan li	3
@@ -31826,7 +31829,7 @@ use_preset_vocabulary: false
 形不得美服	xing bu de mei fu	0
 性不可易	xing bu ke yi	0
 形不离而生亡者有之矣	xing bu li er sheng wang zhe you zhi yi	0
-刑不上大夫	xing bu shang da fu	29
+刑不上大夫	xing bu shang da fu	26
 行不崖异之谓宽	xing bu ya yi zhi wei kuan	0
 行不知所之	xing bu zhi suo zhi	0
 星辰固有列矣	xing chen gu you lie yi	0
@@ -32570,7 +32573,7 @@ use_preset_vocabulary: false
 亦以天下人为念	yi yi tian xia ren wei nian	1
 亦以新子之国	yi yi xin zi zhi guo	0
 亦异於曾子矣	yi yi yu zeng zi yi	1
-以易之也	yi yi zhi ye	0
+以易之也	yi yi zhi ye	2
 翼殷不逝	yi yin bu shi	0
 伊尹放之於桐	yi yin fang zhi yu tong	0
 伊尹耕於有莘之野	yi yin geng yu you xin zhi ye	0
@@ -32581,7 +32584,7 @@ use_preset_vocabulary: false
 颐隐于齐	yi yin yu qi	0
 以阴召阴	yi yin zhao yin	0
 伊尹之於殷也	yi yin zhi yu yin ye	0
-以用为知	yi yong wei zhi	2
+以用为知	yi yong wei zhi	1
 亦有辩乎	yi you bian hu	0
 以游大川	yi you da chuan	0
 以有若似圣人	yi you ruo si sheng ren	0
@@ -34740,7 +34743,7 @@ use_preset_vocabulary: false
 粗绢箩	cu juan luo	0
 翠缕	cui lv	2
 翠墨	cui mo	0
-翠云	cui yun	20
+翠云	cui yun	6
 翠嶂	cui zhang	0
 村姥姥是信口开合	cun lao lao shi xin kou kai he	0
 错里错以错劝哥哥	cuo li cuo yi cuo quan ge ge	0
@@ -34806,7 +34809,7 @@ use_preset_vocabulary: false
 广匀胶	guang yun jiao	0
 姽婳词	gui hua ci	4
 鬼脸青	gui lian qing	1
-癸酉本	gui you ben	58
+癸酉本	gui you ben	53
 还孽债迎女返真元	hai nie zhai ying nv fan zhen yuan	0
 海棠春睡图	hai tang chun shui tu	0
 含耻辱情烈死金钏	han chi ru qing lie si jin chuan	0
@@ -34901,7 +34904,7 @@ use_preset_vocabulary: false
 贾蓝	jia lan	0
 贾璘	jia lin	0
 贾菱	jia ling	2
-贾敏	jia min	25
+贾敏	jia min	24
 贾萍	jia ping	0
 贾婆	jia po	0
 贾蔷	jia qiang	9
@@ -34915,7 +34918,7 @@ use_preset_vocabulary: false
 贾时飞	jia shi fei	0
 贾四姐儿	jia si jie er	0
 贾太君祷天消祸患	jia tai jun dao tian xiao huo huan	0
-贾探春	jia tan chun	3
+贾探春	jia tan chun	2
 贾天祥	jia tian xiang	0
 贾天祥正照风月鉴	jia tian xiang zheng zhao feng yue jian	1
 贾王扁	jia wang bian	0
@@ -34936,7 +34939,7 @@ use_preset_vocabulary: false
 贾芸	jia yun	24
 贾藻	jia zao	0
 贾蓁	jia zhen	0
-贾政	jia zheng	126
+贾政	jia zheng	119
 贾芝	jia zhi	0
 贾珠	jia zhu	11
 见土仪颦卿思故里	jian tu yi pin qing si gu li	0
@@ -34947,7 +34950,7 @@ use_preset_vocabulary: false
 绛珠草	jiang zhu cao	5
 绛珠仙草	jiang zhu xian cao	11
 绛珠仙子	jiang zhu xian zi	8
-焦大	jiao da	11
+焦大	jiao da	10
 胶矾	jiao fan	13
 蕉下客	jiao xia ke	0
 娇杏	jiao xing	0
@@ -34981,7 +34984,7 @@ use_preset_vocabulary: false
 苦尤娘赚入大观园	ku you niang zhuan ru da guan yuan	0
 葵官	kui guan	1
 蜡油冻	la you dong	0
-赖大	lai da	9
+赖大	lai da	7
 赖大家的	lai da jia de	0
 赖二	lai er	1
 赖二家的	lai er jia de	0
@@ -34990,7 +34993,7 @@ use_preset_vocabulary: false
 来升	lai sheng	2
 赖升	lai sheng	0
 癞头和尚	lai tou he shang	5
-来旺	lai wang	12
+来旺	lai wang	9
 来旺妇倚势霸成亲	lai wang fu yi shi ba cheng qin	0
 滥情人情误思游艺	lan qing ren qing wu si you yi	0
 浪荡子情遗九龙佩	lang dang zi qing yi jiu long pei	0
@@ -35001,7 +35004,7 @@ use_preset_vocabulary: false
 冷郎君惧祸走他乡	leng lang jun ju huo zou ta xiang	0
 冷香丸	leng xiang wan	9
 冷子兴演说荣国府	leng zi xing yan shuo rong guo fu	2
-李贵	li gui	14
+李贵	li gui	11
 理国公柳彪	li guo gong liu biao	0
 离恨天	li hen tian	11
 黧鸡	li ji	0
@@ -35009,7 +35012,7 @@ use_preset_vocabulary: false
 李奶奶	li nai nai	54
 李绮	li qi	1
 李十儿	li shi er	0
-李纨	li wan	112
+李纨	li wan	110
 李纹	li wen	3
 梨香院	li xiang yuan	5
 琏二爷	lian er ye	0
@@ -35068,7 +35071,7 @@ use_preset_vocabulary: false
 那府里	na fu li	1
 南安王	nan an wang	8
 闹闺阃薛宝钗吞声	nao gui kun xue bao chai tun sheng	0
-倪二	ni er	2
+倪二	ni er	3
 宁府	ning fu	17
 宁国府除夕祭宗祠	ning guo fu chu xi ji zong ci	0
 宁国府骨肉病灾襟	ning guo fu gu rou bing zai jin	0
@@ -35223,7 +35226,7 @@ use_preset_vocabulary: false
 王嬷嬷	wang mo mo	4
 王奶妈	wang nai ma	0
 王青儿	wang qing er	0
-王善保	wang shan bao	8
+王善保	wang shan bao	2
 王太医	wang tai yi	1
 王熙凤毒设相思局	wang xi feng du she xiang si ju	0
 王熙凤历幻返金陵	wang xi feng li huan fan jin ling	0
@@ -35233,7 +35236,7 @@ use_preset_vocabulary: false
 王熙凤正言弹妒意	wang xi feng zheng yan dan du yi	0
 王熙凤致祸抱羞惭	wang xi feng zhi huo bao xiu can	0
 王希献	wang xi xian	0
-王兴	wang xing	385
+王兴	wang xing	338
 王柱儿	wang zhu er	0
 王子胜	wang zi sheng	0
 王作梅	wang zuo mei	0
@@ -35325,7 +35328,7 @@ use_preset_vocabulary: false
 因麒麟伏白首双星	yin qi lin fu bai shou shuang xing	1
 饮仙醪曲演红楼梦	yin xian lao qu yan hong lou meng	2
 阴骘文	yin zhi wen	0
-莺儿	ying er	14
+莺儿	ying er	15
 英莲	ying lian	10
 营缮郎	ying shan lang	0
 蝇帚	ying zhou	0
@@ -35344,7 +35347,7 @@ use_preset_vocabulary: false
 玉蕗藤	yu lu teng	0
 余信	yu xin	0
 玉柱儿	yu zhu er	0
-圆信	yuan xin	12
+圆信	yuan xin	0
 鸳鸯女誓绝鸳鸯偶	yuan yang nv shi jue yuan yang ou	0
 鸳鸯女无意遇鸳鸯	yuan yang nv wu yi yu yuan yang	0
 鸳鸯女殉主登太虚	yuan yang nv xun zhu deng tai xu	0
@@ -35405,7 +35408,7 @@ use_preset_vocabulary: false
 脂批	zhi pi	59
 脂评本	zhi ping ben	0
 智善	zhi shan	4
-智通	zhi tong	24
+智通	zhi tong	18
 忠靖侯	zhong jing hou	0
 忠靖侯史鼎	zhong jing hou shi ding	0
 终身误	zhong shen wu	6
@@ -35454,3 +35457,21 @@ use_preset_vocabulary: false
 一一风荷举	yi yi feng he ju	16
 一丈青扈三娘	yi zhang qing hu san niang	5
 一份耕耘一份收获	yi fen geng yun yi fen shou huo	8
+晚日金陵岸草平	wan ri jin ling an cao ping	2
+蓼岸风多橘柚香	liao an feng duo ju you xiang	2
+一钩初月临妆镜	yi gou chu yue lin zhuang jing	2
+茅舍槿篱溪曲	mao she jin li xi qu	2
+西风吹罗幕	xi feng chui luo mu	1
+逐胜归来雨未晴	zhu sheng gui lai yu wei qing	2
+窗雨阻佳期	chuang yu zu jia qi	2
+柳带摇风汉水滨	liu dai yao feng han shui bin	2
+风递残香出绣帘	feng di can xiang chu xiu lian	2
+岸柳垂金线	an liu chui jin xian	2
+雨渍花零	yu zi hua ling	2
+独立寒阶望月华	du li han jie wang yue hua	2
+回塘风起波文细	hui tang feng qi bo wen xi	2
+白露点晓星明灭	bai lu dian xiao xing ming mie	1
+薄妆桃脸	bao zhuang tao lian	2
+凤楼琪树	feng lou qi shu	2
+秦妇吟	qin fu yin	20
+毛诗传	mao shi chuan	21

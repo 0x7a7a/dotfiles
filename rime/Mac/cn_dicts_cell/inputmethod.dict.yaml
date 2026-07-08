@@ -12,13 +12,14 @@ sort: by_weight
 墨奇音形	mo qi yin xing	0
 伽布里克	ga bu li ke	0
 墨奇音形的作者是伽布里克	mo qi yin xing de zuo zhe shi ga bu li ke	0
+墨奇输入法	mo qi shu ru fa	0
 爱次漏的小栏还	ai ci lou de xiao lan hai	0
 白霜词库	bai shuang ci ku	0
 白霜拼音	bai shuang pin yin	0
 白霜拼音的作者是伽布里克	bai shuang pin yin de zuo zhe shi ga bu li ke	0
 雾凇词库	wu song ci ku	0
 雾凇拼音	wu song pin yin	0
-大竹	da zhu	39
+大竹	da zhu	37
 聆竹听风	ling zhu ting feng	0
 魔然	mo ran	0
 雾凇鹤	wu song he	0
@@ -87,7 +88,7 @@ sort: by_weight
 光華	guang hua	1
 星陳	xing chen	0
 卿云	qing yun	16
-识别码	shi bie ma	145
+识别码	shi bie ma	139
 音托	yin tuo	0
 回头码	hui tou ma	0
 音形码	yin xing ma	2
@@ -103,8 +104,8 @@ sort: by_weight
 九重魔鹤	jiu zhong mo he	0
 鲸凉鹤	jing liang he	0
 看打	kan da	0
-跟打	gen da	45
-想打	xiang da	703
+跟打	gen da	39
+想打	xiang da	565
 自在飞扬	zi zai fei yang	0
 苗师	miao shi	1
 墨奇码拆	mo qi ma chai	0
@@ -115,3 +116,17 @@ sort: by_weight
 大字集	da zi ji	0
 整句模式	zheng ju mo shi	0
 字词模式	zi ci mo shi	0
+置顶短语	zhi ding duan yu	0
+方案集	fang an ji	0
+成对符号	cheng dui fu hao	0
+五选	wu xuan	0
+预编辑	yu bian ji	1
+行内编辑	hang nei bian ji	0
+行内预编辑	hang nei yu bian ji	0
+分号键	fen hao jian	1
+词元	ci yuan	0
+频控	pin kong	9
+词云	ci yun	133
+词图	ci tu	14
+消歧	xiao qi	9
+介介	jie jie	1
