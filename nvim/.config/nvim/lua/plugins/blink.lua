@@ -86,11 +86,6 @@ return {
           --   score_offset = 100,
           --   async = true,
           -- },
-          markdown = {
-            name = 'RenderMarkdown',
-            module = 'render-markdown.integ.blink',
-            fallbacks = { 'lsp' },
-          },
         },
       },
 
