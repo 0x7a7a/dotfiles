@@ -14,7 +14,6 @@ return {
         require('luasnip.loaders.from_lua').lazy_load({ paths = './lua/snippets' })
       end,
     },
-    -- { 'fang2hou/blink-copilot' },
   },
   config = function()
     require('blink.cmp').setup({
@@ -24,6 +23,7 @@ return {
       keymap = {
         preset = 'super-tab',
         ['<CR>'] = { 'accept', 'fallback' },
+        -- ['<A-y>'] = require('minuet').make_blink_map(),
       },
       appearance = {
         use_nvim_cmp_as_default = true,
@@ -77,15 +77,18 @@ return {
       signature = { enabled = true },
       snippets = { preset = 'luasnip' },
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown' },
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
         min_keyword_length = 1,
         providers = {
-          -- copilot = {
-          --   name = 'copilot',
-          --   module = 'blink-copilot',
-          --   score_offset = 100,
-          --   async = true,
-          -- },
+          minuet = {
+            name = 'minuet',
+            module = 'minuet.blink',
+            async = true,
+            -- Should match minuet.config.request_timeout * 1000,
+            -- since minuet.config.request_timeout is in seconds
+            timeout_ms = 3000,
+            score_offset = 50, -- Gives minuet higher priority among suggestions
+          },
         },
       },
 
@@ -115,21 +118,9 @@ return {
               return vim.fn.getcmdtype() == ':' or vim.fn.getcmdtype() == '@'
             end,
           },
+          trigger = { prefetch_on_insert = false },
         },
       },
-    })
-
-    vim.api.nvim_create_autocmd('User', {
-      pattern = 'BlinkCmpMenuOpen',
-      callback = function()
-        vim.b.copilot_suggestion_hidden = true
-      end,
-    })
-    vim.api.nvim_create_autocmd('User', {
-      pattern = 'BlinkCmpMenuClose',
-      callback = function()
-        vim.b.copilot_suggestion_hidden = false
-      end,
     })
   end,
 }
