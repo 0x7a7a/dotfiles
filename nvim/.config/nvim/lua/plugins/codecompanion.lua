@@ -6,22 +6,42 @@ return {
   },
   config = function()
     require('codecompanion').setup({
+      adapters = {
+        http = {
+          opentoken = function()
+            return require('codecompanion.adapters').extend('anthropic', {
+              url = os.getenv('OPENTOKEN_API_URL'),
+              env = {
+                api_key = 'OPENTOKEN_API_KEY',
+              },
+              schema = {
+                model = {
+                  default = 'claude-opus-4-7',
+                  choices = { 'claude-opus-4-7' },
+                },
+              },
+            })
+          end,
+        },
+      },
       interactions = {
         chat = {
           adapter = {
-            name = 'copilot',
-            model = 'claude-sonnet-4.6',
+            name = 'opentoken',
+            model = 'claude-opus-4-7',
           },
         },
         inline = {
-          adapter = 'copilot',
+          adapter = 'opentoken',
+          model = 'claude-opus-4-7',
         },
         cmd = {
-          adapter = 'copilot',
+          adapter = 'opentoken',
+          model = 'claude-opus-4-7',
         },
       },
       opts = {
-        language = 'Chinease',
+        language = 'Chinese',
       },
       windows = {
         layout = 'buffer',

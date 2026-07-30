@@ -23,6 +23,7 @@ return {
       'json',
       'vimdoc',
       'make',
+      'yaml',
     }
     local already_installed = require('nvim-treesitter.config').get_installed()
     local uninstalled = vim
