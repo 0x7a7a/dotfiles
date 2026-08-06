@@ -5,6 +5,7 @@ return {
     'nvim-treesitter/nvim-treesitter',
   },
   config = function()
+    local default_model = 'claude-opus-4-8'
     require('codecompanion').setup({
       adapters = {
         http = {
@@ -16,8 +17,8 @@ return {
               },
               schema = {
                 model = {
-                  default = 'claude-opus-4-7',
-                  choices = { 'claude-opus-4-7' },
+                  default = default_model,
+                  choices = { default_model },
                 },
               },
             })
@@ -28,16 +29,16 @@ return {
         chat = {
           adapter = {
             name = 'opentoken',
-            model = 'claude-opus-4-7',
+            model = default_model,
           },
         },
         inline = {
           adapter = 'opentoken',
-          model = 'claude-opus-4-7',
+          model = default_model,
         },
         cmd = {
           adapter = 'opentoken',
-          model = 'claude-opus-4-7',
+          model = default_model,
         },
       },
       opts = {
