@@ -79,15 +79,6 @@ return {
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
         min_keyword_length = 1,
-        providers = {
-          minuet = {
-            name = 'minuet',
-            module = 'minuet.blink',
-            async = true,
-            timeout_ms = 5000,
-            score_offset = 50, -- Gives minuet higher priority among suggestions
-          },
-        },
       },
 
       cmdline = {
