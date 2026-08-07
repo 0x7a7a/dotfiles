@@ -4,9 +4,23 @@ return {
   config = function()
     local conform = require('conform')
     conform.setup({
-      log_level = vim.log.levels.DEBUG,
+      log_level = vim.log.levels.INFO,
       formatters = {
         -- ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
+        stylua = {
+          prepend_args = function(_, ctx)
+            local stylua_conf = vim.fs.find('.stylua.toml', {
+              path = ctx.dirname,
+              upward = true,
+              type = 'file',
+            })[1] or (vim.fn.stdpath('config') .. '/.stylua.toml')
+
+            if vim.fn.filereadable(stylua_conf) == 1 then
+              return { '--config-path', stylua_conf }
+            end
+            return {}
+          end,
+        },
         prettier = {
           prepend_args = function()
             return {
@@ -48,22 +62,6 @@ return {
         return { timeout_ms = 500, lsp_format = 'fallback' }
       end,
     })
-
-    local function get_stylua_config()
-      local stylua_conf = '.stylua.toml'
-
-      if not vim.fs.find(stylua_conf, { upward = true }) then
-        return vim.fn.stdpath('config') .. '/' .. stylua_conf
-      end
-      return vim.fn.getcwd() .. '/' .. stylua_conf
-    end
-
-    local stylua_conf = get_stylua_config()
-    if vim.fn.filereadable(stylua_conf) == 1 then
-      conform.formatters.stylua = {
-        prepend_args = { '--config-path', stylua_conf },
-      }
-    end
 
     vim.keymap.set({ 'n', 'v' }, '=f', function()
       conform.format({

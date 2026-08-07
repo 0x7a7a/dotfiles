@@ -1,30 +1,11 @@
-local treesitter = require('vim.treesitter')
 local AUGROUP = vim.api.nvim_create_augroup('_AUGROUP', {})
 
--- Autocommand to set the cursorlineopt based on insert mode
+-- Autocommand to update cursorline and relative line numbers based on insert mode
 vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
   callback = function(arg)
-    if arg.event == 'InsertEnter' then
-      vim.opt.cursorlineopt = 'number'
-    else
-      vim.opt.cursorlineopt = 'both'
-    end
-  end,
-  group = AUGROUP,
-})
-
--- Autocommand to toggle line numbers based on filetype
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
-  callback = function(arg)
-    vim.opt.relativenumber = arg.event == 'InsertEnter'
-  end,
-  group = AUGROUP,
-})
-
--- Autocommand to toggle relative numbers based on insert mode
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'InsertLeave' }, {
-  callback = function(arg)
-    vim.opt.relativenumber = arg.event == 'InsertLeave'
+    local in_insert = arg.event == 'InsertEnter'
+    vim.opt.cursorlineopt = in_insert and 'number' or 'both'
+    vim.opt.relativenumber = not in_insert
   end,
   group = AUGROUP,
 })
