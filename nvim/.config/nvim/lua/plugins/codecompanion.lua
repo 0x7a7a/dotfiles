@@ -5,13 +5,13 @@ return {
     'nvim-treesitter/nvim-treesitter',
   },
   config = function()
-    local default_model = 'claude-opus-4-8'
+    local default_model = 'claude-opus-4-7'
     require('codecompanion').setup({
       adapters = {
         http = {
           opentoken = function()
             return require('codecompanion.adapters').extend('anthropic', {
-              url = os.getenv('OPENTOKEN_API_URL'),
+              url = string.format('%s/v1/messages', os.getenv('OPENTOKEN_API_URL')),
               env = {
                 api_key = 'OPENTOKEN_API_KEY',
               },
