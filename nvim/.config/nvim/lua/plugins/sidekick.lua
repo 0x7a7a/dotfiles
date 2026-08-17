@@ -92,5 +92,12 @@ return {
       end,
       desc = 'Sidekick Toggle Claude',
     },
+    {
+      '<leader>ap',
+      function()
+        require('sidekick.cli').toggle({ name = 'pi', focus = true })
+      end,
+      desc = 'Sidekick Toggle Pi',
+    },
   },
 }
