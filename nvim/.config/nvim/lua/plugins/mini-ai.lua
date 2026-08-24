@@ -19,6 +19,7 @@ return {
         goto_left = 'g[',
         goto_right = 'g]',
       },
+      n_lines = 500,
     })
   end,
 }
