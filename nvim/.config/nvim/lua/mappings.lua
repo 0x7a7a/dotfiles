@@ -107,14 +107,6 @@ map('x', 'A', function()
   return vim.fn.mode() == 'V' and '$<C-v>A' or 'A'
 end, { expr = true, desc = 'Append at selection end' })
 
--- window navigation
-if not Z.is_mac() then
-  map('n', '<C-h>', '<C-w>h', { desc = 'Go to left window' })
-  map('n', '<C-j>', '<C-w>j', { desc = 'Go to lower window' })
-  map('n', '<C-k>', '<C-w>k', { desc = 'Go to upper window' })
-  map('n', '<C-l>', '<C-w>l', { desc = 'Go to right window' })
-end
-
 -- https://www.reddit.com/r/neovim/comments/1og2pg9/mom_can_i_have_harpoon_we_have_harpoon_at_home/
 map('n', '<leader>H', '<CMD>$arga<CR>', { silent = true, desc = 'Add current file to arg list' })
 for i = 1, 9 do
