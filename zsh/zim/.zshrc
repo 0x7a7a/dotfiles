@@ -99,3 +99,7 @@ alias noproxy='unset http_proxy https_proxy all_proxy'
 
 ## override omz/git aliases
 alias gf=gf
+
+# Load machine-local configuration when present.
+# Keep ~/.zshrc.local outside the dotfiles repository.
+[[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
