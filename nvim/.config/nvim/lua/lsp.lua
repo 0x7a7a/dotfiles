@@ -1,3 +1,7 @@
+vim.lsp.config('*', {
+  capabilities = require('blink.cmp').get_lsp_capabilities(),
+})
+
 -- TODO: Change to automatically match the file names in the directory.
 vim.lsp.enable({
   'zls',
@@ -18,9 +22,6 @@ local WARN = vim.diagnostic.severity.WARN
 local HINT = vim.diagnostic.severity.HINT
 local INFO = vim.diagnostic.severity.INFO
 vim.diagnostic.config({
-  jump = {
-    float = true,
-  },
   float = {
     source = true,
     prefix = ' ',
@@ -38,27 +39,52 @@ vim.diagnostic.config({
   },
 })
 
+local function setup_keymaps(bufnr)
+  local function map(mode, lhs, rhs, desc)
+    vim.keymap.set(mode, lhs, rhs, {
+      buffer = bufnr,
+      silent = true,
+      desc = 'LSP: ' .. desc,
+    })
+  end
+
+  map('n', 'K', function()
+    vim.lsp.buf.hover({ border = 'rounded', max_height = 10 })
+  end, 'Hover')
+  map('n', 'gd', function()
+    require('fzf-lua').lsp_definitions()
+  end, 'Goto definition')
+  map('n', 'gD', function()
+    require('fzf-lua').lsp_declarations()
+  end, 'Goto declaration')
+  map('n', 'gri', function()
+    require('fzf-lua').lsp_implementations()
+  end, 'Goto implementation')
+  map('n', 'grr', function()
+    require('fzf-lua').lsp_references()
+  end, 'Goto references')
+  map('n', 'gs', function()
+    require('fzf-lua').lsp_document_symbols()
+  end, 'Document symbols')
+  map({ 'n', 'x' }, 'grs', function()
+    vim.lsp.buf.selection_range('outer')
+  end, 'Expand selection')
+  map({ 'n', 'x' }, 'grS', function()
+    vim.lsp.buf.selection_range('inner')
+  end, 'Shrink selection')
+end
+
 vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('lsp.attach', { clear = true }),
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if client == nil then
       return
     end
 
-    if client:supports_method('textDocument/hover') then
-      vim.keymap.set('n', 'K', function()
-        vim.lsp.buf.hover({ border = 'rounded', max_height = 10 })
-      end, { buffer = true })
-    end
-
-    if client:supports_method('textDocument/foldingRange') then
-      local win = vim.api.nvim_get_current_win()
-      vim.wo[win][0].foldexpr = 'v:lua.vim.lsp.foldexpr()'
-    end
-
-    if client:supports_method('textDocument/selectionRange') then
-      vim.keymap.set({ 'n', 'x' }, 'grs', "<cmd>vim.lsp.buf.selection_range('outer')<CR>", { buffer = true })
-      vim.keymap.set({ 'n', 'x' }, 'grS', "<cmd>vim.lsp.buf.selection_range('inner')<CR>", { buffer = true })
+    if not vim.b[args.buf].lsp_keymaps_set then
+      setup_keymaps(args.buf)
+      vim.b[args.buf].lsp_keymaps_set = true
     end
 
     if client:supports_method('textDocument/documentColor') then

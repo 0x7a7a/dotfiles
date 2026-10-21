@@ -9,7 +9,7 @@ end
 -- Cookbook: https://www.naseraleisa.com/posts/diff
 return {
   'sindrets/diffview.nvim',
-  evet = 'VeryLazy',
+  event = 'VeryLazy',
   enabled = false,
   keys = {
     {

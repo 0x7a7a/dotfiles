@@ -1,14 +1,13 @@
 return {
   'rose-pine/neovim',
-  lazy = false,
+  name = 'rose-pine',
+  lazy = true,
   priority = 1000,
-  config = function()
-    require('rose-pine').setup({
-      styles = {
-        bold = false,
-        italic = false,
-        transparency = false,
-      },
-    })
-  end,
+  opts = {
+    styles = {
+      bold = false,
+      italic = false,
+      transparency = false,
+    },
+  },
 }

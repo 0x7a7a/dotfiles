@@ -4,7 +4,6 @@ require('functions')
 require('settings')
 require('mappings')
 require('autocmds')
-require('lsp')
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.uv.fs_stat(lazypath) then
@@ -30,6 +29,8 @@ require('lazy').setup({
     enabled = false,
   },
 })
+
+require('lsp')
 
 -- Z.set_light_colorscheme()
 Z.set_dark_colorscheme()

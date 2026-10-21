@@ -1,21 +1,22 @@
-function Z.close_other_bufs()
-  local cur_buf = vim.api.nvim_get_current_buf()
-  local bufs = vim.api.nvim_list_bufs()
+function Z.close_other_bufs(force)
+  local current = vim.api.nvim_get_current_buf()
+  local skipped = 0
 
-  for _, buf in ipairs(bufs) do
-    if buf ~= cur_buf then
-      local filetype = vim.api.nvim_get_option_value('filetype', { buf = buf })
-      local exclude = {
-        'floaterm',
-        'codecompanion',
-      }
-
-      local is_dap_filetype = filetype:match('^dap') ~= nil
-
-      if not (vim.tbl_contains(exclude, filetype) or is_dap_filetype) then
-        vim.api.nvim_buf_delete(buf, { force = true })
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if buf ~= current and vim.api.nvim_buf_is_valid(buf) and vim.bo[buf].buflisted then
+      if vim.bo[buf].modified and not force then
+        skipped = skipped + 1
+      else
+        local ok = pcall(vim.api.nvim_buf_delete, buf, { force = force == true })
+        if not ok then
+          skipped = skipped + 1
+        end
       end
     end
+  end
+
+  if skipped > 0 then
+    vim.notify(('Skipped %d modified or unclosable buffer(s)'):format(skipped), vim.log.levels.WARN)
   end
 end
 
@@ -48,32 +49,26 @@ end, {})
 
 -- Color scheme toggle
 function Z.set_light_colorscheme()
+  require('lazy').load({ plugins = { 'rose-pine' } })
   vim.opt.background = 'light'
-  vim.cmd.colorscheme('rose-pine-dawn')
-
-  -- because the highlight colors of rose-pine-dawn and illuminate are similar
-  -- the cursor color has been modified
   vim.opt.guicursor = {
     'n-v-c-sm:block-Cursor',
     'i-ci-ve:ver25-Cursor',
     'r-cr-o:hor20',
     't:block-blinkon500-blinkoff500-TermCursor',
   }
-  vim.api.nvim_set_hl(0, 'Cursor', { fg = '#000000', bg = '#EAA041' })
+  vim.cmd.colorscheme('rose-pine-dawn')
 end
 
 function Z.set_dark_colorscheme()
   vim.opt.background = 'dark'
-  vim.cmd.colorscheme('gruvbox-material')
-
   vim.opt.guicursor = {
     'n-v-c-sm:block',
     'i-ci-ve:ver25',
     'r-cr-o:hor20',
     't:block-blinkon500-blinkoff500-TermCursor',
   }
-  -- vim.api.nvim_set_hl(0, 'Cursor', {})
-  vim.cmd('hi clear Cursor')
+  vim.cmd.colorscheme('gruvbox-material')
 end
 
 vim.api.nvim_create_user_command('ToggleColorscheme', function()
@@ -82,8 +77,4 @@ vim.api.nvim_create_user_command('ToggleColorscheme', function()
   else
     Z.set_dark_colorscheme()
   end
-
-  -- I don't know why the WindowPicker loses its highlight after toggle colorscheme
-  vim.api.nvim_set_hl(0, 'WindowPickerStatusLine', { fg = '#ededed', bg = '#44cc41', bold = true })
-  vim.api.nvim_set_hl(0, 'WindowPickerStatusLineNC', { fg = '#ededed', bg = '#44cc41', bold = true })
 end, {})

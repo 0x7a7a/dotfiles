@@ -4,6 +4,7 @@ return {
   dependencies = {
     'nvim-neotest/nvim-nio',
     'leoluz/nvim-dap-go',
+    'igorlfs/nvim-dap-view',
   },
   keys = {
     {
@@ -23,8 +24,7 @@ return {
     {
       '<F6>',
       function()
-        -- require('dap').step_over()
-        require('dap').step_back()
+        require('dap').step_over()
       end,
       desc = 'Debug: Step Over',
     },

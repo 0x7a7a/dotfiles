@@ -16,7 +16,12 @@ map('n', 'c', '"_c', { desc = 'Pure key c' })
 map('n', '<leader><leader>', '<C-^>', { desc = 'Toggle last jumppath' })
 
 -- Close other buffers except the current
-map('n', '<leader>bo', Z.close_other_bufs, { desc = 'bdelete other buffers' })
+map('n', '<leader>bo', function()
+  Z.close_other_bufs(false)
+end, { desc = 'Delete other buffers' })
+map('n', '<leader>bO', function()
+  Z.close_other_bufs(true)
+end, { desc = 'Force delete other buffers' })
 map('n', '<leader>bb', '<cmd>bd<CR>', { desc = ':bdelete' })
 map('n', '<leader>bB', '<cmd>bd!<CR>', { desc = ':bdelete!' })
 map('n', '<leader>w', '<cmd>w<CR>', { desc = ':write' })
@@ -79,10 +84,10 @@ map('n', '<leader>d', vim.diagnostic.setqflist, { desc = 'Open diagnostics list'
 map('n', '<C-w>gi', '<C-w>vgi', { desc = 'LSP implementation in window split', remap = true })
 map('n', '<C-w>gd', '<C-w>vgd', { desc = 'LSP definition in window split', remap = true })
 map('n', '[e', function()
-  vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
+  vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR, float = true })
 end, { desc = 'Previous error diagnostic' })
 map('n', ']e', function()
-  vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
+  vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR, float = true })
 end, { desc = 'Next error diagnostic' })
 
 -- Command

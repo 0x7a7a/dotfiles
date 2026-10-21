@@ -3,22 +3,6 @@
 -- Currently, the pyright also has some issues displaying hover documentation:
 -- https://www.reddit.com/r/neovim/comments/1gdv1rc/what_is_causeing_the_lsp_hover_docs_to_looks_like/
 
-local new_capability = {
-  -- this will remove some of the diagnostics that duplicates those from ruff, idea taken and adapted from
-  -- here: https://github.com/astral-sh/ruff-lsp/issues/384#issuecomment-1989619482
-  textDocument = {
-    publishDiagnostics = {
-      tagSupport = {
-        valueSet = { 2 },
-      },
-    },
-    hover = {
-      contentFormat = { 'plaintext' },
-      dynamicRegistration = true,
-    },
-  },
-}
-
 return {
   cmd = { 'delance-langserver', '--stdio' },
   filetypes = {
@@ -50,5 +34,18 @@ return {
       },
     },
   },
-  capabilities = new_capability,
+  -- These are merged with the default blink.cmp capabilities from lua/lsp.lua.
+  capabilities = {
+    textDocument = {
+      publishDiagnostics = {
+        tagSupport = {
+          valueSet = { 2 },
+        },
+      },
+      hover = {
+        contentFormat = { 'plaintext' },
+        dynamicRegistration = true,
+      },
+    },
+  },
 }

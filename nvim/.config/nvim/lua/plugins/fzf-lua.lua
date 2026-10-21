@@ -42,11 +42,6 @@ return {
     vim.keymap.set('n', '<Space>sk', fzflua.keymaps, { desc = '[S]earch [K]eymaps' })
     vim.keymap.set('n', '<Space>sm', fzflua.marks, { desc = '[S]earch [M]marks' })
 
-    vim.keymap.set('n', 'gd', fzflua.lsp_definitions, { desc = '[G]oto [D]efinition' })
-    vim.keymap.set('n', 'gD', fzflua.lsp_declarations, { desc = '[G]oto type [D]eclaration' })
-    vim.keymap.set('n', 'gri', fzflua.lsp_implementations, { desc = '[G]oto [I]mplementation' })
-    vim.keymap.set('n', 'gs', fzflua.lsp_document_symbols, { desc = '[G]oto Document [S]ymbols' })
-    vim.keymap.set('n', 'grr', fzflua.lsp_references, { desc = '[G]oto [R]eferences' })
     -- stylua: ignore end
   end,
 }
