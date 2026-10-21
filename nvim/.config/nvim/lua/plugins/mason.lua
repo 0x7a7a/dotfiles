@@ -3,7 +3,7 @@ return {
   dependencies = {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
   },
-  event = 'BufEnter',
+  event = 'VeryLazy',
   build = ':MasonUpdate',
   config = function()
     require('mason').setup()

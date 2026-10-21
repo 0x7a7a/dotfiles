@@ -10,6 +10,7 @@ return {
     },
     nes = { enabled = false },
   },
+  enabled = false,
   keys = {
     {
       '<tab>',
