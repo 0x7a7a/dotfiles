@@ -21,7 +21,19 @@ local ERROR = vim.diagnostic.severity.ERROR
 local WARN = vim.diagnostic.severity.WARN
 local HINT = vim.diagnostic.severity.HINT
 local INFO = vim.diagnostic.severity.INFO
+
+local function open_diagnostic_float(_, bufnr)
+  vim.diagnostic.open_float({
+    bufnr = bufnr,
+    scope = 'cursor',
+    focus = false,
+  })
+end
+
 vim.diagnostic.config({
+  jump = {
+    on_jump = open_diagnostic_float,
+  },
   float = {
     source = true,
     prefix = ' ',
