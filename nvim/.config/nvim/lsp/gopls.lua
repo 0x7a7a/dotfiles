@@ -10,8 +10,8 @@
 ---
 --- @field custom_subdir string?
 
-local mod_cache = nil
-local std_lib = nil
+local go_dirs = nil
+local go_dirs_waiters = {}
 
 ---@param custom_args go_dir_custom_args
 ---@param on_complete fun(dir: string | nil)
@@ -21,7 +21,7 @@ local function identify_go_dir(custom_args, on_complete)
     local res = vim.trim(output.stdout or '')
     if output.code == 0 and res ~= '' then
       if custom_args.custom_subdir and custom_args.custom_subdir ~= '' then
-        res = res .. custom_args.custom_subdir
+        res = vim.fs.joinpath(res, custom_args.custom_subdir)
       end
       on_complete(res)
     else
@@ -31,7 +31,8 @@ local function identify_go_dir(custom_args, on_complete)
             output.code,
             vim.inspect(cmd),
             output.stderr
-          )
+          ),
+          vim.log.levels.WARN
         )
       end)
       on_complete(nil)
@@ -39,44 +40,51 @@ local function identify_go_dir(custom_args, on_complete)
   end)
 end
 
----@return string?
-local function get_std_lib_dir()
-  if std_lib and std_lib ~= '' then
-    return std_lib
+---@param on_complete fun(dirs: { mod_cache: string?, std_lib: string? })
+local function get_go_dirs(on_complete)
+  if go_dirs then
+    on_complete(go_dirs)
+    return
   end
 
-  identify_go_dir({ envvar_id = 'GOROOT', custom_subdir = '/src' }, function(dir)
-    if dir then
-      std_lib = dir
+  go_dirs_waiters[#go_dirs_waiters + 1] = on_complete
+  if #go_dirs_waiters > 1 then
+    return
+  end
+
+  local dirs = {}
+  local pending = 2
+  local function complete()
+    pending = pending - 1
+    if pending > 0 then
+      return
     end
-  end)
-  return std_lib
-end
 
----@return string?
-local function get_mod_cache_dir()
-  if mod_cache and mod_cache ~= '' then
-    return mod_cache
+    go_dirs = dirs
+    local waiters = go_dirs_waiters
+    go_dirs_waiters = {}
+    for _, waiter in ipairs(waiters) do
+      waiter(go_dirs)
+    end
   end
 
+  identify_go_dir({ envvar_id = 'GOROOT', custom_subdir = 'src' }, function(dir)
+    dirs.std_lib = dir
+    complete()
+  end)
   identify_go_dir({ envvar_id = 'GOMODCACHE' }, function(dir)
-    if dir then
-      mod_cache = dir
-    end
+    dirs.mod_cache = dir
+    complete()
   end)
-  return mod_cache
 end
 
 ---@param fname string
 ---@return string?
-local function get_root_dir(fname)
-  if mod_cache and fname:sub(1, #mod_cache) == mod_cache then
-    local clients = vim.lsp.get_clients({ name = 'gopls' })
-    if #clients > 0 then
-      return clients[#clients].config.root_dir
-    end
-  end
-  if std_lib and fname:sub(1, #std_lib) == std_lib then
+local function get_root_dir(fname, dirs)
+  if
+    (dirs.mod_cache and vim.fs.relpath(dirs.mod_cache, fname))
+    or (dirs.std_lib and vim.fs.relpath(dirs.std_lib, fname))
+  then
     local clients = vim.lsp.get_clients({ name = 'gopls' })
     if #clients > 0 then
       return clients[#clients].config.root_dir
@@ -90,10 +98,10 @@ return {
   filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
   root_dir = function(bufnr, on_dir)
     local fname = vim.api.nvim_buf_get_name(bufnr)
-    get_mod_cache_dir()
-    get_std_lib_dir()
-    -- see: https://github.com/neovim/nvim-lspconfig/issues/804
-    on_dir(get_root_dir(fname))
+    get_go_dirs(function(dirs)
+      -- see: https://github.com/neovim/nvim-lspconfig/issues/804
+      on_dir(get_root_dir(fname, dirs))
+    end)
   end,
   settings = {
     -- https://github.com/golang/tools/blob/master/gopls/doc/settings.md#analyses-mapstringbool
