@@ -21,7 +21,9 @@ return {
           payload,
         },
       }, { bufnr = context.bufnr }, function(_, r)
-        local response_data = { { id, r.body } }
+        -- r 可能为 nil（vtsls 请求出错或无返回），此时仍需回复 vue_ls，避免其挂起
+        local response = r and r.body
+        local response_data = { { id, response } }
         ---@diagnostic disable-next-line: param-type-mismatch
         client:notify('tsserver/response', response_data)
       end)

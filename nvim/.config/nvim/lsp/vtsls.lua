@@ -1,6 +1,8 @@
 -- https://github.com/vuejs/language-tools/wiki/Neovim
-local vue_language_server_path = vim.fn.expand('$MASON/packages')
-  .. '/vue-language-server'
+-- 不依赖 $MASON：mason 是 VeryLazy 加载，直接打开 .vue 文件时该变量可能尚未设置
+local mason_root = vim.env.MASON or (vim.fn.stdpath('data') .. '/mason')
+local vue_language_server_path = mason_root
+  .. '/packages/vue-language-server'
   .. '/node_modules/@vue/language-server'
 
 local vue_plugin = {
