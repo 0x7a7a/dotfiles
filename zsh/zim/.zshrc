@@ -78,6 +78,7 @@ alias lt='ls --tree'
 
 alias nv='nvim'
 alias v='nvim'
+alias h='herdr'
 alias lg='lazygit'
 alias kc='kubectl'
 alias grep='rg'

@@ -15,6 +15,7 @@ macos-titlebar-style = tabs
 keybind = super+t=new_tab
 keybind = super+enter=new_split:down
 keybind = super+shift+enter=new_split:right
+keybind = super+v=paste_from_clipboard
 
 #terminfo
 #https://ghostty.org/docs/help/terminfo
