@@ -1,0 +1,11 @@
+onboarding = false
+
+[theme]
+name = "rose-pine"
+auto_switch = false
+
+[ui.toast]
+delivery = "terminal"
+
+[keys]
+prefix = "ctrl+a"
