@@ -5,7 +5,7 @@ return {
     'nvim-treesitter/nvim-treesitter',
   },
   config = function()
-    local default_model = 'claude-opus-4-7'
+    local default_model = 'claude-opus-5-5'
     require('codecompanion').setup({
       adapters = {
         http = {
